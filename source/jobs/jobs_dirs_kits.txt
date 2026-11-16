@@ -1,0 +1,10 @@
+source/doll_s/raw/kit1_idle.png|1536x1024|source/doll_s/prompts/kit1.txt|source/doll_s/raw/seed.png|source/doll_s/raw/base_idle.png
+source/doll_s/raw/kit1_walk.png|1536x1024|source/doll_s/prompts/kit1.txt|source/doll_s/raw/seed.png|source/doll_s/raw/base_walk.png
+source/doll_n/raw/kit1_idle.png|1536x1024|source/doll_n/prompts/kit1.txt|source/doll_n/raw/seed.png|source/doll_n/raw/base_idle.png
+source/doll_n/raw/kit1_walk.png|1536x1024|source/doll_n/prompts/kit1.txt|source/doll_n/raw/seed.png|source/doll_n/raw/base_walk.png
+source/doll_n/raw/kit2_idle.png|1536x1024|source/doll_n/prompts/kit2.txt|source/doll_n/raw/seed.png|source/doll_n/raw/base_idle.png
+source/doll_n/raw/kit2_walk.png|1536x1024|source/doll_n/prompts/kit2.txt|source/doll_n/raw/seed.png|source/doll_n/raw/base_walk.png
+source/doll_ne/raw/kit1_idle.png|1536x1024|source/doll_ne/prompts/kit1.txt|source/doll_ne/raw/seed.png|source/doll_ne/raw/base_idle.png
+source/doll_ne/raw/kit1_walk.png|1536x1024|source/doll_ne/prompts/kit1.txt|source/doll_ne/raw/seed.png|source/doll_ne/raw/base_walk.png
+source/doll_ne/raw/kit2_idle.png|1536x1024|source/doll_ne/prompts/kit2.txt|source/doll_ne/raw/seed.png|source/doll_ne/raw/base_idle.png
+source/doll_ne/raw/kit2_walk.png|1536x1024|source/doll_ne/prompts/kit2.txt|source/doll_ne/raw/seed.png|source/doll_ne/raw/base_walk.png

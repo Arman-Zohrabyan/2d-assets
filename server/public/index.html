@@ -11,6 +11,9 @@
   <header class="topbar">
     <h1>Paper doll &amp; layers</h1>
     <div class="toolbar">
+      <label id="doll-pick" hidden>Doll
+        <select id="doll"></select>
+      </label>
       <label>Scale
         <select id="scale">
           <option value="3">3×</option>
@@ -68,7 +71,7 @@
     <section class="panel" id="playground">
       <div class="panel-head">
         <h2>Playground</h2>
-        <span class="hint">click the scene: ←→ / A D walk, Shift run, Space attack with the weapon, Q switch weapon</span>
+        <span class="hint" id="pg-hint">click the scene: ←→ / A D walk, Shift run, Space attack with the weapon, Q switch weapon</span>
       </div>
       <div class="pg-stage"><canvas id="pg-canvas" tabindex="0" aria-label="Playground"></canvas></div>
       <p class="hint" id="pg-status"></p>

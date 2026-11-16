@@ -1,0 +1,9 @@
+source/doll_s/raw/base_idle.png|1536x1024|source/doll_s/prompts/base_idle.txt|source/doll_s/raw/seed.png|source/doll_se/raw/seed_iso.png
+source/doll_s/raw/base_walk.png|1536x1024|source/doll_s/prompts/base_walk.txt|source/doll_s/raw/seed.png|source/doll_se/raw/seed_iso.png
+source/doll_s/raw/heads.png|1536x1024|source/doll_s/prompts/heads.txt|source/doll_s/raw/seed.png|source/doll/raw/heads_sheet.png|source/doll_se/raw/heads_iso.png
+source/doll_n/raw/base_idle.png|1536x1024|source/doll_n/prompts/base_idle.txt|source/doll_n/raw/seed.png|source/doll_se/raw/seed_iso.png
+source/doll_n/raw/base_walk.png|1536x1024|source/doll_n/prompts/base_walk.txt|source/doll_n/raw/seed.png|source/doll_se/raw/seed_iso.png
+source/doll_n/raw/heads.png|1536x1024|source/doll_n/prompts/heads.txt|source/doll_n/raw/seed.png|source/doll/raw/heads_sheet.png|source/doll_se/raw/heads_iso.png
+source/doll_ne/raw/base_idle.png|1536x1024|source/doll_ne/prompts/base_idle.txt|source/doll_ne/raw/seed.png|source/doll_se/raw/seed_iso.png
+source/doll_ne/raw/base_walk.png|1536x1024|source/doll_ne/prompts/base_walk.txt|source/doll_ne/raw/seed.png|source/doll_se/raw/seed_iso.png
+source/doll_ne/raw/heads.png|1536x1024|source/doll_ne/prompts/heads.txt|source/doll_ne/raw/seed.png|source/doll/raw/heads_sheet.png|source/doll_se/raw/heads_iso.png

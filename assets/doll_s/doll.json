@@ -1,0 +1,294 @@
+{
+  "name": "doll_s",
+  "label": "South (front)",
+  "frame_size": [
+    112,
+    96
+  ],
+  "pivot": {
+    "x": 56,
+    "y": 92
+  },
+  "facing": "south",
+  "view": "isometric",
+  "compose": "First draw the `under` strips of the worn items, then the slots in order. When a shield is worn: cut masks.far_arm out of every slot listed in the shield slot's `cuts` (the far arm is behind the shield), and right after the shield draw every earlier slot again clipped to masks.near_arm (the sword arm is in front of the shield). When headgear is worn, cut its `hides` mask out of the head layer (hair that would poke through).",
+  "animations": [
+    {
+      "id": "idle",
+      "label": "Idle",
+      "frames": 4,
+      "fps": 6,
+      "loop": true
+    },
+    {
+      "id": "walk",
+      "label": "Walk",
+      "frames": 6,
+      "fps": 10,
+      "loop": true
+    }
+  ],
+  "masks": {
+    "near_arm": {
+      "idle": "masks/near_arm/idle.png",
+      "walk": "masks/near_arm/walk.png"
+    },
+    "far_arm": {
+      "idle": "masks/far_arm/idle.png",
+      "walk": "masks/far_arm/walk.png"
+    }
+  },
+  "materials": {
+    "steel": {
+      "label": "Steel",
+      "ramp": [
+        "#e4eaf2",
+        "#c0cbdc",
+        "#8b9bb4",
+        "#5a6988",
+        "#3a4466"
+      ]
+    },
+    "silver": {
+      "label": "Silver",
+      "ramp": [
+        "#ffffff",
+        "#dde2e8",
+        "#b2bac5",
+        "#7b8591",
+        "#4a535e"
+      ]
+    },
+    "gold": {
+      "label": "Gold",
+      "ramp": [
+        "#fff3b0",
+        "#f2d16b",
+        "#c99a2e",
+        "#8a6214",
+        "#553a0c"
+      ]
+    },
+    "copper": {
+      "label": "Copper",
+      "ramp": [
+        "#ffc69a",
+        "#e08a52",
+        "#b45d2e",
+        "#7e3a1a",
+        "#4a200e"
+      ]
+    },
+    "bronze": {
+      "label": "Bronze",
+      "ramp": [
+        "#f2c278",
+        "#d08a45",
+        "#a0612a",
+        "#6b3e1a",
+        "#40240e"
+      ]
+    },
+    "leather": {
+      "label": "Leather",
+      "ramp": [
+        "#c99566",
+        "#a3713f",
+        "#7a4f2a",
+        "#56351b",
+        "#33200f"
+      ]
+    },
+    "cloth": {
+      "label": "Crimson cloth"
+    }
+  },
+  "recolor": "A piece with `tones` can take any material colour: for each frame, pixels of its tone map (grey 0/60/120/180/240 = tone 0..4, highlight to deepest) take tone k of a 5-colour ramp; tone 2 is the material colour itself. `materials` lists ready ramps.",
+  "slots": [
+    {
+      "id": "body",
+      "label": "Body",
+      "required": true,
+      "items": [
+        {
+          "id": "base",
+          "label": "Mannequin",
+          "strips": {
+            "idle": "body/idle.png",
+            "walk": "body/walk.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pants",
+      "label": "Pants",
+      "items": [
+        {
+          "id": "green",
+          "label": "Green wool pants",
+          "strips": {
+            "idle": "layers/pants/green/idle.png",
+            "walk": "layers/pants/green/walk.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cloak",
+      "label": "Cloak",
+      "items": [
+        {
+          "id": "red",
+          "label": "Red cloak",
+          "strips": {
+            "idle": "layers/cloak/red/idle.png",
+            "walk": "layers/cloak/red/walk.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greaves",
+      "label": "Greaves",
+      "items": [
+        {
+          "id": "plate",
+          "label": "Plate greaves",
+          "strips": {
+            "idle": "layers/greaves/plate/idle.png",
+            "walk": "layers/greaves/plate/walk.png"
+          },
+          "material": "steel",
+          "tones": {
+            "idle": "layers/greaves/plate/idle_tones.png",
+            "walk": "layers/greaves/plate/walk_tones.png"
+          }
+        }
+      ],
+      "materials": [
+        "steel",
+        "silver",
+        "gold",
+        "copper",
+        "bronze",
+        "leather"
+      ]
+    },
+    {
+      "id": "chest",
+      "label": "Chest",
+      "items": [
+        {
+          "id": "plate",
+          "label": "Cuirass",
+          "strips": {
+            "idle": "layers/chest/plate/idle.png",
+            "walk": "layers/chest/plate/walk.png"
+          },
+          "material": "steel",
+          "tones": {
+            "idle": "layers/chest/plate/idle_tones.png",
+            "walk": "layers/chest/plate/walk_tones.png"
+          }
+        }
+      ],
+      "materials": [
+        "steel",
+        "silver",
+        "gold",
+        "copper",
+        "bronze",
+        "leather"
+      ]
+    },
+    {
+      "id": "bracers",
+      "label": "Bracers",
+      "items": [
+        {
+          "id": "forearm",
+          "label": "Bracers 50% (forearm)",
+          "strips": {
+            "idle": "layers/bracers/forearm/idle.png",
+            "walk": "layers/bracers/forearm/walk.png"
+          },
+          "material": "steel",
+          "tones": {
+            "idle": "layers/bracers/forearm/idle_tones.png",
+            "walk": "layers/bracers/forearm/walk_tones.png"
+          }
+        },
+        {
+          "id": "full",
+          "label": "Bracers 100% (whole arm)",
+          "strips": {
+            "idle": "layers/bracers/full/idle.png",
+            "walk": "layers/bracers/full/walk.png"
+          },
+          "material": "steel",
+          "tones": {
+            "idle": "layers/bracers/full/idle_tones.png",
+            "walk": "layers/bracers/full/walk_tones.png"
+          }
+        }
+      ],
+      "materials": [
+        "steel",
+        "silver",
+        "gold",
+        "copper",
+        "bronze",
+        "leather"
+      ]
+    },
+    {
+      "id": "head",
+      "label": "Head",
+      "required": true,
+      "items": [
+        {
+          "id": "a",
+          "label": "Head A: dark hair",
+          "strips": {
+            "idle": "layers/head/a/idle.png",
+            "walk": "layers/head/a/walk.png"
+          }
+        },
+        {
+          "id": "b",
+          "label": "Head B: blond with beard",
+          "strips": {
+            "idle": "layers/head/b/idle.png",
+            "walk": "layers/head/b/walk.png"
+          }
+        },
+        {
+          "id": "c",
+          "label": "Head C: auburn bun",
+          "strips": {
+            "idle": "layers/head/c/idle.png",
+            "walk": "layers/head/c/walk.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "weapon",
+      "label": "Weapon",
+      "items": [
+        {
+          "id": "sword1h",
+          "label": "Sword (one-handed)",
+          "strips": {
+            "idle": "layers/weapon/sword1h/idle.png",
+            "walk": "layers/weapon/sword1h/walk.png"
+          },
+          "kind": "sword1h",
+          "hands": 1,
+          "attack": null
+        }
+      ]
+    }
+  ]
+}

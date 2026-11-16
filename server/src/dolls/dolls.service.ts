@@ -6,8 +6,11 @@ import { ASSETS_DIR } from '../paths';
 /** assets/<doll>/doll.json as written by tools/doll.py. */
 interface DollFile {
   name: string;
+  /** shown in the doll picker, e.g. "South (front)" */
+  label?: string;
   frame_size: [number, number];
   pivot: { x: number; y: number };
+  /** right (side view), or a compass direction: south-east, south, north, north-east (the mirrored ones are flips) */
   facing: string;
   view: string;
   compose?: string;

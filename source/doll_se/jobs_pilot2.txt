@@ -1,0 +1,2 @@
+source/doll_se/raw/kit1_idle.png|1536x1024|source/doll_se/prompts/kit1.txt|source/doll_se/raw/seed_iso.png|source/doll_se/raw/base_idle.png
+source/doll_se/raw/kit1_walk.png|1536x1024|source/doll_se/prompts/kit1.txt|source/doll_se/raw/seed_iso.png|source/doll_se/raw/base_walk.png

@@ -807,10 +807,27 @@ def main(config_path: str) -> None:
 
     # ---- head template from idle frame 0, then find the head in every frame
     f0 = body[anims[0]["id"]][0]
-    skin0 = col.of(f0, col.skin)
-    lab, sizes = label(skin0)
-    comp = lab == int(np.argmax(sizes))
-    tmask_full = dilate(dilate(comp) | comp) & ~col.of(f0, col.linen) & (f0 >= 0)  # head + highlights + outline ring
+    head_sil = None  # front / back views: (widest row, top row, centre x) of the mannequin head's silhouette
+    if cfg.get("head_rows"):
+        # front / back views: the skull is drawn in several shading bands (the back of a head has no single skin
+        # tone), so the head is its whole silhouette: everything above the collar (the first row with shirt cloth)
+        op0 = f0 >= 0
+        rows0 = np.flatnonzero(op0.any(1))
+        top0 = int(rows0[0])
+        linen0 = col.of(f0, col.linen)
+        collar = next((y for y in range(top0, top0 + cfg["head_rows"]) if linen0[y].sum() >= 2), top0 + cfg["head_rows"])
+        comp = op0 & ~linen0 & (np.arange(fh)[:, None] < collar)
+        lab, sizes = label(comp)
+        comp = lab == int(np.argmax(sizes))
+        widths = [np.ptp(np.flatnonzero(r)) + 1 if r.any() else 0 for r in comp]
+        wide_y = int(np.argmax(widths))
+        head_sil = (float(widths[wide_y]), top0, float(np.flatnonzero(comp[wide_y]).mean()) + 0.5)
+        tmask_full = comp | (dilate(comp) & ~linen0 & op0)
+    else:
+        skin0 = col.of(f0, col.skin)
+        lab, sizes = label(skin0)
+        comp = lab == int(np.argmax(sizes))
+        tmask_full = dilate(dilate(comp) | comp) & ~col.of(f0, col.linen) & (f0 >= 0)  # head + highlights + outline ring
     ys, xs = np.nonzero(tmask_full)
     ty0, tx0 = ys.min(), xs.min()
     tmask = tmask_full[ty0:ys.max() + 1, tx0:xs.max() + 1]
@@ -853,6 +870,7 @@ def main(config_path: str) -> None:
                         img[lab == i] = -1
         head_pos[a["id"]] = positions
         head_box[a["id"]] = boxes
+        print(f"head {a['id']:<16} template {tw}x{th} from ({tx0}, {ty0}); found at {positions}")
 
     # ---- weapons out of attack bodies
     yy_g, xx_g = np.mgrid[0:fh, 0:fw]
@@ -1010,6 +1028,21 @@ def main(config_path: str) -> None:
             d = np.minimum(seg_dist(xx_g, yy_g, h["shoulder"], h["elbow"]), seg_dist(xx_g, yy_g, h["elbow"], h["hand"]))
             out.append(((d <= cfg.get("arm_radius", 2.0)) & dilate(img >= 0)) | dilate(fist(img, h["hand"])))
         arm_masks[aid] = out
+
+    # every arm in front of the body: the near arm, plus both arms where `arms` annotates them (front and back
+    # views show both arms whole); legs and torso fills keep out of these
+    all_arms: dict[str, list[np.ndarray]] = {aid: [m.copy() for m in ms] for aid, ms in arm_masks.items()}
+    for aid, rows in cfg.get("arms", {}).items():
+        if aid not in all_arms:  # only with `hands` too (front / back views); side attacks keep `leg_exclude`
+            continue
+        out = all_arms[aid]
+        for fi, v in enumerate(rows):
+            for arm in (v[0:6], v[6] if len(v) > 6 else None):
+                if not arm:
+                    continue
+                S, E, H = (arm[0], arm[1]), (arm[2], arm[3]), (arm[4], arm[5])
+                d = np.minimum(seg_dist(xx_g, yy_g, S, E), seg_dist(xx_g, yy_g, E, H))
+                out[fi] |= (d <= cfg.get("arm_radius", 2.0)) & dilate(body[aid][fi] >= 0)
 
     # far arm where it shows outside the torso (annotated polygons): with a shield it is behind the shield, so
     # it is cut from the body and the arm-bound layers (masks/far_arm); the near arm is never cut
@@ -1197,6 +1230,15 @@ def main(config_path: str) -> None:
         nb, nc = neck_front(bald_cell), neck_front(cell)  # closed helmet: only the neck shows
         return (nb - nc if nb is not None and nc is not None else 0.0), dy0, False
 
+    def neck_match(bald_cell: np.ndarray, cell: np.ndarray) -> tuple[float, int, bool]:
+        """Like cell_match for front / back views, where no face profile shows: the neck stubs end on one line
+        and the neck is the same neck, so the cells are matched by the neck's bottom and its centre."""
+        def neck_x(c: np.ndarray) -> float:
+            a = c[..., 3] >= ALPHA
+            xs = np.nonzero(a[int(a.shape[0] * 0.92):])[1]
+            return float(xs.mean()) if len(xs) else a.shape[1] / 2
+        return neck_x(bald_cell) - neck_x(cell), cell.shape[0] - bald_cell.shape[0], True
+
     def hide_mask(spr: np.ndarray, above: int = 6, closed: bool = False) -> np.ndarray:
         """What a headgear hides of the head under it: hair poking out ABOVE it. In each of its columns
         (and one either side) the `above` rows over its top pixel; nothing under the headgear is cut,
@@ -1268,7 +1310,13 @@ def main(config_path: str) -> None:
         bf = by_name["bald"]
         bh, bw = bf["y1"] - bf["y0"], bf["x1"] - bf["x0"]
         if first_bald is None:
-            s_head = th / bald["h"] if bald else ref_scale
+            if head_sil and cfg.get("head_height"):  # the same head size as the other views (bald sprite height)
+                s_head = cfg["head_height"] / bh
+            elif head_sil:  # front / back views: the bald head's widest row matches the mannequin head's
+                cell_a = sheet.arr[bf["y0"]:bf["y1"], bf["x0"]:bf["x1"], 3] >= ALPHA
+                s_head = head_sil[0] / max(np.ptp(np.flatnonzero(r)) + 1 for r in cell_a if r.any())
+            else:
+                s_head = th / bald["h"] if bald else ref_scale
             first_bald = (s_head, bh, bw)
         else:  # the same bald head drawn on another sheet: match its outline size, not its skin shading
             s_head = first_bald[0] * (first_bald[1] / bh + first_bald[2] / bw) / 2
@@ -1284,7 +1332,14 @@ def main(config_path: str) -> None:
         # head of every later sheet goes onto the first sheet's bald head by shape, so all sheets agree
         b = sprites["bald"]
         if first_bald_sprite is None:
-            offsets = {"bald": place_on(b, tpatch, (tw - b.shape[1], th - b.shape[0]), by_skin)}
+            if head_sil:  # centred on the mannequin head, the neck ends where the mannequin's did
+                init = (int(round(head_sil[2] - tx0 - b.shape[1] / 2)), th - b.shape[0])
+                # `head_nudge` [dx, dy]: a bigger head than the mannequin's (sized like the other views) can read as
+                # a hunch in a three-quarter back view; set it down onto the shoulders by eye
+                init = (init[0] + cfg.get("head_nudge", [0, 0])[0], init[1] + cfg.get("head_nudge", [0, 0])[1])
+                offsets = {"bald": init}  # pure geometry: a colour fit would move with every palette change
+            else:
+                offsets = {"bald": place_on(b, tpatch, (tw - b.shape[1], th - b.shape[0]), by_skin)}
             first_bald_sprite = (b, offsets["bald"])
         else:
             fb, foff = first_bald_sprite
@@ -1295,7 +1350,7 @@ def main(config_path: str) -> None:
             if name == "bald" or (name.startswith("~") and name != hc.get("headgear_on")):
                 continue
             f = by_name[name]
-            dx, dy, by_face = cell_match(hi["bald"], hi[name])
+            dx, dy, by_face = neck_match(hi["bald"], hi[name]) if head_sil else cell_match(hi["bald"], hi[name])
             # the matched points coincide: shift between the two downsampled canvases, then the crops
             sx = (dx + (f["x1"] - f["x0"]) / 2 - bw / 2) * s_head + origin[name][0] - origin["bald"][0]
             sy = ((f["y1"] - f["y0"]) - dy - bh) * s_head + origin[name][1] - origin["bald"][1]
@@ -1358,12 +1413,25 @@ def main(config_path: str) -> None:
                     print(f"headgear {name}: fitted {fit} {spr.shape} -> {big.shape} at {rel}")
                     sprites[name] = spr = big
             offsets[name] = (rel[0] + offsets["bald"][0], rel[1] + offsets["bald"][1])
-            fit = cfg.get("headgear_fit", {}).get(name.partition(":")[2]) if name.startswith("headgear:") else None
-            if fit and (fit.get("erase") or fit.get("paint")):
+            # hand touch-ups: `headgear_fit` for headgear, `head_fit` for heads (a face redrawn pixel by pixel where
+            # downsampling lost it, e.g. the eyes of a face turned to the camera)
+            fit = cfg.get("headgear_fit" if name.startswith("headgear:") else "head_fit", {}).get(name.partition(":")[2])
+            if fit and (fit.get("erase") or fit.get("paint") or fit.get("patch")):
                 # hand touch-ups of the rigid sprite, given as pixels of the first animation's first frame
                 px0, py0 = head_pos[anims[0]["id"]][0]
                 ox0, oy0 = px0 + offsets[name][0], py0 + offsets[name][1]
                 spr = sprites[name] = sprites[name].copy()
+                if fit.get("patch"):  # a block of pixel art: one character per pixel, " " keeps, "." erases
+                    pt = fit["patch"]
+                    # `at` is in sprite pixels (from its top-left) with "in": "sprite", else in idle frame 0 pixels
+                    bx, by = (ox0, oy0) if pt.get("in") == "sprite" else (0, 0)
+                    for dy_, row in enumerate(pt["rows"]):
+                        for dx_, ch in enumerate(row):
+                            x, y = bx + pt["at"][0] + dx_, by + pt["at"][1] + dy_
+                            if ch == " " or not (0 <= y - oy0 < spr.shape[0] and 0 <= x - ox0 < spr.shape[1]):
+                                continue
+                            spr[y - oy0, x - ox0] = -1 if ch == "." else int(np.argmin(
+                                ((palette[:n].astype(int) - np.array(hex_rgb(pt["colors"][ch]))) ** 2).sum(1)))
                 for x, y in fit.get("erase", []):
                     if 0 <= y - oy0 < spr.shape[0] and 0 <= x - ox0 < spr.shape[1]:
                         spr[y - oy0, x - ox0] = -1
@@ -1381,9 +1449,23 @@ def main(config_path: str) -> None:
             hm = hide_mask(sprites[name], closed=item in cfg.get("closed_headgear", [])) if kind == "headgear" else None
             for a in anims:
                 frames, hframes = [], []
-                for (px, py) in head_pos[a["id"]]:
+                for fi_h, (px, py) in enumerate(head_pos[a["id"]]):
                     canvas = np.full((fh, fw), -1, dtype=np.int32)
                     paste(canvas, sprites[name], px + ox, py + oy)
+                    if kind == "head" and cfg.get("neck_seam"):
+                        # the neck stub's bottom outline lies across the collar when the neck faces the camera
+                        # (isometric): drop it where the body continues below
+                        rows_h = np.flatnonzero((canvas >= 0).any(1))
+                        if len(rows_h):
+                            yb = rows_h[-1]
+                            seam = (canvas[yb] >= 0) & col.dark[np.maximum(canvas[yb], 0)] & (body[a["id"]][fi_h][yb] >= 0)
+                            canvas[yb][seam] = -1
+                        # where the sprite's neck is shorter than the mannequin's (cut away with its head), 1-4 px of
+                        # background show between chin and collar: the head layer closes them from its own pixels
+                        comb = np.where(canvas >= 0, canvas, body[a["id"]][fi_h])
+                        filled = fill_small_holes(comb, 4)
+                        gap = (comb < 0) & (filled >= 0) & dilate(canvas >= 0)
+                        canvas[gap] = filled[gap]
                     frames.append(canvas)
                     if hm is not None:
                         hcanvas = np.full((fh, fw), -1, dtype=np.int32)
@@ -1407,7 +1489,7 @@ def main(config_path: str) -> None:
             for fi, f in enumerate(frames):
                 sh = hands[aid][fi]["shoulder"]
                 ref = shift(frames[r], int(round(sh[0] - sr[0])), int(round(sh[1] - sr[1])))
-                fill = (ref >= 0) & (f < 0) & (body[aid][fi] >= 0) & ~arm_masks[aid][fi] \
+                fill = (ref >= 0) & (f < 0) & (body[aid][fi] >= 0) & ~all_arms[aid][fi] \
                     & ~col.of(body[aid][fi], broad_skin)
                 f[fill] = ref[fill]
 
@@ -1704,14 +1786,15 @@ def main(config_path: str) -> None:
         for poly in cfg.get("leg_exclude", {}).get(aid, {}).get(str(fi), []):  # an arm hanging below the waist
             legs &= ~polygon_mask(poly, (fh, fw))
         if aid in hands:
-            legs &= ~arm_masks[aid][fi] & ~far_cut[aid][fi]
+            legs &= ~all_arms[aid][fi] & ~far_cut[aid][fi]
         return legs, shoes
 
-    # arms for bracers: near arm (shoulder, elbow, hand) and the far arm where it shows. From `hands` (far shoulder next
-    # to the near one, far elbow on the shoulder-hand line) or from `arms` (both arms annotated; far may be null)
+    # arms for bracers: near arm (shoulder, elbow, hand) and the far arm where it shows. From `arms` (both arms
+    # annotated, both whole; the second may be null) or from `hands` (far shoulder next to the near one, far elbow on
+    # the shoulder-hand line, the far arm only where it swings out behind the back)
     def arm_list(aid: str, fi: int) -> list[tuple]:
         out = []
-        if aid in hands:
+        if aid in hands and aid not in cfg.get("arms", {}):
             h = hands[aid][fi]
             S, E, H = np.array(h["shoulder"]), np.array(h["elbow"]), np.array(h["hand"])
             out.append((S, E, H, "near"))
@@ -1737,6 +1820,40 @@ def main(config_path: str) -> None:
             res.append((np.hypot(px - (P0[0] + t * d[0]), py - (P0[1] + t * d[1])), base + t * float(np.hypot(*d))))
         (d1, s1), (d2, s2) = res
         return np.minimum(d1, d2), np.where(d1 <= d2, s1, s2)
+
+    # rigid pieces: where GPT redraws a piece a little elsewhere in every frame (a front-view walk: registration of a
+    # symmetric body has nothing to lock on), one good frame of it is used for the whole animation, moved with the
+    # head (the torso bobs with it), clipped to the body (1 px rim) and kept behind the forearms. `rigid`:
+    # {anim: [reference frame, dx, dy(, "complete")(, "behind")]} on the kit item
+    for kit in cfg["kits"]:
+        for it in kit["items"]:
+            for aid, (ref_i, rdx, rdy, *opt) in it.get("rigid", {}).items():
+                frames = layers.get((it["slot"], it["id"]), {}).get(aid)
+                if not frames:
+                    continue
+                ref = shift(frames[ref_i], rdx, rdy)
+                rx, ry = head_pos[aid][ref_i]
+                # "complete": where an arm hid the piece in the reference frame, the other frames (moved to it) fill
+                # it in (3/4 views, where the near arm crosses the torso)
+                for fj in sorted(range(len(frames)), key=lambda j: -int((frames[j] >= 0).sum())):
+                    if fj != ref_i and "complete" in opt:
+                        hx, hy = head_pos[aid][fj]
+                        g = shift(frames[fj], rx - hx + rdx, ry - hy + rdy)
+                        ref = np.where((ref < 0) & (g >= 0), g, ref)
+                for fi in range(len(frames)):
+                    hx, hy = head_pos[aid][fi]
+                    f = shift(ref, hx - rx, hy - ry)
+                    op = body[aid][fi] >= 0
+                    keep = (f >= 0) & dilate(op)
+                    if "behind" in opt:  # a cape seen from the front: on the body only over the shoulders (the drape)
+                        top_b = int(np.flatnonzero(op.any(1))[0])
+                        keep = (f >= 0) & (~op | (yy_g < top_b + 4))
+                    # a forearm swung in front of the torso hides the piece (the upper arm lies on the shoulder,
+                    # which the piece covers)
+                    for S_, E_, H_, _ in arm_list(aid, fi):
+                        fore = seg_dist(xx_g, yy_g, E_, H_) <= 1.8
+                        keep &= ~(fore & op) & ~fist(body[aid][fi], H_)
+                    frames[fi] = np.where(keep, f, -1)
 
     derived_range: dict[tuple[str, str], tuple[int, int]] = {}
     for dv in cfg.get("derived", []):
@@ -1924,10 +2041,11 @@ def main(config_path: str) -> None:
         slots_out.append({**slot, "items": items, **({"materials": mat_slots[slot["id"]]} if slot["id"] in mat_slots else {})})
     (out_dir / "doll.json").write_text(json.dumps({
         "name": cfg.get("name", "doll"),
+        **({"label": cfg["label"]} if "label" in cfg else {}),
         "frame_size": [fw, fh],
         "pivot": {"x": cfg["anchor_x"], "y": cfg["ground_y"] + 1},
-        "facing": "right",
-        "view": "side",
+        "facing": cfg.get("facing", "right"),
+        "view": cfg.get("view", "side"),
         "compose": "First draw the `under` strips of the worn items, then the slots in order. When a shield is worn: cut masks.far_arm out of every slot listed in "
                    "the shield slot's `cuts` (the far arm is behind the shield), and right after the shield draw "
                    "every earlier slot again clipped to masks.near_arm (the sword arm is in front of the shield). "

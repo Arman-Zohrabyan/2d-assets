@@ -1,0 +1,2 @@
+source/doll_ne/raw/base_idle.png|1536x1024|source/doll_ne/prompts/base_idle.txt|source/doll_ne/raw/seed.png|source/doll_se/raw/seed_iso.png
+source/doll_ne/raw/base_walk.png|1536x1024|source/doll_ne/prompts/base_walk.txt|source/doll_ne/raw/seed.png|source/doll_se/raw/seed_iso.png

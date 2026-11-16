@@ -1,0 +1,4 @@
+source/doll_se/raw/heads2.png|1536x1024|source/doll_se/prompts/heads2.txt|source/doll_se/raw/seed_iso.png|source/doll_se/raw/heads_iso.png|source/doll/raw/heads_sheet.png|source/doll/raw/heads_sheet2.png
+source/doll_s/raw/heads2.png|1536x1024|source/doll_s/prompts/heads2.txt|source/doll_s/raw/seed.png|source/doll_s/raw/heads.png|source/doll/raw/heads_sheet.png|source/doll/raw/heads_sheet2.png
+source/doll_n/raw/heads2.png|1536x1024|source/doll_n/prompts/heads2.txt|source/doll_n/raw/seed.png|source/doll_n/raw/heads.png|source/doll/raw/heads_sheet.png|source/doll/raw/heads_sheet2.png
+source/doll_ne/raw/heads2.png|1536x1024|source/doll_ne/prompts/heads2.txt|source/doll_ne/raw/seed.png|source/doll_ne/raw/heads.png|source/doll/raw/heads_sheet.png|source/doll/raw/heads_sheet2.png

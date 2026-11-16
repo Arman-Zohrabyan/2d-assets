@@ -1,0 +1,7 @@
+ROLE/PURPOSE: head parts for an isometric paper-doll character in a 2D game. They will be placed on top of the body from image 1, so each must match the head on that body EXACTLY in size, angle and camera.
+SUBJECT: two heads, each with a short neck stub, in one horizontal row, evenly spaced and not touching. Copy the head of image 1: the SAME BACK VIEW: the back of the head toward the viewer, symmetrical, BOTH EARS visible, NO face and no eyes, seen from slightly above (isometric camera, about 30 degrees). Drawn at EXACTLY the scale of image 1's head, the same skull. Both neck stubs end on the same horizontal line.
+1) the bald head exactly as in image 1 (skin #e0a77e / #c4835a / #f3c9a4).
+2) the same head in the same view with short dark brown hair (#3b2a20, #57402f, #7a5a40) styled like HEAD A in image 2 (the second head there, seen from the side) and in image 3 (the second head there, seen in three-quarter front view), now seen from BEHIND: the hair covers the whole back of the head down to the nape, the ears and the neck stay visible, no face.
+ART DIRECTION: crisp 16-bit pixel art matching image 1, clean 1-pixel dark navy outline (#1b1f33), flat cel shading, light from the upper left, the same coarse pixel-block size as image 1 scaled up evenly.
+TECHNICAL OUTPUT: wide image, the two heads each about 30% of the image height, transparent background.
+EXCLUDE: text, numbers, labels, bodies, shoulders, ground, shadows, scenery, border, checkerboard pattern, face, eyes, side profile.

@@ -1,0 +1,3 @@
+source/doll_s/raw/seed.png|1024x1024|source/doll_s/prompts/seed.txt|source/doll_se/raw/seed_iso.png|source/doll/seed_approved.png
+source/doll_n/raw/seed.png|1024x1024|source/doll_n/prompts/seed.txt|source/doll_se/raw/seed_iso.png|source/doll/seed_approved.png
+source/doll_ne/raw/seed.png|1024x1024|source/doll_ne/prompts/seed.txt|source/doll_se/raw/seed_iso.png|source/doll/seed_approved.png

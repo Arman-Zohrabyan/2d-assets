@@ -536,7 +536,10 @@ function drawCard(c) {
 
 /* ---------- playground ---------- */
 
-const WORLD = { w: 320, h: 120, ground: 108 };
+// side view: a strip of ground; isometric: a floor the character crosses along the drawn diagonals
+const WORLDS = { side: { w: 320, h: 120, ground: 108 }, iso: { w: 320, h: 180 } };
+let WORLD = WORLDS.side;
+const isIso = () => state.doll?.view === 'isometric';
 const PG_SCALE = 3;
 const pg = {
   canvas: $('#pg-canvas'),
@@ -551,10 +554,61 @@ const pg = {
   walk: 34,
   run: 78,
 };
-pg.buffer.width = WORLD.w;
-pg.buffer.height = WORLD.h;
-pg.canvas.width = WORLD.w * PG_SCALE;
-pg.canvas.height = WORLD.h * PG_SCALE;
+/** Size the scene for the doll's view and put the character back in it. */
+function pgSetup() {
+  WORLD = isIso() ? WORLDS.iso : WORLDS.side;
+  for (const [c, k] of [[pg.buffer, 1], [pg.canvas, PG_SCALE]]) { c.width = WORLD.w * k; c.height = WORLD.h * k; }
+  pg.bg = document.createElement('canvas');
+  pg.bg.width = WORLD.w;
+  pg.bg.height = WORLD.h;
+  {
+    const ctx = pg.bg.getContext('2d');
+    if (isIso()) {
+      // an isometric floor: grass with a 2:1 diamond grid (tiles 32 x 16)
+      ctx.fillStyle = '#5c8f4a';
+      ctx.fillRect(0, 0, WORLD.w, WORLD.h);
+      ctx.fillStyle = '#4f8240';
+      for (let k = -WORLD.h * 2; k < WORLD.w + WORLD.h * 2; k += 32) {
+        for (let x = 0; x < WORLD.w; x++) {
+          const y1 = Math.round((x - k) / 2), y2 = Math.round((k - x) / 2 + WORLD.h);
+          if (y1 >= 0 && y1 < WORLD.h) ctx.fillRect(x, y1, 1, 1);
+          if (y2 >= 0 && y2 < WORLD.h) ctx.fillRect(x, y2, 1, 1);
+        }
+      }
+    } else {
+      ctx.fillStyle = '#8fbbe3';
+      ctx.fillRect(0, 0, WORLD.w, WORLD.h);
+      ctx.fillStyle = '#5c8f4a';
+      ctx.fillRect(0, WORLD.ground - 20, WORLD.w, 20);
+      ctx.fillStyle = '#4f9a3f';
+      ctx.fillRect(0, WORLD.ground, WORLD.w, 3);
+      ctx.fillStyle = '#7a5534';
+      ctx.fillRect(0, WORLD.ground + 3, WORLD.w, WORLD.h - WORLD.ground - 3);
+    }
+  }
+  pg.x = 80;
+  pg.y = isIso() ? 90 : WORLD.ground;
+  pg.facing = 1;
+  // the isometric scene starts facing the way the chosen doll faces
+  pg.dir = Object.keys(DIRS).find((d) => !DIRS[d].flip && DIRS[d].facing === state.doll?.facing) ?? 'E';
+  $('#pg-hint').textContent = isIso()
+    ? 'click the scene: W A S D (or the arrows) walk in 8 directions: A / D alone side view, S toward you, W away, S + A / S + D and W + A / W + D the diagonals; Shift run, Space attack (side view), Q switch weapon'
+    : 'click the scene: ←→ / A D walk, Shift run, Space attack with the weapon, Q switch weapon';
+}
+
+// the eight directions of the isometric scene: the doll drawn facing that way (`flip` = its mirror), the screen
+// motion per unit of speed (2:1 diagonals) and the directions to fall back to when that doll is not built
+const DIRS = {
+  E: { facing: 'right', flip: false, v: [1, 0], name: 'east', alt: ['SE'] },
+  W: { facing: 'right', flip: true, v: [-1, 0], name: 'west', alt: ['SW'] },
+  SE: { facing: 'south-east', flip: false, v: [1, 0.5], name: 'south-east', alt: ['S', 'E'] },
+  SW: { facing: 'south-east', flip: true, v: [-1, 0.5], name: 'south-west', alt: ['S', 'W'] },
+  S: { facing: 'south', flip: false, v: [0, 0.6], name: 'south', alt: ['SE', 'E'] },
+  N: { facing: 'north', flip: false, v: [0, -0.6], name: 'north', alt: ['NE', 'E'] },
+  NE: { facing: 'north-east', flip: false, v: [1, -0.5], name: 'north-east', alt: ['N', 'E'] },
+  NW: { facing: 'north-east', flip: true, v: [-1, -0.5], name: 'north-west', alt: ['N', 'W'] },
+};
+pgSetup();
 
 function weaponCycle() {
   return [null, ...(state.doll.slots.find((s) => s.id === 'weapon')?.items.map((i) => i.id) ?? [])];
@@ -564,71 +618,118 @@ function attackAnim() {
   return id ? animDef(id) : null;
 }
 
+/** Run `fn` with another doll as the current one (the playground mixes the side and the isometric doll). */
+function withDoll(doll, fn) {
+  const prev = state.doll;
+  state.doll = doll;
+  try { return fn(); } finally { state.doll = prev; }
+}
+
+/** The doll drawn for a direction of the isometric scene (or the nearest direction that is built). */
+function dirView(dir) {
+  for (const d of [dir, ...DIRS[dir].alt]) {
+    const doll = state.dirDolls?.[DIRS[d].facing];
+    if (doll) return { doll, flip: DIRS[d].flip, dir: d };
+  }
+  return { doll: state.doll, flip: false, dir };
+}
+
+/** The doll and mirroring the playground character is drawn with: in the isometric scene the doll of its
+ *  direction, in the side scene the chosen doll turned left or right. */
+function pgView() {
+  return isIso() ? dirView(pg.dir) : { doll: state.doll, flip: pg.facing < 0, dir: pg.facing < 0 ? 'W' : 'E' };
+}
+
 function pgUpdate(dt) {
   if (!state.doll) return;
   const left = pg.keys.has('ArrowLeft') || pg.keys.has('KeyA');
   const right = pg.keys.has('ArrowRight') || pg.keys.has('KeyD');
+  const up = pg.keys.has('ArrowUp') || pg.keys.has('KeyW');
+  const down = pg.keys.has('ArrowDown') || pg.keys.has('KeyS');
+  const iso = isIso(); // the scene's doll; inside withDoll() the side doll may stand in for it
   const dx = (right ? 1 : 0) - (left ? 1 : 0);
+  const dy = iso ? (down ? 1 : 0) - (up ? 1 : 0) : 0; // the side scene only walks left and right
   const running = pg.keys.has('ShiftLeft') || pg.keys.has('ShiftRight');
-  let anim;
-  if (pg.attack) {
-    anim = animDef(pg.attack);
-  } else {
+  const moving = !!(dx || dy);
+  if (!pg.attack && moving) {
     if (dx) pg.facing = dx;
-    const next = dx ? (running ? 'run' : 'walk') : 'idle';
-    if (next !== pg.action && !(['walk', 'run'].includes(next) && ['walk', 'run'].includes(pg.action))) {
-      pg.frame = 0;
-      pg.acc = 0;
-    }
-    pg.action = next;
-    pg.x += dx * (running ? pg.run : pg.walk) * dt * state.speed;
-    if (pg.x < -30) pg.x = WORLD.w + 30;
-    if (pg.x > WORLD.w + 30) pg.x = -30;
-    anim = animDef(pg.action);
-  }
-  pg.acc += dt * state.speed;
-  const d = 1 / anim.fps;
-  while (pg.acc >= d) {
-    pg.acc -= d;
-    pg.frame += 1;
-    if (pg.frame >= anim.frames) {
-      if (pg.attack) { pg.attack = null; pg.action = 'idle'; pg.frame = 0; anim = animDef('idle'); }
-      else pg.frame = 0;
+    const dir = (dy > 0 ? 'S' : dy < 0 ? 'N' : '') + (dx > 0 ? 'E' : dx < 0 ? 'W' : '');
+    if (iso && dir !== pg.dir) {
+      const before = dirView(pg.dir).doll;
+      pg.dir = dir;
+      if (dirView(dir).doll !== before) { pg.frame = 0; pg.acc = 0; }
     }
   }
-  pg.anim = anim;
-  const shield = allowed(state.doll.slots.find((s) => s.id === 'shield') ?? {}) ? slotItem('shield')?.label : null;
-  $('#pg-status').textContent = `${anim.label} · frame ${pg.frame + 1}/${anim.frames} · weapon: ${
-    slotItem('weapon')?.label ?? 'none'}${shield ? ` · shield: ${shield}` : ''}`;
+  const view = pgView();
+  withDoll(view.doll, () => {
+    let anim;
+    if (pg.attack) {
+      anim = animDef(pg.attack);
+    } else {
+      const next = moving ? (running && animDef('run') ? 'run' : 'walk') : 'idle';
+      if (next !== pg.action && !(['walk', 'run'].includes(next) && ['walk', 'run'].includes(pg.action))) {
+        pg.frame = 0;
+        pg.acc = 0;
+      }
+      pg.action = next;
+      if (moving) {
+        const speed = (running ? pg.run : pg.walk) * dt * state.speed;
+        const [vx, vy] = iso ? DIRS[pg.dir].v : [dx, 0];
+        pg.x += vx * speed;
+        pg.y += vy * speed;
+      }
+      if (pg.x < -30) pg.x = WORLD.w + 30;
+      if (pg.x > WORLD.w + 30) pg.x = -30;
+      if (iso && pg.y > WORLD.h + 10) pg.y = 40; // off the bottom: in again at the top, and the other way
+      if (iso && pg.y < 30) pg.y = WORLD.h + 8;
+      anim = animDef(pg.action) ?? animDef('idle');
+    }
+    if (pg.frame >= anim.frames) pg.frame = 0;
+    pg.acc += dt * state.speed;
+    const d = 1 / anim.fps;
+    while (pg.acc >= d) {
+      pg.acc -= d;
+      pg.frame += 1;
+      if (pg.frame >= anim.frames) {
+        if (pg.attack) { pg.attack = null; pg.action = 'idle'; pg.frame = 0; anim = animDef('idle'); }
+        else pg.frame = 0;
+      }
+    }
+    pg.anim = anim;
+    const shield = allowed(state.doll.slots.find((s) => s.id === 'shield') ?? {}) ? slotItem('shield')?.label : null;
+    $('#pg-status').textContent = `${iso ? `${DIRS[pg.dir].name}${view.dir !== pg.dir ? ` (as ${DIRS[view.dir].name})` : ''} · ` : ''}${anim.label} · frame ${
+      pg.frame + 1}/${anim.frames} · weapon: ${slotItem('weapon')?.label ?? 'none'}${shield ? ` · shield: ${shield}` : ''}`;
+  });
 }
 
 function pgDraw() {
   if (!state.doll || !pg.anim) return;
   const ctx = pg.buffer.getContext('2d');
   ctx.imageSmoothingEnabled = false;
-  ctx.fillStyle = '#8fbbe3';
-  ctx.fillRect(0, 0, WORLD.w, WORLD.h);
-  ctx.fillStyle = '#5c8f4a';
-  ctx.fillRect(0, WORLD.ground - 20, WORLD.w, 20);
-  ctx.fillStyle = '#4f9a3f';
-  ctx.fillRect(0, WORLD.ground, WORLD.w, 3);
-  ctx.fillStyle = '#7a5534';
-  ctx.fillRect(0, WORLD.ground + 3, WORLD.w, WORLD.h - WORLD.ground - 3);
-  const { x: px, y: py } = state.doll.pivot;
-  const flip = pg.facing < 0;
-  const [fw] = state.doll.frame_size;
-  const left = Math.round(pg.x - (flip ? fw - px : px));
-  drawLayers(ctx, layersFor(pg.anim.id), pg.frame, left, WORLD.ground - py, 1, flip);
+  ctx.drawImage(pg.bg, 0, 0);
+  const view = pgView();
+  withDoll(view.doll, () => {
+    const { x: px, y: py } = state.doll.pivot;
+    const flip = view.flip;
+    const [fw] = state.doll.frame_size;
+    const left = Math.round(pg.x - (flip ? fw - px : px));
+    drawLayers(ctx, layersFor(pg.anim.id), pg.frame, left, Math.round(pg.y) - py, 1, flip);
+  });
   const out = pg.canvas.getContext('2d');
   out.imageSmoothingEnabled = false;
   out.drawImage(pg.buffer, 0, 0, pg.canvas.width, pg.canvas.height);
 }
 
-const PG_KEYS = new Set(['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'KeyA', 'KeyD', 'ShiftLeft', 'ShiftRight', 'Space', 'KeyQ']);
+const PG_KEYS = new Set(['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'KeyA', 'KeyD', 'KeyS', 'KeyW', 'ShiftLeft', 'ShiftRight', 'Space', 'KeyQ']);
 pg.canvas.addEventListener('keydown', (e) => {
   if (PG_KEYS.has(e.code)) e.preventDefault();
   if (e.code === 'Space' && !e.repeat && !pg.attack) {
-    const a = attackAnim();
+    let a = withDoll(pgView().doll, attackAnim);
+    if (!a && isIso()) { // attacks are drawn in the side view only: turn to the last side the character faced
+      const side = pg.facing < 0 ? 'W' : 'E';
+      a = withDoll(dirView(side).doll, attackAnim);
+      if (a) pg.dir = side;
+    }
     if (a) { pg.attack = a.id; pg.frame = 0; pg.acc = 0; }
   }
   if (e.code === 'KeyQ' && !e.repeat) {
@@ -686,16 +787,38 @@ async function load() {
     if (!res.ok) throw new Error(`/api/dolls: HTTP ${res.status}`);
     const dolls = await res.json();
     if (!dolls.length) throw new Error('no doll.json under assets/ — run tools/doll.py');
-    state.doll = dolls[0];
-    await preload(state.doll);
+    // several dolls (e.g. side view and isometric): a picker in the top bar
+    const pick = $('#doll');
+    pick.textContent = '';
+    for (const d of dolls) pick.append(new Option(d.label ?? (d.view && d.view !== 'side' ? `${d.id} (${d.view})` : d.id), d.id));
+    $('#doll-pick').hidden = dolls.length < 2;
+    state.doll = dolls.find((d) => d.id === state.dollId) ?? dolls[0];
+    state.dollId = state.doll.id;
+    // one doll per drawn direction (facing): the isometric playground walks with all of them
+    state.dirDolls = {};
+    for (const d of dolls) state.dirDolls[d.facing ?? 'right'] ??= d;
+    pick.value = state.dollId;
+    await Promise.all(dolls.map(preload));
   } catch (e) {
     error.textContent = `Could not load the doll: ${e.message}`;
     error.hidden = false;
     return;
   }
-  const keep = Object.keys(state.sel).length ? { ...state.sel } : PRESETS.Knight;
+  const keep = Object.keys(state.sel).length
+    ? Object.fromEntries(Object.entries(state.sel).map(([k, v]) => [k, state.mat[k] ? `${v}@${state.mat[k]}` : v]))
+    : PRESETS.Knight;
   renderEquipment();
-  applyOutfit(keep);
+  applyOutfit(keep); // pieces this doll does not have are simply left off
+  pgSetup();
+  pg.attack = null;
+  pg.action = 'idle';
+  pg.frame = 0;
 }
+
+$('#doll').addEventListener('change', (e) => {
+  state.dollId = e.target.value;
+  state.view = 'idle';
+  load();
+});
 
 load().then(() => requestAnimationFrame(tick));
