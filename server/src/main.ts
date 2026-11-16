@@ -1,3 +1,4 @@
+import './env'; // first: settings from server/.env before anything reads process.env
 import 'reflect-metadata';
 import { NestFactory } from '@nestjs/core';
 import { NestExpressApplication } from '@nestjs/platform-express';
@@ -11,8 +12,9 @@ async function bootstrap(): Promise<void> {
   app.useStaticAssets(PUBLIC_DIR);
 
   const port = Number(process.env.PORT ?? 3000);
-  await app.listen(port, '127.0.0.1');
-  console.log(`Sprite viewer: http://127.0.0.1:${port}  (assets: ${ASSETS_DIR})`);
+  const host = process.env.HOST ?? '127.0.0.1';
+  await app.listen(port, host);
+  console.log(`Sprite viewer: http://${host}:${port}  (assets: ${ASSETS_DIR})`);
 }
 
 void bootstrap();

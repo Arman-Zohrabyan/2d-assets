@@ -7,9 +7,12 @@ on its own layer, plus a NestJS viewer to look at any combination.
 
 ```bash
 cd server
-npm install        # first time only
-npm start          # builds with tsc, then serves http://127.0.0.1:3000
+cp .env.example .env   # first time only: PORT, HOST, ASSETS_DIR
+npm install            # first time only
+npm start              # builds with tsc, then serves http://HOST:PORT (default http://127.0.0.1:3000)
 ```
+
+`server/.env` is not committed; variables set in the shell override it (`PORT=4000 npm start`).
 
 The page has an equipment panel (presets: Манекен, Рыцарь, Паладин, Лучник, Наёмник, Алебардщик, Страж, Охотница,
 Случайно; under every armour piece: ready materials, a colour picker for any material colour, and × for the piece
