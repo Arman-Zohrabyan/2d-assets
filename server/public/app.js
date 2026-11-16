@@ -2,14 +2,14 @@
 
 // `shape@material` picks a material version of a piece (e.g. plate@gold); without it the piece is as drawn
 const PRESETS = {
-  'Манекен': { head: 'a' },
-  'Рыцарь': { head: 'a', headgear: 'knight', chest: 'plate', shoulders: 'bands', greaves: 'plate', bracers: 'full', cloak: 'red', skirt: 'blue', shield: 'heater', weapon: 'sword1h' },
-  'Паладин': { head: 'b', headgear: 'knight@gold', chest: 'plate@gold', shoulders: 'layered', greaves: 'plate@gold', bracers: 'full@gold', cloak: 'blue', skirt: 'red', shield: 'heater', weapon: 'sword1h' },
-  'Лучник': { head: 'b', headgear: 'archer', pants: 'green', chest: 'riveted', greaves: 'boots', bracers: 'forearm@leather', cloak: 'green', weapon: 'bow' },
-  'Наёмник': { head: 'b', pants: 'leather', chest: 'mail', shoulders: 'layered@steel', greaves: 'plate', bracers: 'elbow', weapon: 'sword2h' },
-  'Алебардщик': { head: 'a', headgear: 'nasal@copper', pants: 'blue', chest: 'mail@copper', shoulders: 'round@copper', greaves: 'cuffed', bracers: 'forearm@copper', weapon: 'halberd' },
-  'Страж': { head: 'c', headgear: 'nasal', pants: 'blue', chest: 'brigandine', shoulders: 'round', greaves: 'cuffed', bracers: 'forearm', cloak: 'blue', shield: 'round', weapon: 'falchion' },
-  'Охотница': { head: 'c', headgear: 'archer@silver', pants: 'green', chest: 'riveted', greaves: 'boots', bracers: 'wrist@silver', cloak: 'green', weapon: 'bow_dark' },
+  Mannequin: { head: 'a' },
+  Knight: { head: 'a', headgear: 'knight', chest: 'plate', shoulders: 'bands', greaves: 'plate', bracers: 'full', cloak: 'red', skirt: 'blue', shield: 'heater', weapon: 'sword1h' },
+  Paladin: { head: 'b', headgear: 'knight@gold', chest: 'plate@gold', shoulders: 'layered', greaves: 'plate@gold', bracers: 'full@gold', cloak: 'blue', skirt: 'red', shield: 'heater', weapon: 'sword1h' },
+  Archer: { head: 'b', headgear: 'archer', pants: 'green', chest: 'riveted', greaves: 'boots', bracers: 'forearm@leather', cloak: 'green', weapon: 'bow' },
+  Mercenary: { head: 'b', pants: 'leather', chest: 'mail', shoulders: 'layered@steel', greaves: 'plate', bracers: 'elbow', weapon: 'sword2h' },
+  Halberdier: { head: 'a', headgear: 'nasal@copper', pants: 'blue', chest: 'mail@copper', shoulders: 'round@copper', greaves: 'cuffed', bracers: 'forearm@copper', weapon: 'halberd' },
+  Guard: { head: 'c', headgear: 'nasal', pants: 'blue', chest: 'brigandine', shoulders: 'round', greaves: 'cuffed', bracers: 'forearm', cloak: 'blue', shield: 'round', weapon: 'falchion' },
+  Huntress: { head: 'c', headgear: 'archer@silver', pants: 'green', chest: 'riveted', greaves: 'boots', bracers: 'wrist@silver', cloak: 'green', weapon: 'bow_dark' },
 };
 
 /** Animation tabs: the movement animations, plus one attack that follows the weapon (none without a weapon). */
@@ -44,7 +44,7 @@ function loadImage(src) {
     images.set(key, new Promise((resolve, reject) => {
       const img = new Image();
       img.onload = () => resolve(img);
-      img.onerror = () => reject(new Error(`Не загрузилось: ${src}`));
+      img.onerror = () => reject(new Error(`Failed to load: ${src}`));
       img.src = key;
     }));
   }
@@ -255,7 +255,7 @@ function renderEquipment() {
   }
   const random = document.createElement('button');
   random.type = 'button';
-  random.textContent = 'Случайно';
+  random.textContent = 'Random';
   random.addEventListener('click', () => {
     const outfit = {};
     for (const slot of state.doll.slots) {
@@ -288,7 +288,7 @@ function renderEquipment() {
     label.htmlFor = `slot-${slot.id}`;
     const select = document.createElement('select');
     select.id = `slot-${slot.id}`;
-    if (!slot.required) select.append(new Option('— нет —', ''));
+    if (!slot.required) select.append(new Option('— none —', ''));
     for (const item of slot.items) select.append(new Option(item.label, item.id));
     select.value = state.sel[slot.id] ?? '';
     select.addEventListener('change', () => {
@@ -315,13 +315,13 @@ function renderEquipment() {
       }
       const pick = document.createElement('input');
       pick.type = 'color';
-      pick.title = 'Любой цвет материала';
+      pick.title = 'Any material colour';
       pick.addEventListener('input', () => { state.mat[slot.id] = pick.value; onOutfitChanged(); });
       const reset = document.createElement('button');
       reset.type = 'button';
       reset.className = 'mat-reset';
       reset.textContent = '×';
-      reset.title = 'Как нарисовано';
+      reset.title = 'As drawn';
       reset.addEventListener('click', () => { state.mat[slot.id] = null; onOutfitChanged(); });
       const name = document.createElement('span');
       name.className = 'hint mat-name';
@@ -335,7 +335,7 @@ function renderEquipment() {
       const hint = document.createElement('span');
       hint.className = 'hint slot-hint';
       hint.id = `hint-${slot.id}`;
-      hint.textContent = 'только с одноручным оружием';
+      hint.textContent = 'one-handed weapons only';
       row.append(hint);
     }
     root.append(row);
@@ -371,7 +371,7 @@ function renderMaterials() {
     pick.classList.toggle('on', Boolean(choice?.startsWith('#')));
     pick.value = choice?.startsWith('#') ? choice : (rampOf(choice) ?? [0, 0, '#808080'])[2];
     const names = state.doll.materials ?? {};
-    box.querySelector('.mat-name').textContent = !on ? '' : !choice ? (names[item.material]?.label ?? 'как нарисовано')
+    box.querySelector('.mat-name').textContent = !on ? '' : !choice ? (names[item.material]?.label ?? 'as drawn')
       : choice.startsWith('#') ? choice : names[choice]?.label ?? choice;
   }
 }
@@ -414,7 +414,7 @@ function viewList() {
 function viewLabel(v) {
   if (v.view !== ATTACK) return v.anim.label;
   const w = slotItem('weapon')?.label?.split(' (')[0];
-  return w ? `Атака: ${w.toLowerCase()}` : v.anim.label;
+  return w ? `Attack: ${w.toLowerCase()}` : v.anim.label;
 }
 
 /** The attack tab follows the weapon: another weapon kind switches it, no weapon falls back to idle. */
@@ -435,7 +435,7 @@ function renderAnimTabs() {
     b.type = 'button';
     b.textContent = viewLabel(v);
     b.classList.toggle('on', v.view === state.view);
-    if (v.view === ATTACK) b.title = `Атака выбранного оружия: ${slotItem('weapon')?.label}`;
+    if (v.view === ATTACK) b.title = `Attack of the equipped weapon: ${slotItem('weapon')?.label}`;
     b.addEventListener('click', () => {
       state.view = v.view;
       syncAnim();
@@ -460,7 +460,7 @@ function drawMain() {
   drawLayers(ctx, layers.filter((l) => !state.hidden.has(l.slot.id)), state.frame, 0, 0, s, state.flip);
   if (state.guides) drawGuides(ctx, s, state.flip);
   const a = animDef(state.anim);
-  $('#frame-no').textContent = `${a.label} · кадр ${state.frame + 1} / ${a.frames} · ${a.fps} fps`;
+  $('#frame-no').textContent = `${a.label} · frame ${state.frame + 1} / ${a.frames} · ${a.fps} fps`;
   document.querySelector('[data-act="play"]').textContent = state.playing ? '❚❚' : '▶';
   document.querySelector('[data-act="flip"]').classList.toggle('on', state.flip);
   drawLayerStrip(layers);
@@ -518,7 +518,7 @@ function renderGrid() {
     card.className = 'card';
     card.innerHTML = '<div class="stage"><canvas></canvas></div><div class="title"><span></span><span class="meta"></span></div>';
     card.querySelector('.title span').textContent = viewLabel(v);
-    card.querySelector('.meta').textContent = `${a.frames} кадров · ${a.fps} fps`;
+    card.querySelector('.meta').textContent = `${a.frames} frames · ${a.fps} fps`;
     const canvas = card.querySelector('canvas');
     canvas.width = fw * 2;
     canvas.height = fh * 2;
@@ -598,8 +598,8 @@ function pgUpdate(dt) {
   }
   pg.anim = anim;
   const shield = allowed(state.doll.slots.find((s) => s.id === 'shield') ?? {}) ? slotItem('shield')?.label : null;
-  $('#pg-status').textContent = `${anim.label} · кадр ${pg.frame + 1}/${anim.frames} · оружие: ${
-    slotItem('weapon')?.label ?? 'нет'}${shield ? ` · щит: ${shield}` : ''}`;
+  $('#pg-status').textContent = `${anim.label} · frame ${pg.frame + 1}/${anim.frames} · weapon: ${
+    slotItem('weapon')?.label ?? 'none'}${shield ? ` · shield: ${shield}` : ''}`;
 }
 
 function pgDraw() {
@@ -685,15 +685,15 @@ async function load() {
     const res = await fetch('/api/dolls', { cache: 'no-store' });
     if (!res.ok) throw new Error(`/api/dolls: HTTP ${res.status}`);
     const dolls = await res.json();
-    if (!dolls.length) throw new Error('в assets/ нет ни одного doll.json — запусти tools/doll.py');
+    if (!dolls.length) throw new Error('no doll.json under assets/ — run tools/doll.py');
     state.doll = dolls[0];
     await preload(state.doll);
   } catch (e) {
-    error.textContent = `Не удалось загрузить манекен: ${e.message}`;
+    error.textContent = `Could not load the doll: ${e.message}`;
     error.hidden = false;
     return;
   }
-  const keep = Object.keys(state.sel).length ? { ...state.sel } : PRESETS['Рыцарь'];
+  const keep = Object.keys(state.sel).length ? { ...state.sel } : PRESETS.Knight;
   renderEquipment();
   applyOutfit(keep);
 }

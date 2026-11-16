@@ -5,7 +5,7 @@
   "assets": [
     {
       "id": "body-base-idle",
-      "role": "paper-doll layer: Тело / Манекен / idle",
+      "role": "paper-doll layer: Body / Mannequin / idle",
       "path": "assets/doll/body/idle.png",
       "status": "test",
       "technical": {
@@ -47,7 +47,7 @@
     },
     {
       "id": "body-base-walk",
-      "role": "paper-doll layer: Тело / Манекен / walk",
+      "role": "paper-doll layer: Body / Mannequin / walk",
       "path": "assets/doll/body/walk.png",
       "status": "test",
       "technical": {
@@ -89,7 +89,7 @@
     },
     {
       "id": "body-base-run",
-      "role": "paper-doll layer: Тело / Манекен / run",
+      "role": "paper-doll layer: Body / Mannequin / run",
       "path": "assets/doll/body/run.png",
       "status": "test",
       "technical": {
@@ -131,7 +131,7 @@
     },
     {
       "id": "body-base-attack_sword1h",
-      "role": "paper-doll layer: Тело / Манекен / attack_sword1h",
+      "role": "paper-doll layer: Body / Mannequin / attack_sword1h",
       "path": "assets/doll/body/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -173,7 +173,7 @@
     },
     {
       "id": "body-base-attack_sword2h",
-      "role": "paper-doll layer: Тело / Манекен / attack_sword2h",
+      "role": "paper-doll layer: Body / Mannequin / attack_sword2h",
       "path": "assets/doll/body/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -215,7 +215,7 @@
     },
     {
       "id": "body-base-attack_bow",
-      "role": "paper-doll layer: Тело / Манекен / attack_bow",
+      "role": "paper-doll layer: Body / Mannequin / attack_bow",
       "path": "assets/doll/body/attack_bow.png",
       "status": "test",
       "technical": {
@@ -257,7 +257,7 @@
     },
     {
       "id": "pants-green-idle",
-      "role": "paper-doll layer: Штаны / Зелёные шерстяные штаны / idle",
+      "role": "paper-doll layer: Pants / Green wool pants / idle",
       "path": "assets/doll/layers/pants/green/idle.png",
       "status": "test",
       "technical": {
@@ -299,7 +299,7 @@
     },
     {
       "id": "pants-green-walk",
-      "role": "paper-doll layer: Штаны / Зелёные шерстяные штаны / walk",
+      "role": "paper-doll layer: Pants / Green wool pants / walk",
       "path": "assets/doll/layers/pants/green/walk.png",
       "status": "test",
       "technical": {
@@ -341,7 +341,7 @@
     },
     {
       "id": "pants-green-run",
-      "role": "paper-doll layer: Штаны / Зелёные шерстяные штаны / run",
+      "role": "paper-doll layer: Pants / Green wool pants / run",
       "path": "assets/doll/layers/pants/green/run.png",
       "status": "test",
       "technical": {
@@ -383,7 +383,7 @@
     },
     {
       "id": "pants-green-attack_sword1h",
-      "role": "paper-doll layer: Штаны / Зелёные шерстяные штаны / attack_sword1h",
+      "role": "paper-doll layer: Pants / Green wool pants / attack_sword1h",
       "path": "assets/doll/layers/pants/green/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -425,7 +425,7 @@
     },
     {
       "id": "pants-green-attack_sword2h",
-      "role": "paper-doll layer: Штаны / Зелёные шерстяные штаны / attack_sword2h",
+      "role": "paper-doll layer: Pants / Green wool pants / attack_sword2h",
       "path": "assets/doll/layers/pants/green/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -467,7 +467,7 @@
     },
     {
       "id": "pants-green-attack_bow",
-      "role": "paper-doll layer: Штаны / Зелёные шерстяные штаны / attack_bow",
+      "role": "paper-doll layer: Pants / Green wool pants / attack_bow",
       "path": "assets/doll/layers/pants/green/attack_bow.png",
       "status": "test",
       "technical": {
@@ -509,7 +509,7 @@
     },
     {
       "id": "pants-blue-idle",
-      "role": "paper-doll layer: Штаны / Синие штаны / idle",
+      "role": "paper-doll layer: Pants / Blue pants / idle",
       "path": "assets/doll/layers/pants/blue/idle.png",
       "status": "test",
       "technical": {
@@ -551,7 +551,7 @@
     },
     {
       "id": "pants-blue-walk",
-      "role": "paper-doll layer: Штаны / Синие штаны / walk",
+      "role": "paper-doll layer: Pants / Blue pants / walk",
       "path": "assets/doll/layers/pants/blue/walk.png",
       "status": "test",
       "technical": {
@@ -593,7 +593,7 @@
     },
     {
       "id": "pants-blue-run",
-      "role": "paper-doll layer: Штаны / Синие штаны / run",
+      "role": "paper-doll layer: Pants / Blue pants / run",
       "path": "assets/doll/layers/pants/blue/run.png",
       "status": "test",
       "technical": {
@@ -635,7 +635,7 @@
     },
     {
       "id": "pants-blue-attack_sword1h",
-      "role": "paper-doll layer: Штаны / Синие штаны / attack_sword1h",
+      "role": "paper-doll layer: Pants / Blue pants / attack_sword1h",
       "path": "assets/doll/layers/pants/blue/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -677,7 +677,7 @@
     },
     {
       "id": "pants-blue-attack_sword2h",
-      "role": "paper-doll layer: Штаны / Синие штаны / attack_sword2h",
+      "role": "paper-doll layer: Pants / Blue pants / attack_sword2h",
       "path": "assets/doll/layers/pants/blue/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -719,7 +719,7 @@
     },
     {
       "id": "pants-blue-attack_bow",
-      "role": "paper-doll layer: Штаны / Синие штаны / attack_bow",
+      "role": "paper-doll layer: Pants / Blue pants / attack_bow",
       "path": "assets/doll/layers/pants/blue/attack_bow.png",
       "status": "test",
       "technical": {
@@ -761,7 +761,7 @@
     },
     {
       "id": "pants-leather-idle",
-      "role": "paper-doll layer: Штаны / Тёмные кожаные штаны / idle",
+      "role": "paper-doll layer: Pants / Dark leather pants / idle",
       "path": "assets/doll/layers/pants/leather/idle.png",
       "status": "test",
       "technical": {
@@ -803,7 +803,7 @@
     },
     {
       "id": "pants-leather-walk",
-      "role": "paper-doll layer: Штаны / Тёмные кожаные штаны / walk",
+      "role": "paper-doll layer: Pants / Dark leather pants / walk",
       "path": "assets/doll/layers/pants/leather/walk.png",
       "status": "test",
       "technical": {
@@ -845,7 +845,7 @@
     },
     {
       "id": "pants-leather-run",
-      "role": "paper-doll layer: Штаны / Тёмные кожаные штаны / run",
+      "role": "paper-doll layer: Pants / Dark leather pants / run",
       "path": "assets/doll/layers/pants/leather/run.png",
       "status": "test",
       "technical": {
@@ -887,7 +887,7 @@
     },
     {
       "id": "pants-leather-attack_sword1h",
-      "role": "paper-doll layer: Штаны / Тёмные кожаные штаны / attack_sword1h",
+      "role": "paper-doll layer: Pants / Dark leather pants / attack_sword1h",
       "path": "assets/doll/layers/pants/leather/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -929,7 +929,7 @@
     },
     {
       "id": "pants-leather-attack_sword2h",
-      "role": "paper-doll layer: Штаны / Тёмные кожаные штаны / attack_sword2h",
+      "role": "paper-doll layer: Pants / Dark leather pants / attack_sword2h",
       "path": "assets/doll/layers/pants/leather/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -971,7 +971,7 @@
     },
     {
       "id": "pants-leather-attack_bow",
-      "role": "paper-doll layer: Штаны / Тёмные кожаные штаны / attack_bow",
+      "role": "paper-doll layer: Pants / Dark leather pants / attack_bow",
       "path": "assets/doll/layers/pants/leather/attack_bow.png",
       "status": "test",
       "technical": {
@@ -1013,7 +1013,7 @@
     },
     {
       "id": "cloak-red-idle",
-      "role": "paper-doll layer: Плащ / Красный плащ / idle",
+      "role": "paper-doll layer: Cloak / Red cloak / idle",
       "path": "assets/doll/layers/cloak/red/idle.png",
       "status": "test",
       "technical": {
@@ -1057,7 +1057,7 @@
     },
     {
       "id": "cloak-red-walk",
-      "role": "paper-doll layer: Плащ / Красный плащ / walk",
+      "role": "paper-doll layer: Cloak / Red cloak / walk",
       "path": "assets/doll/layers/cloak/red/walk.png",
       "status": "test",
       "technical": {
@@ -1101,7 +1101,7 @@
     },
     {
       "id": "cloak-red-run",
-      "role": "paper-doll layer: Плащ / Красный плащ / run",
+      "role": "paper-doll layer: Cloak / Red cloak / run",
       "path": "assets/doll/layers/cloak/red/run.png",
       "status": "test",
       "technical": {
@@ -1145,7 +1145,7 @@
     },
     {
       "id": "cloak-red-attack_sword1h",
-      "role": "paper-doll layer: Плащ / Красный плащ / attack_sword1h",
+      "role": "paper-doll layer: Cloak / Red cloak / attack_sword1h",
       "path": "assets/doll/layers/cloak/red/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -1189,7 +1189,7 @@
     },
     {
       "id": "cloak-red-attack_sword2h",
-      "role": "paper-doll layer: Плащ / Красный плащ / attack_sword2h",
+      "role": "paper-doll layer: Cloak / Red cloak / attack_sword2h",
       "path": "assets/doll/layers/cloak/red/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -1233,7 +1233,7 @@
     },
     {
       "id": "cloak-red-attack_bow",
-      "role": "paper-doll layer: Плащ / Красный плащ / attack_bow",
+      "role": "paper-doll layer: Cloak / Red cloak / attack_bow",
       "path": "assets/doll/layers/cloak/red/attack_bow.png",
       "status": "test",
       "technical": {
@@ -1277,7 +1277,7 @@
     },
     {
       "id": "cloak-green-idle",
-      "role": "paper-doll layer: Плащ / Зелёный плащ / idle",
+      "role": "paper-doll layer: Cloak / Green cloak / idle",
       "path": "assets/doll/layers/cloak/green/idle.png",
       "status": "test",
       "technical": {
@@ -1321,7 +1321,7 @@
     },
     {
       "id": "cloak-green-walk",
-      "role": "paper-doll layer: Плащ / Зелёный плащ / walk",
+      "role": "paper-doll layer: Cloak / Green cloak / walk",
       "path": "assets/doll/layers/cloak/green/walk.png",
       "status": "test",
       "technical": {
@@ -1365,7 +1365,7 @@
     },
     {
       "id": "cloak-green-run",
-      "role": "paper-doll layer: Плащ / Зелёный плащ / run",
+      "role": "paper-doll layer: Cloak / Green cloak / run",
       "path": "assets/doll/layers/cloak/green/run.png",
       "status": "test",
       "technical": {
@@ -1409,7 +1409,7 @@
     },
     {
       "id": "cloak-green-attack_sword1h",
-      "role": "paper-doll layer: Плащ / Зелёный плащ / attack_sword1h",
+      "role": "paper-doll layer: Cloak / Green cloak / attack_sword1h",
       "path": "assets/doll/layers/cloak/green/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -1453,7 +1453,7 @@
     },
     {
       "id": "cloak-green-attack_sword2h",
-      "role": "paper-doll layer: Плащ / Зелёный плащ / attack_sword2h",
+      "role": "paper-doll layer: Cloak / Green cloak / attack_sword2h",
       "path": "assets/doll/layers/cloak/green/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -1497,7 +1497,7 @@
     },
     {
       "id": "cloak-green-attack_bow",
-      "role": "paper-doll layer: Плащ / Зелёный плащ / attack_bow",
+      "role": "paper-doll layer: Cloak / Green cloak / attack_bow",
       "path": "assets/doll/layers/cloak/green/attack_bow.png",
       "status": "test",
       "technical": {
@@ -1541,7 +1541,7 @@
     },
     {
       "id": "cloak-blue-idle",
-      "role": "paper-doll layer: Плащ / Синий плащ / idle",
+      "role": "paper-doll layer: Cloak / Blue cloak / idle",
       "path": "assets/doll/layers/cloak/blue/idle.png",
       "status": "test",
       "technical": {
@@ -1585,7 +1585,7 @@
     },
     {
       "id": "cloak-blue-walk",
-      "role": "paper-doll layer: Плащ / Синий плащ / walk",
+      "role": "paper-doll layer: Cloak / Blue cloak / walk",
       "path": "assets/doll/layers/cloak/blue/walk.png",
       "status": "test",
       "technical": {
@@ -1629,7 +1629,7 @@
     },
     {
       "id": "cloak-blue-run",
-      "role": "paper-doll layer: Плащ / Синий плащ / run",
+      "role": "paper-doll layer: Cloak / Blue cloak / run",
       "path": "assets/doll/layers/cloak/blue/run.png",
       "status": "test",
       "technical": {
@@ -1673,7 +1673,7 @@
     },
     {
       "id": "cloak-blue-attack_sword1h",
-      "role": "paper-doll layer: Плащ / Синий плащ / attack_sword1h",
+      "role": "paper-doll layer: Cloak / Blue cloak / attack_sword1h",
       "path": "assets/doll/layers/cloak/blue/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -1717,7 +1717,7 @@
     },
     {
       "id": "cloak-blue-attack_sword2h",
-      "role": "paper-doll layer: Плащ / Синий плащ / attack_sword2h",
+      "role": "paper-doll layer: Cloak / Blue cloak / attack_sword2h",
       "path": "assets/doll/layers/cloak/blue/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -1761,7 +1761,7 @@
     },
     {
       "id": "cloak-blue-attack_bow",
-      "role": "paper-doll layer: Плащ / Синий плащ / attack_bow",
+      "role": "paper-doll layer: Cloak / Blue cloak / attack_bow",
       "path": "assets/doll/layers/cloak/blue/attack_bow.png",
       "status": "test",
       "technical": {
@@ -1805,7 +1805,7 @@
     },
     {
       "id": "greaves-plate-idle",
-      "role": "paper-doll layer: Поножи / Пластинчатые поножи / idle",
+      "role": "paper-doll layer: Greaves / Plate greaves / idle",
       "path": "assets/doll/layers/greaves/plate/idle.png",
       "status": "test",
       "technical": {
@@ -1847,7 +1847,7 @@
     },
     {
       "id": "greaves-plate-walk",
-      "role": "paper-doll layer: Поножи / Пластинчатые поножи / walk",
+      "role": "paper-doll layer: Greaves / Plate greaves / walk",
       "path": "assets/doll/layers/greaves/plate/walk.png",
       "status": "test",
       "technical": {
@@ -1889,7 +1889,7 @@
     },
     {
       "id": "greaves-plate-run",
-      "role": "paper-doll layer: Поножи / Пластинчатые поножи / run",
+      "role": "paper-doll layer: Greaves / Plate greaves / run",
       "path": "assets/doll/layers/greaves/plate/run.png",
       "status": "test",
       "technical": {
@@ -1931,7 +1931,7 @@
     },
     {
       "id": "greaves-plate-attack_sword1h",
-      "role": "paper-doll layer: Поножи / Пластинчатые поножи / attack_sword1h",
+      "role": "paper-doll layer: Greaves / Plate greaves / attack_sword1h",
       "path": "assets/doll/layers/greaves/plate/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -1973,7 +1973,7 @@
     },
     {
       "id": "greaves-plate-attack_sword2h",
-      "role": "paper-doll layer: Поножи / Пластинчатые поножи / attack_sword2h",
+      "role": "paper-doll layer: Greaves / Plate greaves / attack_sword2h",
       "path": "assets/doll/layers/greaves/plate/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -2015,7 +2015,7 @@
     },
     {
       "id": "greaves-plate-attack_bow",
-      "role": "paper-doll layer: Поножи / Пластинчатые поножи / attack_bow",
+      "role": "paper-doll layer: Greaves / Plate greaves / attack_bow",
       "path": "assets/doll/layers/greaves/plate/attack_bow.png",
       "status": "test",
       "technical": {
@@ -2057,7 +2057,7 @@
     },
     {
       "id": "greaves-plate-tones-idle",
-      "role": "paper-doll layer: Поножи / Пластинчатые поножи / idle",
+      "role": "paper-doll layer: Greaves / Plate greaves / idle",
       "path": "assets/doll/layers/greaves/plate/idle_tones.png",
       "status": "test",
       "technical": {
@@ -2099,7 +2099,7 @@
     },
     {
       "id": "greaves-plate-tones-walk",
-      "role": "paper-doll layer: Поножи / Пластинчатые поножи / walk",
+      "role": "paper-doll layer: Greaves / Plate greaves / walk",
       "path": "assets/doll/layers/greaves/plate/walk_tones.png",
       "status": "test",
       "technical": {
@@ -2141,7 +2141,7 @@
     },
     {
       "id": "greaves-plate-tones-run",
-      "role": "paper-doll layer: Поножи / Пластинчатые поножи / run",
+      "role": "paper-doll layer: Greaves / Plate greaves / run",
       "path": "assets/doll/layers/greaves/plate/run_tones.png",
       "status": "test",
       "technical": {
@@ -2183,7 +2183,7 @@
     },
     {
       "id": "greaves-plate-tones-attack_sword1h",
-      "role": "paper-doll layer: Поножи / Пластинчатые поножи / attack_sword1h",
+      "role": "paper-doll layer: Greaves / Plate greaves / attack_sword1h",
       "path": "assets/doll/layers/greaves/plate/attack_sword1h_tones.png",
       "status": "test",
       "technical": {
@@ -2225,7 +2225,7 @@
     },
     {
       "id": "greaves-plate-tones-attack_sword2h",
-      "role": "paper-doll layer: Поножи / Пластинчатые поножи / attack_sword2h",
+      "role": "paper-doll layer: Greaves / Plate greaves / attack_sword2h",
       "path": "assets/doll/layers/greaves/plate/attack_sword2h_tones.png",
       "status": "test",
       "technical": {
@@ -2267,7 +2267,7 @@
     },
     {
       "id": "greaves-plate-tones-attack_bow",
-      "role": "paper-doll layer: Поножи / Пластинчатые поножи / attack_bow",
+      "role": "paper-doll layer: Greaves / Plate greaves / attack_bow",
       "path": "assets/doll/layers/greaves/plate/attack_bow_tones.png",
       "status": "test",
       "technical": {
@@ -2309,7 +2309,7 @@
     },
     {
       "id": "greaves-boots-idle",
-      "role": "paper-doll layer: Поножи / Высокие голенища / idle",
+      "role": "paper-doll layer: Greaves / Tall boot shafts / idle",
       "path": "assets/doll/layers/greaves/boots/idle.png",
       "status": "test",
       "technical": {
@@ -2353,7 +2353,7 @@
     },
     {
       "id": "greaves-boots-walk",
-      "role": "paper-doll layer: Поножи / Высокие голенища / walk",
+      "role": "paper-doll layer: Greaves / Tall boot shafts / walk",
       "path": "assets/doll/layers/greaves/boots/walk.png",
       "status": "test",
       "technical": {
@@ -2397,7 +2397,7 @@
     },
     {
       "id": "greaves-boots-run",
-      "role": "paper-doll layer: Поножи / Высокие голенища / run",
+      "role": "paper-doll layer: Greaves / Tall boot shafts / run",
       "path": "assets/doll/layers/greaves/boots/run.png",
       "status": "test",
       "technical": {
@@ -2441,7 +2441,7 @@
     },
     {
       "id": "greaves-boots-attack_sword1h",
-      "role": "paper-doll layer: Поножи / Высокие голенища / attack_sword1h",
+      "role": "paper-doll layer: Greaves / Tall boot shafts / attack_sword1h",
       "path": "assets/doll/layers/greaves/boots/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -2485,7 +2485,7 @@
     },
     {
       "id": "greaves-boots-attack_sword2h",
-      "role": "paper-doll layer: Поножи / Высокие голенища / attack_sword2h",
+      "role": "paper-doll layer: Greaves / Tall boot shafts / attack_sword2h",
       "path": "assets/doll/layers/greaves/boots/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -2529,7 +2529,7 @@
     },
     {
       "id": "greaves-boots-attack_bow",
-      "role": "paper-doll layer: Поножи / Высокие голенища / attack_bow",
+      "role": "paper-doll layer: Greaves / Tall boot shafts / attack_bow",
       "path": "assets/doll/layers/greaves/boots/attack_bow.png",
       "status": "test",
       "technical": {
@@ -2573,7 +2573,7 @@
     },
     {
       "id": "greaves-boots-tones-attack_bow",
-      "role": "paper-doll layer: Поножи / Высокие голенища / attack_bow",
+      "role": "paper-doll layer: Greaves / Tall boot shafts / attack_bow",
       "path": "assets/doll/layers/greaves/boots/attack_bow_tones.png",
       "status": "test",
       "technical": {
@@ -2617,7 +2617,7 @@
     },
     {
       "id": "greaves-boots-tones-attack_sword1h",
-      "role": "paper-doll layer: Поножи / Высокие голенища / attack_sword1h",
+      "role": "paper-doll layer: Greaves / Tall boot shafts / attack_sword1h",
       "path": "assets/doll/layers/greaves/boots/attack_sword1h_tones.png",
       "status": "test",
       "technical": {
@@ -2661,7 +2661,7 @@
     },
     {
       "id": "greaves-boots-tones-attack_sword2h",
-      "role": "paper-doll layer: Поножи / Высокие голенища / attack_sword2h",
+      "role": "paper-doll layer: Greaves / Tall boot shafts / attack_sword2h",
       "path": "assets/doll/layers/greaves/boots/attack_sword2h_tones.png",
       "status": "test",
       "technical": {
@@ -2705,7 +2705,7 @@
     },
     {
       "id": "greaves-boots-tones-idle",
-      "role": "paper-doll layer: Поножи / Высокие голенища / idle",
+      "role": "paper-doll layer: Greaves / Tall boot shafts / idle",
       "path": "assets/doll/layers/greaves/boots/idle_tones.png",
       "status": "test",
       "technical": {
@@ -2749,7 +2749,7 @@
     },
     {
       "id": "greaves-boots-tones-run",
-      "role": "paper-doll layer: Поножи / Высокие голенища / run",
+      "role": "paper-doll layer: Greaves / Tall boot shafts / run",
       "path": "assets/doll/layers/greaves/boots/run_tones.png",
       "status": "test",
       "technical": {
@@ -2793,7 +2793,7 @@
     },
     {
       "id": "greaves-boots-tones-walk",
-      "role": "paper-doll layer: Поножи / Высокие голенища / walk",
+      "role": "paper-doll layer: Greaves / Tall boot shafts / walk",
       "path": "assets/doll/layers/greaves/boots/walk_tones.png",
       "status": "test",
       "technical": {
@@ -2837,7 +2837,7 @@
     },
     {
       "id": "greaves-cuffed-idle",
-      "role": "paper-doll layer: Поножи / Поножи с отворотом / idle",
+      "role": "paper-doll layer: Greaves / Cuffed greaves / idle",
       "path": "assets/doll/layers/greaves/cuffed/idle.png",
       "status": "test",
       "technical": {
@@ -2881,7 +2881,7 @@
     },
     {
       "id": "greaves-cuffed-walk",
-      "role": "paper-doll layer: Поножи / Поножи с отворотом / walk",
+      "role": "paper-doll layer: Greaves / Cuffed greaves / walk",
       "path": "assets/doll/layers/greaves/cuffed/walk.png",
       "status": "test",
       "technical": {
@@ -2925,7 +2925,7 @@
     },
     {
       "id": "greaves-cuffed-run",
-      "role": "paper-doll layer: Поножи / Поножи с отворотом / run",
+      "role": "paper-doll layer: Greaves / Cuffed greaves / run",
       "path": "assets/doll/layers/greaves/cuffed/run.png",
       "status": "test",
       "technical": {
@@ -2969,7 +2969,7 @@
     },
     {
       "id": "greaves-cuffed-attack_sword1h",
-      "role": "paper-doll layer: Поножи / Поножи с отворотом / attack_sword1h",
+      "role": "paper-doll layer: Greaves / Cuffed greaves / attack_sword1h",
       "path": "assets/doll/layers/greaves/cuffed/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -3013,7 +3013,7 @@
     },
     {
       "id": "greaves-cuffed-attack_sword2h",
-      "role": "paper-doll layer: Поножи / Поножи с отворотом / attack_sword2h",
+      "role": "paper-doll layer: Greaves / Cuffed greaves / attack_sword2h",
       "path": "assets/doll/layers/greaves/cuffed/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -3057,7 +3057,7 @@
     },
     {
       "id": "greaves-cuffed-attack_bow",
-      "role": "paper-doll layer: Поножи / Поножи с отворотом / attack_bow",
+      "role": "paper-doll layer: Greaves / Cuffed greaves / attack_bow",
       "path": "assets/doll/layers/greaves/cuffed/attack_bow.png",
       "status": "test",
       "technical": {
@@ -3101,7 +3101,7 @@
     },
     {
       "id": "greaves-cuffed-tones-attack_bow",
-      "role": "paper-doll layer: Поножи / Поножи с отворотом / attack_bow",
+      "role": "paper-doll layer: Greaves / Cuffed greaves / attack_bow",
       "path": "assets/doll/layers/greaves/cuffed/attack_bow_tones.png",
       "status": "test",
       "technical": {
@@ -3145,7 +3145,7 @@
     },
     {
       "id": "greaves-cuffed-tones-attack_sword1h",
-      "role": "paper-doll layer: Поножи / Поножи с отворотом / attack_sword1h",
+      "role": "paper-doll layer: Greaves / Cuffed greaves / attack_sword1h",
       "path": "assets/doll/layers/greaves/cuffed/attack_sword1h_tones.png",
       "status": "test",
       "technical": {
@@ -3189,7 +3189,7 @@
     },
     {
       "id": "greaves-cuffed-tones-attack_sword2h",
-      "role": "paper-doll layer: Поножи / Поножи с отворотом / attack_sword2h",
+      "role": "paper-doll layer: Greaves / Cuffed greaves / attack_sword2h",
       "path": "assets/doll/layers/greaves/cuffed/attack_sword2h_tones.png",
       "status": "test",
       "technical": {
@@ -3233,7 +3233,7 @@
     },
     {
       "id": "greaves-cuffed-tones-idle",
-      "role": "paper-doll layer: Поножи / Поножи с отворотом / idle",
+      "role": "paper-doll layer: Greaves / Cuffed greaves / idle",
       "path": "assets/doll/layers/greaves/cuffed/idle_tones.png",
       "status": "test",
       "technical": {
@@ -3277,7 +3277,7 @@
     },
     {
       "id": "greaves-cuffed-tones-run",
-      "role": "paper-doll layer: Поножи / Поножи с отворотом / run",
+      "role": "paper-doll layer: Greaves / Cuffed greaves / run",
       "path": "assets/doll/layers/greaves/cuffed/run_tones.png",
       "status": "test",
       "technical": {
@@ -3321,7 +3321,7 @@
     },
     {
       "id": "greaves-cuffed-tones-walk",
-      "role": "paper-doll layer: Поножи / Поножи с отворотом / walk",
+      "role": "paper-doll layer: Greaves / Cuffed greaves / walk",
       "path": "assets/doll/layers/greaves/cuffed/walk_tones.png",
       "status": "test",
       "technical": {
@@ -3365,7 +3365,7 @@
     },
     {
       "id": "skirt-blue-idle",
-      "role": "paper-doll layer: Юбка / Синяя юбка / idle",
+      "role": "paper-doll layer: Skirt / Blue skirt / idle",
       "path": "assets/doll/layers/skirt/blue/idle.png",
       "status": "test",
       "technical": {
@@ -3409,7 +3409,7 @@
     },
     {
       "id": "skirt-blue-walk",
-      "role": "paper-doll layer: Юбка / Синяя юбка / walk",
+      "role": "paper-doll layer: Skirt / Blue skirt / walk",
       "path": "assets/doll/layers/skirt/blue/walk.png",
       "status": "test",
       "technical": {
@@ -3453,7 +3453,7 @@
     },
     {
       "id": "skirt-blue-run",
-      "role": "paper-doll layer: Юбка / Синяя юбка / run",
+      "role": "paper-doll layer: Skirt / Blue skirt / run",
       "path": "assets/doll/layers/skirt/blue/run.png",
       "status": "test",
       "technical": {
@@ -3497,7 +3497,7 @@
     },
     {
       "id": "skirt-blue-attack_sword1h",
-      "role": "paper-doll layer: Юбка / Синяя юбка / attack_sword1h",
+      "role": "paper-doll layer: Skirt / Blue skirt / attack_sword1h",
       "path": "assets/doll/layers/skirt/blue/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -3541,7 +3541,7 @@
     },
     {
       "id": "skirt-blue-attack_sword2h",
-      "role": "paper-doll layer: Юбка / Синяя юбка / attack_sword2h",
+      "role": "paper-doll layer: Skirt / Blue skirt / attack_sword2h",
       "path": "assets/doll/layers/skirt/blue/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -3585,7 +3585,7 @@
     },
     {
       "id": "skirt-blue-attack_bow",
-      "role": "paper-doll layer: Юбка / Синяя юбка / attack_bow",
+      "role": "paper-doll layer: Skirt / Blue skirt / attack_bow",
       "path": "assets/doll/layers/skirt/blue/attack_bow.png",
       "status": "test",
       "technical": {
@@ -3629,7 +3629,7 @@
     },
     {
       "id": "skirt-purple-idle",
-      "role": "paper-doll layer: Юбка / Фиолетовая юбка / idle",
+      "role": "paper-doll layer: Skirt / Purple skirt / idle",
       "path": "assets/doll/layers/skirt/purple/idle.png",
       "status": "test",
       "technical": {
@@ -3673,7 +3673,7 @@
     },
     {
       "id": "skirt-purple-walk",
-      "role": "paper-doll layer: Юбка / Фиолетовая юбка / walk",
+      "role": "paper-doll layer: Skirt / Purple skirt / walk",
       "path": "assets/doll/layers/skirt/purple/walk.png",
       "status": "test",
       "technical": {
@@ -3717,7 +3717,7 @@
     },
     {
       "id": "skirt-purple-run",
-      "role": "paper-doll layer: Юбка / Фиолетовая юбка / run",
+      "role": "paper-doll layer: Skirt / Purple skirt / run",
       "path": "assets/doll/layers/skirt/purple/run.png",
       "status": "test",
       "technical": {
@@ -3761,7 +3761,7 @@
     },
     {
       "id": "skirt-purple-attack_sword1h",
-      "role": "paper-doll layer: Юбка / Фиолетовая юбка / attack_sword1h",
+      "role": "paper-doll layer: Skirt / Purple skirt / attack_sword1h",
       "path": "assets/doll/layers/skirt/purple/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -3805,7 +3805,7 @@
     },
     {
       "id": "skirt-purple-attack_sword2h",
-      "role": "paper-doll layer: Юбка / Фиолетовая юбка / attack_sword2h",
+      "role": "paper-doll layer: Skirt / Purple skirt / attack_sword2h",
       "path": "assets/doll/layers/skirt/purple/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -3849,7 +3849,7 @@
     },
     {
       "id": "skirt-purple-attack_bow",
-      "role": "paper-doll layer: Юбка / Фиолетовая юбка / attack_bow",
+      "role": "paper-doll layer: Skirt / Purple skirt / attack_bow",
       "path": "assets/doll/layers/skirt/purple/attack_bow.png",
       "status": "test",
       "technical": {
@@ -3893,7 +3893,7 @@
     },
     {
       "id": "skirt-red-idle",
-      "role": "paper-doll layer: Юбка / Красная юбка / idle",
+      "role": "paper-doll layer: Skirt / Red skirt / idle",
       "path": "assets/doll/layers/skirt/red/idle.png",
       "status": "test",
       "technical": {
@@ -3937,7 +3937,7 @@
     },
     {
       "id": "skirt-red-walk",
-      "role": "paper-doll layer: Юбка / Красная юбка / walk",
+      "role": "paper-doll layer: Skirt / Red skirt / walk",
       "path": "assets/doll/layers/skirt/red/walk.png",
       "status": "test",
       "technical": {
@@ -3981,7 +3981,7 @@
     },
     {
       "id": "skirt-red-run",
-      "role": "paper-doll layer: Юбка / Красная юбка / run",
+      "role": "paper-doll layer: Skirt / Red skirt / run",
       "path": "assets/doll/layers/skirt/red/run.png",
       "status": "test",
       "technical": {
@@ -4025,7 +4025,7 @@
     },
     {
       "id": "skirt-red-attack_sword1h",
-      "role": "paper-doll layer: Юбка / Красная юбка / attack_sword1h",
+      "role": "paper-doll layer: Skirt / Red skirt / attack_sword1h",
       "path": "assets/doll/layers/skirt/red/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -4069,7 +4069,7 @@
     },
     {
       "id": "skirt-red-attack_sword2h",
-      "role": "paper-doll layer: Юбка / Красная юбка / attack_sword2h",
+      "role": "paper-doll layer: Skirt / Red skirt / attack_sword2h",
       "path": "assets/doll/layers/skirt/red/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -4113,7 +4113,7 @@
     },
     {
       "id": "skirt-red-attack_bow",
-      "role": "paper-doll layer: Юбка / Красная юбка / attack_bow",
+      "role": "paper-doll layer: Skirt / Red skirt / attack_bow",
       "path": "assets/doll/layers/skirt/red/attack_bow.png",
       "status": "test",
       "technical": {
@@ -4157,7 +4157,7 @@
     },
     {
       "id": "chest-plate-idle",
-      "role": "paper-doll layer: Нагрудник / Кираса / idle",
+      "role": "paper-doll layer: Chest / Cuirass / idle",
       "path": "assets/doll/layers/chest/plate/idle.png",
       "status": "test",
       "technical": {
@@ -4201,7 +4201,7 @@
     },
     {
       "id": "chest-plate-walk",
-      "role": "paper-doll layer: Нагрудник / Кираса / walk",
+      "role": "paper-doll layer: Chest / Cuirass / walk",
       "path": "assets/doll/layers/chest/plate/walk.png",
       "status": "test",
       "technical": {
@@ -4245,7 +4245,7 @@
     },
     {
       "id": "chest-plate-run",
-      "role": "paper-doll layer: Нагрудник / Кираса / run",
+      "role": "paper-doll layer: Chest / Cuirass / run",
       "path": "assets/doll/layers/chest/plate/run.png",
       "status": "test",
       "technical": {
@@ -4289,7 +4289,7 @@
     },
     {
       "id": "chest-plate-attack_sword1h",
-      "role": "paper-doll layer: Нагрудник / Кираса / attack_sword1h",
+      "role": "paper-doll layer: Chest / Cuirass / attack_sword1h",
       "path": "assets/doll/layers/chest/plate/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -4333,7 +4333,7 @@
     },
     {
       "id": "chest-plate-attack_sword2h",
-      "role": "paper-doll layer: Нагрудник / Кираса / attack_sword2h",
+      "role": "paper-doll layer: Chest / Cuirass / attack_sword2h",
       "path": "assets/doll/layers/chest/plate/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -4377,7 +4377,7 @@
     },
     {
       "id": "chest-plate-attack_bow",
-      "role": "paper-doll layer: Нагрудник / Кираса / attack_bow",
+      "role": "paper-doll layer: Chest / Cuirass / attack_bow",
       "path": "assets/doll/layers/chest/plate/attack_bow.png",
       "status": "test",
       "technical": {
@@ -4421,7 +4421,7 @@
     },
     {
       "id": "chest-plate-tones-attack_bow",
-      "role": "paper-doll layer: Нагрудник / Кираса / attack_bow",
+      "role": "paper-doll layer: Chest / Cuirass / attack_bow",
       "path": "assets/doll/layers/chest/plate/attack_bow_tones.png",
       "status": "test",
       "technical": {
@@ -4465,7 +4465,7 @@
     },
     {
       "id": "chest-plate-tones-attack_sword1h",
-      "role": "paper-doll layer: Нагрудник / Кираса / attack_sword1h",
+      "role": "paper-doll layer: Chest / Cuirass / attack_sword1h",
       "path": "assets/doll/layers/chest/plate/attack_sword1h_tones.png",
       "status": "test",
       "technical": {
@@ -4509,7 +4509,7 @@
     },
     {
       "id": "chest-plate-tones-attack_sword2h",
-      "role": "paper-doll layer: Нагрудник / Кираса / attack_sword2h",
+      "role": "paper-doll layer: Chest / Cuirass / attack_sword2h",
       "path": "assets/doll/layers/chest/plate/attack_sword2h_tones.png",
       "status": "test",
       "technical": {
@@ -4553,7 +4553,7 @@
     },
     {
       "id": "chest-plate-tones-idle",
-      "role": "paper-doll layer: Нагрудник / Кираса / idle",
+      "role": "paper-doll layer: Chest / Cuirass / idle",
       "path": "assets/doll/layers/chest/plate/idle_tones.png",
       "status": "test",
       "technical": {
@@ -4597,7 +4597,7 @@
     },
     {
       "id": "chest-plate-tones-run",
-      "role": "paper-doll layer: Нагрудник / Кираса / run",
+      "role": "paper-doll layer: Chest / Cuirass / run",
       "path": "assets/doll/layers/chest/plate/run_tones.png",
       "status": "test",
       "technical": {
@@ -4641,7 +4641,7 @@
     },
     {
       "id": "chest-plate-tones-walk",
-      "role": "paper-doll layer: Нагрудник / Кираса / walk",
+      "role": "paper-doll layer: Chest / Cuirass / walk",
       "path": "assets/doll/layers/chest/plate/walk_tones.png",
       "status": "test",
       "technical": {
@@ -4685,7 +4685,7 @@
     },
     {
       "id": "chest-riveted-idle",
-      "role": "paper-doll layer: Нагрудник / Клёпаная кираса со швами / idle",
+      "role": "paper-doll layer: Chest / Riveted cuirass with seams / idle",
       "path": "assets/doll/layers/chest/riveted/idle.png",
       "status": "test",
       "technical": {
@@ -4729,7 +4729,7 @@
     },
     {
       "id": "chest-riveted-walk",
-      "role": "paper-doll layer: Нагрудник / Клёпаная кираса со швами / walk",
+      "role": "paper-doll layer: Chest / Riveted cuirass with seams / walk",
       "path": "assets/doll/layers/chest/riveted/walk.png",
       "status": "test",
       "technical": {
@@ -4773,7 +4773,7 @@
     },
     {
       "id": "chest-riveted-run",
-      "role": "paper-doll layer: Нагрудник / Клёпаная кираса со швами / run",
+      "role": "paper-doll layer: Chest / Riveted cuirass with seams / run",
       "path": "assets/doll/layers/chest/riveted/run.png",
       "status": "test",
       "technical": {
@@ -4817,7 +4817,7 @@
     },
     {
       "id": "chest-riveted-attack_sword1h",
-      "role": "paper-doll layer: Нагрудник / Клёпаная кираса со швами / attack_sword1h",
+      "role": "paper-doll layer: Chest / Riveted cuirass with seams / attack_sword1h",
       "path": "assets/doll/layers/chest/riveted/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -4861,7 +4861,7 @@
     },
     {
       "id": "chest-riveted-attack_sword2h",
-      "role": "paper-doll layer: Нагрудник / Клёпаная кираса со швами / attack_sword2h",
+      "role": "paper-doll layer: Chest / Riveted cuirass with seams / attack_sword2h",
       "path": "assets/doll/layers/chest/riveted/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -4905,7 +4905,7 @@
     },
     {
       "id": "chest-riveted-attack_bow",
-      "role": "paper-doll layer: Нагрудник / Клёпаная кираса со швами / attack_bow",
+      "role": "paper-doll layer: Chest / Riveted cuirass with seams / attack_bow",
       "path": "assets/doll/layers/chest/riveted/attack_bow.png",
       "status": "test",
       "technical": {
@@ -4949,7 +4949,7 @@
     },
     {
       "id": "chest-riveted-tones-attack_bow",
-      "role": "paper-doll layer: Нагрудник / Клёпаная кираса со швами / attack_bow",
+      "role": "paper-doll layer: Chest / Riveted cuirass with seams / attack_bow",
       "path": "assets/doll/layers/chest/riveted/attack_bow_tones.png",
       "status": "test",
       "technical": {
@@ -4993,7 +4993,7 @@
     },
     {
       "id": "chest-riveted-tones-attack_sword1h",
-      "role": "paper-doll layer: Нагрудник / Клёпаная кираса со швами / attack_sword1h",
+      "role": "paper-doll layer: Chest / Riveted cuirass with seams / attack_sword1h",
       "path": "assets/doll/layers/chest/riveted/attack_sword1h_tones.png",
       "status": "test",
       "technical": {
@@ -5037,7 +5037,7 @@
     },
     {
       "id": "chest-riveted-tones-attack_sword2h",
-      "role": "paper-doll layer: Нагрудник / Клёпаная кираса со швами / attack_sword2h",
+      "role": "paper-doll layer: Chest / Riveted cuirass with seams / attack_sword2h",
       "path": "assets/doll/layers/chest/riveted/attack_sword2h_tones.png",
       "status": "test",
       "technical": {
@@ -5081,7 +5081,7 @@
     },
     {
       "id": "chest-riveted-tones-idle",
-      "role": "paper-doll layer: Нагрудник / Клёпаная кираса со швами / idle",
+      "role": "paper-doll layer: Chest / Riveted cuirass with seams / idle",
       "path": "assets/doll/layers/chest/riveted/idle_tones.png",
       "status": "test",
       "technical": {
@@ -5125,7 +5125,7 @@
     },
     {
       "id": "chest-riveted-tones-run",
-      "role": "paper-doll layer: Нагрудник / Клёпаная кираса со швами / run",
+      "role": "paper-doll layer: Chest / Riveted cuirass with seams / run",
       "path": "assets/doll/layers/chest/riveted/run_tones.png",
       "status": "test",
       "technical": {
@@ -5169,7 +5169,7 @@
     },
     {
       "id": "chest-riveted-tones-walk",
-      "role": "paper-doll layer: Нагрудник / Клёпаная кираса со швами / walk",
+      "role": "paper-doll layer: Chest / Riveted cuirass with seams / walk",
       "path": "assets/doll/layers/chest/riveted/walk_tones.png",
       "status": "test",
       "technical": {
@@ -5213,7 +5213,7 @@
     },
     {
       "id": "chest-mail-idle",
-      "role": "paper-doll layer: Нагрудник / Кольчуга до бедра / idle",
+      "role": "paper-doll layer: Chest / Mail hauberk (to mid-thigh) / idle",
       "path": "assets/doll/layers/chest/mail/idle.png",
       "status": "test",
       "technical": {
@@ -5257,7 +5257,7 @@
     },
     {
       "id": "chest-mail-walk",
-      "role": "paper-doll layer: Нагрудник / Кольчуга до бедра / walk",
+      "role": "paper-doll layer: Chest / Mail hauberk (to mid-thigh) / walk",
       "path": "assets/doll/layers/chest/mail/walk.png",
       "status": "test",
       "technical": {
@@ -5301,7 +5301,7 @@
     },
     {
       "id": "chest-mail-run",
-      "role": "paper-doll layer: Нагрудник / Кольчуга до бедра / run",
+      "role": "paper-doll layer: Chest / Mail hauberk (to mid-thigh) / run",
       "path": "assets/doll/layers/chest/mail/run.png",
       "status": "test",
       "technical": {
@@ -5345,7 +5345,7 @@
     },
     {
       "id": "chest-mail-attack_sword1h",
-      "role": "paper-doll layer: Нагрудник / Кольчуга до бедра / attack_sword1h",
+      "role": "paper-doll layer: Chest / Mail hauberk (to mid-thigh) / attack_sword1h",
       "path": "assets/doll/layers/chest/mail/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -5389,7 +5389,7 @@
     },
     {
       "id": "chest-mail-attack_sword2h",
-      "role": "paper-doll layer: Нагрудник / Кольчуга до бедра / attack_sword2h",
+      "role": "paper-doll layer: Chest / Mail hauberk (to mid-thigh) / attack_sword2h",
       "path": "assets/doll/layers/chest/mail/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -5433,7 +5433,7 @@
     },
     {
       "id": "chest-mail-attack_bow",
-      "role": "paper-doll layer: Нагрудник / Кольчуга до бедра / attack_bow",
+      "role": "paper-doll layer: Chest / Mail hauberk (to mid-thigh) / attack_bow",
       "path": "assets/doll/layers/chest/mail/attack_bow.png",
       "status": "test",
       "technical": {
@@ -5477,7 +5477,7 @@
     },
     {
       "id": "chest-mail-tones-attack_bow",
-      "role": "paper-doll layer: Нагрудник / Кольчуга до бедра / attack_bow",
+      "role": "paper-doll layer: Chest / Mail hauberk (to mid-thigh) / attack_bow",
       "path": "assets/doll/layers/chest/mail/attack_bow_tones.png",
       "status": "test",
       "technical": {
@@ -5521,7 +5521,7 @@
     },
     {
       "id": "chest-mail-tones-attack_sword1h",
-      "role": "paper-doll layer: Нагрудник / Кольчуга до бедра / attack_sword1h",
+      "role": "paper-doll layer: Chest / Mail hauberk (to mid-thigh) / attack_sword1h",
       "path": "assets/doll/layers/chest/mail/attack_sword1h_tones.png",
       "status": "test",
       "technical": {
@@ -5565,7 +5565,7 @@
     },
     {
       "id": "chest-mail-tones-attack_sword2h",
-      "role": "paper-doll layer: Нагрудник / Кольчуга до бедра / attack_sword2h",
+      "role": "paper-doll layer: Chest / Mail hauberk (to mid-thigh) / attack_sword2h",
       "path": "assets/doll/layers/chest/mail/attack_sword2h_tones.png",
       "status": "test",
       "technical": {
@@ -5609,7 +5609,7 @@
     },
     {
       "id": "chest-mail-tones-idle",
-      "role": "paper-doll layer: Нагрудник / Кольчуга до бедра / idle",
+      "role": "paper-doll layer: Chest / Mail hauberk (to mid-thigh) / idle",
       "path": "assets/doll/layers/chest/mail/idle_tones.png",
       "status": "test",
       "technical": {
@@ -5653,7 +5653,7 @@
     },
     {
       "id": "chest-mail-tones-run",
-      "role": "paper-doll layer: Нагрудник / Кольчуга до бедра / run",
+      "role": "paper-doll layer: Chest / Mail hauberk (to mid-thigh) / run",
       "path": "assets/doll/layers/chest/mail/run_tones.png",
       "status": "test",
       "technical": {
@@ -5697,7 +5697,7 @@
     },
     {
       "id": "chest-mail-tones-walk",
-      "role": "paper-doll layer: Нагрудник / Кольчуга до бедра / walk",
+      "role": "paper-doll layer: Chest / Mail hauberk (to mid-thigh) / walk",
       "path": "assets/doll/layers/chest/mail/walk_tones.png",
       "status": "test",
       "technical": {
@@ -5741,7 +5741,7 @@
     },
     {
       "id": "chest-brigandine-idle",
-      "role": "paper-doll layer: Нагрудник / Бригантина / idle",
+      "role": "paper-doll layer: Chest / Brigandine / idle",
       "path": "assets/doll/layers/chest/brigandine/idle.png",
       "status": "test",
       "technical": {
@@ -5785,7 +5785,7 @@
     },
     {
       "id": "chest-brigandine-walk",
-      "role": "paper-doll layer: Нагрудник / Бригантина / walk",
+      "role": "paper-doll layer: Chest / Brigandine / walk",
       "path": "assets/doll/layers/chest/brigandine/walk.png",
       "status": "test",
       "technical": {
@@ -5829,7 +5829,7 @@
     },
     {
       "id": "chest-brigandine-run",
-      "role": "paper-doll layer: Нагрудник / Бригантина / run",
+      "role": "paper-doll layer: Chest / Brigandine / run",
       "path": "assets/doll/layers/chest/brigandine/run.png",
       "status": "test",
       "technical": {
@@ -5873,7 +5873,7 @@
     },
     {
       "id": "chest-brigandine-attack_sword1h",
-      "role": "paper-doll layer: Нагрудник / Бригантина / attack_sword1h",
+      "role": "paper-doll layer: Chest / Brigandine / attack_sword1h",
       "path": "assets/doll/layers/chest/brigandine/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -5917,7 +5917,7 @@
     },
     {
       "id": "chest-brigandine-attack_sword2h",
-      "role": "paper-doll layer: Нагрудник / Бригантина / attack_sword2h",
+      "role": "paper-doll layer: Chest / Brigandine / attack_sword2h",
       "path": "assets/doll/layers/chest/brigandine/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -5961,7 +5961,7 @@
     },
     {
       "id": "chest-brigandine-attack_bow",
-      "role": "paper-doll layer: Нагрудник / Бригантина / attack_bow",
+      "role": "paper-doll layer: Chest / Brigandine / attack_bow",
       "path": "assets/doll/layers/chest/brigandine/attack_bow.png",
       "status": "test",
       "technical": {
@@ -6005,7 +6005,7 @@
     },
     {
       "id": "chest-brigandine-tones-attack_bow",
-      "role": "paper-doll layer: Нагрудник / Бригантина / attack_bow",
+      "role": "paper-doll layer: Chest / Brigandine / attack_bow",
       "path": "assets/doll/layers/chest/brigandine/attack_bow_tones.png",
       "status": "test",
       "technical": {
@@ -6049,7 +6049,7 @@
     },
     {
       "id": "chest-brigandine-tones-attack_sword1h",
-      "role": "paper-doll layer: Нагрудник / Бригантина / attack_sword1h",
+      "role": "paper-doll layer: Chest / Brigandine / attack_sword1h",
       "path": "assets/doll/layers/chest/brigandine/attack_sword1h_tones.png",
       "status": "test",
       "technical": {
@@ -6093,7 +6093,7 @@
     },
     {
       "id": "chest-brigandine-tones-attack_sword2h",
-      "role": "paper-doll layer: Нагрудник / Бригантина / attack_sword2h",
+      "role": "paper-doll layer: Chest / Brigandine / attack_sword2h",
       "path": "assets/doll/layers/chest/brigandine/attack_sword2h_tones.png",
       "status": "test",
       "technical": {
@@ -6137,7 +6137,7 @@
     },
     {
       "id": "chest-brigandine-tones-idle",
-      "role": "paper-doll layer: Нагрудник / Бригантина / idle",
+      "role": "paper-doll layer: Chest / Brigandine / idle",
       "path": "assets/doll/layers/chest/brigandine/idle_tones.png",
       "status": "test",
       "technical": {
@@ -6181,7 +6181,7 @@
     },
     {
       "id": "chest-brigandine-tones-run",
-      "role": "paper-doll layer: Нагрудник / Бригантина / run",
+      "role": "paper-doll layer: Chest / Brigandine / run",
       "path": "assets/doll/layers/chest/brigandine/run_tones.png",
       "status": "test",
       "technical": {
@@ -6225,7 +6225,7 @@
     },
     {
       "id": "chest-brigandine-tones-walk",
-      "role": "paper-doll layer: Нагрудник / Бригантина / walk",
+      "role": "paper-doll layer: Chest / Brigandine / walk",
       "path": "assets/doll/layers/chest/brigandine/walk_tones.png",
       "status": "test",
       "technical": {
@@ -6269,7 +6269,7 @@
     },
     {
       "id": "bracers-wrist-idle",
-      "role": "paper-doll layer: Наручи / Наручи 25 % (запястье) / idle",
+      "role": "paper-doll layer: Bracers / Bracers 25% (wrist) / idle",
       "path": "assets/doll/layers/bracers/wrist/idle.png",
       "status": "test",
       "technical": {
@@ -6311,7 +6311,7 @@
     },
     {
       "id": "bracers-wrist-walk",
-      "role": "paper-doll layer: Наручи / Наручи 25 % (запястье) / walk",
+      "role": "paper-doll layer: Bracers / Bracers 25% (wrist) / walk",
       "path": "assets/doll/layers/bracers/wrist/walk.png",
       "status": "test",
       "technical": {
@@ -6353,7 +6353,7 @@
     },
     {
       "id": "bracers-wrist-run",
-      "role": "paper-doll layer: Наручи / Наручи 25 % (запястье) / run",
+      "role": "paper-doll layer: Bracers / Bracers 25% (wrist) / run",
       "path": "assets/doll/layers/bracers/wrist/run.png",
       "status": "test",
       "technical": {
@@ -6395,7 +6395,7 @@
     },
     {
       "id": "bracers-wrist-attack_sword1h",
-      "role": "paper-doll layer: Наручи / Наручи 25 % (запястье) / attack_sword1h",
+      "role": "paper-doll layer: Bracers / Bracers 25% (wrist) / attack_sword1h",
       "path": "assets/doll/layers/bracers/wrist/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -6437,7 +6437,7 @@
     },
     {
       "id": "bracers-wrist-attack_sword2h",
-      "role": "paper-doll layer: Наручи / Наручи 25 % (запястье) / attack_sword2h",
+      "role": "paper-doll layer: Bracers / Bracers 25% (wrist) / attack_sword2h",
       "path": "assets/doll/layers/bracers/wrist/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -6479,7 +6479,7 @@
     },
     {
       "id": "bracers-wrist-attack_bow",
-      "role": "paper-doll layer: Наручи / Наручи 25 % (запястье) / attack_bow",
+      "role": "paper-doll layer: Bracers / Bracers 25% (wrist) / attack_bow",
       "path": "assets/doll/layers/bracers/wrist/attack_bow.png",
       "status": "test",
       "technical": {
@@ -6521,7 +6521,7 @@
     },
     {
       "id": "bracers-wrist-tones-idle",
-      "role": "paper-doll layer: Наручи / Наручи 25 % (запястье) / idle",
+      "role": "paper-doll layer: Bracers / Bracers 25% (wrist) / idle",
       "path": "assets/doll/layers/bracers/wrist/idle_tones.png",
       "status": "test",
       "technical": {
@@ -6563,7 +6563,7 @@
     },
     {
       "id": "bracers-wrist-tones-walk",
-      "role": "paper-doll layer: Наручи / Наручи 25 % (запястье) / walk",
+      "role": "paper-doll layer: Bracers / Bracers 25% (wrist) / walk",
       "path": "assets/doll/layers/bracers/wrist/walk_tones.png",
       "status": "test",
       "technical": {
@@ -6605,7 +6605,7 @@
     },
     {
       "id": "bracers-wrist-tones-run",
-      "role": "paper-doll layer: Наручи / Наручи 25 % (запястье) / run",
+      "role": "paper-doll layer: Bracers / Bracers 25% (wrist) / run",
       "path": "assets/doll/layers/bracers/wrist/run_tones.png",
       "status": "test",
       "technical": {
@@ -6647,7 +6647,7 @@
     },
     {
       "id": "bracers-wrist-tones-attack_sword1h",
-      "role": "paper-doll layer: Наручи / Наручи 25 % (запястье) / attack_sword1h",
+      "role": "paper-doll layer: Bracers / Bracers 25% (wrist) / attack_sword1h",
       "path": "assets/doll/layers/bracers/wrist/attack_sword1h_tones.png",
       "status": "test",
       "technical": {
@@ -6689,7 +6689,7 @@
     },
     {
       "id": "bracers-wrist-tones-attack_sword2h",
-      "role": "paper-doll layer: Наручи / Наручи 25 % (запястье) / attack_sword2h",
+      "role": "paper-doll layer: Bracers / Bracers 25% (wrist) / attack_sword2h",
       "path": "assets/doll/layers/bracers/wrist/attack_sword2h_tones.png",
       "status": "test",
       "technical": {
@@ -6731,7 +6731,7 @@
     },
     {
       "id": "bracers-wrist-tones-attack_bow",
-      "role": "paper-doll layer: Наручи / Наручи 25 % (запястье) / attack_bow",
+      "role": "paper-doll layer: Bracers / Bracers 25% (wrist) / attack_bow",
       "path": "assets/doll/layers/bracers/wrist/attack_bow_tones.png",
       "status": "test",
       "technical": {
@@ -6773,7 +6773,7 @@
     },
     {
       "id": "bracers-forearm-idle",
-      "role": "paper-doll layer: Наручи / Наручи 50 % (предплечье) / idle",
+      "role": "paper-doll layer: Bracers / Bracers 50% (forearm) / idle",
       "path": "assets/doll/layers/bracers/forearm/idle.png",
       "status": "test",
       "technical": {
@@ -6815,7 +6815,7 @@
     },
     {
       "id": "bracers-forearm-walk",
-      "role": "paper-doll layer: Наручи / Наручи 50 % (предплечье) / walk",
+      "role": "paper-doll layer: Bracers / Bracers 50% (forearm) / walk",
       "path": "assets/doll/layers/bracers/forearm/walk.png",
       "status": "test",
       "technical": {
@@ -6857,7 +6857,7 @@
     },
     {
       "id": "bracers-forearm-run",
-      "role": "paper-doll layer: Наручи / Наручи 50 % (предплечье) / run",
+      "role": "paper-doll layer: Bracers / Bracers 50% (forearm) / run",
       "path": "assets/doll/layers/bracers/forearm/run.png",
       "status": "test",
       "technical": {
@@ -6899,7 +6899,7 @@
     },
     {
       "id": "bracers-forearm-attack_sword1h",
-      "role": "paper-doll layer: Наручи / Наручи 50 % (предплечье) / attack_sword1h",
+      "role": "paper-doll layer: Bracers / Bracers 50% (forearm) / attack_sword1h",
       "path": "assets/doll/layers/bracers/forearm/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -6941,7 +6941,7 @@
     },
     {
       "id": "bracers-forearm-attack_sword2h",
-      "role": "paper-doll layer: Наручи / Наручи 50 % (предплечье) / attack_sword2h",
+      "role": "paper-doll layer: Bracers / Bracers 50% (forearm) / attack_sword2h",
       "path": "assets/doll/layers/bracers/forearm/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -6983,7 +6983,7 @@
     },
     {
       "id": "bracers-forearm-attack_bow",
-      "role": "paper-doll layer: Наручи / Наручи 50 % (предплечье) / attack_bow",
+      "role": "paper-doll layer: Bracers / Bracers 50% (forearm) / attack_bow",
       "path": "assets/doll/layers/bracers/forearm/attack_bow.png",
       "status": "test",
       "technical": {
@@ -7025,7 +7025,7 @@
     },
     {
       "id": "bracers-forearm-tones-idle",
-      "role": "paper-doll layer: Наручи / Наручи 50 % (предплечье) / idle",
+      "role": "paper-doll layer: Bracers / Bracers 50% (forearm) / idle",
       "path": "assets/doll/layers/bracers/forearm/idle_tones.png",
       "status": "test",
       "technical": {
@@ -7067,7 +7067,7 @@
     },
     {
       "id": "bracers-forearm-tones-walk",
-      "role": "paper-doll layer: Наручи / Наручи 50 % (предплечье) / walk",
+      "role": "paper-doll layer: Bracers / Bracers 50% (forearm) / walk",
       "path": "assets/doll/layers/bracers/forearm/walk_tones.png",
       "status": "test",
       "technical": {
@@ -7109,7 +7109,7 @@
     },
     {
       "id": "bracers-forearm-tones-run",
-      "role": "paper-doll layer: Наручи / Наручи 50 % (предплечье) / run",
+      "role": "paper-doll layer: Bracers / Bracers 50% (forearm) / run",
       "path": "assets/doll/layers/bracers/forearm/run_tones.png",
       "status": "test",
       "technical": {
@@ -7151,7 +7151,7 @@
     },
     {
       "id": "bracers-forearm-tones-attack_sword1h",
-      "role": "paper-doll layer: Наручи / Наручи 50 % (предплечье) / attack_sword1h",
+      "role": "paper-doll layer: Bracers / Bracers 50% (forearm) / attack_sword1h",
       "path": "assets/doll/layers/bracers/forearm/attack_sword1h_tones.png",
       "status": "test",
       "technical": {
@@ -7193,7 +7193,7 @@
     },
     {
       "id": "bracers-forearm-tones-attack_sword2h",
-      "role": "paper-doll layer: Наручи / Наручи 50 % (предплечье) / attack_sword2h",
+      "role": "paper-doll layer: Bracers / Bracers 50% (forearm) / attack_sword2h",
       "path": "assets/doll/layers/bracers/forearm/attack_sword2h_tones.png",
       "status": "test",
       "technical": {
@@ -7235,7 +7235,7 @@
     },
     {
       "id": "bracers-forearm-tones-attack_bow",
-      "role": "paper-doll layer: Наручи / Наручи 50 % (предплечье) / attack_bow",
+      "role": "paper-doll layer: Bracers / Bracers 50% (forearm) / attack_bow",
       "path": "assets/doll/layers/bracers/forearm/attack_bow_tones.png",
       "status": "test",
       "technical": {
@@ -7277,7 +7277,7 @@
     },
     {
       "id": "bracers-elbow-idle",
-      "role": "paper-doll layer: Наручи / Наручи 75 % (с локтем) / idle",
+      "role": "paper-doll layer: Bracers / Bracers 75% (with elbow) / idle",
       "path": "assets/doll/layers/bracers/elbow/idle.png",
       "status": "test",
       "technical": {
@@ -7319,7 +7319,7 @@
     },
     {
       "id": "bracers-elbow-walk",
-      "role": "paper-doll layer: Наручи / Наручи 75 % (с локтем) / walk",
+      "role": "paper-doll layer: Bracers / Bracers 75% (with elbow) / walk",
       "path": "assets/doll/layers/bracers/elbow/walk.png",
       "status": "test",
       "technical": {
@@ -7361,7 +7361,7 @@
     },
     {
       "id": "bracers-elbow-run",
-      "role": "paper-doll layer: Наручи / Наручи 75 % (с локтем) / run",
+      "role": "paper-doll layer: Bracers / Bracers 75% (with elbow) / run",
       "path": "assets/doll/layers/bracers/elbow/run.png",
       "status": "test",
       "technical": {
@@ -7403,7 +7403,7 @@
     },
     {
       "id": "bracers-elbow-attack_sword1h",
-      "role": "paper-doll layer: Наручи / Наручи 75 % (с локтем) / attack_sword1h",
+      "role": "paper-doll layer: Bracers / Bracers 75% (with elbow) / attack_sword1h",
       "path": "assets/doll/layers/bracers/elbow/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -7445,7 +7445,7 @@
     },
     {
       "id": "bracers-elbow-attack_sword2h",
-      "role": "paper-doll layer: Наручи / Наручи 75 % (с локтем) / attack_sword2h",
+      "role": "paper-doll layer: Bracers / Bracers 75% (with elbow) / attack_sword2h",
       "path": "assets/doll/layers/bracers/elbow/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -7487,7 +7487,7 @@
     },
     {
       "id": "bracers-elbow-attack_bow",
-      "role": "paper-doll layer: Наручи / Наручи 75 % (с локтем) / attack_bow",
+      "role": "paper-doll layer: Bracers / Bracers 75% (with elbow) / attack_bow",
       "path": "assets/doll/layers/bracers/elbow/attack_bow.png",
       "status": "test",
       "technical": {
@@ -7529,7 +7529,7 @@
     },
     {
       "id": "bracers-elbow-tones-idle",
-      "role": "paper-doll layer: Наручи / Наручи 75 % (с локтем) / idle",
+      "role": "paper-doll layer: Bracers / Bracers 75% (with elbow) / idle",
       "path": "assets/doll/layers/bracers/elbow/idle_tones.png",
       "status": "test",
       "technical": {
@@ -7571,7 +7571,7 @@
     },
     {
       "id": "bracers-elbow-tones-walk",
-      "role": "paper-doll layer: Наручи / Наручи 75 % (с локтем) / walk",
+      "role": "paper-doll layer: Bracers / Bracers 75% (with elbow) / walk",
       "path": "assets/doll/layers/bracers/elbow/walk_tones.png",
       "status": "test",
       "technical": {
@@ -7613,7 +7613,7 @@
     },
     {
       "id": "bracers-elbow-tones-run",
-      "role": "paper-doll layer: Наручи / Наручи 75 % (с локтем) / run",
+      "role": "paper-doll layer: Bracers / Bracers 75% (with elbow) / run",
       "path": "assets/doll/layers/bracers/elbow/run_tones.png",
       "status": "test",
       "technical": {
@@ -7655,7 +7655,7 @@
     },
     {
       "id": "bracers-elbow-tones-attack_sword1h",
-      "role": "paper-doll layer: Наручи / Наручи 75 % (с локтем) / attack_sword1h",
+      "role": "paper-doll layer: Bracers / Bracers 75% (with elbow) / attack_sword1h",
       "path": "assets/doll/layers/bracers/elbow/attack_sword1h_tones.png",
       "status": "test",
       "technical": {
@@ -7697,7 +7697,7 @@
     },
     {
       "id": "bracers-elbow-tones-attack_sword2h",
-      "role": "paper-doll layer: Наручи / Наручи 75 % (с локтем) / attack_sword2h",
+      "role": "paper-doll layer: Bracers / Bracers 75% (with elbow) / attack_sword2h",
       "path": "assets/doll/layers/bracers/elbow/attack_sword2h_tones.png",
       "status": "test",
       "technical": {
@@ -7739,7 +7739,7 @@
     },
     {
       "id": "bracers-elbow-tones-attack_bow",
-      "role": "paper-doll layer: Наручи / Наручи 75 % (с локтем) / attack_bow",
+      "role": "paper-doll layer: Bracers / Bracers 75% (with elbow) / attack_bow",
       "path": "assets/doll/layers/bracers/elbow/attack_bow_tones.png",
       "status": "test",
       "technical": {
@@ -7781,7 +7781,7 @@
     },
     {
       "id": "bracers-full-idle",
-      "role": "paper-doll layer: Наручи / Наручи 100 % (вся рука) / idle",
+      "role": "paper-doll layer: Bracers / Bracers 100% (whole arm) / idle",
       "path": "assets/doll/layers/bracers/full/idle.png",
       "status": "test",
       "technical": {
@@ -7823,7 +7823,7 @@
     },
     {
       "id": "bracers-full-walk",
-      "role": "paper-doll layer: Наручи / Наручи 100 % (вся рука) / walk",
+      "role": "paper-doll layer: Bracers / Bracers 100% (whole arm) / walk",
       "path": "assets/doll/layers/bracers/full/walk.png",
       "status": "test",
       "technical": {
@@ -7865,7 +7865,7 @@
     },
     {
       "id": "bracers-full-run",
-      "role": "paper-doll layer: Наручи / Наручи 100 % (вся рука) / run",
+      "role": "paper-doll layer: Bracers / Bracers 100% (whole arm) / run",
       "path": "assets/doll/layers/bracers/full/run.png",
       "status": "test",
       "technical": {
@@ -7907,7 +7907,7 @@
     },
     {
       "id": "bracers-full-attack_sword1h",
-      "role": "paper-doll layer: Наручи / Наручи 100 % (вся рука) / attack_sword1h",
+      "role": "paper-doll layer: Bracers / Bracers 100% (whole arm) / attack_sword1h",
       "path": "assets/doll/layers/bracers/full/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -7949,7 +7949,7 @@
     },
     {
       "id": "bracers-full-attack_sword2h",
-      "role": "paper-doll layer: Наручи / Наручи 100 % (вся рука) / attack_sword2h",
+      "role": "paper-doll layer: Bracers / Bracers 100% (whole arm) / attack_sword2h",
       "path": "assets/doll/layers/bracers/full/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -7991,7 +7991,7 @@
     },
     {
       "id": "bracers-full-attack_bow",
-      "role": "paper-doll layer: Наручи / Наручи 100 % (вся рука) / attack_bow",
+      "role": "paper-doll layer: Bracers / Bracers 100% (whole arm) / attack_bow",
       "path": "assets/doll/layers/bracers/full/attack_bow.png",
       "status": "test",
       "technical": {
@@ -8033,7 +8033,7 @@
     },
     {
       "id": "bracers-full-tones-idle",
-      "role": "paper-doll layer: Наручи / Наручи 100 % (вся рука) / idle",
+      "role": "paper-doll layer: Bracers / Bracers 100% (whole arm) / idle",
       "path": "assets/doll/layers/bracers/full/idle_tones.png",
       "status": "test",
       "technical": {
@@ -8075,7 +8075,7 @@
     },
     {
       "id": "bracers-full-tones-walk",
-      "role": "paper-doll layer: Наручи / Наручи 100 % (вся рука) / walk",
+      "role": "paper-doll layer: Bracers / Bracers 100% (whole arm) / walk",
       "path": "assets/doll/layers/bracers/full/walk_tones.png",
       "status": "test",
       "technical": {
@@ -8117,7 +8117,7 @@
     },
     {
       "id": "bracers-full-tones-run",
-      "role": "paper-doll layer: Наручи / Наручи 100 % (вся рука) / run",
+      "role": "paper-doll layer: Bracers / Bracers 100% (whole arm) / run",
       "path": "assets/doll/layers/bracers/full/run_tones.png",
       "status": "test",
       "technical": {
@@ -8159,7 +8159,7 @@
     },
     {
       "id": "bracers-full-tones-attack_sword1h",
-      "role": "paper-doll layer: Наручи / Наручи 100 % (вся рука) / attack_sword1h",
+      "role": "paper-doll layer: Bracers / Bracers 100% (whole arm) / attack_sword1h",
       "path": "assets/doll/layers/bracers/full/attack_sword1h_tones.png",
       "status": "test",
       "technical": {
@@ -8201,7 +8201,7 @@
     },
     {
       "id": "bracers-full-tones-attack_sword2h",
-      "role": "paper-doll layer: Наручи / Наручи 100 % (вся рука) / attack_sword2h",
+      "role": "paper-doll layer: Bracers / Bracers 100% (whole arm) / attack_sword2h",
       "path": "assets/doll/layers/bracers/full/attack_sword2h_tones.png",
       "status": "test",
       "technical": {
@@ -8243,7 +8243,7 @@
     },
     {
       "id": "bracers-full-tones-attack_bow",
-      "role": "paper-doll layer: Наручи / Наручи 100 % (вся рука) / attack_bow",
+      "role": "paper-doll layer: Bracers / Bracers 100% (whole arm) / attack_bow",
       "path": "assets/doll/layers/bracers/full/attack_bow_tones.png",
       "status": "test",
       "technical": {
@@ -8285,7 +8285,7 @@
     },
     {
       "id": "shoulders-bands-idle",
-      "role": "paper-doll layer: Наплечники / Наплечники из полос / idle",
+      "role": "paper-doll layer: Shoulders / Banded pauldrons / idle",
       "path": "assets/doll/layers/shoulders/bands/idle.png",
       "status": "test",
       "technical": {
@@ -8329,7 +8329,7 @@
     },
     {
       "id": "shoulders-bands-walk",
-      "role": "paper-doll layer: Наплечники / Наплечники из полос / walk",
+      "role": "paper-doll layer: Shoulders / Banded pauldrons / walk",
       "path": "assets/doll/layers/shoulders/bands/walk.png",
       "status": "test",
       "technical": {
@@ -8373,7 +8373,7 @@
     },
     {
       "id": "shoulders-bands-run",
-      "role": "paper-doll layer: Наплечники / Наплечники из полос / run",
+      "role": "paper-doll layer: Shoulders / Banded pauldrons / run",
       "path": "assets/doll/layers/shoulders/bands/run.png",
       "status": "test",
       "technical": {
@@ -8417,7 +8417,7 @@
     },
     {
       "id": "shoulders-bands-attack_sword1h",
-      "role": "paper-doll layer: Наплечники / Наплечники из полос / attack_sword1h",
+      "role": "paper-doll layer: Shoulders / Banded pauldrons / attack_sword1h",
       "path": "assets/doll/layers/shoulders/bands/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -8461,7 +8461,7 @@
     },
     {
       "id": "shoulders-bands-attack_sword2h",
-      "role": "paper-doll layer: Наплечники / Наплечники из полос / attack_sword2h",
+      "role": "paper-doll layer: Shoulders / Banded pauldrons / attack_sword2h",
       "path": "assets/doll/layers/shoulders/bands/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -8505,7 +8505,7 @@
     },
     {
       "id": "shoulders-bands-attack_bow",
-      "role": "paper-doll layer: Наплечники / Наплечники из полос / attack_bow",
+      "role": "paper-doll layer: Shoulders / Banded pauldrons / attack_bow",
       "path": "assets/doll/layers/shoulders/bands/attack_bow.png",
       "status": "test",
       "technical": {
@@ -8549,7 +8549,7 @@
     },
     {
       "id": "shoulders-bands-tones-attack_bow",
-      "role": "paper-doll layer: Наплечники / Наплечники из полос / attack_bow",
+      "role": "paper-doll layer: Shoulders / Banded pauldrons / attack_bow",
       "path": "assets/doll/layers/shoulders/bands/attack_bow_tones.png",
       "status": "test",
       "technical": {
@@ -8593,7 +8593,7 @@
     },
     {
       "id": "shoulders-bands-tones-attack_sword1h",
-      "role": "paper-doll layer: Наплечники / Наплечники из полос / attack_sword1h",
+      "role": "paper-doll layer: Shoulders / Banded pauldrons / attack_sword1h",
       "path": "assets/doll/layers/shoulders/bands/attack_sword1h_tones.png",
       "status": "test",
       "technical": {
@@ -8637,7 +8637,7 @@
     },
     {
       "id": "shoulders-bands-tones-attack_sword2h",
-      "role": "paper-doll layer: Наплечники / Наплечники из полос / attack_sword2h",
+      "role": "paper-doll layer: Shoulders / Banded pauldrons / attack_sword2h",
       "path": "assets/doll/layers/shoulders/bands/attack_sword2h_tones.png",
       "status": "test",
       "technical": {
@@ -8681,7 +8681,7 @@
     },
     {
       "id": "shoulders-bands-tones-idle",
-      "role": "paper-doll layer: Наплечники / Наплечники из полос / idle",
+      "role": "paper-doll layer: Shoulders / Banded pauldrons / idle",
       "path": "assets/doll/layers/shoulders/bands/idle_tones.png",
       "status": "test",
       "technical": {
@@ -8725,7 +8725,7 @@
     },
     {
       "id": "shoulders-bands-tones-run",
-      "role": "paper-doll layer: Наплечники / Наплечники из полос / run",
+      "role": "paper-doll layer: Shoulders / Banded pauldrons / run",
       "path": "assets/doll/layers/shoulders/bands/run_tones.png",
       "status": "test",
       "technical": {
@@ -8769,7 +8769,7 @@
     },
     {
       "id": "shoulders-bands-tones-walk",
-      "role": "paper-doll layer: Наплечники / Наплечники из полос / walk",
+      "role": "paper-doll layer: Shoulders / Banded pauldrons / walk",
       "path": "assets/doll/layers/shoulders/bands/walk_tones.png",
       "status": "test",
       "technical": {
@@ -8813,7 +8813,7 @@
     },
     {
       "id": "shoulders-domes-idle",
-      "role": "paper-doll layer: Наплечники / Округлые наплечники / idle",
+      "role": "paper-doll layer: Shoulders / Domed pauldrons / idle",
       "path": "assets/doll/layers/shoulders/domes/idle.png",
       "status": "test",
       "technical": {
@@ -8857,7 +8857,7 @@
     },
     {
       "id": "shoulders-domes-walk",
-      "role": "paper-doll layer: Наплечники / Округлые наплечники / walk",
+      "role": "paper-doll layer: Shoulders / Domed pauldrons / walk",
       "path": "assets/doll/layers/shoulders/domes/walk.png",
       "status": "test",
       "technical": {
@@ -8901,7 +8901,7 @@
     },
     {
       "id": "shoulders-domes-run",
-      "role": "paper-doll layer: Наплечники / Округлые наплечники / run",
+      "role": "paper-doll layer: Shoulders / Domed pauldrons / run",
       "path": "assets/doll/layers/shoulders/domes/run.png",
       "status": "test",
       "technical": {
@@ -8945,7 +8945,7 @@
     },
     {
       "id": "shoulders-domes-attack_sword1h",
-      "role": "paper-doll layer: Наплечники / Округлые наплечники / attack_sword1h",
+      "role": "paper-doll layer: Shoulders / Domed pauldrons / attack_sword1h",
       "path": "assets/doll/layers/shoulders/domes/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -8989,7 +8989,7 @@
     },
     {
       "id": "shoulders-domes-attack_sword2h",
-      "role": "paper-doll layer: Наплечники / Округлые наплечники / attack_sword2h",
+      "role": "paper-doll layer: Shoulders / Domed pauldrons / attack_sword2h",
       "path": "assets/doll/layers/shoulders/domes/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -9033,7 +9033,7 @@
     },
     {
       "id": "shoulders-domes-attack_bow",
-      "role": "paper-doll layer: Наплечники / Округлые наплечники / attack_bow",
+      "role": "paper-doll layer: Shoulders / Domed pauldrons / attack_bow",
       "path": "assets/doll/layers/shoulders/domes/attack_bow.png",
       "status": "test",
       "technical": {
@@ -9077,7 +9077,7 @@
     },
     {
       "id": "shoulders-domes-tones-attack_bow",
-      "role": "paper-doll layer: Наплечники / Округлые наплечники / attack_bow",
+      "role": "paper-doll layer: Shoulders / Domed pauldrons / attack_bow",
       "path": "assets/doll/layers/shoulders/domes/attack_bow_tones.png",
       "status": "test",
       "technical": {
@@ -9121,7 +9121,7 @@
     },
     {
       "id": "shoulders-domes-tones-attack_sword1h",
-      "role": "paper-doll layer: Наплечники / Округлые наплечники / attack_sword1h",
+      "role": "paper-doll layer: Shoulders / Domed pauldrons / attack_sword1h",
       "path": "assets/doll/layers/shoulders/domes/attack_sword1h_tones.png",
       "status": "test",
       "technical": {
@@ -9165,7 +9165,7 @@
     },
     {
       "id": "shoulders-domes-tones-attack_sword2h",
-      "role": "paper-doll layer: Наплечники / Округлые наплечники / attack_sword2h",
+      "role": "paper-doll layer: Shoulders / Domed pauldrons / attack_sword2h",
       "path": "assets/doll/layers/shoulders/domes/attack_sword2h_tones.png",
       "status": "test",
       "technical": {
@@ -9209,7 +9209,7 @@
     },
     {
       "id": "shoulders-domes-tones-idle",
-      "role": "paper-doll layer: Наплечники / Округлые наплечники / idle",
+      "role": "paper-doll layer: Shoulders / Domed pauldrons / idle",
       "path": "assets/doll/layers/shoulders/domes/idle_tones.png",
       "status": "test",
       "technical": {
@@ -9253,7 +9253,7 @@
     },
     {
       "id": "shoulders-domes-tones-run",
-      "role": "paper-doll layer: Наплечники / Округлые наплечники / run",
+      "role": "paper-doll layer: Shoulders / Domed pauldrons / run",
       "path": "assets/doll/layers/shoulders/domes/run_tones.png",
       "status": "test",
       "technical": {
@@ -9297,7 +9297,7 @@
     },
     {
       "id": "shoulders-domes-tones-walk",
-      "role": "paper-doll layer: Наплечники / Округлые наплечники / walk",
+      "role": "paper-doll layer: Shoulders / Domed pauldrons / walk",
       "path": "assets/doll/layers/shoulders/domes/walk_tones.png",
       "status": "test",
       "technical": {
@@ -9341,7 +9341,7 @@
     },
     {
       "id": "shoulders-layered-idle",
-      "role": "paper-doll layer: Наплечники / Большие наплечники из трёх пластин / idle",
+      "role": "paper-doll layer: Shoulders / Large three-plate pauldrons / idle",
       "path": "assets/doll/layers/shoulders/layered/idle.png",
       "status": "test",
       "technical": {
@@ -9385,7 +9385,7 @@
     },
     {
       "id": "shoulders-layered-walk",
-      "role": "paper-doll layer: Наплечники / Большие наплечники из трёх пластин / walk",
+      "role": "paper-doll layer: Shoulders / Large three-plate pauldrons / walk",
       "path": "assets/doll/layers/shoulders/layered/walk.png",
       "status": "test",
       "technical": {
@@ -9429,7 +9429,7 @@
     },
     {
       "id": "shoulders-layered-run",
-      "role": "paper-doll layer: Наплечники / Большие наплечники из трёх пластин / run",
+      "role": "paper-doll layer: Shoulders / Large three-plate pauldrons / run",
       "path": "assets/doll/layers/shoulders/layered/run.png",
       "status": "test",
       "technical": {
@@ -9473,7 +9473,7 @@
     },
     {
       "id": "shoulders-layered-attack_sword1h",
-      "role": "paper-doll layer: Наплечники / Большие наплечники из трёх пластин / attack_sword1h",
+      "role": "paper-doll layer: Shoulders / Large three-plate pauldrons / attack_sword1h",
       "path": "assets/doll/layers/shoulders/layered/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -9517,7 +9517,7 @@
     },
     {
       "id": "shoulders-layered-attack_sword2h",
-      "role": "paper-doll layer: Наплечники / Большие наплечники из трёх пластин / attack_sword2h",
+      "role": "paper-doll layer: Shoulders / Large three-plate pauldrons / attack_sword2h",
       "path": "assets/doll/layers/shoulders/layered/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -9561,7 +9561,7 @@
     },
     {
       "id": "shoulders-layered-attack_bow",
-      "role": "paper-doll layer: Наплечники / Большие наплечники из трёх пластин / attack_bow",
+      "role": "paper-doll layer: Shoulders / Large three-plate pauldrons / attack_bow",
       "path": "assets/doll/layers/shoulders/layered/attack_bow.png",
       "status": "test",
       "technical": {
@@ -9605,7 +9605,7 @@
     },
     {
       "id": "shoulders-layered-tones-attack_bow",
-      "role": "paper-doll layer: Наплечники / Большие наплечники из трёх пластин / attack_bow",
+      "role": "paper-doll layer: Shoulders / Large three-plate pauldrons / attack_bow",
       "path": "assets/doll/layers/shoulders/layered/attack_bow_tones.png",
       "status": "test",
       "technical": {
@@ -9649,7 +9649,7 @@
     },
     {
       "id": "shoulders-layered-tones-attack_sword1h",
-      "role": "paper-doll layer: Наплечники / Большие наплечники из трёх пластин / attack_sword1h",
+      "role": "paper-doll layer: Shoulders / Large three-plate pauldrons / attack_sword1h",
       "path": "assets/doll/layers/shoulders/layered/attack_sword1h_tones.png",
       "status": "test",
       "technical": {
@@ -9693,7 +9693,7 @@
     },
     {
       "id": "shoulders-layered-tones-attack_sword2h",
-      "role": "paper-doll layer: Наплечники / Большие наплечники из трёх пластин / attack_sword2h",
+      "role": "paper-doll layer: Shoulders / Large three-plate pauldrons / attack_sword2h",
       "path": "assets/doll/layers/shoulders/layered/attack_sword2h_tones.png",
       "status": "test",
       "technical": {
@@ -9737,7 +9737,7 @@
     },
     {
       "id": "shoulders-layered-tones-idle",
-      "role": "paper-doll layer: Наплечники / Большие наплечники из трёх пластин / idle",
+      "role": "paper-doll layer: Shoulders / Large three-plate pauldrons / idle",
       "path": "assets/doll/layers/shoulders/layered/idle_tones.png",
       "status": "test",
       "technical": {
@@ -9781,7 +9781,7 @@
     },
     {
       "id": "shoulders-layered-tones-run",
-      "role": "paper-doll layer: Наплечники / Большие наплечники из трёх пластин / run",
+      "role": "paper-doll layer: Shoulders / Large three-plate pauldrons / run",
       "path": "assets/doll/layers/shoulders/layered/run_tones.png",
       "status": "test",
       "technical": {
@@ -9825,7 +9825,7 @@
     },
     {
       "id": "shoulders-layered-tones-walk",
-      "role": "paper-doll layer: Наплечники / Большие наплечники из трёх пластин / walk",
+      "role": "paper-doll layer: Shoulders / Large three-plate pauldrons / walk",
       "path": "assets/doll/layers/shoulders/layered/walk_tones.png",
       "status": "test",
       "technical": {
@@ -9869,7 +9869,7 @@
     },
     {
       "id": "shoulders-round-idle",
-      "role": "paper-doll layer: Наплечники / Малые круглые наплечники / idle",
+      "role": "paper-doll layer: Shoulders / Small round spaulders / idle",
       "path": "assets/doll/layers/shoulders/round/idle.png",
       "status": "test",
       "technical": {
@@ -9913,7 +9913,7 @@
     },
     {
       "id": "shoulders-round-walk",
-      "role": "paper-doll layer: Наплечники / Малые круглые наплечники / walk",
+      "role": "paper-doll layer: Shoulders / Small round spaulders / walk",
       "path": "assets/doll/layers/shoulders/round/walk.png",
       "status": "test",
       "technical": {
@@ -9957,7 +9957,7 @@
     },
     {
       "id": "shoulders-round-run",
-      "role": "paper-doll layer: Наплечники / Малые круглые наплечники / run",
+      "role": "paper-doll layer: Shoulders / Small round spaulders / run",
       "path": "assets/doll/layers/shoulders/round/run.png",
       "status": "test",
       "technical": {
@@ -10001,7 +10001,7 @@
     },
     {
       "id": "shoulders-round-attack_sword1h",
-      "role": "paper-doll layer: Наплечники / Малые круглые наплечники / attack_sword1h",
+      "role": "paper-doll layer: Shoulders / Small round spaulders / attack_sword1h",
       "path": "assets/doll/layers/shoulders/round/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -10045,7 +10045,7 @@
     },
     {
       "id": "shoulders-round-attack_sword2h",
-      "role": "paper-doll layer: Наплечники / Малые круглые наплечники / attack_sword2h",
+      "role": "paper-doll layer: Shoulders / Small round spaulders / attack_sword2h",
       "path": "assets/doll/layers/shoulders/round/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -10089,7 +10089,7 @@
     },
     {
       "id": "shoulders-round-attack_bow",
-      "role": "paper-doll layer: Наплечники / Малые круглые наплечники / attack_bow",
+      "role": "paper-doll layer: Shoulders / Small round spaulders / attack_bow",
       "path": "assets/doll/layers/shoulders/round/attack_bow.png",
       "status": "test",
       "technical": {
@@ -10133,7 +10133,7 @@
     },
     {
       "id": "shoulders-round-tones-attack_bow",
-      "role": "paper-doll layer: Наплечники / Малые круглые наплечники / attack_bow",
+      "role": "paper-doll layer: Shoulders / Small round spaulders / attack_bow",
       "path": "assets/doll/layers/shoulders/round/attack_bow_tones.png",
       "status": "test",
       "technical": {
@@ -10177,7 +10177,7 @@
     },
     {
       "id": "shoulders-round-tones-attack_sword1h",
-      "role": "paper-doll layer: Наплечники / Малые круглые наплечники / attack_sword1h",
+      "role": "paper-doll layer: Shoulders / Small round spaulders / attack_sword1h",
       "path": "assets/doll/layers/shoulders/round/attack_sword1h_tones.png",
       "status": "test",
       "technical": {
@@ -10221,7 +10221,7 @@
     },
     {
       "id": "shoulders-round-tones-attack_sword2h",
-      "role": "paper-doll layer: Наплечники / Малые круглые наплечники / attack_sword2h",
+      "role": "paper-doll layer: Shoulders / Small round spaulders / attack_sword2h",
       "path": "assets/doll/layers/shoulders/round/attack_sword2h_tones.png",
       "status": "test",
       "technical": {
@@ -10265,7 +10265,7 @@
     },
     {
       "id": "shoulders-round-tones-idle",
-      "role": "paper-doll layer: Наплечники / Малые круглые наплечники / idle",
+      "role": "paper-doll layer: Shoulders / Small round spaulders / idle",
       "path": "assets/doll/layers/shoulders/round/idle_tones.png",
       "status": "test",
       "technical": {
@@ -10309,7 +10309,7 @@
     },
     {
       "id": "shoulders-round-tones-run",
-      "role": "paper-doll layer: Наплечники / Малые круглые наплечники / run",
+      "role": "paper-doll layer: Shoulders / Small round spaulders / run",
       "path": "assets/doll/layers/shoulders/round/run_tones.png",
       "status": "test",
       "technical": {
@@ -10353,7 +10353,7 @@
     },
     {
       "id": "shoulders-round-tones-walk",
-      "role": "paper-doll layer: Наплечники / Малые круглые наплечники / walk",
+      "role": "paper-doll layer: Shoulders / Small round spaulders / walk",
       "path": "assets/doll/layers/shoulders/round/walk_tones.png",
       "status": "test",
       "technical": {
@@ -10397,7 +10397,7 @@
     },
     {
       "id": "shield-round-idle",
-      "role": "paper-doll layer: Щит / Круглый деревянный щит / idle",
+      "role": "paper-doll layer: Shield / Round wooden shield / idle",
       "path": "assets/doll/layers/shield/round/idle.png",
       "status": "test",
       "technical": {
@@ -10439,7 +10439,7 @@
     },
     {
       "id": "shield-round-walk",
-      "role": "paper-doll layer: Щит / Круглый деревянный щит / walk",
+      "role": "paper-doll layer: Shield / Round wooden shield / walk",
       "path": "assets/doll/layers/shield/round/walk.png",
       "status": "test",
       "technical": {
@@ -10481,7 +10481,7 @@
     },
     {
       "id": "shield-round-run",
-      "role": "paper-doll layer: Щит / Круглый деревянный щит / run",
+      "role": "paper-doll layer: Shield / Round wooden shield / run",
       "path": "assets/doll/layers/shield/round/run.png",
       "status": "test",
       "technical": {
@@ -10523,7 +10523,7 @@
     },
     {
       "id": "shield-round-attack_sword1h",
-      "role": "paper-doll layer: Щит / Круглый деревянный щит / attack_sword1h",
+      "role": "paper-doll layer: Shield / Round wooden shield / attack_sword1h",
       "path": "assets/doll/layers/shield/round/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -10565,7 +10565,7 @@
     },
     {
       "id": "shield-heater-idle",
-      "role": "paper-doll layer: Щит / Треугольный щит / idle",
+      "role": "paper-doll layer: Shield / Heater shield / idle",
       "path": "assets/doll/layers/shield/heater/idle.png",
       "status": "test",
       "technical": {
@@ -10607,7 +10607,7 @@
     },
     {
       "id": "shield-heater-walk",
-      "role": "paper-doll layer: Щит / Треугольный щит / walk",
+      "role": "paper-doll layer: Shield / Heater shield / walk",
       "path": "assets/doll/layers/shield/heater/walk.png",
       "status": "test",
       "technical": {
@@ -10649,7 +10649,7 @@
     },
     {
       "id": "shield-heater-run",
-      "role": "paper-doll layer: Щит / Треугольный щит / run",
+      "role": "paper-doll layer: Shield / Heater shield / run",
       "path": "assets/doll/layers/shield/heater/run.png",
       "status": "test",
       "technical": {
@@ -10691,7 +10691,7 @@
     },
     {
       "id": "shield-heater-attack_sword1h",
-      "role": "paper-doll layer: Щит / Треугольный щит / attack_sword1h",
+      "role": "paper-doll layer: Shield / Heater shield / attack_sword1h",
       "path": "assets/doll/layers/shield/heater/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -10733,7 +10733,7 @@
     },
     {
       "id": "head-a-idle",
-      "role": "paper-doll layer: Голова / Голова A: тёмные волосы / idle",
+      "role": "paper-doll layer: Head / Head A: dark hair / idle",
       "path": "assets/doll/layers/head/a/idle.png",
       "status": "test",
       "technical": {
@@ -10775,7 +10775,7 @@
     },
     {
       "id": "head-a-walk",
-      "role": "paper-doll layer: Голова / Голова A: тёмные волосы / walk",
+      "role": "paper-doll layer: Head / Head A: dark hair / walk",
       "path": "assets/doll/layers/head/a/walk.png",
       "status": "test",
       "technical": {
@@ -10817,7 +10817,7 @@
     },
     {
       "id": "head-a-run",
-      "role": "paper-doll layer: Голова / Голова A: тёмные волосы / run",
+      "role": "paper-doll layer: Head / Head A: dark hair / run",
       "path": "assets/doll/layers/head/a/run.png",
       "status": "test",
       "technical": {
@@ -10859,7 +10859,7 @@
     },
     {
       "id": "head-a-attack_sword1h",
-      "role": "paper-doll layer: Голова / Голова A: тёмные волосы / attack_sword1h",
+      "role": "paper-doll layer: Head / Head A: dark hair / attack_sword1h",
       "path": "assets/doll/layers/head/a/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -10901,7 +10901,7 @@
     },
     {
       "id": "head-a-attack_sword2h",
-      "role": "paper-doll layer: Голова / Голова A: тёмные волосы / attack_sword2h",
+      "role": "paper-doll layer: Head / Head A: dark hair / attack_sword2h",
       "path": "assets/doll/layers/head/a/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -10943,7 +10943,7 @@
     },
     {
       "id": "head-a-attack_bow",
-      "role": "paper-doll layer: Голова / Голова A: тёмные волосы / attack_bow",
+      "role": "paper-doll layer: Head / Head A: dark hair / attack_bow",
       "path": "assets/doll/layers/head/a/attack_bow.png",
       "status": "test",
       "technical": {
@@ -10985,7 +10985,7 @@
     },
     {
       "id": "head-b-idle",
-      "role": "paper-doll layer: Голова / Голова B: блондин с бородой / idle",
+      "role": "paper-doll layer: Head / Head B: blond with beard / idle",
       "path": "assets/doll/layers/head/b/idle.png",
       "status": "test",
       "technical": {
@@ -11027,7 +11027,7 @@
     },
     {
       "id": "head-b-walk",
-      "role": "paper-doll layer: Голова / Голова B: блондин с бородой / walk",
+      "role": "paper-doll layer: Head / Head B: blond with beard / walk",
       "path": "assets/doll/layers/head/b/walk.png",
       "status": "test",
       "technical": {
@@ -11069,7 +11069,7 @@
     },
     {
       "id": "head-b-run",
-      "role": "paper-doll layer: Голова / Голова B: блондин с бородой / run",
+      "role": "paper-doll layer: Head / Head B: blond with beard / run",
       "path": "assets/doll/layers/head/b/run.png",
       "status": "test",
       "technical": {
@@ -11111,7 +11111,7 @@
     },
     {
       "id": "head-b-attack_sword1h",
-      "role": "paper-doll layer: Голова / Голова B: блондин с бородой / attack_sword1h",
+      "role": "paper-doll layer: Head / Head B: blond with beard / attack_sword1h",
       "path": "assets/doll/layers/head/b/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -11153,7 +11153,7 @@
     },
     {
       "id": "head-b-attack_sword2h",
-      "role": "paper-doll layer: Голова / Голова B: блондин с бородой / attack_sword2h",
+      "role": "paper-doll layer: Head / Head B: blond with beard / attack_sword2h",
       "path": "assets/doll/layers/head/b/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -11195,7 +11195,7 @@
     },
     {
       "id": "head-b-attack_bow",
-      "role": "paper-doll layer: Голова / Голова B: блондин с бородой / attack_bow",
+      "role": "paper-doll layer: Head / Head B: blond with beard / attack_bow",
       "path": "assets/doll/layers/head/b/attack_bow.png",
       "status": "test",
       "technical": {
@@ -11237,7 +11237,7 @@
     },
     {
       "id": "head-c-idle",
-      "role": "paper-doll layer: Голова / Голова C: рыжая, пучок / idle",
+      "role": "paper-doll layer: Head / Head C: auburn bun / idle",
       "path": "assets/doll/layers/head/c/idle.png",
       "status": "test",
       "technical": {
@@ -11279,7 +11279,7 @@
     },
     {
       "id": "head-c-walk",
-      "role": "paper-doll layer: Голова / Голова C: рыжая, пучок / walk",
+      "role": "paper-doll layer: Head / Head C: auburn bun / walk",
       "path": "assets/doll/layers/head/c/walk.png",
       "status": "test",
       "technical": {
@@ -11321,7 +11321,7 @@
     },
     {
       "id": "head-c-run",
-      "role": "paper-doll layer: Голова / Голова C: рыжая, пучок / run",
+      "role": "paper-doll layer: Head / Head C: auburn bun / run",
       "path": "assets/doll/layers/head/c/run.png",
       "status": "test",
       "technical": {
@@ -11363,7 +11363,7 @@
     },
     {
       "id": "head-c-attack_sword1h",
-      "role": "paper-doll layer: Голова / Голова C: рыжая, пучок / attack_sword1h",
+      "role": "paper-doll layer: Head / Head C: auburn bun / attack_sword1h",
       "path": "assets/doll/layers/head/c/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -11405,7 +11405,7 @@
     },
     {
       "id": "head-c-attack_sword2h",
-      "role": "paper-doll layer: Голова / Голова C: рыжая, пучок / attack_sword2h",
+      "role": "paper-doll layer: Head / Head C: auburn bun / attack_sword2h",
       "path": "assets/doll/layers/head/c/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -11447,7 +11447,7 @@
     },
     {
       "id": "head-c-attack_bow",
-      "role": "paper-doll layer: Голова / Голова C: рыжая, пучок / attack_bow",
+      "role": "paper-doll layer: Head / Head C: auburn bun / attack_bow",
       "path": "assets/doll/layers/head/c/attack_bow.png",
       "status": "test",
       "technical": {
@@ -11489,7 +11489,7 @@
     },
     {
       "id": "headgear-knight-idle",
-      "role": "paper-doll layer: Головной убор / Закрытый шлем / idle",
+      "role": "paper-doll layer: Headgear / Closed helm / idle",
       "path": "assets/doll/layers/headgear/knight/idle.png",
       "status": "test",
       "technical": {
@@ -11531,7 +11531,7 @@
     },
     {
       "id": "headgear-knight-walk",
-      "role": "paper-doll layer: Головной убор / Закрытый шлем / walk",
+      "role": "paper-doll layer: Headgear / Closed helm / walk",
       "path": "assets/doll/layers/headgear/knight/walk.png",
       "status": "test",
       "technical": {
@@ -11573,7 +11573,7 @@
     },
     {
       "id": "headgear-knight-run",
-      "role": "paper-doll layer: Головной убор / Закрытый шлем / run",
+      "role": "paper-doll layer: Headgear / Closed helm / run",
       "path": "assets/doll/layers/headgear/knight/run.png",
       "status": "test",
       "technical": {
@@ -11615,7 +11615,7 @@
     },
     {
       "id": "headgear-knight-attack_sword1h",
-      "role": "paper-doll layer: Головной убор / Закрытый шлем / attack_sword1h",
+      "role": "paper-doll layer: Headgear / Closed helm / attack_sword1h",
       "path": "assets/doll/layers/headgear/knight/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -11657,7 +11657,7 @@
     },
     {
       "id": "headgear-knight-attack_sword2h",
-      "role": "paper-doll layer: Головной убор / Закрытый шлем / attack_sword2h",
+      "role": "paper-doll layer: Headgear / Closed helm / attack_sword2h",
       "path": "assets/doll/layers/headgear/knight/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -11699,7 +11699,7 @@
     },
     {
       "id": "headgear-knight-attack_bow",
-      "role": "paper-doll layer: Головной убор / Закрытый шлем / attack_bow",
+      "role": "paper-doll layer: Headgear / Closed helm / attack_bow",
       "path": "assets/doll/layers/headgear/knight/attack_bow.png",
       "status": "test",
       "technical": {
@@ -11741,7 +11741,7 @@
     },
     {
       "id": "headgear-knight-tones-idle",
-      "role": "paper-doll layer: Головной убор / Закрытый шлем / idle",
+      "role": "paper-doll layer: Headgear / Closed helm / idle",
       "path": "assets/doll/layers/headgear/knight/idle_tones.png",
       "status": "test",
       "technical": {
@@ -11783,7 +11783,7 @@
     },
     {
       "id": "headgear-knight-tones-walk",
-      "role": "paper-doll layer: Головной убор / Закрытый шлем / walk",
+      "role": "paper-doll layer: Headgear / Closed helm / walk",
       "path": "assets/doll/layers/headgear/knight/walk_tones.png",
       "status": "test",
       "technical": {
@@ -11825,7 +11825,7 @@
     },
     {
       "id": "headgear-knight-tones-run",
-      "role": "paper-doll layer: Головной убор / Закрытый шлем / run",
+      "role": "paper-doll layer: Headgear / Closed helm / run",
       "path": "assets/doll/layers/headgear/knight/run_tones.png",
       "status": "test",
       "technical": {
@@ -11867,7 +11867,7 @@
     },
     {
       "id": "headgear-knight-tones-attack_sword1h",
-      "role": "paper-doll layer: Головной убор / Закрытый шлем / attack_sword1h",
+      "role": "paper-doll layer: Headgear / Closed helm / attack_sword1h",
       "path": "assets/doll/layers/headgear/knight/attack_sword1h_tones.png",
       "status": "test",
       "technical": {
@@ -11909,7 +11909,7 @@
     },
     {
       "id": "headgear-knight-tones-attack_sword2h",
-      "role": "paper-doll layer: Головной убор / Закрытый шлем / attack_sword2h",
+      "role": "paper-doll layer: Headgear / Closed helm / attack_sword2h",
       "path": "assets/doll/layers/headgear/knight/attack_sword2h_tones.png",
       "status": "test",
       "technical": {
@@ -11951,7 +11951,7 @@
     },
     {
       "id": "headgear-knight-tones-attack_bow",
-      "role": "paper-doll layer: Головной убор / Закрытый шлем / attack_bow",
+      "role": "paper-doll layer: Headgear / Closed helm / attack_bow",
       "path": "assets/doll/layers/headgear/knight/attack_bow_tones.png",
       "status": "test",
       "technical": {
@@ -11993,7 +11993,7 @@
     },
     {
       "id": "headgear-archer-idle",
-      "role": "paper-doll layer: Головной убор / Открытый шлем лучника / idle",
+      "role": "paper-doll layer: Headgear / Open archer helmet / idle",
       "path": "assets/doll/layers/headgear/archer/idle.png",
       "status": "test",
       "technical": {
@@ -12035,7 +12035,7 @@
     },
     {
       "id": "headgear-archer-walk",
-      "role": "paper-doll layer: Головной убор / Открытый шлем лучника / walk",
+      "role": "paper-doll layer: Headgear / Open archer helmet / walk",
       "path": "assets/doll/layers/headgear/archer/walk.png",
       "status": "test",
       "technical": {
@@ -12077,7 +12077,7 @@
     },
     {
       "id": "headgear-archer-run",
-      "role": "paper-doll layer: Головной убор / Открытый шлем лучника / run",
+      "role": "paper-doll layer: Headgear / Open archer helmet / run",
       "path": "assets/doll/layers/headgear/archer/run.png",
       "status": "test",
       "technical": {
@@ -12119,7 +12119,7 @@
     },
     {
       "id": "headgear-archer-attack_sword1h",
-      "role": "paper-doll layer: Головной убор / Открытый шлем лучника / attack_sword1h",
+      "role": "paper-doll layer: Headgear / Open archer helmet / attack_sword1h",
       "path": "assets/doll/layers/headgear/archer/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -12161,7 +12161,7 @@
     },
     {
       "id": "headgear-archer-attack_sword2h",
-      "role": "paper-doll layer: Головной убор / Открытый шлем лучника / attack_sword2h",
+      "role": "paper-doll layer: Headgear / Open archer helmet / attack_sword2h",
       "path": "assets/doll/layers/headgear/archer/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -12203,7 +12203,7 @@
     },
     {
       "id": "headgear-archer-attack_bow",
-      "role": "paper-doll layer: Головной убор / Открытый шлем лучника / attack_bow",
+      "role": "paper-doll layer: Headgear / Open archer helmet / attack_bow",
       "path": "assets/doll/layers/headgear/archer/attack_bow.png",
       "status": "test",
       "technical": {
@@ -12245,7 +12245,7 @@
     },
     {
       "id": "headgear-archer-tones-idle",
-      "role": "paper-doll layer: Головной убор / Открытый шлем лучника / idle",
+      "role": "paper-doll layer: Headgear / Open archer helmet / idle",
       "path": "assets/doll/layers/headgear/archer/idle_tones.png",
       "status": "test",
       "technical": {
@@ -12287,7 +12287,7 @@
     },
     {
       "id": "headgear-archer-tones-walk",
-      "role": "paper-doll layer: Головной убор / Открытый шлем лучника / walk",
+      "role": "paper-doll layer: Headgear / Open archer helmet / walk",
       "path": "assets/doll/layers/headgear/archer/walk_tones.png",
       "status": "test",
       "technical": {
@@ -12329,7 +12329,7 @@
     },
     {
       "id": "headgear-archer-tones-run",
-      "role": "paper-doll layer: Головной убор / Открытый шлем лучника / run",
+      "role": "paper-doll layer: Headgear / Open archer helmet / run",
       "path": "assets/doll/layers/headgear/archer/run_tones.png",
       "status": "test",
       "technical": {
@@ -12371,7 +12371,7 @@
     },
     {
       "id": "headgear-archer-tones-attack_sword1h",
-      "role": "paper-doll layer: Головной убор / Открытый шлем лучника / attack_sword1h",
+      "role": "paper-doll layer: Headgear / Open archer helmet / attack_sword1h",
       "path": "assets/doll/layers/headgear/archer/attack_sword1h_tones.png",
       "status": "test",
       "technical": {
@@ -12413,7 +12413,7 @@
     },
     {
       "id": "headgear-archer-tones-attack_sword2h",
-      "role": "paper-doll layer: Головной убор / Открытый шлем лучника / attack_sword2h",
+      "role": "paper-doll layer: Headgear / Open archer helmet / attack_sword2h",
       "path": "assets/doll/layers/headgear/archer/attack_sword2h_tones.png",
       "status": "test",
       "technical": {
@@ -12455,7 +12455,7 @@
     },
     {
       "id": "headgear-archer-tones-attack_bow",
-      "role": "paper-doll layer: Головной убор / Открытый шлем лучника / attack_bow",
+      "role": "paper-doll layer: Headgear / Open archer helmet / attack_bow",
       "path": "assets/doll/layers/headgear/archer/attack_bow_tones.png",
       "status": "test",
       "technical": {
@@ -12497,7 +12497,7 @@
     },
     {
       "id": "headgear-nasal-idle",
-      "role": "paper-doll layer: Головной убор / Конический шлем / idle",
+      "role": "paper-doll layer: Headgear / Conical helmet / idle",
       "path": "assets/doll/layers/headgear/nasal/idle.png",
       "status": "test",
       "technical": {
@@ -12539,7 +12539,7 @@
     },
     {
       "id": "headgear-nasal-walk",
-      "role": "paper-doll layer: Головной убор / Конический шлем / walk",
+      "role": "paper-doll layer: Headgear / Conical helmet / walk",
       "path": "assets/doll/layers/headgear/nasal/walk.png",
       "status": "test",
       "technical": {
@@ -12581,7 +12581,7 @@
     },
     {
       "id": "headgear-nasal-run",
-      "role": "paper-doll layer: Головной убор / Конический шлем / run",
+      "role": "paper-doll layer: Headgear / Conical helmet / run",
       "path": "assets/doll/layers/headgear/nasal/run.png",
       "status": "test",
       "technical": {
@@ -12623,7 +12623,7 @@
     },
     {
       "id": "headgear-nasal-attack_sword1h",
-      "role": "paper-doll layer: Головной убор / Конический шлем / attack_sword1h",
+      "role": "paper-doll layer: Headgear / Conical helmet / attack_sword1h",
       "path": "assets/doll/layers/headgear/nasal/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -12665,7 +12665,7 @@
     },
     {
       "id": "headgear-nasal-attack_sword2h",
-      "role": "paper-doll layer: Головной убор / Конический шлем / attack_sword2h",
+      "role": "paper-doll layer: Headgear / Conical helmet / attack_sword2h",
       "path": "assets/doll/layers/headgear/nasal/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -12707,7 +12707,7 @@
     },
     {
       "id": "headgear-nasal-attack_bow",
-      "role": "paper-doll layer: Головной убор / Конический шлем / attack_bow",
+      "role": "paper-doll layer: Headgear / Conical helmet / attack_bow",
       "path": "assets/doll/layers/headgear/nasal/attack_bow.png",
       "status": "test",
       "technical": {
@@ -12749,7 +12749,7 @@
     },
     {
       "id": "headgear-nasal-tones-idle",
-      "role": "paper-doll layer: Головной убор / Конический шлем / idle",
+      "role": "paper-doll layer: Headgear / Conical helmet / idle",
       "path": "assets/doll/layers/headgear/nasal/idle_tones.png",
       "status": "test",
       "technical": {
@@ -12791,7 +12791,7 @@
     },
     {
       "id": "headgear-nasal-tones-walk",
-      "role": "paper-doll layer: Головной убор / Конический шлем / walk",
+      "role": "paper-doll layer: Headgear / Conical helmet / walk",
       "path": "assets/doll/layers/headgear/nasal/walk_tones.png",
       "status": "test",
       "technical": {
@@ -12833,7 +12833,7 @@
     },
     {
       "id": "headgear-nasal-tones-run",
-      "role": "paper-doll layer: Головной убор / Конический шлем / run",
+      "role": "paper-doll layer: Headgear / Conical helmet / run",
       "path": "assets/doll/layers/headgear/nasal/run_tones.png",
       "status": "test",
       "technical": {
@@ -12875,7 +12875,7 @@
     },
     {
       "id": "headgear-nasal-tones-attack_sword1h",
-      "role": "paper-doll layer: Головной убор / Конический шлем / attack_sword1h",
+      "role": "paper-doll layer: Headgear / Conical helmet / attack_sword1h",
       "path": "assets/doll/layers/headgear/nasal/attack_sword1h_tones.png",
       "status": "test",
       "technical": {
@@ -12917,7 +12917,7 @@
     },
     {
       "id": "headgear-nasal-tones-attack_sword2h",
-      "role": "paper-doll layer: Головной убор / Конический шлем / attack_sword2h",
+      "role": "paper-doll layer: Headgear / Conical helmet / attack_sword2h",
       "path": "assets/doll/layers/headgear/nasal/attack_sword2h_tones.png",
       "status": "test",
       "technical": {
@@ -12959,7 +12959,7 @@
     },
     {
       "id": "headgear-nasal-tones-attack_bow",
-      "role": "paper-doll layer: Головной убор / Конический шлем / attack_bow",
+      "role": "paper-doll layer: Headgear / Conical helmet / attack_bow",
       "path": "assets/doll/layers/headgear/nasal/attack_bow_tones.png",
       "status": "test",
       "technical": {
@@ -13001,7 +13001,7 @@
     },
     {
       "id": "weapon-sword1h-idle",
-      "role": "paper-doll layer: Оружие / Меч (одноручный) / idle",
+      "role": "paper-doll layer: Weapon / Sword (one-handed) / idle",
       "path": "assets/doll/layers/weapon/sword1h/idle.png",
       "status": "test",
       "technical": {
@@ -13043,7 +13043,7 @@
     },
     {
       "id": "weapon-sword1h-walk",
-      "role": "paper-doll layer: Оружие / Меч (одноручный) / walk",
+      "role": "paper-doll layer: Weapon / Sword (one-handed) / walk",
       "path": "assets/doll/layers/weapon/sword1h/walk.png",
       "status": "test",
       "technical": {
@@ -13085,7 +13085,7 @@
     },
     {
       "id": "weapon-sword1h-run",
-      "role": "paper-doll layer: Оружие / Меч (одноручный) / run",
+      "role": "paper-doll layer: Weapon / Sword (one-handed) / run",
       "path": "assets/doll/layers/weapon/sword1h/run.png",
       "status": "test",
       "technical": {
@@ -13127,7 +13127,7 @@
     },
     {
       "id": "weapon-sword1h-attack_sword1h",
-      "role": "paper-doll layer: Оружие / Меч (одноручный) / attack_sword1h",
+      "role": "paper-doll layer: Weapon / Sword (one-handed) / attack_sword1h",
       "path": "assets/doll/layers/weapon/sword1h/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -13169,7 +13169,7 @@
     },
     {
       "id": "weapon-falchion-idle",
-      "role": "paper-doll layer: Оружие / Фальшион (одноручный) / idle",
+      "role": "paper-doll layer: Weapon / Falchion (one-handed) / idle",
       "path": "assets/doll/layers/weapon/falchion/idle.png",
       "status": "test",
       "technical": {
@@ -13211,7 +13211,7 @@
     },
     {
       "id": "weapon-falchion-walk",
-      "role": "paper-doll layer: Оружие / Фальшион (одноручный) / walk",
+      "role": "paper-doll layer: Weapon / Falchion (one-handed) / walk",
       "path": "assets/doll/layers/weapon/falchion/walk.png",
       "status": "test",
       "technical": {
@@ -13253,7 +13253,7 @@
     },
     {
       "id": "weapon-falchion-run",
-      "role": "paper-doll layer: Оружие / Фальшион (одноручный) / run",
+      "role": "paper-doll layer: Weapon / Falchion (one-handed) / run",
       "path": "assets/doll/layers/weapon/falchion/run.png",
       "status": "test",
       "technical": {
@@ -13295,7 +13295,7 @@
     },
     {
       "id": "weapon-falchion-attack_sword1h",
-      "role": "paper-doll layer: Оружие / Фальшион (одноручный) / attack_sword1h",
+      "role": "paper-doll layer: Weapon / Falchion (one-handed) / attack_sword1h",
       "path": "assets/doll/layers/weapon/falchion/attack_sword1h.png",
       "status": "test",
       "technical": {
@@ -13339,7 +13339,7 @@
     },
     {
       "id": "weapon-sword2h-idle",
-      "role": "paper-doll layer: Оружие / Двуручный меч / idle",
+      "role": "paper-doll layer: Weapon / Two-handed sword / idle",
       "path": "assets/doll/layers/weapon/sword2h/idle.png",
       "status": "test",
       "technical": {
@@ -13381,7 +13381,7 @@
     },
     {
       "id": "weapon-sword2h-walk",
-      "role": "paper-doll layer: Оружие / Двуручный меч / walk",
+      "role": "paper-doll layer: Weapon / Two-handed sword / walk",
       "path": "assets/doll/layers/weapon/sword2h/walk.png",
       "status": "test",
       "technical": {
@@ -13423,7 +13423,7 @@
     },
     {
       "id": "weapon-sword2h-run",
-      "role": "paper-doll layer: Оружие / Двуручный меч / run",
+      "role": "paper-doll layer: Weapon / Two-handed sword / run",
       "path": "assets/doll/layers/weapon/sword2h/run.png",
       "status": "test",
       "technical": {
@@ -13465,7 +13465,7 @@
     },
     {
       "id": "weapon-sword2h-attack_sword2h",
-      "role": "paper-doll layer: Оружие / Двуручный меч / attack_sword2h",
+      "role": "paper-doll layer: Weapon / Two-handed sword / attack_sword2h",
       "path": "assets/doll/layers/weapon/sword2h/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -13507,7 +13507,7 @@
     },
     {
       "id": "weapon-zweihander-idle",
-      "role": "paper-doll layer: Оружие / Цвайхендер (двуручный) / idle",
+      "role": "paper-doll layer: Weapon / Zweihander (two-handed) / idle",
       "path": "assets/doll/layers/weapon/zweihander/idle.png",
       "status": "test",
       "technical": {
@@ -13549,7 +13549,7 @@
     },
     {
       "id": "weapon-zweihander-walk",
-      "role": "paper-doll layer: Оружие / Цвайхендер (двуручный) / walk",
+      "role": "paper-doll layer: Weapon / Zweihander (two-handed) / walk",
       "path": "assets/doll/layers/weapon/zweihander/walk.png",
       "status": "test",
       "technical": {
@@ -13591,7 +13591,7 @@
     },
     {
       "id": "weapon-zweihander-run",
-      "role": "paper-doll layer: Оружие / Цвайхендер (двуручный) / run",
+      "role": "paper-doll layer: Weapon / Zweihander (two-handed) / run",
       "path": "assets/doll/layers/weapon/zweihander/run.png",
       "status": "test",
       "technical": {
@@ -13633,7 +13633,7 @@
     },
     {
       "id": "weapon-zweihander-attack_sword2h",
-      "role": "paper-doll layer: Оружие / Цвайхендер (двуручный) / attack_sword2h",
+      "role": "paper-doll layer: Weapon / Zweihander (two-handed) / attack_sword2h",
       "path": "assets/doll/layers/weapon/zweihander/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -13677,7 +13677,7 @@
     },
     {
       "id": "weapon-glaive-idle",
-      "role": "paper-doll layer: Оружие / Глефа (древковая, двуручная) / idle",
+      "role": "paper-doll layer: Weapon / Glaive (polearm, two-handed) / idle",
       "path": "assets/doll/layers/weapon/glaive/idle.png",
       "status": "test",
       "technical": {
@@ -13719,7 +13719,7 @@
     },
     {
       "id": "weapon-glaive-walk",
-      "role": "paper-doll layer: Оружие / Глефа (древковая, двуручная) / walk",
+      "role": "paper-doll layer: Weapon / Glaive (polearm, two-handed) / walk",
       "path": "assets/doll/layers/weapon/glaive/walk.png",
       "status": "test",
       "technical": {
@@ -13761,7 +13761,7 @@
     },
     {
       "id": "weapon-glaive-run",
-      "role": "paper-doll layer: Оружие / Глефа (древковая, двуручная) / run",
+      "role": "paper-doll layer: Weapon / Glaive (polearm, two-handed) / run",
       "path": "assets/doll/layers/weapon/glaive/run.png",
       "status": "test",
       "technical": {
@@ -13803,7 +13803,7 @@
     },
     {
       "id": "weapon-glaive-attack_sword2h",
-      "role": "paper-doll layer: Оружие / Глефа (древковая, двуручная) / attack_sword2h",
+      "role": "paper-doll layer: Weapon / Glaive (polearm, two-handed) / attack_sword2h",
       "path": "assets/doll/layers/weapon/glaive/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -13847,7 +13847,7 @@
     },
     {
       "id": "weapon-halberd-idle",
-      "role": "paper-doll layer: Оружие / Алебарда (древковая, двуручная) / idle",
+      "role": "paper-doll layer: Weapon / Halberd (polearm, two-handed) / idle",
       "path": "assets/doll/layers/weapon/halberd/idle.png",
       "status": "test",
       "technical": {
@@ -13889,7 +13889,7 @@
     },
     {
       "id": "weapon-halberd-walk",
-      "role": "paper-doll layer: Оружие / Алебарда (древковая, двуручная) / walk",
+      "role": "paper-doll layer: Weapon / Halberd (polearm, two-handed) / walk",
       "path": "assets/doll/layers/weapon/halberd/walk.png",
       "status": "test",
       "technical": {
@@ -13931,7 +13931,7 @@
     },
     {
       "id": "weapon-halberd-run",
-      "role": "paper-doll layer: Оружие / Алебарда (древковая, двуручная) / run",
+      "role": "paper-doll layer: Weapon / Halberd (polearm, two-handed) / run",
       "path": "assets/doll/layers/weapon/halberd/run.png",
       "status": "test",
       "technical": {
@@ -13973,7 +13973,7 @@
     },
     {
       "id": "weapon-halberd-attack_sword2h",
-      "role": "paper-doll layer: Оружие / Алебарда (древковая, двуручная) / attack_sword2h",
+      "role": "paper-doll layer: Weapon / Halberd (polearm, two-handed) / attack_sword2h",
       "path": "assets/doll/layers/weapon/halberd/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -14017,7 +14017,7 @@
     },
     {
       "id": "weapon-spear-idle",
-      "role": "paper-doll layer: Оружие / Копьё (древковое, двуручное) / idle",
+      "role": "paper-doll layer: Weapon / Spear (polearm, two-handed) / idle",
       "path": "assets/doll/layers/weapon/spear/idle.png",
       "status": "test",
       "technical": {
@@ -14059,7 +14059,7 @@
     },
     {
       "id": "weapon-spear-walk",
-      "role": "paper-doll layer: Оружие / Копьё (древковое, двуручное) / walk",
+      "role": "paper-doll layer: Weapon / Spear (polearm, two-handed) / walk",
       "path": "assets/doll/layers/weapon/spear/walk.png",
       "status": "test",
       "technical": {
@@ -14101,7 +14101,7 @@
     },
     {
       "id": "weapon-spear-run",
-      "role": "paper-doll layer: Оружие / Копьё (древковое, двуручное) / run",
+      "role": "paper-doll layer: Weapon / Spear (polearm, two-handed) / run",
       "path": "assets/doll/layers/weapon/spear/run.png",
       "status": "test",
       "technical": {
@@ -14143,7 +14143,7 @@
     },
     {
       "id": "weapon-spear-attack_sword2h",
-      "role": "paper-doll layer: Оружие / Копьё (древковое, двуручное) / attack_sword2h",
+      "role": "paper-doll layer: Weapon / Spear (polearm, two-handed) / attack_sword2h",
       "path": "assets/doll/layers/weapon/spear/attack_sword2h.png",
       "status": "test",
       "technical": {
@@ -14187,7 +14187,7 @@
     },
     {
       "id": "weapon-bow-idle",
-      "role": "paper-doll layer: Оружие / Лук / idle",
+      "role": "paper-doll layer: Weapon / Bow / idle",
       "path": "assets/doll/layers/weapon/bow/idle.png",
       "status": "test",
       "technical": {
@@ -14229,7 +14229,7 @@
     },
     {
       "id": "weapon-bow-walk",
-      "role": "paper-doll layer: Оружие / Лук / walk",
+      "role": "paper-doll layer: Weapon / Bow / walk",
       "path": "assets/doll/layers/weapon/bow/walk.png",
       "status": "test",
       "technical": {
@@ -14271,7 +14271,7 @@
     },
     {
       "id": "weapon-bow-run",
-      "role": "paper-doll layer: Оружие / Лук / run",
+      "role": "paper-doll layer: Weapon / Bow / run",
       "path": "assets/doll/layers/weapon/bow/run.png",
       "status": "test",
       "technical": {
@@ -14313,7 +14313,7 @@
     },
     {
       "id": "weapon-bow-attack_bow",
-      "role": "paper-doll layer: Оружие / Лук / attack_bow",
+      "role": "paper-doll layer: Weapon / Bow / attack_bow",
       "path": "assets/doll/layers/weapon/bow/attack_bow.png",
       "status": "test",
       "technical": {
@@ -14355,7 +14355,7 @@
     },
     {
       "id": "weapon-bow_dark-idle",
-      "role": "paper-doll layer: Оружие / Красный лакированный лук / idle",
+      "role": "paper-doll layer: Weapon / Red lacquered bow / idle",
       "path": "assets/doll/layers/weapon/bow_dark/idle.png",
       "status": "test",
       "technical": {
@@ -14397,7 +14397,7 @@
     },
     {
       "id": "weapon-bow_dark-walk",
-      "role": "paper-doll layer: Оружие / Красный лакированный лук / walk",
+      "role": "paper-doll layer: Weapon / Red lacquered bow / walk",
       "path": "assets/doll/layers/weapon/bow_dark/walk.png",
       "status": "test",
       "technical": {
@@ -14439,7 +14439,7 @@
     },
     {
       "id": "weapon-bow_dark-run",
-      "role": "paper-doll layer: Оружие / Красный лакированный лук / run",
+      "role": "paper-doll layer: Weapon / Red lacquered bow / run",
       "path": "assets/doll/layers/weapon/bow_dark/run.png",
       "status": "test",
       "technical": {
@@ -14481,7 +14481,7 @@
     },
     {
       "id": "weapon-bow_dark-attack_bow",
-      "role": "paper-doll layer: Оружие / Красный лакированный лук / attack_bow",
+      "role": "paper-doll layer: Weapon / Red lacquered bow / attack_bow",
       "path": "assets/doll/layers/weapon/bow_dark/attack_bow.png",
       "status": "test",
       "technical": {

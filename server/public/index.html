@@ -1,32 +1,33 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Paper Doll</title>
+  <link rel="icon" href="data:," />
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body class="bg-grey">
   <header class="topbar">
-    <h1>Манекен и слои</h1>
+    <h1>Paper doll &amp; layers</h1>
     <div class="toolbar">
-      <label>Масштаб
+      <label>Scale
         <select id="scale">
           <option value="3">3×</option>
           <option value="4" selected>4×</option>
           <option value="6">6×</option>
         </select>
       </label>
-      <label>Фон
+      <label>Background
         <select id="bg">
-          <option value="grey" selected>серый</option>
-          <option value="checker">клетка</option>
-          <option value="dark">тёмный</option>
-          <option value="light">светлый</option>
-          <option value="grass">трава</option>
+          <option value="grey" selected>grey</option>
+          <option value="checker">checker</option>
+          <option value="dark">dark</option>
+          <option value="light">light</option>
+          <option value="grass">grass</option>
         </select>
       </label>
-      <label>Скорость
+      <label>Speed
         <select id="speed">
           <option value="0.25">0.25×</option>
           <option value="0.5">0.5×</option>
@@ -34,8 +35,8 @@
           <option value="2">2×</option>
         </select>
       </label>
-      <label class="check"><input type="checkbox" id="guides" /> земля и пивот</label>
-      <button id="reload" type="button" title="Перечитать assets/ после новой сборки">Обновить</button>
+      <label class="check"><input type="checkbox" id="guides" /> ground &amp; pivot</label>
+      <button id="reload" type="button" title="Re-read assets/ after a new build">Reload</button>
     </div>
   </header>
 
@@ -43,7 +44,7 @@
     <div class="layout">
       <aside class="panel" id="equipment">
         <div class="panel-head">
-          <h2>Экипировка</h2>
+          <h2>Equipment</h2>
         </div>
         <div class="presets" id="presets"></div>
         <div id="slots"></div>
@@ -53,28 +54,28 @@
         <div class="anim-tabs" id="anim-tabs"></div>
         <div class="stage big"><canvas id="main-canvas"></canvas></div>
         <div class="controls">
-          <button type="button" data-act="prev" title="Предыдущий кадр">◀︎</button>
-          <button type="button" data-act="play" title="Пауза / играть">❚❚</button>
-          <button type="button" data-act="next" title="Следующий кадр">▶︎</button>
-          <button type="button" data-act="flip" title="Отразить">⇋</button>
+          <button type="button" data-act="prev" title="Previous frame">◀︎</button>
+          <button type="button" data-act="play" title="Pause / play">❚❚</button>
+          <button type="button" data-act="next" title="Next frame">▶︎</button>
+          <button type="button" data-act="flip" title="Flip">⇋</button>
           <span class="frame-no" id="frame-no"></span>
         </div>
-        <h3>Слои этого кадра <span class="hint">клик — скрыть / показать слой</span></h3>
+        <h3>Layers of this frame <span class="hint">click to hide / show a layer</span></h3>
         <div class="layer-strip" id="layer-strip"></div>
       </section>
     </div>
 
     <section class="panel" id="playground">
       <div class="panel-head">
-        <h2>Сцена</h2>
-        <span class="hint">клик по сцене: ←→ / A D — идти, Shift — бежать, Пробел — атака оружием, Q — сменить оружие</span>
+        <h2>Playground</h2>
+        <span class="hint">click the scene: ←→ / A D walk, Shift run, Space attack with the weapon, Q switch weapon</span>
       </div>
-      <div class="pg-stage"><canvas id="pg-canvas" tabindex="0" aria-label="Сцена"></canvas></div>
+      <div class="pg-stage"><canvas id="pg-canvas" tabindex="0" aria-label="Playground"></canvas></div>
       <p class="hint" id="pg-status"></p>
     </section>
 
     <section class="panel">
-      <div class="panel-head"><h2>Анимации в текущей экипировке</h2><span class="hint">атака — та, что у выбранного оружия</span></div>
+      <div class="panel-head"><h2>Animations in this outfit</h2><span class="hint">the attack is the equipped weapon's</span></div>
       <div class="grid" id="grid"></div>
     </section>
     <p id="error" class="error" hidden></p>

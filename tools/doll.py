@@ -1888,7 +1888,7 @@ def main(config_path: str) -> None:
     for slot in cfg["slots"]:
         items = []
         if slot["id"] == "body":
-            items.append({"id": "base", "label": "Манекен",
+            items.append({"id": "base", "label": labels_cfg.get("body:base", "Mannequin"),
                           "strips": {a["id"]: f"body/{a['id']}.png" for a in anims}})
         found = [(item, per_anim) for (sl, item), per_anim in layers.items() if sl == slot["id"]]
         found.sort(key=lambda x: order.index(f"{slot['id']}:{x[0]}") if f"{slot['id']}:{x[0]}" in order else 999)

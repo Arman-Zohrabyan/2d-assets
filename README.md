@@ -14,12 +14,12 @@ npm start              # builds with tsc, then serves http://HOST:PORT (default 
 
 `server/.env` is not committed; variables set in the shell override it (`PORT=4000 npm start`).
 
-The page has an equipment panel (presets: Манекен, Рыцарь, Паладин, Лучник, Наёмник, Алебардщик, Страж, Охотница,
-Случайно; under every armour piece: ready materials, a colour picker for any material colour, and × for the piece
+The page has an equipment panel (presets: Mannequin, Knight, Paladin, Archer, Mercenary, Halberdier, Guard, Huntress,
+Random; under every armour piece: ready materials, a colour picker for any material colour, and × for the piece
 as drawn), a big
 view with frame stepping and per-layer toggles, a scene (arrows / A D to walk, Shift to run, Space to attack with
-the equipped weapon, Q to switch weapons) and every animation in the current outfit. The tabs are Стойка, Ходьба,
-Бег and one «Атака» that plays the equipped weapon's attack and switches with the weapon; without a weapon there
+the equipped weapon, Q to switch weapons) and every animation in the current outfit. The tabs are Idle, Walk,
+Run and one "Attack" that plays the equipped weapon's attack and switches with the weapon; without a weapon there
 is no attack tab. A shield can only be picked with a one-handed weapon.
 
 ## Rebuild the layers
@@ -31,7 +31,7 @@ python3 tools/doll_preview.py assets/doll 6 --outfit knight --anims walk --out /
 python3 tools/doll_manifest.py source/doll/doll.json
 ```
 
-Then press "Обновить" on the page.
+Then press "Reload" on the page.
 
 ## Generate more
 

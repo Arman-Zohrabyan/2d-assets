@@ -164,7 +164,7 @@
   "animations": [
     {
       "id": "idle",
-      "label": "Стойка",
+      "label": "Idle",
       "src": "source/doll/raw/base_idle.png",
       "frames": 4,
       "rows": 1,
@@ -174,7 +174,7 @@
     },
     {
       "id": "walk",
-      "label": "Ходьба",
+      "label": "Walk",
       "src": "source/doll/raw/base_walk.png",
       "frames": 6,
       "rows": 1,
@@ -184,7 +184,7 @@
     },
     {
       "id": "run",
-      "label": "Бег",
+      "label": "Run",
       "src": "source/doll/raw/base_run.png",
       "frames": 6,
       "rows": 1,
@@ -194,7 +194,7 @@
     },
     {
       "id": "attack_sword1h",
-      "label": "Атака: одноручный меч",
+      "label": "Attack: one-handed sword",
       "src": "source/doll/raw/base_attack_sword1h.png",
       "frames": 6,
       "rows": 2,
@@ -206,7 +206,7 @@
     },
     {
       "id": "attack_sword2h",
-      "label": "Атака: двуручный меч",
+      "label": "Attack: two-handed sword",
       "src": "source/doll/raw/base_attack_sword2h.png",
       "frames": 6,
       "rows": 2,
@@ -217,7 +217,7 @@
     },
     {
       "id": "attack_bow",
-      "label": "Атака: лук",
+      "label": "Attack: bow",
       "src": "source/doll/raw/base_attack_bow.png",
       "frames": 6,
       "rows": 2,
@@ -575,40 +575,40 @@
   "slots": [
     {
       "id": "body",
-      "label": "Тело",
+      "label": "Body",
       "required": true
     },
     {
       "id": "pants",
-      "label": "Штаны"
+      "label": "Pants"
     },
     {
       "id": "cloak",
-      "label": "Плащ"
+      "label": "Cloak"
     },
     {
       "id": "greaves",
-      "label": "Поножи"
+      "label": "Greaves"
     },
     {
       "id": "skirt",
-      "label": "Юбка"
+      "label": "Skirt"
     },
     {
       "id": "chest",
-      "label": "Нагрудник"
+      "label": "Chest"
     },
     {
       "id": "bracers",
-      "label": "Наручи"
+      "label": "Bracers"
     },
     {
       "id": "shoulders",
-      "label": "Наплечники"
+      "label": "Shoulders"
     },
     {
       "id": "shield",
-      "label": "Щит",
+      "label": "Shield",
       "requires": {
         "slot": "weapon",
         "hands": 1
@@ -622,60 +622,61 @@
     },
     {
       "id": "head",
-      "label": "Голова",
+      "label": "Head",
       "required": true
     },
     {
       "id": "headgear",
-      "label": "Головной убор"
+      "label": "Headgear"
     },
     {
       "id": "weapon",
-      "label": "Оружие"
+      "label": "Weapon"
     }
   ],
   "labels": {
-    "pants:green": "Зелёные шерстяные штаны",
-    "pants:blue": "Синие штаны",
-    "pants:leather": "Тёмные кожаные штаны",
-    "cloak:red": "Красный плащ",
-    "cloak:green": "Зелёный плащ",
-    "cloak:blue": "Синий плащ",
-    "greaves:plate": "Пластинчатые поножи",
-    "greaves:boots": "Высокие голенища",
-    "greaves:cuffed": "Поножи с отворотом",
-    "skirt:blue": "Синяя юбка",
-    "skirt:purple": "Фиолетовая юбка",
-    "skirt:red": "Красная юбка",
-    "chest:plate": "Кираса",
-    "chest:riveted": "Клёпаная кираса со швами",
-    "chest:mail": "Кольчуга до бедра",
-    "chest:brigandine": "Бригантина",
-    "bracers:wrist": "Наручи 25 % (запястье)",
-    "bracers:forearm": "Наручи 50 % (предплечье)",
-    "bracers:elbow": "Наручи 75 % (с локтем)",
-    "bracers:full": "Наручи 100 % (вся рука)",
-    "shoulders:bands": "Наплечники из полос",
-    "shoulders:domes": "Округлые наплечники",
-    "shoulders:layered": "Большие наплечники из трёх пластин",
-    "shoulders:round": "Малые круглые наплечники",
-    "shield:round": "Круглый деревянный щит",
-    "shield:heater": "Треугольный щит",
-    "head:a": "Голова A: тёмные волосы",
-    "head:b": "Голова B: блондин с бородой",
-    "head:c": "Голова C: рыжая, пучок",
-    "headgear:knight": "Закрытый шлем",
-    "headgear:archer": "Открытый шлем лучника",
-    "headgear:nasal": "Конический шлем",
-    "weapon:sword1h": "Меч (одноручный)",
-    "weapon:falchion": "Фальшион (одноручный)",
-    "weapon:sword2h": "Двуручный меч",
-    "weapon:zweihander": "Цвайхендер (двуручный)",
-    "weapon:glaive": "Глефа (древковая, двуручная)",
-    "weapon:halberd": "Алебарда (древковая, двуручная)",
-    "weapon:spear": "Копьё (древковое, двуручное)",
-    "weapon:bow": "Лук",
-    "weapon:bow_dark": "Красный лакированный лук"
+    "body:base": "Mannequin",
+    "pants:green": "Green wool pants",
+    "pants:blue": "Blue pants",
+    "pants:leather": "Dark leather pants",
+    "cloak:red": "Red cloak",
+    "cloak:green": "Green cloak",
+    "cloak:blue": "Blue cloak",
+    "greaves:plate": "Plate greaves",
+    "greaves:boots": "Tall boot shafts",
+    "greaves:cuffed": "Cuffed greaves",
+    "skirt:blue": "Blue skirt",
+    "skirt:purple": "Purple skirt",
+    "skirt:red": "Red skirt",
+    "chest:plate": "Cuirass",
+    "chest:riveted": "Riveted cuirass with seams",
+    "chest:mail": "Mail hauberk (to mid-thigh)",
+    "chest:brigandine": "Brigandine",
+    "bracers:wrist": "Bracers 25% (wrist)",
+    "bracers:forearm": "Bracers 50% (forearm)",
+    "bracers:elbow": "Bracers 75% (with elbow)",
+    "bracers:full": "Bracers 100% (whole arm)",
+    "shoulders:bands": "Banded pauldrons",
+    "shoulders:domes": "Domed pauldrons",
+    "shoulders:layered": "Large three-plate pauldrons",
+    "shoulders:round": "Small round spaulders",
+    "shield:round": "Round wooden shield",
+    "shield:heater": "Heater shield",
+    "head:a": "Head A: dark hair",
+    "head:b": "Head B: blond with beard",
+    "head:c": "Head C: auburn bun",
+    "headgear:knight": "Closed helm",
+    "headgear:archer": "Open archer helmet",
+    "headgear:nasal": "Conical helmet",
+    "weapon:sword1h": "Sword (one-handed)",
+    "weapon:falchion": "Falchion (one-handed)",
+    "weapon:sword2h": "Two-handed sword",
+    "weapon:zweihander": "Zweihander (two-handed)",
+    "weapon:glaive": "Glaive (polearm, two-handed)",
+    "weapon:halberd": "Halberd (polearm, two-handed)",
+    "weapon:spear": "Spear (polearm, two-handed)",
+    "weapon:bow": "Bow",
+    "weapon:bow_dark": "Red lacquered bow"
   },
   "skin_hsv": {
     "h": [
@@ -1670,7 +1671,7 @@
   },
   "materials": {
     "steel": {
-      "label": "Сталь",
+      "label": "Steel",
       "ramp": [
         "#e4eaf2",
         "#c0cbdc",
@@ -1680,7 +1681,7 @@
       ]
     },
     "silver": {
-      "label": "Серебро",
+      "label": "Silver",
       "ramp": [
         "#ffffff",
         "#dde2e8",
@@ -1690,7 +1691,7 @@
       ]
     },
     "gold": {
-      "label": "Золото",
+      "label": "Gold",
       "ramp": [
         "#fff3b0",
         "#f2d16b",
@@ -1700,7 +1701,7 @@
       ]
     },
     "copper": {
-      "label": "Медь",
+      "label": "Copper",
       "ramp": [
         "#ffc69a",
         "#e08a52",
@@ -1710,7 +1711,7 @@
       ]
     },
     "bronze": {
-      "label": "Бронза",
+      "label": "Bronze",
       "ramp": [
         "#f2c278",
         "#d08a45",
@@ -1720,7 +1721,7 @@
       ]
     },
     "leather": {
-      "label": "Кожа",
+      "label": "Leather",
       "ramp": [
         "#c99566",
         "#a3713f",
@@ -1792,7 +1793,7 @@
     "headgear:nasal": "steel"
   },
   "material_labels_extra": {
-    "cloth": "Багряная ткань"
+    "cloth": "Crimson cloth"
   },
   "headgear_color": "steel",
   "gear_sheets": [
