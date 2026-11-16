@@ -1,0 +1,7 @@
+source/doll/raw/base_idle.png|1536x1024|source/doll/prompts/base_idle.txt|source/doll/seed_approved.png
+source/doll/raw/base_walk.png|1536x1024|source/doll/prompts/base_walk.txt|source/doll/seed_approved.png
+source/doll/raw/base_run.png|1536x1024|source/doll/prompts/base_run.txt|source/doll/seed_approved.png
+source/doll/raw/base_attack_sword1h.png|1536x1024|source/doll/prompts/base_attack_sword1h.txt|source/doll/seed_approved.png
+source/doll/raw/base_attack_sword2h.png|1536x1024|source/doll/prompts/base_attack_sword2h.txt|source/doll/seed_approved.png
+source/doll/raw/base_attack_bow.png|1536x1024|source/doll/prompts/base_attack_bow.txt|source/doll/seed_approved.png
+source/doll/raw/heads_sheet.png|1536x1024|source/doll/prompts/heads_sheet.txt|source/doll/seed_approved.png

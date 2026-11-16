@@ -1,0 +1,845 @@
+{
+  "ok": true,
+  "assets": [
+    {
+      "path": "assets/doll/body/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 2292,
+      "color_count": 34,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 41634,
+      "content_bounds": [
+        40,
+        49,
+        389,
+        92
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/layered/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 829,
+      "color_count": 18,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42847,
+      "content_bounds": [
+        40,
+        53,
+        384,
+        65
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/bands/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 767,
+      "color_count": 17,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42869,
+      "content_bounds": [
+        40,
+        53,
+        383,
+        61
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/domes/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 855,
+      "color_count": 30,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42869,
+      "content_bounds": [
+        40,
+        53,
+        383,
+        60
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/round/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 539,
+      "color_count": 17,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42947,
+      "content_bounds": [
+        42,
+        54,
+        382,
+        59
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shield/heater/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 805,
+      "color_count": 25,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42644,
+      "content_bounds": [
+        49,
+        56,
+        392,
+        74
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shield/round/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 750,
+      "color_count": 19,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42648,
+      "content_bounds": [
+        49,
+        56,
+        392,
+        74
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/skirt/blue/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 915,
+      "color_count": 12,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42727,
+      "content_bounds": [
+        44,
+        65,
+        389,
+        78
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/skirt/red/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 1081,
+      "color_count": 18,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42599,
+      "content_bounds": [
+        42,
+        64,
+        389,
+        79
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/skirt/purple/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 1052,
+      "color_count": 15,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42723,
+      "content_bounds": [
+        43,
+        65,
+        389,
+        78
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/cloak/green/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 1180,
+      "color_count": 14,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42594,
+      "content_bounds": [
+        37,
+        52,
+        385,
+        82
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/cloak/blue/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 1498,
+      "color_count": 17,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42421,
+      "content_bounds": [
+        36,
+        52,
+        384,
+        83
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/cloak/red/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 1571,
+      "color_count": 16,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42491,
+      "content_bounds": [
+        37,
+        52,
+        385,
+        83
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/falchion/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 794,
+      "color_count": 22,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42777,
+      "content_bounds": [
+        42,
+        67,
+        392,
+        84
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/bow/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 766,
+      "color_count": 10,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42656,
+      "content_bounds": [
+        38,
+        55,
+        386,
+        86
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/sword2h/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 1036,
+      "color_count": 20,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42574,
+      "content_bounds": [
+        40,
+        66,
+        402,
+        89
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/sword1h/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 696,
+      "color_count": 18,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42797,
+      "content_bounds": [
+        42,
+        67,
+        390,
+        85
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/halberd/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 1348,
+      "color_count": 36,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42564,
+      "content_bounds": [
+        33,
+        46,
+        398,
+        88
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/spear/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 1067,
+      "color_count": 25,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42642,
+      "content_bounds": [
+        33,
+        46,
+        398,
+        88
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/zweihander/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 1368,
+      "color_count": 26,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42470,
+      "content_bounds": [
+        40,
+        66,
+        403,
+        89
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/glaive/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 1063,
+      "color_count": 22,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42598,
+      "content_bounds": [
+        33,
+        48,
+        401,
+        88
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/bow_dark/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 798,
+      "color_count": 10,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42640,
+      "content_bounds": [
+        38,
+        54,
+        386,
+        87
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/full/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 616,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42766,
+      "content_bounds": [
+        41,
+        55,
+        382,
+        74
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/elbow/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 601,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42834,
+      "content_bounds": [
+        41,
+        59,
+        382,
+        74
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/forearm/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 517,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42890,
+      "content_bounds": [
+        41,
+        61,
+        382,
+        74
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/wrist/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 440,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42941,
+      "content_bounds": [
+        42,
+        64,
+        382,
+        74
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/pants/green/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 650,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42654,
+      "content_bounds": [
+        43,
+        67,
+        386,
+        88
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/pants/blue/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 650,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42654,
+      "content_bounds": [
+        43,
+        67,
+        386,
+        88
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/pants/leather/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 651,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42654,
+      "content_bounds": [
+        43,
+        67,
+        386,
+        88
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/head/a/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 983,
+      "color_count": 20,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42384,
+      "content_bounds": [
+        41,
+        40,
+        391,
+        56
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/head/c/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 1017,
+      "color_count": 24,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42372,
+      "content_bounds": [
+        39,
+        41,
+        391,
+        56
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/head/b/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 1058,
+      "color_count": 24,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42324,
+      "content_bounds": [
+        39,
+        40,
+        391,
+        56
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/archer/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 994,
+      "color_count": 30,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42568,
+      "content_bounds": [
+        40,
+        41,
+        392,
+        56
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/knight/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 1024,
+      "color_count": 26,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42340,
+      "content_bounds": [
+        41,
+        40,
+        391,
+        56
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/nasal/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 825,
+      "color_count": 24,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42640,
+      "content_bounds": [
+        41,
+        37,
+        391,
+        50
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/boots/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 802,
+      "color_count": 22,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42856,
+      "content_bounds": [
+        43,
+        79,
+        385,
+        89
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/cuffed/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 839,
+      "color_count": 19,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42834,
+      "content_bounds": [
+        42,
+        80,
+        384,
+        89
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/plate/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 487,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42857,
+      "content_bounds": [
+        43,
+        79,
+        384,
+        88
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/mail/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 1536,
+      "color_count": 22,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42555,
+      "content_bounds": [
+        43,
+        53,
+        389,
+        76
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/plate/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 1360,
+      "color_count": 36,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42693,
+      "content_bounds": [
+        44,
+        53,
+        389,
+        69
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/riveted/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 1199,
+      "color_count": 21,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42673,
+      "content_bounds": [
+        45,
+        53,
+        389,
+        71
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/brigandine/idle.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 995,
+      "color_count": 9,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42630,
+      "content_bounds": [
+        44,
+        52,
+        388,
+        71
+      ],
+      "problems": []
+    }
+  ]
+}

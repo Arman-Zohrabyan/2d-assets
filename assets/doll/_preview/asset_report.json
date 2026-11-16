@@ -1,0 +1,6525 @@
+{
+  "ok": true,
+  "assets": [
+    {
+      "path": "assets/doll/body/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 4617,
+      "color_count": 47,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 62225,
+      "content_bounds": [
+        41,
+        55,
+        617,
+        92
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/body/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 4589,
+      "color_count": 48,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 62343,
+      "content_bounds": [
+        29,
+        54,
+        615,
+        92
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/body/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 4695,
+      "color_count": 48,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 62208,
+      "content_bounds": [
+        36,
+        48,
+        613,
+        92
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/body/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 5465,
+      "color_count": 48,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 61747,
+      "content_bounds": [
+        37,
+        51,
+        615,
+        92
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/body/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 3995,
+      "color_count": 48,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 62106,
+      "content_bounds": [
+        39,
+        48,
+        620,
+        92
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/masks/far_arm/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 426,
+      "color_count": 2,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64159,
+      "content_bounds": [
+        28,
+        59,
+        599,
+        74
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/masks/far_arm/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 400,
+      "color_count": 2,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64249,
+      "content_bounds": [
+        366,
+        58,
+        490,
+        73
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/masks/far_arm/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 398,
+      "color_count": 2,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64391,
+      "content_bounds": [
+        260,
+        60,
+        385,
+        70
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/masks/near_arm/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 619,
+      "color_count": 2,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64084,
+      "content_bounds": [
+        41,
+        59,
+        615,
+        74
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/masks/near_arm/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 592,
+      "color_count": 2,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63981,
+      "content_bounds": [
+        37,
+        55,
+        610,
+        76
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/masks/near_arm/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 622,
+      "color_count": 2,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64091,
+      "content_bounds": [
+        43,
+        56,
+        613,
+        73
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/masks/headgear/archer/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 533,
+      "color_count": 2,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63534,
+      "content_bounds": [
+        39,
+        39,
+        617,
+        57
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/masks/headgear/archer/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 528,
+      "color_count": 2,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63534,
+      "content_bounds": [
+        39,
+        40,
+        617,
+        57
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/masks/headgear/archer/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 515,
+      "color_count": 2,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63534,
+      "content_bounds": [
+        39,
+        35,
+        617,
+        50
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/masks/headgear/archer/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 508,
+      "color_count": 2,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63534,
+      "content_bounds": [
+        39,
+        38,
+        618,
+        52
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/masks/headgear/archer/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 503,
+      "color_count": 2,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63534,
+      "content_bounds": [
+        39,
+        35,
+        617,
+        49
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/masks/headgear/knight/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 454,
+      "color_count": 2,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 61488,
+      "content_bounds": [
+        32,
+        38,
+        616,
+        64
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/masks/headgear/knight/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 451,
+      "color_count": 2,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 61488,
+      "content_bounds": [
+        32,
+        39,
+        616,
+        64
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/masks/headgear/knight/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 432,
+      "color_count": 2,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 61488,
+      "content_bounds": [
+        32,
+        34,
+        616,
+        57
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/masks/headgear/knight/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 432,
+      "color_count": 2,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 61488,
+      "content_bounds": [
+        32,
+        37,
+        617,
+        59
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/masks/headgear/knight/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 427,
+      "color_count": 2,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 61488,
+      "content_bounds": [
+        32,
+        34,
+        616,
+        56
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/masks/headgear/nasal/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 570,
+      "color_count": 2,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63474,
+      "content_bounds": [
+        40,
+        35,
+        616,
+        53
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/masks/headgear/nasal/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 550,
+      "color_count": 2,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63474,
+      "content_bounds": [
+        40,
+        36,
+        616,
+        53
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/masks/headgear/nasal/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 524,
+      "color_count": 2,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63474,
+      "content_bounds": [
+        40,
+        31,
+        616,
+        46
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/masks/headgear/nasal/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 510,
+      "color_count": 2,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63474,
+      "content_bounds": [
+        40,
+        34,
+        617,
+        48
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/masks/headgear/nasal/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 502,
+      "color_count": 2,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63474,
+      "content_bounds": [
+        40,
+        31,
+        616,
+        45
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/plate/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 877,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64183,
+      "content_bounds": [
+        42,
+        79,
+        608,
+        89
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/plate/attack_bow_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 504,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64294,
+      "content_bounds": [
+        43,
+        80,
+        608,
+        91
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/plate/idle_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 384,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42877,
+      "content_bounds": [
+        43,
+        80,
+        384,
+        88
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/plate/run_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 847,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64240,
+      "content_bounds": [
+        32,
+        71,
+        613,
+        89
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/plate/attack_sword2h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 680,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64219,
+      "content_bounds": [
+        42,
+        80,
+        608,
+        89
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/plate/attack_sword1h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 750,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64206,
+      "content_bounds": [
+        39,
+        79,
+        612,
+        88
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/plate/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1027,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64196,
+      "content_bounds": [
+        32,
+        71,
+        613,
+        89
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/plate/walk_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 726,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64277,
+      "content_bounds": [
+        38,
+        79,
+        609,
+        91
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/plate/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 934,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64245,
+      "content_bounds": [
+        38,
+        78,
+        609,
+        91
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/plate/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 897,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64167,
+      "content_bounds": [
+        39,
+        78,
+        612,
+        88
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/plate/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 576,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64264,
+      "content_bounds": [
+        43,
+        79,
+        608,
+        91
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/mail/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1998,
+      "color_count": 25,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63909,
+      "content_bounds": [
+        42,
+        58,
+        612,
+        79
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/mail/attack_bow_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1440,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63688,
+      "content_bounds": [
+        40,
+        54,
+        612,
+        75
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/mail/idle_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 877,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42650,
+      "content_bounds": [
+        43,
+        53,
+        388,
+        75
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/mail/run_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1165,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64028,
+      "content_bounds": [
+        38,
+        57,
+        611,
+        78
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/mail/attack_sword2h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1085,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64078,
+      "content_bounds": [
+        43,
+        58,
+        612,
+        77
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/mail/attack_sword1h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1298,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63806,
+      "content_bounds": [
+        40,
+        56,
+        611,
+        77
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/mail/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 2356,
+      "color_count": 30,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63851,
+      "content_bounds": [
+        37,
+        57,
+        611,
+        79
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/mail/walk_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1377,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63936,
+      "content_bounds": [
+        41,
+        54,
+        611,
+        77
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/mail/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 2716,
+      "color_count": 32,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63784,
+      "content_bounds": [
+        40,
+        54,
+        612,
+        78
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/mail/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 2795,
+      "color_count": 30,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63645,
+      "content_bounds": [
+        39,
+        55,
+        613,
+        78
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/mail/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 2983,
+      "color_count": 32,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63544,
+      "content_bounds": [
+        39,
+        53,
+        614,
+        77
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/plate/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1438,
+      "color_count": 33,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64216,
+      "content_bounds": [
+        43,
+        56,
+        614,
+        73
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/plate/attack_bow_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 789,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64238,
+      "content_bounds": [
+        45,
+        55,
+        612,
+        66
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/plate/idle_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 635,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42749,
+      "content_bounds": [
+        45,
+        53,
+        388,
+        67
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/plate/run_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 780,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64292,
+      "content_bounds": [
+        41,
+        58,
+        609,
+        73
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/plate/attack_sword2h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 742,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64330,
+      "content_bounds": [
+        44,
+        58,
+        612,
+        72
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/plate/attack_sword1h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 837,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64202,
+      "content_bounds": [
+        40,
+        56,
+        611,
+        71
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/plate/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1515,
+      "color_count": 35,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64241,
+      "content_bounds": [
+        40,
+        58,
+        611,
+        73
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/plate/walk_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 762,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64260,
+      "content_bounds": [
+        43,
+        53,
+        611,
+        68
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/plate/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1640,
+      "color_count": 34,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64134,
+      "content_bounds": [
+        43,
+        53,
+        612,
+        69
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/plate/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1816,
+      "color_count": 33,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64119,
+      "content_bounds": [
+        40,
+        55,
+        612,
+        71
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/plate/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1566,
+      "color_count": 27,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64103,
+      "content_bounds": [
+        44,
+        54,
+        612,
+        67
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/riveted/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1235,
+      "color_count": 19,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64273,
+      "content_bounds": [
+        43,
+        60,
+        613,
+        74
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/riveted/attack_bow_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 893,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64124,
+      "content_bounds": [
+        44,
+        55,
+        612,
+        71
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/riveted/idle_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 622,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42735,
+      "content_bounds": [
+        45,
+        54,
+        388,
+        68
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/riveted/run_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 753,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64311,
+      "content_bounds": [
+        39,
+        59,
+        609,
+        74
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/riveted/attack_sword2h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 744,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64319,
+      "content_bounds": [
+        43,
+        60,
+        612,
+        74
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/riveted/attack_sword1h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 920,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64211,
+      "content_bounds": [
+        41,
+        56,
+        611,
+        71
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/riveted/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1351,
+      "color_count": 17,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64230,
+      "content_bounds": [
+        39,
+        58,
+        609,
+        74
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/riveted/walk_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 721,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64266,
+      "content_bounds": [
+        43,
+        55,
+        611,
+        68
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/riveted/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1244,
+      "color_count": 15,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64205,
+      "content_bounds": [
+        43,
+        54,
+        612,
+        68
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/riveted/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1575,
+      "color_count": 15,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64125,
+      "content_bounds": [
+        41,
+        56,
+        613,
+        71
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/riveted/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1571,
+      "color_count": 22,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63965,
+      "content_bounds": [
+        43,
+        54,
+        613,
+        72
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/brigandine/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1565,
+      "color_count": 19,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64071,
+      "content_bounds": [
+        42,
+        56,
+        609,
+        76
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/brigandine/attack_bow_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 893,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63901,
+      "content_bounds": [
+        44,
+        52,
+        612,
+        70
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/brigandine/idle_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 662,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42679,
+      "content_bounds": [
+        44,
+        52,
+        388,
+        71
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/brigandine/run_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1057,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64072,
+      "content_bounds": [
+        39,
+        56,
+        610,
+        76
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/brigandine/attack_sword2h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 845,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64218,
+      "content_bounds": [
+        43,
+        56,
+        607,
+        75
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/brigandine/attack_sword1h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1152,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63928,
+      "content_bounds": [
+        40,
+        55,
+        611,
+        74
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/brigandine/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1852,
+      "color_count": 23,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63967,
+      "content_bounds": [
+        38,
+        56,
+        610,
+        77
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/brigandine/walk_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1064,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64034,
+      "content_bounds": [
+        42,
+        51,
+        611,
+        74
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/brigandine/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1665,
+      "color_count": 12,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63944,
+      "content_bounds": [
+        42,
+        51,
+        612,
+        74
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/brigandine/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 2238,
+      "color_count": 26,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63848,
+      "content_bounds": [
+        40,
+        53,
+        612,
+        75
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/chest/brigandine/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1362,
+      "color_count": 10,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63828,
+      "content_bounds": [
+        44,
+        52,
+        613,
+        71
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/layered/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1146,
+      "color_count": 16,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64286,
+      "content_bounds": [
+        41,
+        56,
+        609,
+        67
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/layered/attack_bow_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 648,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64367,
+      "content_bounds": [
+        40,
+        52,
+        607,
+        61
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/layered/idle_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 482,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42875,
+      "content_bounds": [
+        41,
+        53,
+        384,
+        62
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/layered/run_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 678,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64345,
+      "content_bounds": [
+        39,
+        56,
+        607,
+        68
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/layered/attack_sword2h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 651,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64362,
+      "content_bounds": [
+        42,
+        56,
+        609,
+        67
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/layered/attack_sword1h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 755,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64312,
+      "content_bounds": [
+        39,
+        55,
+        608,
+        64
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/layered/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1231,
+      "color_count": 19,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64285,
+      "content_bounds": [
+        39,
+        54,
+        608,
+        68
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/layered/walk_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 647,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64335,
+      "content_bounds": [
+        41,
+        53,
+        609,
+        63
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/layered/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1078,
+      "color_count": 15,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64306,
+      "content_bounds": [
+        41,
+        53,
+        609,
+        63
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/layered/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1267,
+      "color_count": 14,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64239,
+      "content_bounds": [
+        38,
+        53,
+        608,
+        64
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/layered/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1090,
+      "color_count": 15,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64313,
+      "content_bounds": [
+        39,
+        52,
+        607,
+        61
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/bands/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1123,
+      "color_count": 25,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64327,
+      "content_bounds": [
+        41,
+        56,
+        608,
+        68
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/bands/attack_bow_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 604,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64382,
+      "content_bounds": [
+        40,
+        53,
+        607,
+        62
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/bands/idle_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 480,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42892,
+      "content_bounds": [
+        41,
+        54,
+        383,
+        61
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/bands/run_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 601,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64405,
+      "content_bounds": [
+        38,
+        57,
+        609,
+        66
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/bands/attack_sword2h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 557,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64420,
+      "content_bounds": [
+        42,
+        58,
+        608,
+        68
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/bands/attack_sword1h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 729,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64341,
+      "content_bounds": [
+        39,
+        55,
+        608,
+        64
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/bands/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1002,
+      "color_count": 28,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64379,
+      "content_bounds": [
+        38,
+        56,
+        610,
+        66
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/bands/walk_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 696,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64323,
+      "content_bounds": [
+        40,
+        54,
+        608,
+        62
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/bands/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1193,
+      "color_count": 23,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64266,
+      "content_bounds": [
+        40,
+        53,
+        608,
+        64
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/bands/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1267,
+      "color_count": 24,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64284,
+      "content_bounds": [
+        39,
+        54,
+        608,
+        64
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/bands/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1163,
+      "color_count": 23,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64282,
+      "content_bounds": [
+        39,
+        52,
+        607,
+        62
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/domes/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1396,
+      "color_count": 36,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64266,
+      "content_bounds": [
+        41,
+        56,
+        609,
+        67
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/domes/attack_bow_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 583,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64402,
+      "content_bounds": [
+        41,
+        52,
+        606,
+        60
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/domes/idle_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 450,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42904,
+      "content_bounds": [
+        41,
+        53,
+        383,
+        60
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/domes/run_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 685,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64342,
+      "content_bounds": [
+        39,
+        56,
+        608,
+        67
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/domes/attack_sword2h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 701,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64315,
+      "content_bounds": [
+        41,
+        56,
+        609,
+        67
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/domes/attack_sword1h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 682,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64342,
+      "content_bounds": [
+        40,
+        54,
+        607,
+        63
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/domes/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1278,
+      "color_count": 32,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64295,
+      "content_bounds": [
+        38,
+        56,
+        608,
+        67
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/domes/walk_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 668,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64349,
+      "content_bounds": [
+        41,
+        53,
+        608,
+        62
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/domes/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1318,
+      "color_count": 30,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64278,
+      "content_bounds": [
+        40,
+        51,
+        608,
+        63
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/domes/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1252,
+      "color_count": 28,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64286,
+      "content_bounds": [
+        39,
+        54,
+        607,
+        64
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/domes/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1047,
+      "color_count": 24,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64321,
+      "content_bounds": [
+        40,
+        52,
+        606,
+        61
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/round/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1032,
+      "color_count": 30,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64361,
+      "content_bounds": [
+        42,
+        57,
+        616,
+        69
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/round/attack_bow_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 528,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64429,
+      "content_bounds": [
+        41,
+        52,
+        606,
+        58
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/round/idle_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 385,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42948,
+      "content_bounds": [
+        42,
+        54,
+        382,
+        59
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/round/run_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 573,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64415,
+      "content_bounds": [
+        42,
+        56,
+        608,
+        65
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/round/attack_sword2h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 626,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64392,
+      "content_bounds": [
+        42,
+        57,
+        615,
+        68
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/round/attack_sword1h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 540,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64422,
+      "content_bounds": [
+        41,
+        55,
+        607,
+        63
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/round/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 916,
+      "color_count": 29,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64402,
+      "content_bounds": [
+        42,
+        54,
+        608,
+        65
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/round/walk_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 554,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64402,
+      "content_bounds": [
+        42,
+        53,
+        607,
+        61
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/round/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 946,
+      "color_count": 24,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64391,
+      "content_bounds": [
+        41,
+        53,
+        607,
+        61
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/round/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 896,
+      "color_count": 25,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64405,
+      "content_bounds": [
+        41,
+        55,
+        607,
+        63
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shoulders/round/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 828,
+      "color_count": 23,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64422,
+      "content_bounds": [
+        41,
+        51,
+        606,
+        58
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shield/heater/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1283,
+      "color_count": 29,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64007,
+      "content_bounds": [
+        40,
+        59,
+        614,
+        79
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shield/heater/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1243,
+      "color_count": 28,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64009,
+      "content_bounds": [
+        50,
+        55,
+        616,
+        73
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shield/heater/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1022,
+      "color_count": 26,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63956,
+      "content_bounds": [
+        49,
+        59,
+        616,
+        77
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shield/round/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1212,
+      "color_count": 24,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63975,
+      "content_bounds": [
+        40,
+        59,
+        614,
+        79
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shield/round/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1223,
+      "color_count": 26,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63984,
+      "content_bounds": [
+        50,
+        56,
+        616,
+        73
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/shield/round/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 960,
+      "color_count": 20,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63962,
+      "content_bounds": [
+        49,
+        59,
+        616,
+        77
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/skirt/blue/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1654,
+      "color_count": 15,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63941,
+      "content_bounds": [
+        40,
+        61,
+        614,
+        82
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/skirt/blue/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1688,
+      "color_count": 18,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64081,
+      "content_bounds": [
+        35,
+        66,
+        609,
+        82
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/skirt/blue/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1695,
+      "color_count": 20,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64023,
+      "content_bounds": [
+        38,
+        66,
+        614,
+        80
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/skirt/blue/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1724,
+      "color_count": 14,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63809,
+      "content_bounds": [
+        37,
+        64,
+        613,
+        80
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/skirt/blue/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1567,
+      "color_count": 15,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63956,
+      "content_bounds": [
+        41,
+        63,
+        612,
+        77
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/skirt/red/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 2125,
+      "color_count": 18,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63659,
+      "content_bounds": [
+        40,
+        67,
+        613,
+        85
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/skirt/red/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1896,
+      "color_count": 22,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63910,
+      "content_bounds": [
+        32,
+        66,
+        612,
+        83
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/skirt/red/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 2076,
+      "color_count": 21,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63811,
+      "content_bounds": [
+        39,
+        65,
+        614,
+        81
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/skirt/red/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 2067,
+      "color_count": 18,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63686,
+      "content_bounds": [
+        37,
+        66,
+        615,
+        81
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/skirt/red/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 2062,
+      "color_count": 25,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63765,
+      "content_bounds": [
+        40,
+        64,
+        612,
+        79
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/skirt/purple/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1300,
+      "color_count": 15,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64016,
+      "content_bounds": [
+        41,
+        67,
+        613,
+        81
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/skirt/purple/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1665,
+      "color_count": 13,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64020,
+      "content_bounds": [
+        35,
+        65,
+        609,
+        81
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/skirt/purple/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1421,
+      "color_count": 14,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64015,
+      "content_bounds": [
+        40,
+        66,
+        614,
+        79
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/skirt/purple/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1752,
+      "color_count": 17,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63912,
+      "content_bounds": [
+        37,
+        66,
+        613,
+        81
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/skirt/purple/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1365,
+      "color_count": 17,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64011,
+      "content_bounds": [
+        41,
+        63,
+        613,
+        75
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/cloak/green/run_under.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 574,
+      "color_count": 9,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64450,
+      "content_bounds": [
+        37,
+        60,
+        599,
+        73
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/cloak/green/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 2056,
+      "color_count": 14,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63510,
+      "content_bounds": [
+        36,
+        55,
+        610,
+        86
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/cloak/green/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1800,
+      "color_count": 14,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63904,
+      "content_bounds": [
+        32,
+        57,
+        607,
+        81
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/cloak/green/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1569,
+      "color_count": 14,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63792,
+      "content_bounds": [
+        33,
+        53,
+        610,
+        81
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/cloak/green/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 2113,
+      "color_count": 10,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63327,
+      "content_bounds": [
+        31,
+        53,
+        608,
+        83
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/cloak/green/walk_under.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 435,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64470,
+      "content_bounds": [
+        374,
+        61,
+        490,
+        73
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/cloak/green/attack_sword1h_under.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 463,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64466,
+      "content_bounds": [
+        264,
+        60,
+        385,
+        70
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/cloak/green/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1784,
+      "color_count": 15,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63690,
+      "content_bounds": [
+        35,
+        52,
+        608,
+        82
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/cloak/blue/run_under.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 684,
+      "color_count": 9,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64423,
+      "content_bounds": [
+        33,
+        60,
+        599,
+        73
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/cloak/blue/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 2094,
+      "color_count": 13,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63568,
+      "content_bounds": [
+        34,
+        56,
+        609,
+        84
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/cloak/blue/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 2155,
+      "color_count": 17,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63865,
+      "content_bounds": [
+        29,
+        57,
+        607,
+        79
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/cloak/blue/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1946,
+      "color_count": 13,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63749,
+      "content_bounds": [
+        33,
+        52,
+        609,
+        81
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/cloak/blue/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 2272,
+      "color_count": 14,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63363,
+      "content_bounds": [
+        32,
+        54,
+        609,
+        84
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/cloak/blue/walk_under.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 566,
+      "color_count": 9,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64454,
+      "content_bounds": [
+        374,
+        59,
+        490,
+        73
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/cloak/blue/attack_sword1h_under.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 478,
+      "color_count": 7,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64459,
+      "content_bounds": [
+        264,
+        60,
+        385,
+        70
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/cloak/blue/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 2029,
+      "color_count": 11,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63587,
+      "content_bounds": [
+        34,
+        52,
+        608,
+        83
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/cloak/red/run_under.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 572,
+      "color_count": 11,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64462,
+      "content_bounds": [
+        35,
+        60,
+        599,
+        73
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/cloak/red/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 2378,
+      "color_count": 21,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63547,
+      "content_bounds": [
+        37,
+        55,
+        608,
+        85
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/cloak/red/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 2428,
+      "color_count": 29,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63754,
+      "content_bounds": [
+        30,
+        56,
+        608,
+        83
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/cloak/red/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 2289,
+      "color_count": 22,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63726,
+      "content_bounds": [
+        33,
+        52,
+        610,
+        82
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/cloak/red/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 3022,
+      "color_count": 31,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63504,
+      "content_bounds": [
+        33,
+        53,
+        609,
+        83
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/cloak/red/walk_under.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 563,
+      "color_count": 8,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64468,
+      "content_bounds": [
+        374,
+        61,
+        490,
+        73
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/cloak/red/attack_sword1h_under.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 497,
+      "color_count": 10,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64473,
+      "content_bounds": [
+        264,
+        60,
+        385,
+        70
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/cloak/red/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 2431,
+      "color_count": 29,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63646,
+      "content_bounds": [
+        37,
+        52,
+        608,
+        84
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/falchion/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1019,
+      "color_count": 24,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64121,
+      "content_bounds": [
+        50,
+        61,
+        628,
+        80
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/falchion/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1057,
+      "color_count": 23,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64159,
+      "content_bounds": [
+        37,
+        66,
+        618,
+        85
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/falchion/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1620,
+      "color_count": 30,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64150,
+      "content_bounds": [
+        45,
+        41,
+        626,
+        78
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/bow/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1094,
+      "color_count": 10,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64021,
+      "content_bounds": [
+        47,
+        49,
+        618,
+        86
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/bow/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1022,
+      "color_count": 10,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63984,
+      "content_bounds": [
+        33,
+        54,
+        612,
+        87
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/bow/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1521,
+      "color_count": 19,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63902,
+      "content_bounds": [
+        50,
+        43,
+        622,
+        83
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/sword2h/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 2072,
+      "color_count": 31,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63860,
+      "content_bounds": [
+        50,
+        45,
+        629,
+        90
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/sword2h/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1371,
+      "color_count": 22,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63857,
+      "content_bounds": [
+        48,
+        60,
+        637,
+        86
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/sword2h/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1466,
+      "color_count": 23,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63854,
+      "content_bounds": [
+        35,
+        65,
+        628,
+        90
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/sword1h/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1110,
+      "color_count": 20,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64163,
+      "content_bounds": [
+        50,
+        61,
+        626,
+        81
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/sword1h/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 967,
+      "color_count": 19,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64189,
+      "content_bounds": [
+        37,
+        66,
+        616,
+        86
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/sword1h/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1362,
+      "color_count": 27,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64159,
+      "content_bounds": [
+        46,
+        43,
+        629,
+        78
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/halberd/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 3208,
+      "color_count": 42,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63782,
+      "content_bounds": [
+        44,
+        44,
+        628,
+        90
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/halberd/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1788,
+      "color_count": 34,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63818,
+      "content_bounds": [
+        40,
+        42,
+        632,
+        87
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/halberd/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1829,
+      "color_count": 36,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63821,
+      "content_bounds": [
+        28,
+        45,
+        624,
+        89
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/spear/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 2427,
+      "color_count": 39,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63954,
+      "content_bounds": [
+        44,
+        44,
+        628,
+        89
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/spear/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1412,
+      "color_count": 28,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63967,
+      "content_bounds": [
+        40,
+        42,
+        632,
+        87
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/spear/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1449,
+      "color_count": 25,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63966,
+      "content_bounds": [
+        28,
+        45,
+        624,
+        89
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/zweihander/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 2552,
+      "color_count": 30,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63742,
+      "content_bounds": [
+        51,
+        44,
+        628,
+        92
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/zweihander/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1522,
+      "color_count": 27,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63683,
+      "content_bounds": [
+        48,
+        60,
+        638,
+        86
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/zweihander/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1940,
+      "color_count": 30,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63709,
+      "content_bounds": [
+        35,
+        65,
+        629,
+        90
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/glaive/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 2437,
+      "color_count": 29,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63906,
+      "content_bounds": [
+        44,
+        45,
+        632,
+        93
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/glaive/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1421,
+      "color_count": 23,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63905,
+      "content_bounds": [
+        40,
+        43,
+        636,
+        87
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/glaive/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1445,
+      "color_count": 22,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63898,
+      "content_bounds": [
+        28,
+        47,
+        627,
+        89
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/bow_dark/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1297,
+      "color_count": 10,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63997,
+      "content_bounds": [
+        47,
+        48,
+        618,
+        87
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/bow_dark/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1079,
+      "color_count": 10,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63960,
+      "content_bounds": [
+        33,
+        53,
+        612,
+        88
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/weapon/bow_dark/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1660,
+      "color_count": 18,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63878,
+      "content_bounds": [
+        50,
+        42,
+        622,
+        84
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/full/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 917,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64200,
+      "content_bounds": [
+        44,
+        58,
+        613,
+        75
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/full/attack_bow_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1028,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63984,
+      "content_bounds": [
+        40,
+        53,
+        619,
+        72
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/full/idle_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 546,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42766,
+      "content_bounds": [
+        41,
+        55,
+        382,
+        74
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/full/run_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 844,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64217,
+      "content_bounds": [
+        35,
+        59,
+        612,
+        72
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/full/attack_sword2h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 846,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64200,
+      "content_bounds": [
+        44,
+        58,
+        613,
+        75
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/full/attack_sword1h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 723,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64278,
+      "content_bounds": [
+        43,
+        56,
+        609,
+        71
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/full/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 915,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64217,
+      "content_bounds": [
+        35,
+        59,
+        612,
+        72
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/full/walk_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 853,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64124,
+      "content_bounds": [
+        38,
+        55,
+        609,
+        73
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/full/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 959,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64124,
+      "content_bounds": [
+        38,
+        55,
+        609,
+        73
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/full/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 820,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64278,
+      "content_bounds": [
+        43,
+        56,
+        609,
+        71
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/full/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1143,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63984,
+      "content_bounds": [
+        40,
+        53,
+        619,
+        72
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/elbow/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 875,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64276,
+      "content_bounds": [
+        44,
+        61,
+        613,
+        75
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/elbow/attack_bow_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 944,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64178,
+      "content_bounds": [
+        40,
+        53,
+        619,
+        72
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/elbow/idle_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 484,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42854,
+      "content_bounds": [
+        41,
+        60,
+        382,
+        74
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/elbow/run_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 737,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64307,
+      "content_bounds": [
+        35,
+        60,
+        612,
+        72
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/elbow/attack_sword2h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 743,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64303,
+      "content_bounds": [
+        45,
+        61,
+        613,
+        75
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/elbow/attack_sword1h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 653,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64366,
+      "content_bounds": [
+        43,
+        56,
+        609,
+        71
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/elbow/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 874,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64282,
+      "content_bounds": [
+        35,
+        60,
+        612,
+        72
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/elbow/walk_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 781,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64256,
+      "content_bounds": [
+        38,
+        59,
+        609,
+        73
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/elbow/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 920,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64228,
+      "content_bounds": [
+        38,
+        58,
+        609,
+        73
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/elbow/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 770,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64340,
+      "content_bounds": [
+        43,
+        56,
+        609,
+        71
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/elbow/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1091,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64134,
+      "content_bounds": [
+        40,
+        53,
+        619,
+        72
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/forearm/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 727,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64347,
+      "content_bounds": [
+        45,
+        61,
+        613,
+        75
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/forearm/attack_bow_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 767,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64293,
+      "content_bounds": [
+        40,
+        53,
+        619,
+        72
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/forearm/idle_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 412,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42908,
+      "content_bounds": [
+        41,
+        63,
+        382,
+        74
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/forearm/run_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 657,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64373,
+      "content_bounds": [
+        35,
+        60,
+        612,
+        72
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/forearm/attack_sword2h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 650,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64373,
+      "content_bounds": [
+        46,
+        61,
+        613,
+        75
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/forearm/attack_sword1h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 589,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64408,
+      "content_bounds": [
+        43,
+        56,
+        609,
+        71
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/forearm/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 834,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64344,
+      "content_bounds": [
+        35,
+        60,
+        612,
+        72
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/forearm/walk_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 666,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64341,
+      "content_bounds": [
+        38,
+        61,
+        609,
+        73
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/forearm/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 794,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64314,
+      "content_bounds": [
+        38,
+        60,
+        609,
+        73
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/forearm/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 680,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64390,
+      "content_bounds": [
+        43,
+        56,
+        609,
+        71
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/forearm/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 921,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64254,
+      "content_bounds": [
+        40,
+        53,
+        619,
+        72
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/wrist/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 649,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64409,
+      "content_bounds": [
+        47,
+        61,
+        613,
+        75
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/wrist/attack_bow_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 584,
+      "color_count": 3,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64393,
+      "content_bounds": [
+        41,
+        53,
+        619,
+        72
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/wrist/idle_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 344,
+      "color_count": 3,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42957,
+      "content_bounds": [
+        42,
+        65,
+        382,
+        74
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/wrist/run_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 490,
+      "color_count": 3,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64442,
+      "content_bounds": [
+        35,
+        61,
+        612,
+        72
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/wrist/attack_sword2h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 517,
+      "color_count": 3,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64433,
+      "content_bounds": [
+        49,
+        61,
+        613,
+        75
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/wrist/attack_sword1h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 485,
+      "color_count": 3,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64447,
+      "content_bounds": [
+        45,
+        56,
+        609,
+        71
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/wrist/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 601,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64415,
+      "content_bounds": [
+        35,
+        61,
+        612,
+        72
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/wrist/walk_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 507,
+      "color_count": 3,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64427,
+      "content_bounds": [
+        38,
+        64,
+        609,
+        73
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/wrist/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 632,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64403,
+      "content_bounds": [
+        38,
+        63,
+        609,
+        73
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/wrist/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 587,
+      "color_count": 4,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64427,
+      "content_bounds": [
+        44,
+        56,
+        609,
+        71
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/bracers/wrist/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 761,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64355,
+      "content_bounds": [
+        40,
+        53,
+        619,
+        72
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/pants/green/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1206,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63796,
+      "content_bounds": [
+        42,
+        68,
+        611,
+        89
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/pants/green/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1248,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63906,
+      "content_bounds": [
+        32,
+        71,
+        613,
+        89
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/pants/green/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1416,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63863,
+      "content_bounds": [
+        38,
+        67,
+        612,
+        91
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/pants/green/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1301,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63651,
+      "content_bounds": [
+        39,
+        69,
+        612,
+        88
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/pants/green/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 885,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63858,
+      "content_bounds": [
+        41,
+        67,
+        611,
+        91
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/pants/blue/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1213,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63796,
+      "content_bounds": [
+        42,
+        68,
+        611,
+        89
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/pants/blue/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1260,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63906,
+      "content_bounds": [
+        32,
+        71,
+        613,
+        89
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/pants/blue/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1428,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63863,
+      "content_bounds": [
+        38,
+        67,
+        612,
+        91
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/pants/blue/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1302,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63651,
+      "content_bounds": [
+        39,
+        69,
+        612,
+        88
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/pants/blue/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 892,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63858,
+      "content_bounds": [
+        41,
+        67,
+        611,
+        91
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/pants/leather/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1197,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63796,
+      "content_bounds": [
+        42,
+        68,
+        611,
+        89
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/pants/leather/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1266,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63906,
+      "content_bounds": [
+        32,
+        71,
+        613,
+        89
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/pants/leather/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1420,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63863,
+      "content_bounds": [
+        38,
+        67,
+        612,
+        91
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/pants/leather/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1297,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63651,
+      "content_bounds": [
+        39,
+        69,
+        612,
+        88
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/pants/leather/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 882,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63858,
+      "content_bounds": [
+        41,
+        67,
+        611,
+        91
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/head/a/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1316,
+      "color_count": 20,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63576,
+      "content_bounds": [
+        41,
+        44,
+        615,
+        64
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/head/a/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1201,
+      "color_count": 20,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63576,
+      "content_bounds": [
+        41,
+        45,
+        615,
+        64
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/head/a/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1111,
+      "color_count": 20,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63576,
+      "content_bounds": [
+        41,
+        40,
+        615,
+        57
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/head/a/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1107,
+      "color_count": 20,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63576,
+      "content_bounds": [
+        41,
+        43,
+        616,
+        59
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/head/a/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1112,
+      "color_count": 20,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63576,
+      "content_bounds": [
+        41,
+        40,
+        615,
+        56
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/head/c/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1381,
+      "color_count": 24,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63558,
+      "content_bounds": [
+        39,
+        45,
+        615,
+        64
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/head/c/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1250,
+      "color_count": 24,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63558,
+      "content_bounds": [
+        39,
+        46,
+        615,
+        64
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/head/c/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1209,
+      "color_count": 24,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63558,
+      "content_bounds": [
+        39,
+        41,
+        615,
+        57
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/head/c/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1117,
+      "color_count": 24,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63558,
+      "content_bounds": [
+        39,
+        44,
+        616,
+        59
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/head/c/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1187,
+      "color_count": 24,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63558,
+      "content_bounds": [
+        39,
+        41,
+        615,
+        56
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/head/b/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1547,
+      "color_count": 24,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63486,
+      "content_bounds": [
+        39,
+        44,
+        615,
+        64
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/head/b/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1484,
+      "color_count": 24,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63486,
+      "content_bounds": [
+        39,
+        45,
+        615,
+        64
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/head/b/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1284,
+      "color_count": 24,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63486,
+      "content_bounds": [
+        39,
+        40,
+        615,
+        57
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/head/b/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1230,
+      "color_count": 24,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63486,
+      "content_bounds": [
+        39,
+        43,
+        616,
+        59
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/head/b/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1215,
+      "color_count": 24,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63486,
+      "content_bounds": [
+        39,
+        40,
+        615,
+        56
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/archer/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1203,
+      "color_count": 30,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63852,
+      "content_bounds": [
+        40,
+        45,
+        616,
+        64
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/archer/attack_bow_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 572,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64176,
+      "content_bounds": [
+        41,
+        41,
+        615,
+        50
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/archer/idle_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 461,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42784,
+      "content_bounds": [
+        41,
+        41,
+        391,
+        50
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/archer/run_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 651,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64176,
+      "content_bounds": [
+        41,
+        46,
+        615,
+        58
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/archer/attack_sword2h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 670,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64176,
+      "content_bounds": [
+        41,
+        45,
+        615,
+        58
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/archer/attack_sword1h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 576,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64176,
+      "content_bounds": [
+        41,
+        44,
+        616,
+        53
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/archer/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1173,
+      "color_count": 30,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63852,
+      "content_bounds": [
+        40,
+        46,
+        616,
+        64
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/archer/walk_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 607,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64176,
+      "content_bounds": [
+        41,
+        41,
+        615,
+        51
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/archer/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1190,
+      "color_count": 30,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63852,
+      "content_bounds": [
+        40,
+        41,
+        616,
+        57
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/archer/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1170,
+      "color_count": 30,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63852,
+      "content_bounds": [
+        40,
+        44,
+        617,
+        59
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/archer/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1160,
+      "color_count": 30,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63852,
+      "content_bounds": [
+        40,
+        41,
+        616,
+        56
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/knight/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1483,
+      "color_count": 26,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63510,
+      "content_bounds": [
+        41,
+        44,
+        615,
+        64
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/knight/attack_bow_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 771,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63750,
+      "content_bounds": [
+        42,
+        41,
+        614,
+        56
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/knight/idle_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 620,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42500,
+      "content_bounds": [
+        42,
+        41,
+        390,
+        56
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/knight/run_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 834,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63750,
+      "content_bounds": [
+        42,
+        46,
+        614,
+        64
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/knight/attack_sword2h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 875,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63750,
+      "content_bounds": [
+        42,
+        45,
+        614,
+        64
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/knight/attack_sword1h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 768,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63750,
+      "content_bounds": [
+        42,
+        44,
+        615,
+        59
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/knight/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1355,
+      "color_count": 26,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63510,
+      "content_bounds": [
+        41,
+        45,
+        615,
+        64
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/knight/walk_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 783,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63750,
+      "content_bounds": [
+        42,
+        41,
+        614,
+        57
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/knight/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1327,
+      "color_count": 26,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63510,
+      "content_bounds": [
+        41,
+        40,
+        615,
+        57
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/knight/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1229,
+      "color_count": 26,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63510,
+      "content_bounds": [
+        41,
+        43,
+        616,
+        59
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/knight/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1236,
+      "color_count": 26,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63510,
+      "content_bounds": [
+        41,
+        40,
+        615,
+        56
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/nasal/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1075,
+      "color_count": 24,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63960,
+      "content_bounds": [
+        41,
+        41,
+        615,
+        58
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/nasal/attack_bow_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 578,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64206,
+      "content_bounds": [
+        42,
+        39,
+        614,
+        48
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/nasal/idle_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 463,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42804,
+      "content_bounds": [
+        42,
+        39,
+        390,
+        48
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/nasal/run_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 648,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64206,
+      "content_bounds": [
+        42,
+        44,
+        614,
+        56
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/nasal/attack_sword2h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 656,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64206,
+      "content_bounds": [
+        42,
+        43,
+        614,
+        56
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/nasal/attack_sword1h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 585,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64206,
+      "content_bounds": [
+        42,
+        42,
+        615,
+        51
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/nasal/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1098,
+      "color_count": 24,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63960,
+      "content_bounds": [
+        41,
+        42,
+        615,
+        58
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/nasal/walk_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 603,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64206,
+      "content_bounds": [
+        42,
+        39,
+        614,
+        49
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/nasal/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 947,
+      "color_count": 24,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63960,
+      "content_bounds": [
+        41,
+        37,
+        615,
+        51
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/nasal/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 944,
+      "color_count": 24,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63960,
+      "content_bounds": [
+        41,
+        40,
+        616,
+        53
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/headgear/nasal/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 931,
+      "color_count": 24,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 63960,
+      "content_bounds": [
+        41,
+        37,
+        615,
+        50
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/boots/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1385,
+      "color_count": 22,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64187,
+      "content_bounds": [
+        42,
+        80,
+        609,
+        89
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/boots/attack_bow_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 722,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64269,
+      "content_bounds": [
+        43,
+        79,
+        609,
+        88
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/boots/idle_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 473,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42891,
+      "content_bounds": [
+        43,
+        80,
+        385,
+        89
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/boots/run_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 960,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64230,
+      "content_bounds": [
+        32,
+        73,
+        611,
+        89
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/boots/attack_sword2h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 852,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64222,
+      "content_bounds": [
+        42,
+        80,
+        609,
+        89
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/boots/attack_sword1h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 915,
+      "color_count": 6,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64136,
+      "content_bounds": [
+        38,
+        71,
+        612,
+        90
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/boots/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1769,
+      "color_count": 27,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64154,
+      "content_bounds": [
+        32,
+        73,
+        612,
+        89
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/boots/walk_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 805,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64268,
+      "content_bounds": [
+        38,
+        78,
+        609,
+        88
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/boots/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1268,
+      "color_count": 13,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64217,
+      "content_bounds": [
+        38,
+        77,
+        610,
+        89
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/boots/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1773,
+      "color_count": 20,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64103,
+      "content_bounds": [
+        38,
+        71,
+        613,
+        90
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/boots/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1138,
+      "color_count": 21,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64243,
+      "content_bounds": [
+        43,
+        79,
+        609,
+        88
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/cuffed/attack_sword2h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1338,
+      "color_count": 21,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64183,
+      "content_bounds": [
+        42,
+        79,
+        610,
+        90
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/cuffed/attack_bow_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 698,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64302,
+      "content_bounds": [
+        43,
+        78,
+        609,
+        87
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/cuffed/idle_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 448,
+      "height": 96,
+      "bytes": 499,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 42882,
+      "content_bounds": [
+        42,
+        80,
+        384,
+        88
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/cuffed/run_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 810,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64246,
+      "content_bounds": [
+        32,
+        73,
+        612,
+        88
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/cuffed/attack_sword2h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 757,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64293,
+      "content_bounds": [
+        43,
+        80,
+        609,
+        88
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/cuffed/attack_sword1h_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 891,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64151,
+      "content_bounds": [
+        39,
+        78,
+        612,
+        88
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/cuffed/run.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1339,
+      "color_count": 20,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64213,
+      "content_bounds": [
+        32,
+        73,
+        612,
+        89
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/cuffed/walk_tones.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 795,
+      "color_count": 5,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64261,
+      "content_bounds": [
+        37,
+        78,
+        609,
+        88
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/cuffed/walk.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1386,
+      "color_count": 21,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64211,
+      "content_bounds": [
+        37,
+        77,
+        609,
+        89
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/cuffed/attack_sword1h.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1694,
+      "color_count": 24,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64074,
+      "content_bounds": [
+        39,
+        78,
+        612,
+        89
+      ],
+      "problems": []
+    },
+    {
+      "path": "assets/doll/layers/greaves/cuffed/attack_bow.png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 672,
+      "height": 96,
+      "bytes": 1197,
+      "color_count": 19,
+      "has_alpha": true,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "transparent_pixels": 64226,
+      "content_bounds": [
+        43,
+        77,
+        609,
+        88
+      ],
+      "problems": []
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+ROLE/PURPOSE: equipment icons for a paper-doll character in a 2D side-scrolling game; each item will be cut out and attached to the character's hand in code, so every item must be complete, separate and drawn at one shared scale.
+Attached image 1 is the approved character. Image 2 shows the approved one-handed sword in use, image 3 the approved two-handed sword in use. Draw at EXACTLY the pixel scale of those images (the one-handed sword about as long as the character's leg, the two-handed sword about as long as the character from feet to chin).
+SUBJECT: six separate items on a transparent background, two rows, evenly spaced, nothing touching or overlapping.
+Top row, four swords standing UPRIGHT, blade pointing straight UP, grip and pommel at the bottom, each fully visible with its whole grip:
+1) the one-handed sword exactly as in image 2: straight steel blade, small gold crossguard, short dark brown grip, round gold pommel.
+2) a FALCHION, one-handed, the same length as sword 1: a broad single-edged steel blade that widens toward a clipped angled tip, slightly curved back edge, a short straight dark bronze crossguard, dark brown leather grip, small bronze pommel.
+3) the two-handed sword exactly as in image 3: long straight steel blade, wide steel crossguard, long dark brown grip, round steel pommel.
+4) a ZWEIHANDER, two-handed, the same length as sword 3: long straight steel blade with a short unsharpened section just above the guard that has two small side hooks, a very wide straight gold crossguard, a long crimson-wrapped grip, a gold pommel.
+Bottom row, two shields, each seen from the front, upright:
+5) a ROUND SHIELD of wooden planks (#6b4226, #94603a, #b07a4a) with a dark iron rim and a round steel boss in the centre, as wide as the character's torso is tall.
+6) a HEATER SHIELD (flat top, pointed bottom): steel rim, crimson field (#8f2533, #c4404f) with one broad gold diagonal band (#c99a2e, #f2d16b), the same height as shield 5.
+ART DIRECTION: crisp 16-bit pixel art matching the attached images, 1-pixel dark navy outline (#1b1f33), flat cel shading, light from the upper left, steel #3a4466 / #5a6988 / #8b9bb4 / #c0cbdc, gold #c99a2e / #f2d16b.
+EXCLUDE: text, numbers, labels, hands, characters, ground, shadows, scenery, border, checkerboard pattern, motion effects.

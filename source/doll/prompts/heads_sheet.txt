@@ -1,0 +1,10 @@
+ROLE/PURPOSE: head and headgear parts for a paper-doll character in a 2D side-scrolling game. They will be placed on top of the body from image 1, so they must match its head exactly in size and angle.
+SUBJECT: five heads in PURE SIDE PROFILE facing RIGHT, each with a short neck stub, in one horizontal row, evenly spaced and not touching, all drawn at EXACTLY the same scale as the head of attached image 1 and all with exactly the same skull size and face size. All neck stubs end on the same horizontal line.
+1) the bald base head exactly as in image 1 (same face, skin #e0a77e / #c4835a / #f3c9a4).
+2) HEAD A: a young man with short dark brown hair (#3b2a20, #57402f, #7a5a40), clean-shaven, otherwise the same skull and face as 1.
+3) HEAD B: an older man with long blond hair tied back in a short ponytail (#8a6a24, #c9a23f, #e6c86a) and a full blond beard, same skull and same face size as 1.
+4) HEAD A wearing a FULL CLOSED KNIGHT HELMET: a rounded steel great helm covering the whole head and face, one dark horizontal visor slit, steel #3a4466 / #5a6988 / #8b9bb4 / #c0cbdc, sized to fit this head snugly.
+5) HEAD A wearing an ARCHER HELMET: a light open-face steel cap with a small brim and a brown leather lining and chin strap (#4a2e1f, #7a4a2c), the face stays visible, sized to fit this head snugly.
+ART DIRECTION: crisp 16-bit pixel art matching image 1, clean 1-pixel dark navy outline (#1b1f33), flat cel shading, light from the upper left, the same coarse pixel-block size as image 1 scaled up evenly.
+TECHNICAL OUTPUT: wide image, the five heads each about 25% of the image height, transparent background.
+EXCLUDE: text, numbers, labels, bodies, shoulders, ground, shadows, scenery, border, checkerboard pattern.

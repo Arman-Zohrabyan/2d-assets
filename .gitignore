@@ -1,0 +1,9 @@
+# dependencies and builds
+node_modules/
+server/dist/
+# tool output
+.playwright-mcp/
+__pycache__/
+*.pyc
+*.log
+.DS_Store

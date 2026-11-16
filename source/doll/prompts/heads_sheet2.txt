@@ -1,0 +1,9 @@
+ROLE/PURPOSE: head and headgear parts for a paper-doll character in a 2D side-scrolling game. They will be placed on top of the body from image 1, so they must match its head exactly in size and angle. Image 2 is the approved head sheet: copy its style, scale and pixel size exactly.
+SUBJECT: four heads in PURE SIDE PROFILE facing RIGHT, each with a short neck stub, in one horizontal row, evenly spaced and not touching, all drawn at EXACTLY the same scale as the heads in image 2 and all with exactly the same skull size and face size. All neck stubs end on the same horizontal line.
+1) the bald base head exactly as the first head of image 2 (same face, skin #e0a77e / #c4835a / #f3c9a4).
+2) HEAD A exactly as the second head of image 2: a young man with short dark brown hair, clean-shaven.
+3) HEAD C: a young woman with auburn red hair (#5a2318, #8c3a22, #c0603a) pulled back into a neat bun at the back of the head, no beard, the same skull and the same face size as 1; nothing hangs below the neck stub.
+4) HEAD A wearing a CONICAL NASAL HELMET: a pointed conical steel helmet with a straight vertical nose guard in front of the nose and a narrow bronze band around the rim, steel #3a4466 / #5a6988 / #8b9bb4 / #c0cbdc, bronze #a0612a / #d08a45, sized to fit this head snugly; the eyes, cheeks and chin stay visible.
+ART DIRECTION: crisp 16-bit pixel art matching images 1 and 2, clean 1-pixel dark navy outline (#1b1f33), flat cel shading, light from the upper left, the same coarse pixel-block size as image 2.
+TECHNICAL OUTPUT: wide image, the four heads each about 25% of the image height, transparent background.
+EXCLUDE: text, numbers, labels, bodies, shoulders, ground, shadows, scenery, border, checkerboard pattern.

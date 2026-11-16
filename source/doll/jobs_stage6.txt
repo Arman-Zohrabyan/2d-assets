@@ -1,0 +1,1 @@
+source/doll/raw/polearm_sheet.png|1536x1024|source/doll/prompts/polearm_sheet.txt|source/doll/seed_approved.png|source/doll/raw/gear_sheet.png

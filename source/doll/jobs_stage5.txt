@@ -1,0 +1,12 @@
+source/doll/raw/kit9_idle.png|1536x1024|source/doll/prompts/kit9.txt|source/doll/seed_approved.png|source/doll/raw/base_idle.png
+source/doll/raw/kit9_walk.png|1536x1024|source/doll/prompts/kit9.txt|source/doll/seed_approved.png|source/doll/raw/base_walk.png
+source/doll/raw/kit9_run.png|1536x1024|source/doll/prompts/kit9.txt|source/doll/seed_approved.png|source/doll/raw/base_run.png
+source/doll/raw/kit9_attack_sword1h.png|1536x1024|source/doll/prompts/kit9.txt|source/doll/seed_approved.png|source/doll/raw/base_attack_sword1h.png
+source/doll/raw/kit9_attack_sword2h.png|1536x1024|source/doll/prompts/kit9.txt|source/doll/seed_approved.png|source/doll/raw/base_attack_sword2h.png
+source/doll/raw/kit9_attack_bow.png|1536x1024|source/doll/prompts/kit9.txt|source/doll/seed_approved.png|source/doll/raw/base_attack_bow.png
+source/doll/raw/kit10_idle.png|1536x1024|source/doll/prompts/kit10.txt|source/doll/seed_approved.png|source/doll/raw/base_idle.png
+source/doll/raw/kit10_walk.png|1536x1024|source/doll/prompts/kit10.txt|source/doll/seed_approved.png|source/doll/raw/base_walk.png
+source/doll/raw/kit10_run.png|1536x1024|source/doll/prompts/kit10.txt|source/doll/seed_approved.png|source/doll/raw/base_run.png
+source/doll/raw/kit10_attack_sword1h.png|1536x1024|source/doll/prompts/kit10.txt|source/doll/seed_approved.png|source/doll/raw/base_attack_sword1h.png
+source/doll/raw/kit10_attack_sword2h.png|1536x1024|source/doll/prompts/kit10.txt|source/doll/seed_approved.png|source/doll/raw/base_attack_sword2h.png
+source/doll/raw/kit10_attack_bow.png|1536x1024|source/doll/prompts/kit10.txt|source/doll/seed_approved.png|source/doll/raw/base_attack_bow.png
