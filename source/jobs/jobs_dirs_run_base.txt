@@ -1,0 +1,5 @@
+source/doll_se/raw/base_run.png|1536x1024|source/doll_se/prompts/base_run.txt|source/doll_se/raw/seed_iso.png|source/doll_se/raw/base_walk.png
+source/doll_s/raw/base_run.png|1536x1024|source/doll_s/prompts/base_run.txt|source/doll_s/raw/seed.png|source/doll_s/raw/base_walk.png
+source/doll_n/raw/base_run.png|1536x1024|source/doll_n/prompts/base_run.txt|source/doll_n/raw/seed.png|source/doll_n/raw/base_walk.png
+source/doll_ne/raw/base_run.png|1536x1024|source/doll_ne/prompts/base_run.txt|source/doll_ne/raw/seed.png|source/doll_ne/raw/base_walk.png
+source/doll_se/raw/shield_backs.png|1536x1024|source/doll_se/prompts/shield_backs.txt|source/doll/raw/gear_sheet.png

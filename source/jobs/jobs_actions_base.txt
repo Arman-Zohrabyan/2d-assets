@@ -1,0 +1,15 @@
+source/doll/raw/base_hurt_block.png|1536x1024|source/doll/prompts/base_hurt_block.txt|source/doll/seed_approved.png|source/doll/raw/base_idle.png
+source/doll/raw/base_blocks.png|1536x1024|source/doll/prompts/base_blocks.txt|source/doll/seed_approved.png|source/doll/raw/base_idle.png
+source/doll/raw/base_death.png|1536x1024|source/doll/prompts/base_death.txt|source/doll/seed_approved.png|source/doll/raw/base_idle.png
+source/doll_se/raw/base_hurt_block.png|1536x1024|source/doll_se/prompts/base_hurt_block.txt|source/doll_se/raw/seed_iso.png|source/doll_se/raw/base_idle.png
+source/doll_se/raw/base_blocks.png|1536x1024|source/doll_se/prompts/base_blocks.txt|source/doll_se/raw/seed_iso.png|source/doll_se/raw/base_idle.png
+source/doll_se/raw/base_death.png|1536x1024|source/doll_se/prompts/base_death.txt|source/doll_se/raw/seed_iso.png|source/doll_se/raw/base_idle.png
+source/doll_s/raw/base_hurt_block.png|1536x1024|source/doll_s/prompts/base_hurt_block.txt|source/doll_s/raw/seed.png|source/doll_s/raw/base_idle.png
+source/doll_s/raw/base_blocks.png|1536x1024|source/doll_s/prompts/base_blocks.txt|source/doll_s/raw/seed.png|source/doll_s/raw/base_idle.png
+source/doll_s/raw/base_death.png|1536x1024|source/doll_s/prompts/base_death.txt|source/doll_s/raw/seed.png|source/doll_s/raw/base_idle.png
+source/doll_n/raw/base_hurt_block.png|1536x1024|source/doll_n/prompts/base_hurt_block.txt|source/doll_n/raw/seed.png|source/doll_n/raw/base_idle.png
+source/doll_n/raw/base_blocks.png|1536x1024|source/doll_n/prompts/base_blocks.txt|source/doll_n/raw/seed.png|source/doll_n/raw/base_idle.png
+source/doll_n/raw/base_death.png|1536x1024|source/doll_n/prompts/base_death.txt|source/doll_n/raw/seed.png|source/doll_n/raw/base_idle.png
+source/doll_ne/raw/base_hurt_block.png|1536x1024|source/doll_ne/prompts/base_hurt_block.txt|source/doll_ne/raw/seed.png|source/doll_ne/raw/base_idle.png
+source/doll_ne/raw/base_blocks.png|1536x1024|source/doll_ne/prompts/base_blocks.txt|source/doll_ne/raw/seed.png|source/doll_ne/raw/base_idle.png
+source/doll_ne/raw/base_death.png|1536x1024|source/doll_ne/prompts/base_death.txt|source/doll_ne/raw/seed.png|source/doll_ne/raw/base_idle.png

@@ -1,0 +1,12 @@
+source/doll_se/raw/base_attack_sword1h.png|1536x1024|source/doll_se/prompts/base_attack_sword1h.txt|source/doll_se/raw/seed_iso.png|source/doll_se/raw/base_idle.png
+source/doll_se/raw/base_attack_sword2h.png|1536x1024|source/doll_se/prompts/base_attack_sword2h.txt|source/doll_se/raw/seed_iso.png|source/doll_se/raw/base_idle.png
+source/doll_se/raw/base_attack_bow.png|1536x1024|source/doll_se/prompts/base_attack_bow.txt|source/doll_se/raw/seed_iso.png|source/doll_se/raw/base_idle.png
+source/doll_s/raw/base_attack_sword1h.png|1536x1024|source/doll_s/prompts/base_attack_sword1h.txt|source/doll_s/raw/seed.png|source/doll_s/raw/base_idle.png
+source/doll_s/raw/base_attack_sword2h.png|1536x1024|source/doll_s/prompts/base_attack_sword2h.txt|source/doll_s/raw/seed.png|source/doll_s/raw/base_idle.png
+source/doll_s/raw/base_attack_bow.png|1536x1024|source/doll_s/prompts/base_attack_bow.txt|source/doll_s/raw/seed.png|source/doll_s/raw/base_idle.png
+source/doll_n/raw/base_attack_sword1h.png|1536x1024|source/doll_n/prompts/base_attack_sword1h.txt|source/doll_n/raw/seed.png|source/doll_n/raw/base_idle.png
+source/doll_n/raw/base_attack_sword2h.png|1536x1024|source/doll_n/prompts/base_attack_sword2h.txt|source/doll_n/raw/seed.png|source/doll_n/raw/base_idle.png
+source/doll_n/raw/base_attack_bow.png|1536x1024|source/doll_n/prompts/base_attack_bow.txt|source/doll_n/raw/seed.png|source/doll_n/raw/base_idle.png
+source/doll_ne/raw/base_attack_sword1h.png|1536x1024|source/doll_ne/prompts/base_attack_sword1h.txt|source/doll_ne/raw/seed.png|source/doll_ne/raw/base_idle.png
+source/doll_ne/raw/base_attack_sword2h.png|1536x1024|source/doll_ne/prompts/base_attack_sword2h.txt|source/doll_ne/raw/seed.png|source/doll_ne/raw/base_idle.png
+source/doll_ne/raw/base_attack_bow.png|1536x1024|source/doll_ne/prompts/base_attack_bow.txt|source/doll_ne/raw/seed.png|source/doll_ne/raw/base_idle.png

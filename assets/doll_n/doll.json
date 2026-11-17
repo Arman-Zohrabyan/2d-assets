@@ -26,16 +26,108 @@
       "frames": 6,
       "fps": 10,
       "loop": true
+    },
+    {
+      "id": "run",
+      "label": "Run",
+      "frames": 6,
+      "fps": 12,
+      "loop": true
+    },
+    {
+      "id": "attack_sword1h",
+      "label": "Attack: one-handed sword",
+      "frames": 6,
+      "fps": 12,
+      "loop": false,
+      "weapon": "sword1h"
+    },
+    {
+      "id": "attack_sword2h",
+      "label": "Attack: two-handed sword",
+      "frames": 6,
+      "fps": 10,
+      "loop": false,
+      "weapon": "sword2h"
+    },
+    {
+      "id": "attack_bow",
+      "label": "Attack: bow",
+      "frames": 6,
+      "fps": 10,
+      "loop": false,
+      "weapon": "bow"
+    },
+    {
+      "id": "hurt",
+      "label": "Hurt",
+      "frames": 3,
+      "fps": 10,
+      "loop": false,
+      "role": "hurt"
+    },
+    {
+      "id": "block_shield",
+      "label": "Block: shield",
+      "frames": 3,
+      "fps": 12,
+      "loop": false,
+      "role": "block_shield",
+      "weapon": "sword1h"
+    },
+    {
+      "id": "block_sword1h",
+      "label": "Block: one-handed",
+      "frames": 3,
+      "fps": 12,
+      "loop": false,
+      "role": "block",
+      "weapon": "sword1h"
+    },
+    {
+      "id": "block_sword2h",
+      "label": "Block: two-handed",
+      "frames": 3,
+      "fps": 12,
+      "loop": false,
+      "role": "block",
+      "weapon": "sword2h"
+    },
+    {
+      "id": "death",
+      "label": "Death",
+      "frames": 6,
+      "fps": 8,
+      "loop": false,
+      "role": "death"
     }
   ],
   "masks": {
     "near_arm": {
       "idle": "masks/near_arm/idle.png",
-      "walk": "masks/near_arm/walk.png"
+      "walk": "masks/near_arm/walk.png",
+      "run": "masks/near_arm/run.png",
+      "attack_sword1h": "masks/near_arm/attack_sword1h.png",
+      "attack_sword2h": "masks/near_arm/attack_sword2h.png",
+      "attack_bow": "masks/near_arm/attack_bow.png",
+      "hurt": "masks/near_arm/hurt.png",
+      "block_shield": "masks/near_arm/block_shield.png",
+      "block_sword1h": "masks/near_arm/block_sword1h.png",
+      "block_sword2h": "masks/near_arm/block_sword2h.png",
+      "death": "masks/near_arm/death.png"
     },
     "far_arm": {
       "idle": "masks/far_arm/idle.png",
-      "walk": "masks/far_arm/walk.png"
+      "walk": "masks/far_arm/walk.png",
+      "run": "masks/far_arm/run.png",
+      "attack_sword1h": "masks/far_arm/attack_sword1h.png",
+      "attack_sword2h": "masks/far_arm/attack_sword2h.png",
+      "attack_bow": "masks/far_arm/attack_bow.png",
+      "hurt": "masks/far_arm/hurt.png",
+      "block_shield": "masks/far_arm/block_shield.png",
+      "block_sword1h": "masks/far_arm/block_sword1h.png",
+      "block_sword2h": "masks/far_arm/block_sword2h.png",
+      "death": "masks/far_arm/death.png"
     }
   },
   "materials": {
@@ -114,11 +206,197 @@
           "label": "Sword (one-handed)",
           "strips": {
             "idle": "layers/weapon/sword1h/idle.png",
-            "walk": "layers/weapon/sword1h/walk.png"
+            "walk": "layers/weapon/sword1h/walk.png",
+            "run": "layers/weapon/sword1h/run.png",
+            "attack_sword1h": "layers/weapon/sword1h/attack_sword1h.png",
+            "hurt": "layers/weapon/sword1h/hurt.png",
+            "block_shield": "layers/weapon/sword1h/block_shield.png",
+            "block_sword1h": "layers/weapon/sword1h/block_sword1h.png",
+            "death": "layers/weapon/sword1h/death.png"
           },
           "kind": "sword1h",
           "hands": 1,
-          "attack": null
+          "attack": "attack_sword1h",
+          "block": "block_sword1h"
+        },
+        {
+          "id": "falchion",
+          "label": "Falchion (one-handed)",
+          "strips": {
+            "idle": "layers/weapon/falchion/idle.png",
+            "walk": "layers/weapon/falchion/walk.png",
+            "run": "layers/weapon/falchion/run.png",
+            "attack_sword1h": "layers/weapon/falchion/attack_sword1h.png",
+            "hurt": "layers/weapon/falchion/hurt.png",
+            "block_shield": "layers/weapon/falchion/block_shield.png",
+            "block_sword1h": "layers/weapon/falchion/block_sword1h.png",
+            "death": "layers/weapon/falchion/death.png"
+          },
+          "kind": "sword1h",
+          "hands": 1,
+          "attack": "attack_sword1h",
+          "block": "block_sword1h"
+        },
+        {
+          "id": "sword2h",
+          "label": "Two-handed sword",
+          "strips": {
+            "idle": "layers/weapon/sword2h/idle.png",
+            "walk": "layers/weapon/sword2h/walk.png",
+            "run": "layers/weapon/sword2h/run.png",
+            "attack_sword2h": "layers/weapon/sword2h/attack_sword2h.png",
+            "hurt": "layers/weapon/sword2h/hurt.png",
+            "block_sword2h": "layers/weapon/sword2h/block_sword2h.png",
+            "death": "layers/weapon/sword2h/death.png"
+          },
+          "kind": "sword2h",
+          "hands": 2,
+          "attack": "attack_sword2h",
+          "block": "block_sword2h"
+        },
+        {
+          "id": "zweihander",
+          "label": "Zweihander (two-handed)",
+          "strips": {
+            "idle": "layers/weapon/zweihander/idle.png",
+            "walk": "layers/weapon/zweihander/walk.png",
+            "run": "layers/weapon/zweihander/run.png",
+            "attack_sword2h": "layers/weapon/zweihander/attack_sword2h.png",
+            "hurt": "layers/weapon/zweihander/hurt.png",
+            "block_sword2h": "layers/weapon/zweihander/block_sword2h.png",
+            "death": "layers/weapon/zweihander/death.png"
+          },
+          "kind": "sword2h",
+          "hands": 2,
+          "attack": "attack_sword2h",
+          "block": "block_sword2h"
+        },
+        {
+          "id": "glaive",
+          "label": "Glaive (polearm, two-handed)",
+          "strips": {
+            "idle": "layers/weapon/glaive/idle.png",
+            "walk": "layers/weapon/glaive/walk.png",
+            "run": "layers/weapon/glaive/run.png",
+            "attack_sword2h": "layers/weapon/glaive/attack_sword2h.png",
+            "hurt": "layers/weapon/glaive/hurt.png",
+            "block_sword2h": "layers/weapon/glaive/block_sword2h.png",
+            "death": "layers/weapon/glaive/death.png"
+          },
+          "kind": "polearm",
+          "hands": 2,
+          "attack": "attack_sword2h",
+          "block": "block_sword2h"
+        },
+        {
+          "id": "halberd",
+          "label": "Halberd (polearm, two-handed)",
+          "strips": {
+            "idle": "layers/weapon/halberd/idle.png",
+            "walk": "layers/weapon/halberd/walk.png",
+            "run": "layers/weapon/halberd/run.png",
+            "attack_sword2h": "layers/weapon/halberd/attack_sword2h.png",
+            "hurt": "layers/weapon/halberd/hurt.png",
+            "block_sword2h": "layers/weapon/halberd/block_sword2h.png",
+            "death": "layers/weapon/halberd/death.png"
+          },
+          "kind": "polearm",
+          "hands": 2,
+          "attack": "attack_sword2h",
+          "block": "block_sword2h"
+        },
+        {
+          "id": "spear",
+          "label": "Spear (polearm, two-handed)",
+          "strips": {
+            "idle": "layers/weapon/spear/idle.png",
+            "walk": "layers/weapon/spear/walk.png",
+            "run": "layers/weapon/spear/run.png",
+            "attack_sword2h": "layers/weapon/spear/attack_sword2h.png",
+            "hurt": "layers/weapon/spear/hurt.png",
+            "block_sword2h": "layers/weapon/spear/block_sword2h.png",
+            "death": "layers/weapon/spear/death.png"
+          },
+          "kind": "polearm",
+          "hands": 2,
+          "attack": "attack_sword2h",
+          "block": "block_sword2h"
+        },
+        {
+          "id": "bow",
+          "label": "Bow",
+          "strips": {
+            "idle": "layers/weapon/bow/idle.png",
+            "walk": "layers/weapon/bow/walk.png",
+            "run": "layers/weapon/bow/run.png",
+            "attack_bow": "layers/weapon/bow/attack_bow.png",
+            "hurt": "layers/weapon/bow/hurt.png",
+            "death": "layers/weapon/bow/death.png"
+          },
+          "kind": "bow",
+          "hands": 2,
+          "attack": "attack_bow",
+          "block": null
+        },
+        {
+          "id": "bow_dark",
+          "label": "Red lacquered bow",
+          "strips": {
+            "idle": "layers/weapon/bow_dark/idle.png",
+            "walk": "layers/weapon/bow_dark/walk.png",
+            "run": "layers/weapon/bow_dark/run.png",
+            "attack_bow": "layers/weapon/bow_dark/attack_bow.png",
+            "hurt": "layers/weapon/bow_dark/hurt.png",
+            "death": "layers/weapon/bow_dark/death.png"
+          },
+          "kind": "bow",
+          "hands": 2,
+          "attack": "attack_bow",
+          "block": null
+        }
+      ]
+    },
+    {
+      "id": "shield",
+      "label": "Shield",
+      "requires": {
+        "slot": "weapon",
+        "hands": 1
+      },
+      "items": [
+        {
+          "id": "round",
+          "label": "Round wooden shield",
+          "strips": {
+            "idle": "layers/shield/round/idle.png",
+            "walk": "layers/shield/round/walk.png",
+            "run": "layers/shield/round/run.png",
+            "attack_sword1h": "layers/shield/round/attack_sword1h.png",
+            "attack_sword2h": "layers/shield/round/attack_sword2h.png",
+            "attack_bow": "layers/shield/round/attack_bow.png",
+            "hurt": "layers/shield/round/hurt.png",
+            "block_shield": "layers/shield/round/block_shield.png",
+            "block_sword1h": "layers/shield/round/block_sword1h.png",
+            "block_sword2h": "layers/shield/round/block_sword2h.png",
+            "death": "layers/shield/round/death.png"
+          }
+        },
+        {
+          "id": "heater",
+          "label": "Heater shield",
+          "strips": {
+            "idle": "layers/shield/heater/idle.png",
+            "walk": "layers/shield/heater/walk.png",
+            "run": "layers/shield/heater/run.png",
+            "attack_sword1h": "layers/shield/heater/attack_sword1h.png",
+            "attack_sword2h": "layers/shield/heater/attack_sword2h.png",
+            "attack_bow": "layers/shield/heater/attack_bow.png",
+            "hurt": "layers/shield/heater/hurt.png",
+            "block_shield": "layers/shield/heater/block_shield.png",
+            "block_sword1h": "layers/shield/heater/block_sword1h.png",
+            "block_sword2h": "layers/shield/heater/block_sword2h.png",
+            "death": "layers/shield/heater/death.png"
+          }
         }
       ]
     },
@@ -132,7 +410,16 @@
           "label": "Mannequin",
           "strips": {
             "idle": "body/idle.png",
-            "walk": "body/walk.png"
+            "walk": "body/walk.png",
+            "run": "body/run.png",
+            "attack_sword1h": "body/attack_sword1h.png",
+            "attack_sword2h": "body/attack_sword2h.png",
+            "attack_bow": "body/attack_bow.png",
+            "hurt": "body/hurt.png",
+            "block_shield": "body/block_shield.png",
+            "block_sword1h": "body/block_sword1h.png",
+            "block_sword2h": "body/block_sword2h.png",
+            "death": "body/death.png"
           }
         }
       ]
@@ -146,7 +433,50 @@
           "label": "Green wool pants",
           "strips": {
             "idle": "layers/pants/green/idle.png",
-            "walk": "layers/pants/green/walk.png"
+            "walk": "layers/pants/green/walk.png",
+            "run": "layers/pants/green/run.png",
+            "attack_sword1h": "layers/pants/green/attack_sword1h.png",
+            "attack_sword2h": "layers/pants/green/attack_sword2h.png",
+            "attack_bow": "layers/pants/green/attack_bow.png",
+            "hurt": "layers/pants/green/hurt.png",
+            "block_shield": "layers/pants/green/block_shield.png",
+            "block_sword1h": "layers/pants/green/block_sword1h.png",
+            "block_sword2h": "layers/pants/green/block_sword2h.png",
+            "death": "layers/pants/green/death.png"
+          }
+        },
+        {
+          "id": "blue",
+          "label": "Blue pants",
+          "strips": {
+            "idle": "layers/pants/blue/idle.png",
+            "walk": "layers/pants/blue/walk.png",
+            "run": "layers/pants/blue/run.png",
+            "attack_sword1h": "layers/pants/blue/attack_sword1h.png",
+            "attack_sword2h": "layers/pants/blue/attack_sword2h.png",
+            "attack_bow": "layers/pants/blue/attack_bow.png",
+            "hurt": "layers/pants/blue/hurt.png",
+            "block_shield": "layers/pants/blue/block_shield.png",
+            "block_sword1h": "layers/pants/blue/block_sword1h.png",
+            "block_sword2h": "layers/pants/blue/block_sword2h.png",
+            "death": "layers/pants/blue/death.png"
+          }
+        },
+        {
+          "id": "leather",
+          "label": "Dark leather pants",
+          "strips": {
+            "idle": "layers/pants/leather/idle.png",
+            "walk": "layers/pants/leather/walk.png",
+            "run": "layers/pants/leather/run.png",
+            "attack_sword1h": "layers/pants/leather/attack_sword1h.png",
+            "attack_sword2h": "layers/pants/leather/attack_sword2h.png",
+            "attack_bow": "layers/pants/leather/attack_bow.png",
+            "hurt": "layers/pants/leather/hurt.png",
+            "block_shield": "layers/pants/leather/block_shield.png",
+            "block_sword1h": "layers/pants/leather/block_sword1h.png",
+            "block_sword2h": "layers/pants/leather/block_sword2h.png",
+            "death": "layers/pants/leather/death.png"
           }
         }
       ]
@@ -160,12 +490,92 @@
           "label": "Plate greaves",
           "strips": {
             "idle": "layers/greaves/plate/idle.png",
-            "walk": "layers/greaves/plate/walk.png"
+            "walk": "layers/greaves/plate/walk.png",
+            "run": "layers/greaves/plate/run.png",
+            "attack_sword1h": "layers/greaves/plate/attack_sword1h.png",
+            "attack_sword2h": "layers/greaves/plate/attack_sword2h.png",
+            "attack_bow": "layers/greaves/plate/attack_bow.png",
+            "hurt": "layers/greaves/plate/hurt.png",
+            "block_shield": "layers/greaves/plate/block_shield.png",
+            "block_sword1h": "layers/greaves/plate/block_sword1h.png",
+            "block_sword2h": "layers/greaves/plate/block_sword2h.png",
+            "death": "layers/greaves/plate/death.png"
           },
           "material": "steel",
           "tones": {
             "idle": "layers/greaves/plate/idle_tones.png",
-            "walk": "layers/greaves/plate/walk_tones.png"
+            "walk": "layers/greaves/plate/walk_tones.png",
+            "run": "layers/greaves/plate/run_tones.png",
+            "attack_sword1h": "layers/greaves/plate/attack_sword1h_tones.png",
+            "attack_sword2h": "layers/greaves/plate/attack_sword2h_tones.png",
+            "attack_bow": "layers/greaves/plate/attack_bow_tones.png",
+            "hurt": "layers/greaves/plate/hurt_tones.png",
+            "block_shield": "layers/greaves/plate/block_shield_tones.png",
+            "block_sword1h": "layers/greaves/plate/block_sword1h_tones.png",
+            "block_sword2h": "layers/greaves/plate/block_sword2h_tones.png",
+            "death": "layers/greaves/plate/death_tones.png"
+          }
+        },
+        {
+          "id": "boots",
+          "label": "Tall boot shafts",
+          "strips": {
+            "idle": "layers/greaves/boots/idle.png",
+            "walk": "layers/greaves/boots/walk.png",
+            "run": "layers/greaves/boots/run.png",
+            "attack_sword1h": "layers/greaves/boots/attack_sword1h.png",
+            "attack_sword2h": "layers/greaves/boots/attack_sword2h.png",
+            "attack_bow": "layers/greaves/boots/attack_bow.png",
+            "hurt": "layers/greaves/boots/hurt.png",
+            "block_shield": "layers/greaves/boots/block_shield.png",
+            "block_sword1h": "layers/greaves/boots/block_sword1h.png",
+            "block_sword2h": "layers/greaves/boots/block_sword2h.png",
+            "death": "layers/greaves/boots/death.png"
+          },
+          "material": "leather",
+          "tones": {
+            "attack_bow": "layers/greaves/boots/attack_bow_tones.png",
+            "attack_sword1h": "layers/greaves/boots/attack_sword1h_tones.png",
+            "attack_sword2h": "layers/greaves/boots/attack_sword2h_tones.png",
+            "block_shield": "layers/greaves/boots/block_shield_tones.png",
+            "block_sword1h": "layers/greaves/boots/block_sword1h_tones.png",
+            "block_sword2h": "layers/greaves/boots/block_sword2h_tones.png",
+            "death": "layers/greaves/boots/death_tones.png",
+            "hurt": "layers/greaves/boots/hurt_tones.png",
+            "idle": "layers/greaves/boots/idle_tones.png",
+            "run": "layers/greaves/boots/run_tones.png",
+            "walk": "layers/greaves/boots/walk_tones.png"
+          }
+        },
+        {
+          "id": "cuffed",
+          "label": "Cuffed greaves",
+          "strips": {
+            "idle": "layers/greaves/cuffed/idle.png",
+            "walk": "layers/greaves/cuffed/walk.png",
+            "run": "layers/greaves/cuffed/run.png",
+            "attack_sword1h": "layers/greaves/cuffed/attack_sword1h.png",
+            "attack_sword2h": "layers/greaves/cuffed/attack_sword2h.png",
+            "attack_bow": "layers/greaves/cuffed/attack_bow.png",
+            "hurt": "layers/greaves/cuffed/hurt.png",
+            "block_shield": "layers/greaves/cuffed/block_shield.png",
+            "block_sword1h": "layers/greaves/cuffed/block_sword1h.png",
+            "block_sword2h": "layers/greaves/cuffed/block_sword2h.png",
+            "death": "layers/greaves/cuffed/death.png"
+          },
+          "material": "bronze",
+          "tones": {
+            "attack_bow": "layers/greaves/cuffed/attack_bow_tones.png",
+            "attack_sword1h": "layers/greaves/cuffed/attack_sword1h_tones.png",
+            "attack_sword2h": "layers/greaves/cuffed/attack_sword2h_tones.png",
+            "block_shield": "layers/greaves/cuffed/block_shield_tones.png",
+            "block_sword1h": "layers/greaves/cuffed/block_sword1h_tones.png",
+            "block_sword2h": "layers/greaves/cuffed/block_sword2h_tones.png",
+            "death": "layers/greaves/cuffed/death_tones.png",
+            "hurt": "layers/greaves/cuffed/hurt_tones.png",
+            "idle": "layers/greaves/cuffed/idle_tones.png",
+            "run": "layers/greaves/cuffed/run_tones.png",
+            "walk": "layers/greaves/cuffed/walk_tones.png"
           }
         }
       ],
@@ -179,6 +589,63 @@
       ]
     },
     {
+      "id": "skirt",
+      "label": "Skirt",
+      "items": [
+        {
+          "id": "blue",
+          "label": "Blue skirt",
+          "strips": {
+            "idle": "layers/skirt/blue/idle.png",
+            "walk": "layers/skirt/blue/walk.png",
+            "run": "layers/skirt/blue/run.png",
+            "attack_sword1h": "layers/skirt/blue/attack_sword1h.png",
+            "attack_sword2h": "layers/skirt/blue/attack_sword2h.png",
+            "attack_bow": "layers/skirt/blue/attack_bow.png",
+            "hurt": "layers/skirt/blue/hurt.png",
+            "block_shield": "layers/skirt/blue/block_shield.png",
+            "block_sword1h": "layers/skirt/blue/block_sword1h.png",
+            "block_sword2h": "layers/skirt/blue/block_sword2h.png",
+            "death": "layers/skirt/blue/death.png"
+          }
+        },
+        {
+          "id": "purple",
+          "label": "Purple skirt",
+          "strips": {
+            "idle": "layers/skirt/purple/idle.png",
+            "walk": "layers/skirt/purple/walk.png",
+            "run": "layers/skirt/purple/run.png",
+            "attack_sword1h": "layers/skirt/purple/attack_sword1h.png",
+            "attack_sword2h": "layers/skirt/purple/attack_sword2h.png",
+            "attack_bow": "layers/skirt/purple/attack_bow.png",
+            "hurt": "layers/skirt/purple/hurt.png",
+            "block_shield": "layers/skirt/purple/block_shield.png",
+            "block_sword1h": "layers/skirt/purple/block_sword1h.png",
+            "block_sword2h": "layers/skirt/purple/block_sword2h.png",
+            "death": "layers/skirt/purple/death.png"
+          }
+        },
+        {
+          "id": "red",
+          "label": "Red skirt",
+          "strips": {
+            "idle": "layers/skirt/red/idle.png",
+            "walk": "layers/skirt/red/walk.png",
+            "run": "layers/skirt/red/run.png",
+            "attack_sword1h": "layers/skirt/red/attack_sword1h.png",
+            "attack_sword2h": "layers/skirt/red/attack_sword2h.png",
+            "attack_bow": "layers/skirt/red/attack_bow.png",
+            "hurt": "layers/skirt/red/hurt.png",
+            "block_shield": "layers/skirt/red/block_shield.png",
+            "block_sword1h": "layers/skirt/red/block_sword1h.png",
+            "block_sword2h": "layers/skirt/red/block_sword2h.png",
+            "death": "layers/skirt/red/death.png"
+          }
+        }
+      ]
+    },
+    {
       "id": "chest",
       "label": "Chest",
       "items": [
@@ -187,12 +654,123 @@
           "label": "Cuirass",
           "strips": {
             "idle": "layers/chest/plate/idle.png",
-            "walk": "layers/chest/plate/walk.png"
+            "walk": "layers/chest/plate/walk.png",
+            "run": "layers/chest/plate/run.png",
+            "attack_sword1h": "layers/chest/plate/attack_sword1h.png",
+            "attack_sword2h": "layers/chest/plate/attack_sword2h.png",
+            "attack_bow": "layers/chest/plate/attack_bow.png",
+            "hurt": "layers/chest/plate/hurt.png",
+            "block_shield": "layers/chest/plate/block_shield.png",
+            "block_sword1h": "layers/chest/plate/block_sword1h.png",
+            "block_sword2h": "layers/chest/plate/block_sword2h.png",
+            "death": "layers/chest/plate/death.png"
           },
           "material": "steel",
           "tones": {
+            "attack_bow": "layers/chest/plate/attack_bow_tones.png",
+            "attack_sword1h": "layers/chest/plate/attack_sword1h_tones.png",
+            "attack_sword2h": "layers/chest/plate/attack_sword2h_tones.png",
+            "block_shield": "layers/chest/plate/block_shield_tones.png",
+            "block_sword1h": "layers/chest/plate/block_sword1h_tones.png",
+            "block_sword2h": "layers/chest/plate/block_sword2h_tones.png",
+            "death": "layers/chest/plate/death_tones.png",
+            "hurt": "layers/chest/plate/hurt_tones.png",
             "idle": "layers/chest/plate/idle_tones.png",
+            "run": "layers/chest/plate/run_tones.png",
             "walk": "layers/chest/plate/walk_tones.png"
+          }
+        },
+        {
+          "id": "riveted",
+          "label": "Riveted cuirass with seams",
+          "strips": {
+            "idle": "layers/chest/riveted/idle.png",
+            "walk": "layers/chest/riveted/walk.png",
+            "run": "layers/chest/riveted/run.png",
+            "attack_sword1h": "layers/chest/riveted/attack_sword1h.png",
+            "attack_sword2h": "layers/chest/riveted/attack_sword2h.png",
+            "attack_bow": "layers/chest/riveted/attack_bow.png",
+            "hurt": "layers/chest/riveted/hurt.png",
+            "block_shield": "layers/chest/riveted/block_shield.png",
+            "block_sword1h": "layers/chest/riveted/block_sword1h.png",
+            "block_sword2h": "layers/chest/riveted/block_sword2h.png",
+            "death": "layers/chest/riveted/death.png"
+          },
+          "material": "leather",
+          "tones": {
+            "attack_bow": "layers/chest/riveted/attack_bow_tones.png",
+            "attack_sword1h": "layers/chest/riveted/attack_sword1h_tones.png",
+            "attack_sword2h": "layers/chest/riveted/attack_sword2h_tones.png",
+            "block_shield": "layers/chest/riveted/block_shield_tones.png",
+            "block_sword1h": "layers/chest/riveted/block_sword1h_tones.png",
+            "block_sword2h": "layers/chest/riveted/block_sword2h_tones.png",
+            "death": "layers/chest/riveted/death_tones.png",
+            "hurt": "layers/chest/riveted/hurt_tones.png",
+            "idle": "layers/chest/riveted/idle_tones.png",
+            "run": "layers/chest/riveted/run_tones.png",
+            "walk": "layers/chest/riveted/walk_tones.png"
+          }
+        },
+        {
+          "id": "mail",
+          "label": "Mail hauberk (to mid-thigh)",
+          "strips": {
+            "idle": "layers/chest/mail/idle.png",
+            "walk": "layers/chest/mail/walk.png",
+            "run": "layers/chest/mail/run.png",
+            "attack_sword1h": "layers/chest/mail/attack_sword1h.png",
+            "attack_sword2h": "layers/chest/mail/attack_sword2h.png",
+            "attack_bow": "layers/chest/mail/attack_bow.png",
+            "hurt": "layers/chest/mail/hurt.png",
+            "block_shield": "layers/chest/mail/block_shield.png",
+            "block_sword1h": "layers/chest/mail/block_sword1h.png",
+            "block_sword2h": "layers/chest/mail/block_sword2h.png",
+            "death": "layers/chest/mail/death.png"
+          },
+          "material": "steel",
+          "tones": {
+            "attack_bow": "layers/chest/mail/attack_bow_tones.png",
+            "attack_sword1h": "layers/chest/mail/attack_sword1h_tones.png",
+            "attack_sword2h": "layers/chest/mail/attack_sword2h_tones.png",
+            "block_shield": "layers/chest/mail/block_shield_tones.png",
+            "block_sword1h": "layers/chest/mail/block_sword1h_tones.png",
+            "block_sword2h": "layers/chest/mail/block_sword2h_tones.png",
+            "death": "layers/chest/mail/death_tones.png",
+            "hurt": "layers/chest/mail/hurt_tones.png",
+            "idle": "layers/chest/mail/idle_tones.png",
+            "run": "layers/chest/mail/run_tones.png",
+            "walk": "layers/chest/mail/walk_tones.png"
+          }
+        },
+        {
+          "id": "brigandine",
+          "label": "Brigandine",
+          "strips": {
+            "idle": "layers/chest/brigandine/idle.png",
+            "walk": "layers/chest/brigandine/walk.png",
+            "run": "layers/chest/brigandine/run.png",
+            "attack_sword1h": "layers/chest/brigandine/attack_sword1h.png",
+            "attack_sword2h": "layers/chest/brigandine/attack_sword2h.png",
+            "attack_bow": "layers/chest/brigandine/attack_bow.png",
+            "hurt": "layers/chest/brigandine/hurt.png",
+            "block_shield": "layers/chest/brigandine/block_shield.png",
+            "block_sword1h": "layers/chest/brigandine/block_sword1h.png",
+            "block_sword2h": "layers/chest/brigandine/block_sword2h.png",
+            "death": "layers/chest/brigandine/death.png"
+          },
+          "material": "cloth",
+          "tones": {
+            "attack_bow": "layers/chest/brigandine/attack_bow_tones.png",
+            "attack_sword1h": "layers/chest/brigandine/attack_sword1h_tones.png",
+            "attack_sword2h": "layers/chest/brigandine/attack_sword2h_tones.png",
+            "block_shield": "layers/chest/brigandine/block_shield_tones.png",
+            "block_sword1h": "layers/chest/brigandine/block_sword1h_tones.png",
+            "block_sword2h": "layers/chest/brigandine/block_sword2h_tones.png",
+            "death": "layers/chest/brigandine/death_tones.png",
+            "hurt": "layers/chest/brigandine/hurt_tones.png",
+            "idle": "layers/chest/brigandine/idle_tones.png",
+            "run": "layers/chest/brigandine/run_tones.png",
+            "walk": "layers/chest/brigandine/walk_tones.png"
           }
         }
       ],
@@ -210,16 +788,96 @@
       "label": "Bracers",
       "items": [
         {
+          "id": "wrist",
+          "label": "Bracers 25% (wrist)",
+          "strips": {
+            "idle": "layers/bracers/wrist/idle.png",
+            "walk": "layers/bracers/wrist/walk.png",
+            "run": "layers/bracers/wrist/run.png",
+            "attack_sword1h": "layers/bracers/wrist/attack_sword1h.png",
+            "attack_sword2h": "layers/bracers/wrist/attack_sword2h.png",
+            "attack_bow": "layers/bracers/wrist/attack_bow.png",
+            "hurt": "layers/bracers/wrist/hurt.png",
+            "block_shield": "layers/bracers/wrist/block_shield.png",
+            "block_sword1h": "layers/bracers/wrist/block_sword1h.png",
+            "block_sword2h": "layers/bracers/wrist/block_sword2h.png",
+            "death": "layers/bracers/wrist/death.png"
+          },
+          "material": "steel",
+          "tones": {
+            "idle": "layers/bracers/wrist/idle_tones.png",
+            "walk": "layers/bracers/wrist/walk_tones.png",
+            "run": "layers/bracers/wrist/run_tones.png",
+            "attack_sword1h": "layers/bracers/wrist/attack_sword1h_tones.png",
+            "attack_sword2h": "layers/bracers/wrist/attack_sword2h_tones.png",
+            "attack_bow": "layers/bracers/wrist/attack_bow_tones.png",
+            "hurt": "layers/bracers/wrist/hurt_tones.png",
+            "block_shield": "layers/bracers/wrist/block_shield_tones.png",
+            "block_sword1h": "layers/bracers/wrist/block_sword1h_tones.png",
+            "block_sword2h": "layers/bracers/wrist/block_sword2h_tones.png",
+            "death": "layers/bracers/wrist/death_tones.png"
+          }
+        },
+        {
           "id": "forearm",
           "label": "Bracers 50% (forearm)",
           "strips": {
             "idle": "layers/bracers/forearm/idle.png",
-            "walk": "layers/bracers/forearm/walk.png"
+            "walk": "layers/bracers/forearm/walk.png",
+            "run": "layers/bracers/forearm/run.png",
+            "attack_sword1h": "layers/bracers/forearm/attack_sword1h.png",
+            "attack_sword2h": "layers/bracers/forearm/attack_sword2h.png",
+            "attack_bow": "layers/bracers/forearm/attack_bow.png",
+            "hurt": "layers/bracers/forearm/hurt.png",
+            "block_shield": "layers/bracers/forearm/block_shield.png",
+            "block_sword1h": "layers/bracers/forearm/block_sword1h.png",
+            "block_sword2h": "layers/bracers/forearm/block_sword2h.png",
+            "death": "layers/bracers/forearm/death.png"
           },
           "material": "steel",
           "tones": {
             "idle": "layers/bracers/forearm/idle_tones.png",
-            "walk": "layers/bracers/forearm/walk_tones.png"
+            "walk": "layers/bracers/forearm/walk_tones.png",
+            "run": "layers/bracers/forearm/run_tones.png",
+            "attack_sword1h": "layers/bracers/forearm/attack_sword1h_tones.png",
+            "attack_sword2h": "layers/bracers/forearm/attack_sword2h_tones.png",
+            "attack_bow": "layers/bracers/forearm/attack_bow_tones.png",
+            "hurt": "layers/bracers/forearm/hurt_tones.png",
+            "block_shield": "layers/bracers/forearm/block_shield_tones.png",
+            "block_sword1h": "layers/bracers/forearm/block_sword1h_tones.png",
+            "block_sword2h": "layers/bracers/forearm/block_sword2h_tones.png",
+            "death": "layers/bracers/forearm/death_tones.png"
+          }
+        },
+        {
+          "id": "elbow",
+          "label": "Bracers 75% (with elbow)",
+          "strips": {
+            "idle": "layers/bracers/elbow/idle.png",
+            "walk": "layers/bracers/elbow/walk.png",
+            "run": "layers/bracers/elbow/run.png",
+            "attack_sword1h": "layers/bracers/elbow/attack_sword1h.png",
+            "attack_sword2h": "layers/bracers/elbow/attack_sword2h.png",
+            "attack_bow": "layers/bracers/elbow/attack_bow.png",
+            "hurt": "layers/bracers/elbow/hurt.png",
+            "block_shield": "layers/bracers/elbow/block_shield.png",
+            "block_sword1h": "layers/bracers/elbow/block_sword1h.png",
+            "block_sword2h": "layers/bracers/elbow/block_sword2h.png",
+            "death": "layers/bracers/elbow/death.png"
+          },
+          "material": "steel",
+          "tones": {
+            "idle": "layers/bracers/elbow/idle_tones.png",
+            "walk": "layers/bracers/elbow/walk_tones.png",
+            "run": "layers/bracers/elbow/run_tones.png",
+            "attack_sword1h": "layers/bracers/elbow/attack_sword1h_tones.png",
+            "attack_sword2h": "layers/bracers/elbow/attack_sword2h_tones.png",
+            "attack_bow": "layers/bracers/elbow/attack_bow_tones.png",
+            "hurt": "layers/bracers/elbow/hurt_tones.png",
+            "block_shield": "layers/bracers/elbow/block_shield_tones.png",
+            "block_sword1h": "layers/bracers/elbow/block_sword1h_tones.png",
+            "block_sword2h": "layers/bracers/elbow/block_sword2h_tones.png",
+            "death": "layers/bracers/elbow/death_tones.png"
           }
         },
         {
@@ -227,12 +885,30 @@
           "label": "Bracers 100% (whole arm)",
           "strips": {
             "idle": "layers/bracers/full/idle.png",
-            "walk": "layers/bracers/full/walk.png"
+            "walk": "layers/bracers/full/walk.png",
+            "run": "layers/bracers/full/run.png",
+            "attack_sword1h": "layers/bracers/full/attack_sword1h.png",
+            "attack_sword2h": "layers/bracers/full/attack_sword2h.png",
+            "attack_bow": "layers/bracers/full/attack_bow.png",
+            "hurt": "layers/bracers/full/hurt.png",
+            "block_shield": "layers/bracers/full/block_shield.png",
+            "block_sword1h": "layers/bracers/full/block_sword1h.png",
+            "block_sword2h": "layers/bracers/full/block_sword2h.png",
+            "death": "layers/bracers/full/death.png"
           },
           "material": "steel",
           "tones": {
             "idle": "layers/bracers/full/idle_tones.png",
-            "walk": "layers/bracers/full/walk_tones.png"
+            "walk": "layers/bracers/full/walk_tones.png",
+            "run": "layers/bracers/full/run_tones.png",
+            "attack_sword1h": "layers/bracers/full/attack_sword1h_tones.png",
+            "attack_sword2h": "layers/bracers/full/attack_sword2h_tones.png",
+            "attack_bow": "layers/bracers/full/attack_bow_tones.png",
+            "hurt": "layers/bracers/full/hurt_tones.png",
+            "block_shield": "layers/bracers/full/block_shield_tones.png",
+            "block_sword1h": "layers/bracers/full/block_sword1h_tones.png",
+            "block_sword2h": "layers/bracers/full/block_sword2h_tones.png",
+            "death": "layers/bracers/full/death_tones.png"
           }
         }
       ],
@@ -254,9 +930,190 @@
           "label": "Red cloak",
           "strips": {
             "idle": "layers/cloak/red/idle.png",
-            "walk": "layers/cloak/red/walk.png"
+            "walk": "layers/cloak/red/walk.png",
+            "run": "layers/cloak/red/run.png",
+            "attack_sword1h": "layers/cloak/red/attack_sword1h.png",
+            "attack_sword2h": "layers/cloak/red/attack_sword2h.png",
+            "attack_bow": "layers/cloak/red/attack_bow.png",
+            "hurt": "layers/cloak/red/hurt.png",
+            "block_shield": "layers/cloak/red/block_shield.png",
+            "block_sword1h": "layers/cloak/red/block_sword1h.png",
+            "block_sword2h": "layers/cloak/red/block_sword2h.png",
+            "death": "layers/cloak/red/death.png"
+          }
+        },
+        {
+          "id": "green",
+          "label": "Green cloak",
+          "strips": {
+            "idle": "layers/cloak/green/idle.png",
+            "walk": "layers/cloak/green/walk.png",
+            "run": "layers/cloak/green/run.png",
+            "attack_sword1h": "layers/cloak/green/attack_sword1h.png",
+            "attack_sword2h": "layers/cloak/green/attack_sword2h.png",
+            "attack_bow": "layers/cloak/green/attack_bow.png",
+            "hurt": "layers/cloak/green/hurt.png",
+            "block_shield": "layers/cloak/green/block_shield.png",
+            "block_sword1h": "layers/cloak/green/block_sword1h.png",
+            "block_sword2h": "layers/cloak/green/block_sword2h.png",
+            "death": "layers/cloak/green/death.png"
+          }
+        },
+        {
+          "id": "blue",
+          "label": "Blue cloak",
+          "strips": {
+            "idle": "layers/cloak/blue/idle.png",
+            "walk": "layers/cloak/blue/walk.png",
+            "run": "layers/cloak/blue/run.png",
+            "attack_sword1h": "layers/cloak/blue/attack_sword1h.png",
+            "attack_sword2h": "layers/cloak/blue/attack_sword2h.png",
+            "attack_bow": "layers/cloak/blue/attack_bow.png",
+            "hurt": "layers/cloak/blue/hurt.png",
+            "block_shield": "layers/cloak/blue/block_shield.png",
+            "block_sword1h": "layers/cloak/blue/block_sword1h.png",
+            "block_sword2h": "layers/cloak/blue/block_sword2h.png",
+            "death": "layers/cloak/blue/death.png"
           }
         }
+      ]
+    },
+    {
+      "id": "shoulders",
+      "label": "Shoulders",
+      "items": [
+        {
+          "id": "bands",
+          "label": "Banded pauldrons",
+          "strips": {
+            "idle": "layers/shoulders/bands/idle.png",
+            "walk": "layers/shoulders/bands/walk.png",
+            "run": "layers/shoulders/bands/run.png",
+            "attack_sword1h": "layers/shoulders/bands/attack_sword1h.png",
+            "attack_sword2h": "layers/shoulders/bands/attack_sword2h.png",
+            "attack_bow": "layers/shoulders/bands/attack_bow.png",
+            "hurt": "layers/shoulders/bands/hurt.png",
+            "block_shield": "layers/shoulders/bands/block_shield.png",
+            "block_sword1h": "layers/shoulders/bands/block_sword1h.png",
+            "block_sword2h": "layers/shoulders/bands/block_sword2h.png",
+            "death": "layers/shoulders/bands/death.png"
+          },
+          "material": "bronze",
+          "tones": {
+            "attack_bow": "layers/shoulders/bands/attack_bow_tones.png",
+            "attack_sword1h": "layers/shoulders/bands/attack_sword1h_tones.png",
+            "attack_sword2h": "layers/shoulders/bands/attack_sword2h_tones.png",
+            "block_shield": "layers/shoulders/bands/block_shield_tones.png",
+            "block_sword1h": "layers/shoulders/bands/block_sword1h_tones.png",
+            "block_sword2h": "layers/shoulders/bands/block_sword2h_tones.png",
+            "death": "layers/shoulders/bands/death_tones.png",
+            "hurt": "layers/shoulders/bands/hurt_tones.png",
+            "idle": "layers/shoulders/bands/idle_tones.png",
+            "run": "layers/shoulders/bands/run_tones.png",
+            "walk": "layers/shoulders/bands/walk_tones.png"
+          }
+        },
+        {
+          "id": "domes",
+          "label": "Domed pauldrons",
+          "strips": {
+            "idle": "layers/shoulders/domes/idle.png",
+            "walk": "layers/shoulders/domes/walk.png",
+            "run": "layers/shoulders/domes/run.png",
+            "attack_sword1h": "layers/shoulders/domes/attack_sword1h.png",
+            "attack_sword2h": "layers/shoulders/domes/attack_sword2h.png",
+            "attack_bow": "layers/shoulders/domes/attack_bow.png",
+            "hurt": "layers/shoulders/domes/hurt.png",
+            "block_shield": "layers/shoulders/domes/block_shield.png",
+            "block_sword1h": "layers/shoulders/domes/block_sword1h.png",
+            "block_sword2h": "layers/shoulders/domes/block_sword2h.png",
+            "death": "layers/shoulders/domes/death.png"
+          },
+          "material": "steel",
+          "tones": {
+            "attack_bow": "layers/shoulders/domes/attack_bow_tones.png",
+            "attack_sword1h": "layers/shoulders/domes/attack_sword1h_tones.png",
+            "attack_sword2h": "layers/shoulders/domes/attack_sword2h_tones.png",
+            "block_shield": "layers/shoulders/domes/block_shield_tones.png",
+            "block_sword1h": "layers/shoulders/domes/block_sword1h_tones.png",
+            "block_sword2h": "layers/shoulders/domes/block_sword2h_tones.png",
+            "death": "layers/shoulders/domes/death_tones.png",
+            "hurt": "layers/shoulders/domes/hurt_tones.png",
+            "idle": "layers/shoulders/domes/idle_tones.png",
+            "run": "layers/shoulders/domes/run_tones.png",
+            "walk": "layers/shoulders/domes/walk_tones.png"
+          }
+        },
+        {
+          "id": "layered",
+          "label": "Large three-plate pauldrons",
+          "strips": {
+            "idle": "layers/shoulders/layered/idle.png",
+            "walk": "layers/shoulders/layered/walk.png",
+            "run": "layers/shoulders/layered/run.png",
+            "attack_sword1h": "layers/shoulders/layered/attack_sword1h.png",
+            "attack_sword2h": "layers/shoulders/layered/attack_sword2h.png",
+            "attack_bow": "layers/shoulders/layered/attack_bow.png",
+            "hurt": "layers/shoulders/layered/hurt.png",
+            "block_shield": "layers/shoulders/layered/block_shield.png",
+            "block_sword1h": "layers/shoulders/layered/block_sword1h.png",
+            "block_sword2h": "layers/shoulders/layered/block_sword2h.png",
+            "death": "layers/shoulders/layered/death.png"
+          },
+          "material": "gold",
+          "tones": {
+            "attack_bow": "layers/shoulders/layered/attack_bow_tones.png",
+            "attack_sword1h": "layers/shoulders/layered/attack_sword1h_tones.png",
+            "attack_sword2h": "layers/shoulders/layered/attack_sword2h_tones.png",
+            "block_shield": "layers/shoulders/layered/block_shield_tones.png",
+            "block_sword1h": "layers/shoulders/layered/block_sword1h_tones.png",
+            "block_sword2h": "layers/shoulders/layered/block_sword2h_tones.png",
+            "death": "layers/shoulders/layered/death_tones.png",
+            "hurt": "layers/shoulders/layered/hurt_tones.png",
+            "idle": "layers/shoulders/layered/idle_tones.png",
+            "run": "layers/shoulders/layered/run_tones.png",
+            "walk": "layers/shoulders/layered/walk_tones.png"
+          }
+        },
+        {
+          "id": "round",
+          "label": "Small round spaulders",
+          "strips": {
+            "idle": "layers/shoulders/round/idle.png",
+            "walk": "layers/shoulders/round/walk.png",
+            "run": "layers/shoulders/round/run.png",
+            "attack_sword1h": "layers/shoulders/round/attack_sword1h.png",
+            "attack_sword2h": "layers/shoulders/round/attack_sword2h.png",
+            "attack_bow": "layers/shoulders/round/attack_bow.png",
+            "hurt": "layers/shoulders/round/hurt.png",
+            "block_shield": "layers/shoulders/round/block_shield.png",
+            "block_sword1h": "layers/shoulders/round/block_sword1h.png",
+            "block_sword2h": "layers/shoulders/round/block_sword2h.png",
+            "death": "layers/shoulders/round/death.png"
+          },
+          "material": "steel",
+          "tones": {
+            "attack_bow": "layers/shoulders/round/attack_bow_tones.png",
+            "attack_sword1h": "layers/shoulders/round/attack_sword1h_tones.png",
+            "attack_sword2h": "layers/shoulders/round/attack_sword2h_tones.png",
+            "block_shield": "layers/shoulders/round/block_shield_tones.png",
+            "block_sword1h": "layers/shoulders/round/block_sword1h_tones.png",
+            "block_sword2h": "layers/shoulders/round/block_sword2h_tones.png",
+            "death": "layers/shoulders/round/death_tones.png",
+            "hurt": "layers/shoulders/round/hurt_tones.png",
+            "idle": "layers/shoulders/round/idle_tones.png",
+            "run": "layers/shoulders/round/run_tones.png",
+            "walk": "layers/shoulders/round/walk_tones.png"
+          }
+        }
+      ],
+      "materials": [
+        "steel",
+        "silver",
+        "gold",
+        "copper",
+        "bronze",
+        "leather"
       ]
     },
     {
@@ -269,7 +1126,16 @@
           "label": "Head A: dark hair",
           "strips": {
             "idle": "layers/head/a/idle.png",
-            "walk": "layers/head/a/walk.png"
+            "walk": "layers/head/a/walk.png",
+            "run": "layers/head/a/run.png",
+            "attack_sword1h": "layers/head/a/attack_sword1h.png",
+            "attack_sword2h": "layers/head/a/attack_sword2h.png",
+            "attack_bow": "layers/head/a/attack_bow.png",
+            "hurt": "layers/head/a/hurt.png",
+            "block_shield": "layers/head/a/block_shield.png",
+            "block_sword1h": "layers/head/a/block_sword1h.png",
+            "block_sword2h": "layers/head/a/block_sword2h.png",
+            "death": "layers/head/a/death.png"
           }
         },
         {
@@ -277,7 +1143,16 @@
           "label": "Head B: blond with beard",
           "strips": {
             "idle": "layers/head/b/idle.png",
-            "walk": "layers/head/b/walk.png"
+            "walk": "layers/head/b/walk.png",
+            "run": "layers/head/b/run.png",
+            "attack_sword1h": "layers/head/b/attack_sword1h.png",
+            "attack_sword2h": "layers/head/b/attack_sword2h.png",
+            "attack_bow": "layers/head/b/attack_bow.png",
+            "hurt": "layers/head/b/hurt.png",
+            "block_shield": "layers/head/b/block_shield.png",
+            "block_sword1h": "layers/head/b/block_sword1h.png",
+            "block_sword2h": "layers/head/b/block_sword2h.png",
+            "death": "layers/head/b/death.png"
           }
         },
         {
@@ -285,9 +1160,163 @@
           "label": "Head C: auburn bun",
           "strips": {
             "idle": "layers/head/c/idle.png",
-            "walk": "layers/head/c/walk.png"
+            "walk": "layers/head/c/walk.png",
+            "run": "layers/head/c/run.png",
+            "attack_sword1h": "layers/head/c/attack_sword1h.png",
+            "attack_sword2h": "layers/head/c/attack_sword2h.png",
+            "attack_bow": "layers/head/c/attack_bow.png",
+            "hurt": "layers/head/c/hurt.png",
+            "block_shield": "layers/head/c/block_shield.png",
+            "block_sword1h": "layers/head/c/block_sword1h.png",
+            "block_sword2h": "layers/head/c/block_sword2h.png",
+            "death": "layers/head/c/death.png"
           }
         }
+      ]
+    },
+    {
+      "id": "headgear",
+      "label": "Headgear",
+      "items": [
+        {
+          "id": "knight",
+          "label": "Closed helm",
+          "strips": {
+            "idle": "layers/headgear/knight/idle.png",
+            "walk": "layers/headgear/knight/walk.png",
+            "run": "layers/headgear/knight/run.png",
+            "attack_sword1h": "layers/headgear/knight/attack_sword1h.png",
+            "attack_sword2h": "layers/headgear/knight/attack_sword2h.png",
+            "attack_bow": "layers/headgear/knight/attack_bow.png",
+            "hurt": "layers/headgear/knight/hurt.png",
+            "block_shield": "layers/headgear/knight/block_shield.png",
+            "block_sword1h": "layers/headgear/knight/block_sword1h.png",
+            "block_sword2h": "layers/headgear/knight/block_sword2h.png",
+            "death": "layers/headgear/knight/death.png"
+          },
+          "hides": {
+            "idle": "masks/headgear/knight/idle.png",
+            "walk": "masks/headgear/knight/walk.png",
+            "run": "masks/headgear/knight/run.png",
+            "attack_sword1h": "masks/headgear/knight/attack_sword1h.png",
+            "attack_sword2h": "masks/headgear/knight/attack_sword2h.png",
+            "attack_bow": "masks/headgear/knight/attack_bow.png",
+            "hurt": "masks/headgear/knight/hurt.png",
+            "block_shield": "masks/headgear/knight/block_shield.png",
+            "block_sword1h": "masks/headgear/knight/block_sword1h.png",
+            "block_sword2h": "masks/headgear/knight/block_sword2h.png",
+            "death": "masks/headgear/knight/death.png"
+          },
+          "material": "steel",
+          "tones": {
+            "idle": "layers/headgear/knight/idle_tones.png",
+            "walk": "layers/headgear/knight/walk_tones.png",
+            "run": "layers/headgear/knight/run_tones.png",
+            "attack_sword1h": "layers/headgear/knight/attack_sword1h_tones.png",
+            "attack_sword2h": "layers/headgear/knight/attack_sword2h_tones.png",
+            "attack_bow": "layers/headgear/knight/attack_bow_tones.png",
+            "hurt": "layers/headgear/knight/hurt_tones.png",
+            "block_shield": "layers/headgear/knight/block_shield_tones.png",
+            "block_sword1h": "layers/headgear/knight/block_sword1h_tones.png",
+            "block_sword2h": "layers/headgear/knight/block_sword2h_tones.png",
+            "death": "layers/headgear/knight/death_tones.png"
+          }
+        },
+        {
+          "id": "archer",
+          "label": "Open archer helmet",
+          "strips": {
+            "idle": "layers/headgear/archer/idle.png",
+            "walk": "layers/headgear/archer/walk.png",
+            "run": "layers/headgear/archer/run.png",
+            "attack_sword1h": "layers/headgear/archer/attack_sword1h.png",
+            "attack_sword2h": "layers/headgear/archer/attack_sword2h.png",
+            "attack_bow": "layers/headgear/archer/attack_bow.png",
+            "hurt": "layers/headgear/archer/hurt.png",
+            "block_shield": "layers/headgear/archer/block_shield.png",
+            "block_sword1h": "layers/headgear/archer/block_sword1h.png",
+            "block_sword2h": "layers/headgear/archer/block_sword2h.png",
+            "death": "layers/headgear/archer/death.png"
+          },
+          "hides": {
+            "idle": "masks/headgear/archer/idle.png",
+            "walk": "masks/headgear/archer/walk.png",
+            "run": "masks/headgear/archer/run.png",
+            "attack_sword1h": "masks/headgear/archer/attack_sword1h.png",
+            "attack_sword2h": "masks/headgear/archer/attack_sword2h.png",
+            "attack_bow": "masks/headgear/archer/attack_bow.png",
+            "hurt": "masks/headgear/archer/hurt.png",
+            "block_shield": "masks/headgear/archer/block_shield.png",
+            "block_sword1h": "masks/headgear/archer/block_sword1h.png",
+            "block_sword2h": "masks/headgear/archer/block_sword2h.png",
+            "death": "masks/headgear/archer/death.png"
+          },
+          "material": "steel",
+          "tones": {
+            "idle": "layers/headgear/archer/idle_tones.png",
+            "walk": "layers/headgear/archer/walk_tones.png",
+            "run": "layers/headgear/archer/run_tones.png",
+            "attack_sword1h": "layers/headgear/archer/attack_sword1h_tones.png",
+            "attack_sword2h": "layers/headgear/archer/attack_sword2h_tones.png",
+            "attack_bow": "layers/headgear/archer/attack_bow_tones.png",
+            "hurt": "layers/headgear/archer/hurt_tones.png",
+            "block_shield": "layers/headgear/archer/block_shield_tones.png",
+            "block_sword1h": "layers/headgear/archer/block_sword1h_tones.png",
+            "block_sword2h": "layers/headgear/archer/block_sword2h_tones.png",
+            "death": "layers/headgear/archer/death_tones.png"
+          }
+        },
+        {
+          "id": "nasal",
+          "label": "Conical helmet",
+          "strips": {
+            "idle": "layers/headgear/nasal/idle.png",
+            "walk": "layers/headgear/nasal/walk.png",
+            "run": "layers/headgear/nasal/run.png",
+            "attack_sword1h": "layers/headgear/nasal/attack_sword1h.png",
+            "attack_sword2h": "layers/headgear/nasal/attack_sword2h.png",
+            "attack_bow": "layers/headgear/nasal/attack_bow.png",
+            "hurt": "layers/headgear/nasal/hurt.png",
+            "block_shield": "layers/headgear/nasal/block_shield.png",
+            "block_sword1h": "layers/headgear/nasal/block_sword1h.png",
+            "block_sword2h": "layers/headgear/nasal/block_sword2h.png",
+            "death": "layers/headgear/nasal/death.png"
+          },
+          "hides": {
+            "idle": "masks/headgear/nasal/idle.png",
+            "walk": "masks/headgear/nasal/walk.png",
+            "run": "masks/headgear/nasal/run.png",
+            "attack_sword1h": "masks/headgear/nasal/attack_sword1h.png",
+            "attack_sword2h": "masks/headgear/nasal/attack_sword2h.png",
+            "attack_bow": "masks/headgear/nasal/attack_bow.png",
+            "hurt": "masks/headgear/nasal/hurt.png",
+            "block_shield": "masks/headgear/nasal/block_shield.png",
+            "block_sword1h": "masks/headgear/nasal/block_sword1h.png",
+            "block_sword2h": "masks/headgear/nasal/block_sword2h.png",
+            "death": "masks/headgear/nasal/death.png"
+          },
+          "material": "steel",
+          "tones": {
+            "idle": "layers/headgear/nasal/idle_tones.png",
+            "walk": "layers/headgear/nasal/walk_tones.png",
+            "run": "layers/headgear/nasal/run_tones.png",
+            "attack_sword1h": "layers/headgear/nasal/attack_sword1h_tones.png",
+            "attack_sword2h": "layers/headgear/nasal/attack_sword2h_tones.png",
+            "attack_bow": "layers/headgear/nasal/attack_bow_tones.png",
+            "hurt": "layers/headgear/nasal/hurt_tones.png",
+            "block_shield": "layers/headgear/nasal/block_shield_tones.png",
+            "block_sword1h": "layers/headgear/nasal/block_sword1h_tones.png",
+            "block_sword2h": "layers/headgear/nasal/block_sword2h_tones.png",
+            "death": "layers/headgear/nasal/death_tones.png"
+          }
+        }
+      ],
+      "materials": [
+        "steel",
+        "silver",
+        "gold",
+        "copper",
+        "bronze"
       ]
     }
   ]

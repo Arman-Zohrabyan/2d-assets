@@ -46,8 +46,10 @@ def main(config: str) -> None:
                 return [anims[w["carry_from"]["anim"]]["src"]]
             return [own]
         for kit in cfg["kits"]:
+            if anim not in kit.get("anims", [anim]):  # a kit drawn for some animations only
+                continue
             if any(i["slot"] == slot and i["id"] == item for i in kit["items"]):
-                return [kit["src"].format(anim=anim), anims[anim]["src"]]
+                return [kit["src"].format(anim=anims[anim].get("sheet", {}).get("name", anim)), anims[anim]["src"]]
         return []
 
     def prompt_of(raw: str) -> str:

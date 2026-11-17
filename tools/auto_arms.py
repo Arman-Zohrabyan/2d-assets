@@ -100,6 +100,50 @@ def annotate(img: np.ndarray, near: str, shoulder_drop: int, max_run: int) -> tu
     return hands_row, arms_row
 
 
+def annotate_bent(img: np.ndarray, head_cx: float, half_w: float, near: str, shoulder_drop: int,
+                  head_bottom: int | None = None) -> tuple[list, list]:
+    """Arms bent at the elbow (a run): shoulders at the head's centre +- `half_w` (measured in the walk), hands are the
+    skin blobs on each side, the elbow is where that side of the silhouette sticks out furthest between them. A hand
+    that is hidden ends the arm at its elbow."""
+    rgb, op = img[..., :3].astype(float) / 255, img[..., 3] >= 128
+    hsv = np.array([[colorsys.rgb_to_hsv(*p) for p in row] for row in rgb])
+    hue, sat, val = hsv[..., 0] * 360, hsv[..., 1], hsv[..., 2]
+    skin = op & (hue >= 12) & (hue <= 31) & (sat >= 0.35) & (sat <= 0.75) & (val >= 0.5)
+    rows = np.flatnonzero(op.any(1))
+    top, bottom = int(rows[0]), int(rows[-1])
+    # the shoulders hang from the collar (the bottom of the head sprite), not from the top of the figure: a raised
+    # hand is the top of the figure then
+    sh_y = head_bottom + 3 if head_bottom is not None else top + shoulder_drop
+    blobs = []
+    for comp in components(skin):
+        ys, xs = np.array(comp).T
+        neck = abs(xs.mean() + 0.5 - head_cx) < 4 and sh_y - 5 <= ys.mean() < sh_y + 2  # left of the mannequin's neck
+        if len(comp) >= 2 and ys.mean() < top + 0.62 * (bottom - top) and not neck:  # raised hands count too
+            blobs.append((float(xs.mean()) + 0.5, float(ys.mean()) + 0.5, len(comp)))
+    arms = []
+    for side in (-1, 1):  # left of the image, right of the image
+        S = (head_cx + side * half_w, sh_y + 0.5)
+        mine = [b for b in blobs if (b[0] - head_cx) * side > -1.5]
+        H = max(mine, key=lambda b: b[2])[:2] if mine else None
+        y_end = int(H[1]) if H else int(sh_y + 0.3 * (bottom - top))
+        best = None
+        y_a, y_b = sorted((int(sh_y) + 2, y_end))  # a raised hand: the elbow is between it and the shoulder too
+        for y in range(y_a, max(y_b, y_a + 1)):
+            xs = np.flatnonzero(op[y])
+            if not len(xs):
+                continue
+            x_out = xs.min() if side < 0 else xs.max()
+            if best is None or (x_out - best[0]) * side > 0:
+                best = (float(x_out), y)
+        E = (best[0] - side * 1.5 + 0.5, best[1] + 0.5) if best else (S[0], S[1] + 5)
+        if H is None:
+            H = (E[0], E[1] + 3)
+        arms.append([round(S[0] * 2) / 2, S[1], round(E[0] * 2) / 2, E[1], round(H[0] * 2) / 2, round(H[1] * 2) / 2])
+    left, right = arms
+    n_arm, f_arm = (left, right) if near == "left" else (right, left)
+    return n_arm + f_arm[4:6], n_arm + [f_arm]
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("doll", help="built doll folder, e.g. assets/doll_s")
@@ -107,6 +151,7 @@ def main() -> None:
     ap.add_argument("--anims", default="idle,walk")
     ap.add_argument("--shoulder-drop", type=int, default=3, help="shoulder row below the top of the headless body")
     ap.add_argument("--max-run", type=int, default=6, help="widest run that is still an arm")
+    ap.add_argument("--bent", action="store_true", help="arms bent at the elbow (a run): see annotate_bent")
     a = ap.parse_args()
     doll = Path(a.doll)
     meta = json.loads((doll / "doll.json").read_text())
@@ -114,8 +159,22 @@ def main() -> None:
     hands, arms = {}, {}
     for anim in a.anims.split(","):
         hands[anim], arms[anim] = [], []
-        for img in frames_of(doll / "body" / f"{anim}.png", fw):
-            h, r = annotate(img, a.near, a.shoulder_drop, a.max_run)
+        heads = frames_of(doll / "layers" / "head" / "a" / f"{anim}.png", fw) if a.bent else None
+        walk = frames_of(doll / "body" / "walk.png", fw) if a.bent else None
+        if a.bent:  # shoulder half-width: half the torso width a little below the collar, in the walk
+            ws = []
+            for img in walk:
+                op = img[..., 3] >= 128
+                top = int(np.flatnonzero(op.any(1))[0])
+                xs = np.flatnonzero(op[top + 2])
+                ws.append((xs.max() - xs.min()) / 2 - 1.5 if len(xs) else 6)
+            half_w = float(np.median(ws))
+        for fi, img in enumerate(frames_of(doll / "body" / f"{anim}.png", fw)):
+            if a.bent:
+                hy, hx = np.nonzero(heads[fi][..., 3] >= 128)
+                h, r = annotate_bent(img, float(hx.mean()) + 0.5, half_w, a.near, a.shoulder_drop, int(hy.max()))
+            else:
+                h, r = annotate(img, a.near, a.shoulder_drop, a.max_run)
             hands[anim].append(h)
             arms[anim].append(r)
     print(json.dumps({"hands": hands, "arms": arms}))

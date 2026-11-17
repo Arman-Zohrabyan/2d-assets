@@ -2,18 +2,11 @@
   "name": "doll_ne",
   "label": "North-east / north-west",
   "out_dir": "assets/doll_ne",
-  "frame": [
-    112,
-    96
-  ],
+  "frame": [112, 96],
   "ground_y": 91,
-  "body_height": 48,
+  "body_height": 50,
   "max_colors": 48,
-  "outline_rgb": [
-    27,
-    31,
-    51
-  ],
+  "outline_rgb": [27, 31, 51],
   "fixed_colors": [
     "#1b1f33",
     "#e0a77e",
@@ -38,226 +31,88 @@
   ],
   "colors": {
     "red": {
-      "h": [
-        335,
-        15
-      ],
-      "s": [
-        0.35,
-        1
-      ],
-      "v": [
-        0.18,
-        1
-      ]
+      "h": [335, 15],
+      "s": [0.35, 1],
+      "v": [0.18, 1]
     },
     "green": {
-      "h": [
-        85,
-        170
-      ],
-      "s": [
-        0.2,
-        1
-      ],
-      "v": [
-        0.12,
-        1
-      ]
+      "h": [85, 170],
+      "s": [0.2, 1],
+      "v": [0.12, 1]
     },
     "blue": {
-      "h": [
-        200,
-        250
-      ],
-      "s": [
-        0.5,
-        1
-      ],
-      "v": [
-        0.3,
-        1
-      ]
+      "h": [200, 250],
+      "s": [0.5, 1],
+      "v": [0.3, 1]
     },
     "purple": {
-      "h": [
-        255,
-        320
-      ],
-      "s": [
-        0.2,
-        1
-      ],
-      "v": [
-        0.12,
-        1
-      ]
+      "h": [255, 320],
+      "s": [0.2, 1],
+      "v": [0.12, 1]
     },
     "steel": {
-      "h": [
-        180,
-        265
-      ],
-      "s": [
-        0.15,
-        0.45
-      ],
-      "v": [
-        0.3,
-        1
-      ],
-      "light": [
-        0.15,
-        0.7
-      ]
+      "h": [180, 265],
+      "s": [0.15, 0.45],
+      "v": [0.3, 1],
+      "light": [0.15, 0.7]
     },
     "gold": {
-      "h": [
-        30,
-        60
-      ],
-      "s": [
-        0.45,
-        1
-      ],
-      "v": [
-        0.55,
-        1
-      ]
+      "h": [30, 60],
+      "s": [0.45, 1],
+      "v": [0.55, 1]
     },
     "leather": {
-      "h": [
-        12,
-        40
-      ],
-      "s": [
-        0.35,
-        1
-      ],
-      "v": [
-        0.15,
-        0.72
-      ]
+      "h": [12, 40],
+      "s": [0.35, 1],
+      "v": [0.15, 0.72]
     },
     "bronze": {
-      "h": [
-        15,
-        42
-      ],
-      "s": [
-        0.55,
-        1
-      ],
-      "v": [
-        0.3,
-        0.95
-      ]
+      "h": [15, 42],
+      "s": [0.55, 1],
+      "v": [0.3, 0.95]
     },
     "wood": {
-      "h": [
-        15,
-        40
-      ],
-      "s": [
-        0.4,
-        1
-      ],
-      "v": [
-        0.25,
-        0.75
-      ]
+      "h": [15, 40],
+      "s": [0.4, 1],
+      "v": [0.25, 0.75]
     }
   },
   "skin_hsv": {
-    "h": [
-      19,
-      31
-    ],
-    "s": [
-      0.36,
-      0.53
-    ],
-    "v": [
-      0.58,
-      1
-    ]
+    "h": [19, 31],
+    "s": [0.36, 0.53],
+    "v": [0.58, 1]
   },
   "linen_hsv": {
-    "h": [
-      29,
-      44
-    ],
-    "s": [
-      0.1,
-      0.34
-    ],
-    "v": [
-      0.4,
-      1
-    ]
+    "h": [29, 44],
+    "s": [0.1, 0.34],
+    "v": [0.4, 1]
   },
   "item_colors": 6,
   "arm_radius": 2.3,
   "materials": {
     "steel": {
       "label": "Steel",
-      "ramp": [
-        "#e4eaf2",
-        "#c0cbdc",
-        "#8b9bb4",
-        "#5a6988",
-        "#3a4466"
-      ]
+      "ramp": ["#e4eaf2", "#c0cbdc", "#8b9bb4", "#5a6988", "#3a4466"]
     },
     "silver": {
       "label": "Silver",
-      "ramp": [
-        "#ffffff",
-        "#dde2e8",
-        "#b2bac5",
-        "#7b8591",
-        "#4a535e"
-      ]
+      "ramp": ["#ffffff", "#dde2e8", "#b2bac5", "#7b8591", "#4a535e"]
     },
     "gold": {
       "label": "Gold",
-      "ramp": [
-        "#fff3b0",
-        "#f2d16b",
-        "#c99a2e",
-        "#8a6214",
-        "#553a0c"
-      ]
+      "ramp": ["#fff3b0", "#f2d16b", "#c99a2e", "#8a6214", "#553a0c"]
     },
     "copper": {
       "label": "Copper",
-      "ramp": [
-        "#ffc69a",
-        "#e08a52",
-        "#b45d2e",
-        "#7e3a1a",
-        "#4a200e"
-      ]
+      "ramp": ["#ffc69a", "#e08a52", "#b45d2e", "#7e3a1a", "#4a200e"]
     },
     "bronze": {
       "label": "Bronze",
-      "ramp": [
-        "#f2c278",
-        "#d08a45",
-        "#a0612a",
-        "#6b3e1a",
-        "#40240e"
-      ]
+      "ramp": ["#f2c278", "#d08a45", "#a0612a", "#6b3e1a", "#40240e"]
     },
     "leather": {
       "label": "Leather",
-      "ramp": [
-        "#c99566",
-        "#a3713f",
-        "#7a4f2a",
-        "#56351b",
-        "#33200f"
-      ]
+      "ramp": ["#c99566", "#a3713f", "#7a4f2a", "#56351b", "#33200f"]
     }
   },
   "material_labels_extra": {
@@ -270,23 +125,92 @@
     "sword1h": {
       "kind": "sword1h",
       "hands": 1,
-      "carry": "sprite:sword1h"
+      "carry": "sprite:sword1h",
+      "core": ["steel", "gold"],
+      "grow": ["leather"]
+    },
+    "falchion": {
+      "kind": "sword1h",
+      "hands": 1,
+      "carry": "sprite:falchion",
+      "mirror": true,
+      "attack_sprite": "sprite:falchion",
+      "pose_from": "sword1h",
+      "pose_sprite": "sprite:sword1h"
+    },
+    "sword2h": {
+      "kind": "sword2h",
+      "hands": 2,
+      "carry": "sprite:sword2h",
+      "core": ["steel"],
+      "grow": ["leather", "gold"]
+    },
+    "zweihander": {
+      "kind": "sword2h",
+      "hands": 2,
+      "carry": "sprite:zweihander",
+      "attack_sprite": "sprite:zweihander",
+      "pose_from": "sword2h",
+      "pose_sprite": "sprite:sword2h"
+    },
+    "glaive": {
+      "kind": "polearm",
+      "hands": 2,
+      "carry": "sprite:glaive",
+      "grip_frac": 0.6,
+      "attack_sprite": "sprite:glaive",
+      "pose_from": "sword2h",
+      "pose_sprite": "sprite:sword2h",
+      "attack": "attack_sword2h",
+      "block": "block_sword2h"
+    },
+    "halberd": {
+      "kind": "polearm",
+      "hands": 2,
+      "carry": "sprite:halberd",
+      "grip_frac": 0.6,
+      "attack_sprite": "sprite:halberd",
+      "pose_from": "sword2h",
+      "pose_sprite": "sprite:sword2h",
+      "attack": "attack_sword2h",
+      "block": "block_sword2h"
+    },
+    "spear": {
+      "kind": "polearm",
+      "hands": 2,
+      "carry": "sprite:spear",
+      "grip_frac": 0.6,
+      "attack_sprite": "sprite:spear",
+      "pose_from": "sword2h",
+      "pose_sprite": "sprite:sword2h",
+      "attack": "attack_sword2h",
+      "block": "block_sword2h"
+    },
+    "bow": {
+      "kind": "bow",
+      "hands": 2,
+      "carry": "sprite:bow",
+      "grip_frac": 0.5,
+      "core": ["wood"],
+      "grow": ["steel"],
+      "thin_light": true,
+      "limb_outline": "#3d2414"
+    },
+    "bow_dark": {
+      "kind": "bow",
+      "hands": 2,
+      "carry": "sprite:bow_dark",
+      "grip_frac": 0.5,
+      "recolor_of": "bow",
+      "hue": 352,
+      "sat": 1.15,
+      "val": 0.95
     }
   },
   "gear": {
     "src": "source/doll/raw/gear_sheet.png",
-    "rows": [
-      4,
-      2
-    ],
-    "cells": [
-      "sprite:sword1h",
-      "sprite:falchion",
-      "sprite:sword2h",
-      "sprite:zweihander",
-      "~shield:round",
-      "~shield:heater"
-    ],
+    "rows": [4, 2],
+    "cells": ["sprite:sword1h", "sprite:falchion", "sprite:sword2h", "sprite:zweihander", "shield:round", "shield:heater"],
     "scale_from": {
       "cell": "sprite:sword1h",
       "length": 20
@@ -297,96 +221,128 @@
   "labels": {
     "body:base": "Mannequin",
     "pants:green": "Green wool pants",
+    "pants:blue": "Blue pants",
+    "pants:leather": "Dark leather pants",
     "cloak:red": "Red cloak",
+    "cloak:green": "Green cloak",
+    "cloak:blue": "Blue cloak",
     "greaves:plate": "Plate greaves",
+    "greaves:boots": "Tall boot shafts",
+    "greaves:cuffed": "Cuffed greaves",
+    "skirt:blue": "Blue skirt",
+    "skirt:purple": "Purple skirt",
+    "skirt:red": "Red skirt",
     "chest:plate": "Cuirass",
+    "chest:riveted": "Riveted cuirass with seams",
+    "chest:mail": "Mail hauberk (to mid-thigh)",
+    "chest:brigandine": "Brigandine",
+    "bracers:wrist": "Bracers 25% (wrist)",
     "bracers:forearm": "Bracers 50% (forearm)",
+    "bracers:elbow": "Bracers 75% (with elbow)",
     "bracers:full": "Bracers 100% (whole arm)",
+    "shoulders:bands": "Banded pauldrons",
+    "shoulders:domes": "Domed pauldrons",
+    "shoulders:layered": "Large three-plate pauldrons",
+    "shoulders:round": "Small round spaulders",
+    "shield:round": "Round wooden shield",
+    "shield:heater": "Heater shield",
     "head:a": "Head A: dark hair",
     "head:b": "Head B: blond with beard",
     "head:c": "Head C: auburn bun",
-    "weapon:sword1h": "Sword (one-handed)"
+    "headgear:knight": "Closed helm",
+    "headgear:archer": "Open archer helmet",
+    "headgear:nasal": "Conical helmet",
+    "weapon:sword1h": "Sword (one-handed)",
+    "weapon:falchion": "Falchion (one-handed)",
+    "weapon:sword2h": "Two-handed sword",
+    "weapon:zweihander": "Zweihander (two-handed)",
+    "weapon:glaive": "Glaive (polearm, two-handed)",
+    "weapon:halberd": "Halberd (polearm, two-handed)",
+    "weapon:spear": "Spear (polearm, two-handed)",
+    "weapon:bow": "Bow",
+    "weapon:bow_dark": "Red lacquered bow"
   },
   "derived": [
     {
       "slot": "pants",
       "id": "green",
       "from": "legs",
-      "ramp": [
-        "#6f8a4a",
-        "#56703a",
-        "#40552c",
-        "#2c3b20"
-      ]
+      "ramp": ["#6f8a4a", "#56703a", "#40552c", "#2c3b20"]
     },
     {
       "slot": "greaves",
       "id": "plate",
       "from": "shins",
       "length": 8,
-      "ramp": [
-        "#c0cbdc",
-        "#8b9bb4",
-        "#5a6988",
-        "#3a4466"
-      ]
+      "ramp": ["#c0cbdc", "#8b9bb4", "#5a6988", "#3a4466"]
     },
     {
       "slot": "bracers",
       "id": "forearm",
       "from": "arms",
       "coverage": 0.5,
-      "ramp": [
-        "#c0cbdc",
-        "#8b9bb4",
-        "#5a6988",
-        "#3a4466"
-      ]
+      "ramp": ["#c0cbdc", "#8b9bb4", "#5a6988", "#3a4466"]
     },
     {
       "slot": "bracers",
       "id": "full",
       "from": "arms",
       "coverage": 1.0,
-      "ramp": [
-        "#c0cbdc",
-        "#8b9bb4",
-        "#5a6988",
-        "#3a4466"
-      ]
+      "ramp": ["#c0cbdc", "#8b9bb4", "#5a6988", "#3a4466"]
+    },
+    {
+      "slot": "pants",
+      "id": "blue",
+      "from": "legs",
+      "ramp": ["#5a72a8", "#465b8c", "#34446c", "#242f4d"]
+    },
+    {
+      "slot": "pants",
+      "id": "leather",
+      "from": "legs",
+      "ramp": ["#6e5a50", "#574640", "#40332f", "#2b2321"]
+    },
+    {
+      "slot": "bracers",
+      "id": "wrist",
+      "from": "arms",
+      "coverage": 0.25,
+      "ramp": ["#c0cbdc", "#8b9bb4", "#5a6988", "#3a4466"]
+    },
+    {
+      "slot": "bracers",
+      "id": "elbow",
+      "from": "arms",
+      "coverage": 0.75,
+      "ramp": ["#c0cbdc", "#8b9bb4", "#5a6988", "#3a4466"]
     }
   ],
   "material_slots": {
-    "chest": [
-      "steel",
-      "silver",
-      "gold",
-      "copper",
-      "bronze",
-      "leather"
-    ],
-    "bracers": [
-      "steel",
-      "silver",
-      "gold",
-      "copper",
-      "bronze",
-      "leather"
-    ],
-    "greaves": [
-      "steel",
-      "silver",
-      "gold",
-      "copper",
-      "bronze",
-      "leather"
-    ]
+    "chest": ["steel", "silver", "gold", "copper", "bronze", "leather"],
+    "shoulders": ["steel", "silver", "gold", "copper", "bronze", "leather"],
+    "bracers": ["steel", "silver", "gold", "copper", "bronze", "leather"],
+    "greaves": ["steel", "silver", "gold", "copper", "bronze", "leather"],
+    "headgear": ["steel", "silver", "gold", "copper", "bronze"]
   },
   "item_material": {
     "chest:plate": "steel",
+    "chest:riveted": "leather",
+    "chest:mail": "steel",
+    "chest:brigandine": "cloth",
+    "shoulders:bands": "bronze",
+    "shoulders:domes": "steel",
+    "shoulders:layered": "gold",
+    "shoulders:round": "steel",
     "greaves:plate": "steel",
+    "greaves:boots": "leather",
+    "greaves:cuffed": "bronze",
+    "bracers:wrist": "steel",
     "bracers:forearm": "steel",
-    "bracers:full": "steel"
+    "bracers:elbow": "steel",
+    "bracers:full": "steel",
+    "headgear:knight": "steel",
+    "headgear:archer": "steel",
+    "headgear:nasal": "steel"
   },
   "facing": "north-east",
   "neck_seam": true,
@@ -410,8 +366,148 @@
       "fps": 10,
       "loop": true,
       "anchor": "head",
-      "height": 48,
+      "height": 50,
       "height_frame": 2
+    },
+    {
+      "id": "run",
+      "label": "Run",
+      "src": "source/doll_ne/raw/base_run.png",
+      "frames": 6,
+      "rows": 1,
+      "fps": 12,
+      "loop": true,
+      "anchor": "head",
+      "height": 43,
+      "height_frame": 0
+    },
+    {
+      "id": "attack_sword1h",
+      "label": "Attack: one-handed sword",
+      "src": "source/doll_ne/raw/base_attack_sword1h.png",
+      "frames": 6,
+      "rows": 2,
+      "fps": 12,
+      "loop": false,
+      "anchor": "feet",
+      "weapon": "sword1h",
+      "height": 49,
+      "height_frame": 0
+    },
+    {
+      "id": "attack_sword2h",
+      "label": "Attack: two-handed sword",
+      "src": "source/doll_ne/raw/base_attack_sword2h.png",
+      "frames": 6,
+      "rows": 2,
+      "fps": 10,
+      "loop": false,
+      "anchor": "feet",
+      "weapon": "sword2h",
+      "height": 59,
+      "height_frame": 0
+    },
+    {
+      "id": "attack_bow",
+      "label": "Attack: bow",
+      "src": "source/doll_ne/raw/base_attack_bow.png",
+      "frames": 6,
+      "rows": 2,
+      "fps": 10,
+      "loop": false,
+      "anchor": "feet",
+      "weapon": "bow",
+      "height": 51,
+      "height_frame": 0
+    },
+    {
+      "id": "hurt",
+      "label": "Hurt",
+      "src": "source/doll_ne/raw/base_hurt_block.png",
+      "frames": 3,
+      "sheet": {
+        "name": "hurt_block",
+        "frames": 6,
+        "rows": 2,
+        "first": 0
+      },
+      "fps": 10,
+      "loop": false,
+      "anchor": "head",
+      "role": "hurt",
+      "height": 50,
+      "height_frame": 2
+    },
+    {
+      "id": "block_shield",
+      "label": "Block: shield",
+      "src": "source/doll_ne/raw/base_hurt_block.png",
+      "frames": 3,
+      "sheet": {
+        "name": "hurt_block",
+        "frames": 6,
+        "rows": 2,
+        "first": 3
+      },
+      "fps": 12,
+      "loop": false,
+      "anchor": "feet",
+      "role": "block_shield",
+      "weapon": "sword1h",
+      "scale_as": "hurt",
+      "resprite": true
+    },
+    {
+      "id": "block_sword1h",
+      "label": "Block: one-handed",
+      "src": "source/doll_ne/raw/base_blocks.png",
+      "frames": 3,
+      "sheet": {
+        "name": "blocks",
+        "frames": 6,
+        "rows": 2,
+        "first": 0
+      },
+      "fps": 12,
+      "loop": false,
+      "anchor": "feet",
+      "role": "block",
+      "weapon": "sword1h",
+      "height": 49,
+      "height_frame": 0,
+      "resprite": true
+    },
+    {
+      "id": "block_sword2h",
+      "label": "Block: two-handed",
+      "src": "source/doll_ne/raw/base_blocks.png",
+      "frames": 3,
+      "sheet": {
+        "name": "blocks",
+        "frames": 6,
+        "rows": 2,
+        "first": 3
+      },
+      "fps": 12,
+      "loop": false,
+      "anchor": "feet",
+      "role": "block",
+      "weapon": "sword2h",
+      "scale_as": "block_sword1h",
+      "resprite": true
+    },
+    {
+      "id": "death",
+      "label": "Death",
+      "src": "source/doll_ne/raw/base_death.png",
+      "frames": 6,
+      "rows": 2,
+      "fps": 8,
+      "loop": false,
+      "anchor": "cell",
+      "role": "death",
+      "height": 49,
+      "height_frame": 0
     }
   ],
   "kits": [
@@ -433,17 +529,114 @@
           "id": "plate",
           "color": "steel",
           "on_body": true,
-          "band": [
-            0.3,
-            1.3
-          ],
+          "band": [0.3, 1.3],
           "rigid": {
-            "walk": [
-              3,
-              0,
-              0
-            ]
+            "walk": [3, 0, 0]
           }
+        }
+      ]
+    },
+    {
+      "src": "source/doll_ne/raw/kit3_{anim}.png",
+      "items": [
+        {
+          "slot": "chest",
+          "id": "riveted",
+          "color": "leather",
+          "on_body": true,
+          "band": [0.3, 1.3],
+          "rigid": {
+            "walk": [3, 0, 0]
+          }
+        },
+        {
+          "slot": "shoulders",
+          "id": "domes",
+          "color": "steel",
+          "on_body": true,
+          "band": [0.45, 1.3]
+        },
+        {
+          "slot": "skirt",
+          "id": "blue",
+          "color": "blue"
+        }
+      ]
+    },
+    {
+      "src": "source/doll_ne/raw/kit4_{anim}.png",
+      "items": [
+        {
+          "slot": "chest",
+          "id": "mail",
+          "color": "steel",
+          "on_body": true,
+          "band": [0.2, 1.3],
+          "rigid": {
+            "walk": [3, 0, 0]
+          }
+        },
+        {
+          "slot": "shoulders",
+          "id": "layered",
+          "color": "gold",
+          "on_body": true,
+          "band": [0.45, 1.3]
+        },
+        {
+          "slot": "greaves",
+          "id": "cuffed",
+          "color": "bronze",
+          "on_body": true,
+          "band": [0.08, 0.55],
+          "keeps_shoe_colours": true
+        }
+      ]
+    },
+    {
+      "src": "source/doll_ne/raw/kit5_{anim}.png",
+      "items": [
+        {
+          "slot": "chest",
+          "id": "brigandine",
+          "color": "red",
+          "on_body": true,
+          "band": [0.25, 1.3],
+          "rigid": {
+            "walk": [3, 0, 0]
+          }
+        },
+        {
+          "slot": "shoulders",
+          "id": "round",
+          "color": "steel",
+          "on_body": true,
+          "band": [0.45, 1.3]
+        },
+        {
+          "slot": "greaves",
+          "id": "boots",
+          "color": "leather",
+          "on_body": true,
+          "band": [0.08, 0.55],
+          "keeps_shoe_colours": true
+        }
+      ]
+    },
+    {
+      "src": "source/doll_ne/raw/kit6_{anim}.png",
+      "items": [
+        {
+          "slot": "shoulders",
+          "id": "bands",
+          "color": "bronze",
+          "on_body": true,
+          "band": [0.45, 1.3]
+        },
+        {
+          "slot": "skirt",
+          "id": "red",
+          "color": "red"
         }
       ]
     }
@@ -451,21 +644,27 @@
   "heads": [
     {
       "src": "source/doll_ne/raw/heads.png",
-      "cells": [
-        "bald",
-        "head:a"
-      ]
+      "cells": ["bald", "head:a"]
     },
     {
       "src": "source/doll_ne/raw/heads2.png",
-      "cells": [
-        "bald",
-        "head:b",
-        "head:c"
-      ]
+      "cells": ["bald", "head:b", "head:c"]
+    },
+    {
+      "src": "source/doll_ne/raw/headgear.png",
+      "cells": ["bald", "headgear:knight", "headgear:archer", "headgear:nasal"],
+      "headgear_on": "bald"
     }
   ],
   "slots": [
+    {
+      "id": "shield",
+      "label": "Shield",
+      "requires": {
+        "slot": "weapon",
+        "hands": 1
+      }
+    },
     {
       "id": "body",
       "label": "Body",
@@ -480,6 +679,10 @@
       "label": "Greaves"
     },
     {
+      "id": "skirt",
+      "label": "Skirt"
+    },
+    {
       "id": "chest",
       "label": "Chest"
     },
@@ -492,9 +695,17 @@
       "label": "Cloak"
     },
     {
+      "id": "shoulders",
+      "label": "Shoulders"
+    },
+    {
       "id": "head",
       "label": "Head",
       "required": true
+    },
+    {
+      "id": "headgear",
+      "label": "Headgear"
     },
     {
       "id": "weapon",
@@ -504,268 +715,680 @@
   "carry_angle": {
     "sword1h": {
       "idle": 90,
-      "walk": 90
+      "walk": 90,
+      "run": 90,
+      "hurt": 90,
+      "death": [90, 90, 90, 30, 0, 0]
+    },
+    "sword2h": {
+      "idle": 50,
+      "walk": 50,
+      "run": 30,
+      "hurt": 50,
+      "death": [50, 50, 50, 30, 0, 0]
+    },
+    "polearm": {
+      "idle": -65,
+      "walk": -65,
+      "run": -65,
+      "hurt": -65,
+      "death": [-65, -65, -65, -20, 0, 0]
+    },
+    "bow": {
+      "idle": -90,
+      "walk": -90,
+      "run": -90,
+      "hurt": -90,
+      "death": [-90, -90, -90, -45, 0, 0]
     }
   },
   "head_rows": 17,
   "head_height": 15,
   "hands": {
     "idle": [
-      [
-        59.5,
-        59.5,
-        59.5,
-        66.5,
-        61.0,
-        72.5,
-        49.5,
-        68.5
-      ],
-      [
-        59.5,
-        59.5,
-        59.5,
-        66.5,
-        61.0,
-        72.5,
-        49.5,
-        68.5
-      ],
-      [
-        59.5,
-        59.5,
-        60.0,
-        66.5,
-        61.0,
-        73.0,
-        49.5,
-        68.5
-      ],
-      [
-        59.5,
-        59.5,
-        59.5,
-        66.5,
-        61.0,
-        73.0,
-        49.5,
-        68.5
-      ]
+      [59.5, 58.0, 59.5, 65.5, 61.0, 71.5, 49.0, 67.5],
+      [59.5, 58.0, 59.5, 65.5, 61.0, 71.5, 49.0, 67.5],
+      [59.5, 58.0, 60.0, 65.5, 61.0, 72.0, 49.0, 67.5],
+      [59.5, 58.0, 59.5, 65.5, 61.0, 72.0, 49.0, 67.5]
     ],
     "walk": [
-      [
-        57.5,
-        59.0,
-        57.5,
-        66.5,
-        57.0,
-        73.0,
-        50.0,
-        68.0
-      ],
-      [
-        57.0,
-        59.0,
-        55.5,
-        66.0,
-        55.0,
-        73.0,
-        50.0,
-        68.0
-      ],
-      [
-        59.5,
-        59.5,
-        59.5,
-        66.5,
-        60.5,
-        72.0,
-        50.0,
-        68.0
-      ],
-      [
-        58.5,
-        60.0,
-        61.5,
-        64.5,
-        64.5,
-        67.5,
-        48.0,
-        69.5
-      ],
-      [
-        59.0,
-        61.0,
-        62.0,
-        65.5,
-        65.0,
-        68.5,
-        49.5,
-        72.5
-      ],
-      [
-        59.0,
-        59.0,
-        62.0,
-        64.0,
-        64.5,
-        68.0,
-        50.0,
-        68.5
-      ]
+      [57.5, 57.5, 57.5, 65.5, 57.0, 72.0, 50.0, 67.0],
+      [57.0, 57.5, 55.5, 65.0, 55.0, 72.0, 50.0, 67.0],
+      [59.5, 58.0, 59.5, 65.5, 60.5, 71.0, 50.0, 67.0],
+      [58.5, 58.5, 61.5, 63.5, 65.0, 66.5, 47.5, 68.5],
+      [59.0, 59.5, 62.0, 64.5, 65.5, 67.5, 49.0, 71.5],
+      [59.0, 57.5, 62.0, 63.0, 65.0, 67.0, 50.0, 67.5]
+    ],
+    "run": [
+      [58.0, 62.5, 60.5, 64.5, 61.0, 63.5, 53.5, 73.0],
+      [58.0, 62.5, 60.0, 66.5, 61.0, 68.0, 45.5, 72.0],
+      [58.0, 58.0, 60.0, 60.0, 60.5, 61.0, 45.0, 66.0],
+      [58.0, 63.5, 61.0, 65.5, 61.0, 68.5, 45.5, 71.0],
+      [58.0, 65.5, 61.0, 67.5, 61.0, 68.0, 47.5, 72.5],
+      [59.0, 60.0, 61.0, 62.5, 61.0, 65.5, 45.5, 65.0]
+    ],
+    "attack_sword1h": [
+      [58.5, 58.5, 66.0, 67.5, 65.0, 69.0, 45.5, 68.5],
+      [58.5, 58.5, 70.0, 56.5, 68.5, 54.0, 45.5, 67.5],
+      [60.5, 58.5, 72.0, 54.5, 72.0, 54.0, 42.5, 66.5],
+      [73.5, 58.5, 79.0, 67.5, 78.5, 69.5, 54.5, 65.0],
+      [60.5, 58.5, 72.0, 63.5, 69.5, 64.5, 46.0, 66.5],
+      [57.5, 58.5, 66.0, 67.5, 65.0, 69.0, 45.5, 68.0]
+    ],
+    "attack_sword2h": [
+      [58.5, 57.5, 65.0, 60.5, 63.0, 63.0, 53.0, 62.5],
+      [59.5, 57.5, 70.0, 58.5, 67.5, 58.0, 55.0, 67.5],
+      [57.5, 57.5, 68.0, 59.5, 67.0, 60.0, 50.0, 69.5],
+      [63.5, 59.5, 65.0, 69.5, 64.5, 70.5, 50.0, 69.5],
+      [60.5, 58.5, 66.0, 64.5, 65.0, 66.0, 50.0, 69.5],
+      [58.5, 57.5, 64.0, 61.5, 63.0, 63.0, 53.0, 62.5]
+    ],
+    "attack_bow": [
+      [58.5, 56.5, 62.0, 68.5, 62.0, 71.0, 50.0, 62.5],
+      [58.5, 56.5, 71.0, 58.5, 69.0, 59.0, 53.0, 61.5],
+      [58.5, 56.5, 59.0, 58.5, 57.0, 59.0, 48.0, 62.5],
+      [57.5, 55.5, 69.0, 50.5, 69.0, 51.0, 46.0, 60.5],
+      [58.5, 55.5, 70.0, 51.5, 70.0, 51.5, 49.0, 56.5],
+      [58.5, 55.5, 63.0, 69.5, 62.5, 70.5, 51.0, 60.5]
+    ],
+    "hurt": [
+      [57.5, 60.5, 73.0, 65.5, 73.0, 66.5, 53.0, 66.0],
+      [58, 61, 58, 67, 56.5, 73.8, 48, 74],
+      [58.5, 58.5, 63.0, 70.5, 62.5, 72.0, 50.0, 69.5]
+    ],
+    "block_shield": [
+      [57, 59, 60, 65, 61.0, 71.2, 64.3, 59.2],
+      [58, 60, 60, 65, 61.2, 70.8, 65.5, 55.8],
+      [57, 59, 60, 66, 60.8, 71.8, 63.2, 57.6]
+    ],
+    "block_sword1h": [
+      [58.5, 59.5, 64.0, 66.5, 63.5, 68.0, 45.5, 68.5],
+      [57.5, 59.5, 67.0, 61.5, 66.5, 61.5, 44.0, 68.0],
+      [58.5, 59.5, 67.0, 59.5, 66.5, 59.0, 41.0, 67.0]
+    ],
+    "block_sword2h": [
+      [58.5, 60.5, 64.0, 62.5, 63.5, 62.5, 50.0, 72.5],
+      [57.5, 60.5, 64.0, 57.5, 63.5, 57.5, 49.0, 72.5],
+      [58.5, 62.5, 69.0, 47.5, 65.0, 47.0, 48.0, 74.5]
+    ],
+    "death": [
+      [57.5, 60.5, 71.0, 65.5, 70.0, 67.5, 48.0, 64.5],
+      [60.5, 61.5, 69.0, 72.5, 68.0, 73.5, 47.5, 69.0],
+      [60, 62, 63, 72, 65.1, 80.9, 50.8, 76.8],
+      [53.0, 69.0, 58.5, 72.0, 63.9, 74.8, 46.1, 82.3],
+      [47.0, 77.0, 51.0, 77.5, 54.8, 77.9, 57.9, 87.8],
+      [47.0, 79.0, 52.0, 78.5, 57.1, 78.3, 58.9, 87.5]
     ]
   },
   "arms": {
     "idle": [
       [
         59.5,
+        58.0,
         59.5,
-        59.5,
-        66.5,
+        65.5,
         61.0,
-        72.5,
-        [
-          52.0,
-          59.0,
-          50.5,
-          64.0,
-          49.5,
-          68.5
-        ]
+        71.5,
+        [52.0, 57.5, 50.5, 63.0, 49.0, 67.5]
       ],
       [
         59.5,
+        58.0,
         59.5,
-        59.5,
-        66.5,
+        65.5,
         61.0,
-        72.5,
-        [
-          52.0,
-          59.0,
-          50.5,
-          64.0,
-          49.5,
-          68.5
-        ]
+        71.5,
+        [52.0, 57.5, 50.5, 63.0, 49.0, 67.5]
       ],
       [
         59.5,
-        59.5,
+        58.0,
         60.0,
-        66.5,
+        65.5,
         61.0,
-        73.0,
-        [
-          52.0,
-          59.0,
-          50.5,
-          64.0,
-          49.5,
-          68.5
-        ]
+        72.0,
+        [52.0, 57.5, 50.5, 63.0, 49.0, 67.5]
       ],
       [
         59.5,
+        58.0,
         59.5,
-        59.5,
-        66.5,
+        65.5,
         61.0,
-        73.0,
-        [
-          52.0,
-          59.0,
-          50.5,
-          64.0,
-          49.5,
-          68.5
-        ]
+        72.0,
+        [52.0, 57.5, 50.5, 63.0, 49.0, 67.5]
       ]
     ],
     "walk": [
+      [57.5, 57.5, 57.5, 65.5, 57.0, 72.0, null],
+      [57.0, 57.5, 55.5, 65.0, 55.0, 72.0, null],
+      [59.5, 58.0, 59.5, 65.5, 60.5, 71.0, null],
       [
-        57.5,
-        59.0,
-        57.5,
+        58.5,
+        58.5,
+        61.5,
+        63.5,
+        65.0,
         66.5,
-        57.0,
-        73.0,
-        null
+        [51.0, 58.5, 48.5, 64.0, 47.5, 68.5]
       ],
       [
-        57.0,
         59.0,
-        55.5,
-        66.0,
-        55.0,
-        73.0,
-        null
+        59.5,
+        62.0,
+        64.5,
+        65.5,
+        67.5,
+        [51.0, 59.5, 49.0, 66.0, 49.0, 71.5]
       ],
       [
-        59.5,
-        59.5,
-        59.5,
-        66.5,
+        59.0,
+        57.5,
+        62.0,
+        63.0,
+        65.0,
+        67.0,
+        [51.0, 57.5, 50.0, 63.0, 50.0, 67.5]
+      ]
+    ],
+    "run": [
+      [
+        58.0,
+        62.5,
         60.5,
-        72.0,
-        null
+        64.5,
+        61.0,
+        63.5,
+        [50.0, 62.5, 50.0, 67.5, 53.5, 73.0]
+      ],
+      [
+        58.0,
+        62.5,
+        60.0,
+        66.5,
+        61.0,
+        68.0,
+        [50.0, 62.5, 45.5, 71.5, 45.5, 72.0]
+      ],
+      [
+        58.0,
+        58.0,
+        60.0,
+        60.0,
+        60.5,
+        61.0,
+        [50.0, 58.0, 45.5, 62.5, 45.0, 66.0]
+      ],
+      [
+        58.0,
+        63.5,
+        61.0,
+        65.5,
+        61.0,
+        68.5,
+        [50.0, 63.5, 45.5, 69.5, 45.5, 71.0]
+      ],
+      [
+        58.0,
+        65.5,
+        61.0,
+        67.5,
+        61.0,
+        68.0,
+        [50.0, 65.5, 47.5, 69.5, 47.5, 72.5]
+      ],
+      [
+        59.0,
+        60.0,
+        61.0,
+        62.5,
+        61.0,
+        65.5,
+        [51.0, 60.0, 45.5, 64.5, 45.5, 65.0]
+      ]
+    ],
+    "attack_sword1h": [
+      [
+        58.5,
+        58.5,
+        66.0,
+        67.5,
+        65.0,
+        69.0,
+        [51.5, 58.5, 45.0, 67.5, 45.5, 68.5]
       ],
       [
         58.5,
-        60.0,
-        61.5,
-        64.5,
-        64.5,
-        67.5,
-        [
-          51.0,
-          60.0,
-          49.0,
-          65.0,
-          48.0,
-          69.5
-        ]
-      ],
-      [
-        59.0,
-        61.0,
-        62.0,
-        65.5,
-        65.0,
+        58.5,
+        70.0,
+        56.5,
         68.5,
-        [
-          51.0,
-          61.0,
-          49.5,
-          67.0,
-          49.5,
-          72.5
-        ]
+        54.0,
+        [51.5, 58.5, 45.0, 63.5, 45.5, 67.5]
       ],
       [
-        59.0,
-        59.0,
-        62.0,
-        64.0,
+        60.5,
+        58.5,
+        72.0,
+        54.5,
+        72.0,
+        54.0,
+        [53.5, 58.5, 43.0, 65.5, 42.5, 66.5]
+      ],
+      [
+        73.5,
+        58.5,
+        79.0,
+        67.5,
+        78.5,
+        69.5,
+        [66.5, 58.5, 55.0, 63.5, 54.5, 65.0]
+      ],
+      [
+        60.5,
+        58.5,
+        72.0,
+        63.5,
+        69.5,
         64.5,
+        [53.5, 58.5, 46.0, 63.5, 46.0, 66.5]
+      ],
+      [
+        57.5,
+        58.5,
+        66.0,
+        67.5,
+        65.0,
+        69.0,
+        [50.5, 58.5, 45.0, 63.5, 45.5, 68.0]
+      ]
+    ],
+    "attack_sword2h": [
+      [
+        58.5,
+        57.5,
+        65.0,
+        60.5,
+        63.0,
+        63.0,
+        [51.5, 57.5, 53.0, 59.5, 53.0, 62.5]
+      ],
+      [
+        59.5,
+        57.5,
+        70.0,
+        58.5,
+        67.5,
+        58.0,
+        [52.5, 57.5, 53.0, 59.5, 55.0, 67.5]
+      ],
+      [
+        57.5,
+        57.5,
         68.0,
-        [
-          51.0,
-          59.0,
-          50.0,
-          64.0,
-          50.0,
-          68.5
-        ]
+        59.5,
+        67.0,
+        60.0,
+        [50.5, 57.5, 50.0, 66.5, 50.0, 69.5]
+      ],
+      [
+        63.5,
+        59.5,
+        65.0,
+        69.5,
+        64.5,
+        70.5,
+        [56.5, 59.5, 50.0, 66.5, 50.0, 69.5]
+      ],
+      [
+        60.5,
+        58.5,
+        66.0,
+        64.5,
+        65.0,
+        66.0,
+        [53.5, 58.5, 50.0, 66.5, 50.0, 69.5]
+      ],
+      [
+        58.5,
+        57.5,
+        64.0,
+        61.5,
+        63.0,
+        63.0,
+        [51.5, 57.5, 53.0, 59.5, 53.0, 62.5]
+      ]
+    ],
+    "attack_bow": [
+      [
+        58.5,
+        56.5,
+        62.0,
+        68.5,
+        62.0,
+        71.0,
+        [51.5, 56.5, 50.0, 59.5, 50.0, 62.5]
+      ],
+      [
+        58.5,
+        56.5,
+        71.0,
+        58.5,
+        69.0,
+        59.0,
+        [51.5, 56.5, 53.0, 58.5, 53.0, 61.5]
+      ],
+      [
+        58.5,
+        56.5,
+        59.0,
+        58.5,
+        57.0,
+        59.0,
+        [51.5, 56.5, 48.0, 59.5, 48.0, 62.5]
+      ],
+      [
+        57.5,
+        55.5,
+        69.0,
+        50.5,
+        69.0,
+        51.0,
+        [50.5, 55.5, 46.0, 57.5, 46.0, 60.5]
+      ],
+      [
+        58.5,
+        55.5,
+        70.0,
+        51.5,
+        70.0,
+        51.5,
+        [51.5, 55.5, 47.0, 56.5, 49.0, 56.5]
+      ],
+      [
+        58.5,
+        55.5,
+        63.0,
+        69.5,
+        62.5,
+        70.5,
+        [51.5, 55.5, 51.0, 57.5, 51.0, 60.5]
+      ]
+    ],
+    "hurt": [
+      [
+        57.5,
+        60.5,
+        73.0,
+        65.5,
+        73.0,
+        66.5,
+        [50.5, 60.5, 53.0, 63.5, 53.0, 66.0]
+      ],
+      [
+        58,
+        61,
+        58,
+        67,
+        56.5,
+        73.8,
+        [51, 61, 47, 67, 48, 74]
+      ],
+      [
+        58.5,
+        58.5,
+        63.0,
+        70.5,
+        62.5,
+        72.0,
+        [51.5, 58.5, 49.0, 62.5, 50.0, 69.5]
+      ]
+    ],
+    "block_shield": [
+      [
+        57,
+        59,
+        60,
+        65,
+        61.0,
+        71.2,
+        [52, 59, 58, 62, 64.3, 59.2]
+      ],
+      [
+        58,
+        60,
+        60,
+        65,
+        61.2,
+        70.8,
+        [53, 60, 59, 61, 65.5, 55.8]
+      ],
+      [
+        57,
+        59,
+        60,
+        66,
+        60.8,
+        71.8,
+        [52, 59, 58, 62, 63.2, 57.6]
+      ]
+    ],
+    "block_sword1h": [
+      [
+        58.5,
+        59.5,
+        64.0,
+        66.5,
+        63.5,
+        68.0,
+        [51.5, 59.5, 45.0, 67.5, 45.5, 68.5]
+      ],
+      [
+        57.5,
+        59.5,
+        67.0,
+        61.5,
+        66.5,
+        61.5,
+        [50.5, 59.5, 44.0, 66.5, 44.0, 68.0]
+      ],
+      [
+        58.5,
+        59.5,
+        67.0,
+        59.5,
+        66.5,
+        59.0,
+        [51.5, 59.5, 42.0, 66.5, 41.0, 67.0]
+      ]
+    ],
+    "block_sword2h": [
+      [
+        58.5,
+        60.5,
+        64.0,
+        62.5,
+        63.5,
+        62.5,
+        [51.5, 60.5, 50.0, 69.5, 50.0, 72.5]
+      ],
+      [
+        57.5,
+        60.5,
+        64.0,
+        57.5,
+        63.5,
+        57.5,
+        [50.5, 60.5, 49.0, 69.5, 49.0, 72.5]
+      ],
+      [
+        58.5,
+        62.5,
+        69.0,
+        47.5,
+        65.0,
+        47.0,
+        [51.5, 62.5, 48.0, 71.5, 48.0, 74.5]
+      ]
+    ],
+    "death": [
+      [
+        57.5,
+        60.5,
+        71.0,
+        65.5,
+        70.0,
+        67.5,
+        [50.5, 60.5, 48.0, 62.5, 48.0, 64.5]
+      ],
+      [
+        60.5,
+        61.5,
+        69.0,
+        72.5,
+        68.0,
+        73.5,
+        [53.5, 61.5, 47.0, 67.5, 47.5, 69.0]
+      ],
+      [
+        60,
+        62,
+        63,
+        72,
+        65.1,
+        80.9,
+        [53, 62, 50, 70, 50.8, 76.8]
+      ],
+      [
+        53.0,
+        69.0,
+        58.5,
+        72.0,
+        63.9,
+        74.8,
+        [48.0, 75.5, 47.0, 79.0, 46.1, 82.3]
+      ],
+      [
+        47.0,
+        77.0,
+        51.0,
+        77.5,
+        54.8,
+        77.9,
+        [47.0, 85.0, 52.5, 86.5, 57.9, 87.8]
+      ],
+      [
+        47.0,
+        79.0,
+        52.0,
+        78.5,
+        57.1,
+        78.3,
+        [47.0, 87.0, 53.0, 87.5, 58.9, 87.5]
       ]
     ]
   },
   "waist": {
-    "idle": 69,
-    "walk": 69
+    "idle": 68,
+    "walk": 68,
+    "run": 68,
+    "attack_sword1h": 68,
+    "attack_sword2h": 68,
+    "attack_bow": 68
   },
-  "head_nudge": [
-    -1,
-    2
-  ]
+  "head_nudge": [-1, 2],
+  "closed_headgear": ["knight"],
+  "recolors": [
+    {
+      "slot": "cloak",
+      "id": "green",
+      "of": "red",
+      "ramp": ["#345030", "#263b26", "#1e3521", "#1a2a1d"]
+    },
+    {
+      "slot": "cloak",
+      "id": "blue",
+      "of": "red",
+      "ramp": ["#3b55a2", "#324992", "#273a79", "#1a2757"]
+    },
+    {
+      "slot": "skirt",
+      "id": "purple",
+      "of": "blue",
+      "ramp": ["#5f3469", "#512b5a", "#492354", "#3d2146"]
+    }
+  ],
+  "gear_sheets": [
+    {
+      "src": "source/doll/raw/polearm_sheet.png",
+      "rows": [3],
+      "cells": ["sprite:glaive", "sprite:halberd", "sprite:spear"],
+      "length": 50,
+      "colors": 12
+    },
+    {
+      "src": "source/doll_se/raw/bow_sheet.png",
+      "rows": [2],
+      "cells": ["sprite:bow", "sprite:bow_dark"],
+      "length": 29,
+      "colors": 12
+    },
+    {
+      "src": "source/doll_se/raw/shield_backs.png",
+      "rows": [2],
+      "cells": ["sprite:shield_back_round", "sprite:shield_back_heater"],
+      "length": 16,
+      "colors": 10
+    }
+  ],
+  "headgear_fit": {
+    "nasal": {
+      "_why": "the conical helmet has no nose guard (as in the side view): GPT's guard in front of the face is erased",
+      "patch": {
+        "in": "sprite",
+        "at": [11, 8],
+        "colors": {},
+        "rows": ["...", "...", "..."]
+      }
+    }
+  },
+  "shield": {
+    "mode": "hand",
+    "back": true,
+    "squash": 0.6,
+    "offset": {
+      "idle": [0, -3],
+      "walk": [0, -3],
+      "run": [0, -3],
+      "attack_sword1h": [0, -3],
+      "hurt": [0, -3],
+      "block_shield": [0, 0],
+      "death": [
+        [0, -2],
+        [0, -2],
+        [0, -2],
+        [0, -2],
+        [0, -2],
+        [0, -2]
+      ]
+    },
+    "follow": ["death"],
+    "angle": {
+      "death": [null, null, null, -140, 180, 180]
+    }
+  },
+  "fill": {
+    "chest": "all",
+    "shoulders": "low",
+    "skirt": "low",
+    "greaves": "low"
+  },
+  "head_turn": {
+    "death": {
+      "3": -50,
+      "4": -90,
+      "5": -90
+    }
+  },
+  "palette_anims": ["idle", "walk", "run", "attack_sword1h", "attack_sword2h", "attack_bow"]
 }

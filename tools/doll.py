@@ -238,11 +238,14 @@ def split_runs(profile: np.ndarray, count: int) -> list[tuple[int, int]]:
 def find_frames(mask: np.ndarray, count: int, rows: int) -> list[dict]:
     bands = [(0, mask.shape[0])] if rows == 1 else split_runs(mask.sum(1), rows)
     frames = []
+    cols = count // rows
+    cell_w = mask.shape[1] / cols
     for band, (y0, y1) in enumerate(bands):
         sub = mask[y0:y1]
-        for x0, x1 in split_runs(sub.sum(0), count // rows):
+        for col_i, (x0, x1) in enumerate(split_runs(sub.sum(0), cols)):
             ys = np.flatnonzero(sub[:, x0:x1].any(1))
-            frames.append({"x0": x0, "x1": x1, "y0": y0 + int(ys[0]), "y1": y0 + int(ys[-1]) + 1, "band": band})
+            frames.append({"x0": x0, "x1": x1, "y0": y0 + int(ys[0]), "y1": y0 + int(ys[-1]) + 1, "band": band,
+                           "cell_x0": col_i * cell_w})
     return frames
 
 
@@ -351,6 +354,29 @@ def fill_small_holes(img: np.ndarray, max_size: int = 4) -> np.ndarray:
     return img
 
 
+def close_gaps(img: np.ndarray, cover: np.ndarray, cut: np.ndarray, max_size: int = 24) -> np.ndarray:
+    """Background pockets enclosed by the body and a layer drawn over it (a weapon posed a little off GPT's, whose cut
+    left a slit in the body): filled from the body's own neighbouring colours, outside in. Only pockets mostly inside
+    `cut` (where GPT's weapon was) count: a real gap between an arm and the body stays."""
+    out = img.copy()
+    lab, sizes = label(~((img >= 0) | (cover >= 0)))
+    edge = set(lab[0].tolist()) | set(lab[-1].tolist()) | set(lab[:, 0].tolist()) | set(lab[:, -1].tolist())
+    for i, sz in enumerate(sizes):
+        todo = lab == i
+        if i in edge or sz > max_size or (todo & cut).sum() * 2 < sz:
+            continue
+        for _ in range(max_size):
+            if not todo.any():
+                break
+            for y, x in zip(*np.nonzero(todo)):
+                nb = [out[yy, xx] for yy, xx in ((y - 1, x), (y + 1, x), (y, x - 1), (y, x + 1))
+                      if 0 <= yy < out.shape[0] and 0 <= xx < out.shape[1] and out[yy, xx] >= 0 and not todo[yy, xx]]
+                if nb:
+                    out[y, x] = max(set(nb), key=nb.count)
+            todo &= out < 0
+    return out
+
+
 def shift(img: np.ndarray, dx: int, dy: int) -> np.ndarray:
     out = np.full_like(img, -1)
     h, w = img.shape
@@ -378,9 +404,11 @@ def register(moving: np.ndarray, fixed: np.ndarray, weight: np.ndarray | None = 
 class Strip:
     """One raw strip cut into frames and normalised onto the output grid."""
 
-    def __init__(self, path: Path, count: int, rows: int):
+    def __init__(self, path: Path, count: int, rows: int, first: int = 0, take: int | None = None):
+        """`first` / `take`: an animation that is only a part of the sheet (e.g. one row of a 2-row sheet that holds
+        two animations): the whole sheet is cut into `count` frames, then frames first .. first + take are kept."""
         self.arr = load(path)
-        self.frames = find_frames(self.arr[..., 3] >= ALPHA, count, rows)
+        self.frames = find_frames(self.arr[..., 3] >= ALPHA, count, rows)[first:first + (take or count)]
 
     def measure(self, skin_rule: dict):
         skin = hsv_rule(self.arr[..., :3], skin_rule) & (self.arr[..., 3] >= ALPHA)
@@ -404,6 +432,10 @@ class Strip:
             offset = out[0][0] - feet[0]
             for i in range(len(out)):
                 out[i][0] = feet[i] + offset
+        elif mode == "cell":  # where GPT put the figure in its cell (a fall: neither the head nor a foot stays put)
+            rel = out[0][0] - self.frames[0]["cell_x0"]
+            for i, f in enumerate(self.frames):
+                out[i][0] = f["cell_x0"] + rel
         return out
 
     def _head_x(self, i, f):
@@ -415,9 +447,11 @@ class Strip:
         xs = np.flatnonzero(a.any(0))
         return f["x0"] + (xs[0] if len(xs) else 0)
 
-    def render(self, labels, scale, anchors, cfg, n, dark, thin=None):
-        return [downsample(labels, f, scale, ax, bottom, cfg, n, dark, thin)
-                for f, (ax, bottom) in zip(self.frames, anchors)]
+    def render(self, labels, scale, anchors, cfg, n, dark, thin=None, frame_scale=None):
+        """`frame_scale` {frame: factor}: GPT drew that frame's figure smaller or bigger than the others."""
+        fs = frame_scale or {}
+        return [downsample(labels, f, scale * fs.get(str(i), 1.0), ax, bottom, cfg, n, dark, thin)
+                for i, (f, (ax, bottom)) in enumerate(zip(self.frames, anchors))]
 
 
 # ----------------------------------------------------------------------------- main build
@@ -512,6 +546,48 @@ def rotate_sprite(rgba: np.ndarray, pivot: tuple[float, float], angle: float):
     canvas[oy:oy + h, ox:ox + w] = rgba
     im = Image.fromarray(canvas, "RGBA").rotate(-(angle + 90), resample=Image.Resampling.NEAREST, center=(r, r))
     return np.asarray(im), (float(r), float(r))
+
+
+def rot_labels(lab: np.ndarray, angle: float, pivot: tuple[float, float], k: int = 4):
+    """Turn a label image (-1 = empty) by `angle` degrees clockwise (y down) about `pivot` (continuous coordinates):
+    nearest rotation of a k times enlarged copy, then a majority vote per k x k block (pixel art keeps its clusters).
+    Returns the cropped image and where the pivot is in it."""
+    h, w = lab.shape
+    q = angle / 90.0
+    if abs(q - round(q)) < 1e-6:  # quarter turns are exact
+        q = int(round(q)) % 4
+        px, py = pivot
+        return np.rot90(lab, -q).copy(), [(px, py), (h - py, px), (w - px, h - py), (py, w - px)][q]
+    r = int(np.ceil(np.hypot(h, w))) + 3
+    side = 2 * r
+    canvas = np.zeros((side, side), np.int32)  # label + 1, 0 = empty
+    ox, oy = r - int(np.floor(pivot[0])), r - int(np.floor(pivot[1]))
+    canvas[oy:oy + h, ox:ox + w] = lab + 1
+    piv = (ox + pivot[0], oy + pivot[1])
+    big = np.kron(canvas, np.ones((k, k), np.int32))
+    im = Image.fromarray(big).rotate(-angle, resample=Image.Resampling.NEAREST, center=(piv[0] * k, piv[1] * k))
+    big = np.asarray(im).reshape(side, k, side, k).transpose(0, 2, 1, 3).reshape(side, side, k * k)
+    out = np.full((side, side), -1, np.int32)
+    for y, x in zip(*np.nonzero((big > 0).sum(2) * 2 >= k * k)):
+        v = big[y, x]
+        out[y, x] = int(np.bincount(v[v > 0]).argmax()) - 1
+    ys, xs = np.nonzero(out >= 0)
+    if not len(ys):
+        return out[:1, :1], (0.0, 0.0)
+    y0, x0 = int(ys.min()), int(xs.min())
+    return out[y0:ys.max() + 1, x0:xs.max() + 1], (piv[0] - x0, piv[1] - y0)
+
+
+def paste_turned(canvas: np.ndarray, spr: np.ndarray, x: int, y: int, pivot: tuple[float, float], angle: float,
+                 centre: tuple[float, float] | None = None) -> None:
+    """Paste a label sprite whose top-left would be (x, y) upright, turned by `angle` about `pivot` (sprite coordinates);
+    `centre`: where the pivot goes in the canvas (default: where it is upright)."""
+    if not angle:
+        paste(canvas, spr, x, y)
+        return
+    cx, cy = centre if centre is not None else (x + pivot[0], y + pivot[1])
+    rot, rp = rot_labels(spr, angle, pivot)
+    paste(canvas, rot, int(round(cx - rp[0])), int(round(cy - rp[1])))
 
 
 def resample(labels, scale, src_pivot, dst_pivot, shape, n, dark, thin):
@@ -721,15 +797,23 @@ def main(config_path: str) -> None:
     weapons = cfg["weapons"]
 
     # ---- load everything that exists
-    base = {a["id"]: Strip(ROOT / a["src"], a["frames"], a.get("rows", 1)).measure(skin_rgb) for a in anims}
+    def open_strip(path: Path, a: dict) -> Strip:
+        """`sheet` {name, frames, rows, first}: the animation is frames first .. first + frames of a sheet shared with
+        another animation (kits are named after the sheet then)."""
+        sh = a.get("sheet")
+        if sh:
+            return Strip(path, sh["frames"], sh.get("rows", 1), sh["first"], a["frames"]).measure(skin_rgb)
+        return Strip(path, a["frames"], a.get("rows", 1)).measure(skin_rgb)
+
+    base = {a["id"]: open_strip(ROOT / a["src"], a) for a in anims}
     kit_strips: dict[tuple[int, str], Strip] = {}
     for k, kit in enumerate(cfg["kits"]):
         for a in anims:
             if a["id"] not in kit.get("anims", [x["id"] for x in anims]):
                 continue
-            p = ROOT / kit["src"].format(anim=a["id"])
+            p = ROOT / kit["src"].format(anim=a.get("sheet", {}).get("name", a["id"]))
             if p.exists():
-                kit_strips[(k, a["id"])] = Strip(p, a["frames"], a.get("rows", 1)).measure(skin_rgb)
+                kit_strips[(k, a["id"])] = open_strip(p, a)
             else:
                 print(f"missing kit strip: {p.relative_to(ROOT)}")
     head_sheets = []
@@ -746,13 +830,16 @@ def main(config_path: str) -> None:
 
     # palette: body/heads/weapons first, then a small ramp per equipment piece taken from its own pixels,
     # so rare dark hues (a green cape, a purple skirt) are not merged into the outline colour
-    arrays = [s.arr for s in base.values()] + [st.arr for _, st in head_sheets]
+    # `palette_anims`: the animations whose sheets make the palette (later animations take its colours, so adding one
+    # does not recolour the others)
+    pal_anims = set(cfg.get("palette_anims", [a["id"] for a in anims]))
+    arrays = [s.arr for aid, s in base.items() if aid in pal_anims] + [st.arr for _, st in head_sheets]
     palette = build_palette(arrays, cfg["max_colors"], cfg["fixed_colors"])
     item_ramps = []
     ramp_of: dict[tuple[int, int], tuple[int, int]] = {}  # (kit, item) -> palette index range of its ramp
     base_n = len(palette)
     for k, kit in enumerate(cfg["kits"]):
-        strips_k = [st for (kk, _), st in kit_strips.items() if kk == k]
+        strips_k = [st for (kk, aid), st in kit_strips.items() if kk == k and aid in pal_anims]
         for ii, item in enumerate(kit["items"]):
             if item["color"] == "any" or not strips_k:
                 continue
@@ -798,9 +885,10 @@ def main(config_path: str) -> None:
 
     for a in anims:
         s = base[a["id"]]
-        scales[a["id"]] = strip_scale(s, a)
+        # `scale_as`: the other animation of the same sheet (GPT draws one sheet at one scale)
+        scales[a["id"]] = scales[a["scale_as"]] if a.get("scale_as") in scales else strip_scale(s, a)
         frames = s.render(to_labels(s.arr, palette), scales[a["id"]], s.anchors(a["anchor"], scales[a["id"]]),
-                          cfg, n, col.dark, thin)
+                          cfg, n, col.dark, thin, a.get("frame_scale"))
         body[a["id"]] = [close_outline(f, col.outline) for f in frames]
         print(f"body {a['id']:<16} scale {scales[a['id']]:.4f} heights "
               f"{[int((f >= 0).any(1).sum()) for f in body[a['id']]]}")
@@ -836,30 +924,59 @@ def main(config_path: str) -> None:
     pal_f = palette.astype(float)
     head_pos: dict[str, list[tuple[int, int]]] = {}
     head_box: dict[str, list[np.ndarray]] = {}  # where the mannequin head was, per frame
+    head_mask: dict[str, list[np.ndarray]] = {}  # the template's own pixels there (turned with the head)
+    # `head_turn` {anim: {frame: degrees clockwise}}: the head lies turned (a fall); the template is turned the same way
+    # and searched over the whole frame, and every head / headgear sprite is drawn turned about the template's centre
+    head_turn = {a["id"]: [float(cfg.get("head_turn", {}).get(a["id"], {}).get(str(i), 0)) for i in range(len(body[a["id"]]))]
+                 for a in anims}
+    head_centre: dict[str, list[tuple[float, float]]] = {}
     for a in anims:
-        positions, boxes = [], []
-        for img in body[a["id"]]:
+        positions, boxes, masks, centres = [], [], [], []
+        for fi, img in enumerate(body[a["id"]]):
+            ang = head_turn[a["id"]][fi]
+            if ang:
+                patch_, (pcx, pcy) = rot_labels(tpatch, ang, (tw / 2, th / 2))
+                mask_ = patch_ >= 0
+            else:
+                patch_, mask_, (pcx, pcy) = tpatch, tmask, (tw / 2, th / 2)
+            ph, pw = patch_.shape
             best, best_cost = (tx0, ty0), 1e18
             rows = np.flatnonzero((img >= 0).any(1))
             top = rows[0] if len(rows) else 0
-            for py in range(max(0, top - 4), min(fh - th, top + int(cfg["body_height"] * 0.55))):
-                for px in range(0, fw - tw):
-                    win = img[py:py + th, px:px + tw]
-                    m = tmask & (win >= 0)
-                    if m.sum() < tmask.sum() * 0.7:
+            # `head_window` {anim: [dx, dy_min, dy_max]}: search near the idle head only (an attack in place whose blade
+            # crosses the face would otherwise match the head elsewhere)
+            hw = cfg.get("head_window", {}).get(a["id"])
+            if ang:
+                ys_rng, xs_rng = range(0, fh - ph), range(0, fw - pw)
+            else:
+                ys_rng = range(max(0, ty0 + hw[1]), ty0 + hw[2] + 1) if hw else \
+                    range(max(0, top - 4), min(fh - th, top + int(cfg["body_height"] * 0.55)))
+                xs_rng = range(tx0 - hw[0], tx0 + hw[0] + 1) if hw else range(0, fw - tw)
+            for py in ys_rng:
+                for px in xs_rng:
+                    win = img[py:py + ph, px:px + pw]
+                    m = mask_ & (win >= 0)
+                    if m.sum() < mask_.sum() * 0.7:
                         continue
-                    diff = pal_f[win[m]] - pal_f[tpatch[m]]
-                    cost = float((diff ** 2).sum()) / m.sum() + 900.0 * (1 - m.sum() / tmask.sum())
+                    diff = pal_f[win[m]] - pal_f[patch_[m]]
+                    cost = float((diff ** 2).sum()) / m.sum() + 900.0 * (1 - m.sum() / mask_.sum())
                     if cost < best_cost:
                         best, best_cost = (px, py), cost
-            positions.append(best)
+            # `head_at` {anim: {frame: [x, y]}}: where the search took raised hands for the head (the corner of the
+            # upright template; with a turn, of the upright template with the same centre)
+            at = cfg.get("head_at", {}).get(a["id"], {}).get(str(fi))
+            if at:
+                best = (int(round(at[0] + tw / 2 - pcx)), int(round(at[1] + th / 2 - pcy)))
             px, py = best
-            win = img[py:py + th, px:px + tw]
-            kill = tmask & (win >= 0) & ~col.of(win, col.linen)
-            win[kill] = -1  # cut the mannequin head (and neck) out of the body
-            box = np.zeros((fh, fw), dtype=bool)
-            box[py:py + th, px:px + tw] = tmask
-            box = dilate(box)
+            centres.append((px + pcx, py + pcy))
+            positions.append((int(round(px + pcx - tw / 2)), int(round(py + pcy - th / 2))))
+            lab_m = np.full((fh, fw), -1, dtype=np.int32)
+            paste(lab_m, np.where(mask_, 0, -1), px, py)
+            full = lab_m >= 0
+            kill = full & (img >= 0) & ~col.of(img, col.linen)
+            img[kill] = -1  # cut the mannequin head (and neck) out of the body
+            masks.append(full)
+            box = dilate(full)
             boxes.append(box)
             # leftovers of the cut: tiny islands inside the head area
             lab, sizes = label(img >= 0)
@@ -870,10 +987,39 @@ def main(config_path: str) -> None:
                         img[lab == i] = -1
         head_pos[a["id"]] = positions
         head_box[a["id"]] = boxes
-        print(f"head {a['id']:<16} template {tw}x{th} from ({tx0}, {ty0}); found at {positions}")
+        head_mask[a["id"]] = masks
+        head_centre[a["id"]] = centres
+        turned = {i: x for i, x in enumerate(head_turn[a["id"]]) if x}
+        print(f"head {a['id']:<16} template {tw}x{th} from ({tx0}, {ty0}); found at {positions}"
+              + (f"; turned {turned}" if turned else ""))
 
     # ---- weapons out of attack bodies
     yy_g, xx_g = np.mgrid[0:fh, 0:fw]
+
+    def height_along(aid: str, fi: int) -> np.ndarray:
+        """Every pixel's height above the soles, measured up the body: above the ground for a standing figure, along the
+        body turned with the head for one that falls or lies (`head_turn`)."""
+        ang = head_turn[aid][fi]
+        if not ang:
+            return (ground - yy_g).astype(float)
+        tr = np.radians(ang)
+        up = xx_g * np.sin(tr) - yy_g * np.cos(tr)
+        return up - up[body[aid][fi] >= 0].min()
+
+    # a waist line for animations without `waist`: the idle's distance from the head centre down to the waist, along
+    # the body (turned with the head in a fall)
+    _w0 = cfg.get("waist", {}).get(anims[0]["id"])
+    waist_k = float(np.mean([(_w0[i] if isinstance(_w0, list) else _w0) - head_centre[anims[0]["id"]][i][1]
+                             for i in range(len(body[anims[0]["id"]]))])) if _w0 is not None else None
+
+    def below_waist(aid: str, fi: int) -> np.ndarray:
+        w = cfg.get("waist", {}).get(aid)
+        if w is not None or waist_k is None:
+            w = fh if w is None else (w[fi] if isinstance(w, list) else w)
+            return yy_g >= w
+        cx, cy = head_centre[aid][fi]
+        tr = np.radians(head_turn[aid][fi])
+        return (xx_g + 0.5 - cx) * -np.sin(tr) + (yy_g + 0.5 - cy) * np.cos(tr) >= waist_k
     layers: dict[tuple[str, str], dict[str, list[np.ndarray]]] = {}
     weapon_tips: dict[tuple[str, str], list] = {}  # (bow, anim) -> per frame ((x, y) top tip, (x, y) bottom tip)
     string_idx: dict[str, int] = {}
@@ -935,6 +1081,12 @@ def main(config_path: str) -> None:
                 if int((m & core).sum()) >= min(2, sz):
                     keep |= m
             wm = keep
+            # `weapon_cut` {anim: {frame: [[x0, y0, x1, y1], ...]}}: a blade so thin that downsampling left only its
+            # outline, which the colour rules leave with the body: weapon and outline colours in these boxes are weapon
+            for x0, y0, x1, y1 in cfg.get("weapon_cut", {}).get(a["id"], {}).get(str(fi), []):
+                box_ = np.zeros_like(wm)
+                box_[y0:y1, x0:x1] = True
+                wm |= box_ & (img >= 0) & col.of(img, seed | grow)
             nock = rule.get("string", {}).get("nock", {}).get(a["id"], {}).get(str(fi))
             if rule.get("thin_light"):
                 # a bow is its two limbs (the front-most big parts, facing right) plus, while drawn, the arrow
@@ -1082,11 +1234,14 @@ def main(config_path: str) -> None:
     for (k, anim_id), s in sorted(kit_strips.items()):
         kit = cfg["kits"][k]
         a = anim_by_id[anim_id]
-        scale = strip_scale(s, a)
-        frames = s.render(to_labels(s.arr, palette), scale, s.anchors(a["anchor"], scale), cfg, n, col.dark, thin)
+        # the kit's other row of the same sheet sets its scale too (`scale_as`), as for the base
+        sa = a.get("scale_as")
+        scale = strip_scale(kit_strips[(k, sa)], anim_by_id[sa]) if sa and (k, sa) in kit_strips else strip_scale(s, a)
+        frames = s.render(to_labels(s.arr, palette), scale, s.anchors(a["anchor"], scale), cfg, n, col.dark, thin,
+                          a.get("frame_scale"))
         ref_frames = [close_outline(f, col.outline) for f in base[anim_id].render(
             to_labels(base[anim_id].arr, palette), scales[anim_id],
-            base[anim_id].anchors(a["anchor"], scales[anim_id]), cfg, n, col.dark, thin)]
+            base[anim_id].anchors(a["anchor"], scales[anim_id]), cfg, n, col.dark, thin, a.get("frame_scale"))]
         per_item = {i: [] for i in range(len(kit["items"]))}
         shifts = []
         bow_attack = bool(a.get("weapon")) and bool(weapons[a["weapon"]].get("thin_light"))
@@ -1138,7 +1293,7 @@ def main(config_path: str) -> None:
                     m &= fore <= 4.0
                 if "band" in item:  # fraction of body height above the ground: [lo, hi]
                     lo, hi = item["band"]
-                    hgt = (ground - yy_g) / cfg["body_height"]
+                    hgt = height_along(anim_id, fi) / cfg["body_height"]
                     m &= (hgt >= lo) & (hgt <= hi)
                 masks.append(m)
                 claimed |= m
@@ -1246,8 +1401,9 @@ def main(config_path: str) -> None:
         op = spr >= 0
         h, w = op.shape
         out = np.zeros((h + above, w + 2), dtype=bool)
-        if closed:  # a closed helmet: no hair anywhere above its lower edge (ponytails, buns, fringes)
-            rows = np.flatnonzero(op.any(1))
+        if closed:  # a closed helmet: no hair anywhere above its lower edge (ponytails, buns, fringes); a single
+            # dangling outline pixel under the rim is not the edge (it would cut a hole into the neck)
+            rows = np.flatnonzero(op.sum(1) >= 3)
             out[:rows[-1] + above + 1, :] = True
         else:
             for x in range(w):
@@ -1378,7 +1534,7 @@ def main(config_path: str) -> None:
                 if not by_face:  # a closed helmet shows no face to match: centre it on the skull
                     rel = (int(round((b.shape[1] - spr.shape[1]) / 2)), rel[1])
                 fit = cfg.get("headgear_fit", {}).get(name.partition(":")[2])
-                if fit and hc["headgear_on"] == "bald":
+                if fit and hc["headgear_on"] == "bald" and any(k in fit for k in ("kx", "ky", "dx", "dy", "nasal", "outline")):
                     # drawn tight on the bald skull, it is smaller than a head with hair: cut it again from the
                     # sheet wider (kx) and a little taller (ky), centred on the head, then nudged (dx, dy)
                     big, rel = headgear_alone(name, s_head * fit.get("ky", 1.0), fit.get("kx", 1.0) / fit.get("ky", 1.0),
@@ -1451,8 +1607,10 @@ def main(config_path: str) -> None:
                 frames, hframes = [], []
                 for fi_h, (px, py) in enumerate(head_pos[a["id"]]):
                     canvas = np.full((fh, fw), -1, dtype=np.int32)
-                    paste(canvas, sprites[name], px + ox, py + oy)
-                    if kind == "head" and cfg.get("neck_seam"):
+                    ang = head_turn[a["id"]][fi_h]
+                    pivot = (tw / 2 - ox, th / 2 - oy)  # the template's centre, in sprite coordinates
+                    paste_turned(canvas, sprites[name], px + ox, py + oy, pivot, ang, head_centre[a["id"]][fi_h])
+                    if kind == "head" and cfg.get("neck_seam") and not ang:
                         # the neck stub's bottom outline lies across the collar when the neck faces the camera
                         # (isometric): drop it where the body continues below
                         rows_h = np.flatnonzero((canvas >= 0).any(1))
@@ -1469,7 +1627,8 @@ def main(config_path: str) -> None:
                     frames.append(canvas)
                     if hm is not None:
                         hcanvas = np.full((fh, fw), -1, dtype=np.int32)
-                        paste(hcanvas, np.where(hm, 0, -1), px + ox - 1 - HIDE_BACK, py + oy - 6)
+                        paste_turned(hcanvas, np.where(hm, 0, -1), px + ox - 1 - HIDE_BACK, py + oy - 6,
+                                     (pivot[0] + 1 + HIDE_BACK, pivot[1] + 6), ang, head_centre[a["id"]][fi_h])
                         hframes.append(hcanvas >= 0)
                 put(kind, item, a["id"], frames)
                 if hm is not None:
@@ -1492,6 +1651,37 @@ def main(config_path: str) -> None:
                 fill = (ref >= 0) & (f < 0) & (body[aid][fi] >= 0) & ~all_arms[aid][fi] \
                     & ~col.of(body[aid][fi], broad_skin)
                 f[fill] = ref[fill]
+
+    # `fill` {slot: "all" | "low"}: in any animation (attacks too) a piece GPT hid behind a weapon, a raised arm or a
+    # drawn bow is completed from another frame of it, moved with the head, clipped to the body, behind the arms.
+    # "all": every frame from the fullest one (torso armour); "low": only frames that lost over 40 % of the piece,
+    # from the frame closest to the median (pauldrons, skirts, boots move with the limbs)
+    for (sl, item), per_anim in layers.items():
+        mode = cfg.get("fill", {}).get(sl)
+        if not mode:
+            continue
+        for aid, frames in per_anim.items():
+            if aid not in head_pos:
+                continue
+            counts = [int((f >= 0).sum()) for f in frames]
+            # a frame where the body lies turned (a fall) is neither a source nor a target: a shift cannot turn a piece
+            ok = [i for i in range(len(frames)) if not head_turn[aid][i]]
+            if not ok:
+                continue
+            med = float(np.median([counts[i] for i in ok]))
+            if mode == "all":
+                r, targets = max(ok, key=lambda i: counts[i]), ok
+            else:
+                r = min(ok, key=lambda i: abs(counts[i] - med))
+                targets = [i for i in ok if counts[i] < 0.6 * med]
+            rx, ry = head_pos[aid][r]
+            for fi in targets:
+                hx, hy = head_pos[aid][fi]
+                ref = shift(frames[r], hx - rx, hy - ry)
+                op = body[aid][fi] >= 0
+                arms_ = all_arms[aid][fi] if aid in all_arms else np.zeros_like(op)
+                fill = (ref >= 0) & (frames[fi] < 0) & op & ~arms_ & ~col.of(body[aid][fi], broad_skin)
+                frames[fi][fill] = ref[fill]
 
     for (sl, item), per_anim in layers.items():
         if sl not in cfg.get("forearm_slots", ["bracers"]):
@@ -1608,13 +1798,67 @@ def main(config_path: str) -> None:
         length = np.hypot(pts["tip"][0] - pts[pivot_key][0], pts["tip"][1] - pts[pivot_key][1]) * scale
         limit = ground - 2.0
         if target[1] + length * np.sin(np.radians(angle)) > limit:
-            angle = float(np.degrees(np.arcsin(np.clip((limit - target[1]) / length, -1, 1))))
+            low = float(np.degrees(np.arcsin(np.clip((limit - target[1]) / length, -1, 1))))
+            angle = low if np.cos(np.radians(angle)) >= 0 else 180.0 - low  # a blade pointing left stays left
         return angle
 
+    def posed_frames(w: dict, own_name: str, ref_name: str, a: dict, ref_frames: list[np.ndarray]):
+        # a parry holds the blade in front of the face: the head cut took GPT's blade there with it, so the head does
+        # not hide the posed sprite (slot order puts the weapon behind the head where it should be, e.g. from behind)
+        hide_head = not a.get("role", "").startswith("block")
+        """A sheet sprite posed like a weapon cut out of GPT's frames: angle and place by matching the reference sprite's
+        silhouette to it, the grip into the fist(s) that held it; hidden where a hand or the head hid the original."""
+        frames, poses = [], []
+        ref_spr = sprites_hi[ref_name]
+        rp = upright_points(ref_spr)
+        for fi, ref in enumerate(ref_frames):
+            hands_px = col.of(body[a["id"]][fi], broad_skin)
+            pose = match_pose(ref, ref_spr, rp["guard"], s_gear, skin=hands_px,
+                              grip_off=np.hypot(rp["grip"][0] - rp["guard"][0], rp["grip"][1] - rp["guard"][1]) * s_gear)
+            if pose is None:
+                frames.append(np.full((fh, fw), -1, dtype=np.int32))
+                continue
+            (gx, gy), ang, iou = pose
+            # its grip goes into the fist(s) holding the original weapon: skin blobs touching it
+            lab_h, sizes_h = label(hands_px & dilate(dilate(ref >= 0)))
+            blobs = sorted([i for i, sz in enumerate(sizes_h) if sz >= 3], key=lambda i: -sizes_h[i])
+            blobs = blobs[:2] if w["hands"] == 2 else blobs[:1]
+            if blobs:
+                hy, hx = np.nonzero(np.isin(lab_h, blobs))
+                gx, gy = float(hx.mean() + 0.5), float(hy.mean() + 0.5)
+                if "grip_frac" in w:  # a long head must not go into the ground
+                    head_len = float(w["grip_frac"]) * sprites_hi[own_name].shape[0] * sprite_scale.get(own_name, s_gear)
+                    if gy + head_len * np.sin(np.radians(ang)) > ground - 2:
+                        ang = float(np.degrees(np.arcsin(np.clip((ground - 2 - gy) / head_len, -1, 1))))
+                # a blade's silhouette is nearly the same both ways along its axis: from the fist, the blade goes where
+                # GPT's weapon is
+                piv_ = float(w["grip_frac"]) if "grip_frac" in w else "grip"
+                sc_ = sprite_scale.get(own_name, s_gear)
+                f = place(own_name, piv_, ang, (gx, gy), sc_)
+                # (a polearm is held off-centre, its long butt would always win: swords only)
+                f_back = place(own_name, piv_, ang + 180.0, (gx, gy), sc_) if "grip_frac" not in w else f
+                if ((f_back >= 0) & (ref >= 0)).sum() > ((f >= 0) & (ref >= 0)).sum():
+                    f, ang = f_back, (ang + 180.0 + 180.0) % 360.0 - 180.0
+                poses.append(("grip", round(gx, 1), round(gy, 1), round(ang), round(iou, 2)))
+            else:
+                poses.append(("guard", round(gx, 1), round(gy, 1), round(ang), round(iou, 2)))
+                f = place(own_name, float(w["grip_frac"]) if "grip_frac" in w else "guard", ang, (gx, gy),
+                          sprite_scale.get(own_name, s_gear))
+            # where the original weapon was hidden by a hand or the head, this one is too
+            f[(ref < 0) & (col.of(body[a["id"]][fi], broad_skin) | (head_box[a["id"]][fi] if hide_head else False))] = -1
+            frames.append(f)
+        return frames, poses
+
     carry_angle = cfg.get("carry_angle", {})
+
+    def carry_ang(kind: str, aid: str, fi: int):
+        """`carry_angle[kind][anim]`: one angle, or one per frame (a fall: the weapon goes down with the hand)."""
+        v = carry_angle[kind][aid]
+        return v[fi] if isinstance(v, list) else v
+
     for wid, w in weapons.items():
         # carried in the near hand while idle / walking / running
-        if "carry" in w and sprites_hi:
+        if "carry" in w and w["carry"] in sprites_hi:  # (a sheet not generated yet: the weapon is left out)
             for aid, hs in hands.items():
                 if anim_by_id[aid].get("weapon"):
                     continue
@@ -1623,14 +1867,11 @@ def main(config_path: str) -> None:
                     target = (h["hand"][0] + 0.5, h["hand"][1] + 0.5)
                     sc = sprite_scale.get(w["carry"], s_gear)
                     if "grip_frac" in w:  # a polearm: held on its shaft, head up and forward; the head is in front of it
-                        ang = carry_angle[w["kind"]][aid]
+                        ang = carry_ang(w["kind"], aid, len(frames))
                         f = place(w["carry"], float(w["grip_frac"]), ang, target, sc)
-                        px_, py_ = head_pos[aid][len(frames)]
-                        hb_ = np.zeros((fh, fw), dtype=bool)
-                        hb_[py_:py_ + th, px_:px_ + tw] = tmask
-                        f[hb_] = -1
+                        f[head_mask[aid][len(frames)]] = -1
                     else:
-                        ang = blade_angle(w["carry"], "grip", carry_angle[w["kind"]][aid], target, sc)
+                        ang = blade_angle(w["carry"], "grip", carry_ang(w["kind"], aid, len(frames)), target, sc)
                         f = place(w["carry"], "grip", ang, target, sc)
                     f[fist(img, h["hand"])] = -1  # fingers wrap the grip
                     frames.append(f)
@@ -1643,14 +1884,19 @@ def main(config_path: str) -> None:
                     continue
                 frames, moved_tips = [], []
                 src_tips = weapon_tips.get((wid, cf["anim"]), [None] * (cf["frame"] + 1))[cf["frame"]]
+                turns = cf.get("turn", {}).get(aid)  # degrees clockwise per frame (a fall: the bow lies down)
                 for fi, h in enumerate(hs):
+                    if turns and turns[fi]:
+                        canvas_t = np.full((fh, fw), -1, dtype=np.int32)
+                        gx_, gy_ = cf["grip"]
+                        paste_turned(canvas_t, src, 0, 0, (gx_, gy_), turns[fi], (h["hand"][0], h["hand"][1]))
+                        frames.append(canvas_t)
+                        moved_tips.append(None)
+                        continue
                     ddx, ddy = int(round(h["hand"][0] - cf["grip"][0])), int(round(h["hand"][1] - cf["grip"][1]))
                     f = shift(src, ddx, ddy)
                     moved_tips.append(tuple((x + ddx, y + ddy) for x, y in src_tips) if src_tips else None)
-                    px, py = head_pos[aid][fi]
-                    hb = np.zeros((fh, fw), dtype=bool)
-                    hb[py:py + th, px:px + tw] = tmask
-                    f[hb] = -1  # the head is in front of a bow held at the side
+                    f[head_mask[aid][fi]] = -1  # the head is in front of a bow held at the side
                     frames.append(f)
                 put("weapon", wid, aid, frames)
                 weapon_tips[(wid, aid)] = moved_tips
@@ -1659,42 +1905,22 @@ def main(config_path: str) -> None:
             for a in anims:
                 if a.get("weapon") != w["pose_from"]:
                     continue
-                frames, poses = [], []
-                ref_spr = sprites_hi[w["pose_sprite"]]
-                rp = upright_points(ref_spr)
-                own = upright_points(sprites_hi[w["attack_sprite"]])
-                for fi, ref in enumerate(layers[("weapon", a["weapon"])][a["id"]]):
-                    hands_px = col.of(body[a["id"]][fi], broad_skin)
-                    pose = match_pose(ref, ref_spr, rp["guard"], s_gear, skin=hands_px,
-                                      grip_off=np.hypot(rp["grip"][0] - rp["guard"][0], rp["grip"][1] - rp["guard"][1]) * s_gear)
-                    if pose is None:
-                        frames.append(np.full((fh, fw), -1, dtype=np.int32))
-                        continue
-                    (gx, gy), ang, iou = pose
-                    # its grip goes into the fist(s) holding the original weapon: skin blobs touching it
-                    lab_h, sizes_h = label(hands_px & dilate(dilate(ref >= 0)))
-                    blobs = sorted([i for i, sz in enumerate(sizes_h) if sz >= 3], key=lambda i: -sizes_h[i])
-                    blobs = blobs[:2] if w["hands"] == 2 else blobs[:1]
-                    if blobs:
-                        hy, hx = np.nonzero(np.isin(lab_h, blobs))
-                        gx, gy = float(hx.mean() + 0.5), float(hy.mean() + 0.5)
-                        if "grip_frac" in w:  # a long head must not go into the ground
-                            head_len = float(w["grip_frac"]) * sprites_hi[w["attack_sprite"]].shape[0] \
-                                * sprite_scale.get(w["attack_sprite"], s_gear)
-                            if gy + head_len * np.sin(np.radians(ang)) > ground - 2:
-                                ang = float(np.degrees(np.arcsin(np.clip((ground - 2 - gy) / head_len, -1, 1))))
-                        poses.append(("grip", round(gx, 1), round(gy, 1), round(ang), round(iou, 2)))
-                        f = place(w["attack_sprite"], float(w["grip_frac"]) if "grip_frac" in w else "grip", ang,
-                                  (gx, gy), sprite_scale.get(w["attack_sprite"], s_gear))
-                    else:
-                        poses.append(("guard", round(gx, 1), round(gy, 1), round(ang), round(iou, 2)))
-                        f = place(w["attack_sprite"], float(w["grip_frac"]) if "grip_frac" in w else "guard", ang,
-                                  (gx, gy), sprite_scale.get(w["attack_sprite"], s_gear))
-                    # where the original weapon was hidden by a hand or the head, this one is too
-                    f[(ref < 0) & (col.of(body[a["id"]][fi], broad_skin) | head_box[a["id"]][fi])] = -1
-                    frames.append(f)
+                frames, poses = posed_frames(w, w["attack_sprite"], w["pose_sprite"], a,
+                                             layers[("weapon", a["weapon"])][a["id"]])
                 put("weapon", wid, a["id"], frames)
                 print(f"weapon {wid} in {a['id']}: poses from {w['pose_from']} {poses}")
+        # `resprite` on an animation: GPT drew its weapon too thin or too dark to read at game size, so the weapon's own
+        # sheet sprite takes its place, posed like GPT's weapon frame by frame (before other weapons pose from it)
+        if w.get("carry") in sprites_hi and "recolor_of" not in w:
+            for a in anims:
+                if a.get("weapon") != wid or not a.get("resprite") or a["id"] not in layers.get(("weapon", wid), {}):
+                    continue
+                gpt = layers[("weapon", wid)][a["id"]]
+                frames, poses = posed_frames(w, w["carry"], w["carry"], a, gpt)
+                for fi, f in enumerate(frames):  # where GPT's blade was cut from the body and this one does not lie
+                    body[a["id"]][fi] = close_gaps(body[a["id"]][fi], f, dilate(gpt[fi] >= 0))
+                put("weapon", wid, a["id"], frames)
+                print(f"weapon {wid} in {a['id']}: own sprite posed {poses}")
 
     # shields: held in guard at the front of the chest (near shoulder + a per-animation offset), so a shield does not
     # swing with GPT's far hand from front to back. Seen from the side its face is turned toward the enemy: the
@@ -1702,7 +1928,48 @@ def main(config_path: str) -> None:
     # which would show outside the torso, is cut from the layers below (masks/far_arm); the cut edge of the back
     # gets an outline that travels with the shield.
     sh_cfg = cfg.get("shield", {})
-    for nm in [x for x in (gear["cells"] if gear_arr is not None else []) if x.startswith("shield:")]:
+    # isometric views: the shield is strapped to the hand without the weapon (`hands` far point) plus a per-animation
+    # offset, seen at an angle (`squash`); from behind (`back`) it is its back side, drawn behind the body (slot order)
+    # `hand_anims`: the side view straps it to the hand in these animations only (a fall)
+    hand_anims = set(hands) if sh_cfg.get("mode") == "hand" else set(sh_cfg.get("hand_anims", []))
+    if hand_anims and gear_arr is not None:
+        for nm in [x for x in gear["cells"] if x.lstrip("~").startswith("shield:")]:
+            sid = nm.lstrip("~").partition(":")[2]
+            src = f"sprite:shield_back_{sid}" if sh_cfg.get("back") else nm
+            if src not in sprites_hi:
+                continue
+            hi = sprites_hi[src]
+            sq = sh_cfg.get("squash", 1.0)
+            if sq != 1.0:
+                sprites_hi[src + "@iso"] = np.asarray(Image.fromarray(hi, "RGBA").resize(
+                    (max(1, int(round(hi.shape[1] * sq))), hi.shape[0]), Image.Resampling.NEAREST))
+                src = src + "@iso"
+            sc = s_shield if not sh_cfg.get("back") else sh_cfg.get("height", gear["shield_height"]) / hi.shape[0]
+            for aid, hs in hands.items():
+                if aid not in hand_anims:
+                    continue
+                off = sh_cfg.get("offset", {}).get(aid, [0, -3])
+                # one [dx, dy] for the animation, or one per frame
+                offs = off if isinstance(off[0], list) else [off] * len(hs)
+                fx = np.array([h["far"][0] for h in hs], float)
+                fy = np.array([h["far"][1] for h in hs], float)
+                if aid in sh_cfg.get("follow", []):  # the hand goes far (a fall): the shield goes with it
+                    cx, cy = fx, fy
+                else:
+                    # the arm swings the shield only a little (a share of the hand's swing, clamped) and the body's
+                    # bob carries it: following GPT's hand fully made it jump across the body
+                    k, mx = sh_cfg.get("sway", [0.3, 2.0])
+                    hy = np.array([head_pos[aid][i][1] for i in range(len(hs))], float)
+                    cx = fx.mean() + np.clip(k * (fx - fx.mean()), -mx, mx)
+                    cy = fy.mean() + (hy - hy.mean()) + np.clip(k * (fy - fy.mean()), -mx, mx)
+                # `angle` {anim: per frame}: null = upright, else where the shield's top points (0 = right, 90 = down)
+                angs = sh_cfg.get("angle", {}).get(aid, [None] * len(hs))
+                frames = [place(src, "centre", angs[i], (cx[i] + offs[i][0] + 0.5, cy[i] + offs[i][1] + 0.5), sc)
+                          for i in range(len(hs))]
+                put("shield", sid, aid, frames)
+        if sh_cfg.get("mode") == "hand":
+            sh_cfg = {}
+    for nm in [x for x in (gear["cells"] if gear_arr is not None and sh_cfg else []) if x.startswith("shield:")]:
         sid = nm.partition(":")[2]
         src = nm
         if sh_cfg.get("squash", 1.0) != 1.0:
@@ -1711,6 +1978,8 @@ def main(config_path: str) -> None:
             src = nm + "@side"
             sprites_hi[src] = np.asarray(Image.fromarray(hi, "RGBA").resize((w_new, hi.shape[0]), Image.Resampling.NEAREST))
         for aid, hs in hands.items():
+            if aid in hand_anims:
+                continue
             gx, gy = sh_cfg.get("guard", {}).get(aid, [6, 7])
             # the shield arm is alive: it follows the torso's bob (taken from the head, the shoulder annotations miss
             # it), swings a share of the far hand's swing (clamped, so it never goes behind the back) and tilts with it
@@ -1761,6 +2030,8 @@ def main(config_path: str) -> None:
         if extra:
             palette = np.concatenate([palette, np.array(extra)])
         for aid, frames in layers[("weapon", w["recolor_of"])].items():
+            if aid in layers.get(("weapon", wid), {}):  # its own sprite already (carried): only the rest is recoloured
+                continue
             put("weapon", wid, aid, [np.where(f >= 0, mapping[np.maximum(f, 0)], -1) for f in frames])
 
     # ---- derived layers: drawn from the mannequin's own legs, so they sit on them in every frame
@@ -1775,14 +2046,21 @@ def main(config_path: str) -> None:
         """Cloth pixels of the legs below the waist, and the shoes."""
         img = body[aid][fi]
         op = img >= 0
-        lab, sizes = label(col.of(img, shoe_tab))
+        # shoe-brown, or a colour that stands at the mannequin's feet (front / back views: a palette can merge the
+        # shoe browns away from the brown rule); small blobs count there, a foot seen end-on is only a few pixels
+        tab = shoe_tab | (shoe if cfg.get("view") == "isometric" else np.zeros_like(shoe))
+        min_sz = 4 if cfg.get("view") == "isometric" else 6
+        lab, sizes = label(col.of(img, tab))
+        up_ = height_along(aid, fi)  # a lying body: its belt is near the ground too, but not near the soles
         shoes = np.isin(lab, [i for i, sz in enumerate(sizes)
-                              if sz >= 6 and np.nonzero(lab == i)[0].max() >= ground - 14])  # not the belt
+                              if sz >= min_sz and up_[lab == i].min() <= 14])  # not the belt
+        if not shoes.any() and cfg.get("view") == "isometric":
+            # a foot seen from behind can be two pixels: the bottom rows of the figure stand for the shoes
+            yb = int(np.flatnonzero(op.any(1))[-1])
+            shoes = op & (yy_g >= yb - 2) & ~col.of(img, col.linen)
         lab, sizes = label(col.of(img, hand_tab))
         hands_px = np.isin(lab, [i for i, sz in enumerate(sizes) if sz >= 4])
-        w = cfg.get("waist", {}).get(aid, fh)
-        w = w[fi] if isinstance(w, list) else w
-        legs = op & ~shoes & ~col.of(img, dark_tab) & ~hands_px & (yy_g >= w)
+        legs = op & ~shoes & ~col.of(img, dark_tab) & ~hands_px & below_waist(aid, fi)
         for poly in cfg.get("leg_exclude", {}).get(aid, {}).get(str(fi), []):  # an arm hanging below the waist
             legs &= ~polygon_mask(poly, (fh, fw))
         if aid in hands:
@@ -1854,6 +2132,35 @@ def main(config_path: str) -> None:
                         fore = seg_dist(xx_g, yy_g, E_, H_) <= 1.8
                         keep &= ~(fore & op) & ~fist(body[aid][fi], H_)
                     frames[fi] = np.where(keep, f, -1)
+
+    # recoloured items: the same shape in other cloth colours (`recolors`: {slot, id, of, ramp light -> dark}). The source
+    # item's lit pixels take the ramp by lightness (pixel-weighted quantiles); outline and dark detail stay
+    for rc in cfg.get("recolors", []):
+        src = layers.get((rc["slot"], rc["of"]))
+        if not src:
+            continue
+        ramp = np.array([hex_rgb(h) for h in rc["ramp"]], dtype=np.uint8)
+        r0 = len(palette)
+        palette = np.concatenate([palette, ramp])
+        val = palette.astype(float).max(1) / 255.0
+        # the outline (navy, or nearly black) stays; the item's own deep shades are recoloured too
+        hue_ = col.hsv[:, 0] * 360
+        keep_ = col.dark & (((hue_ >= 190) & (hue_ <= 280)) | (col.hsv[:, 2] < 0.16))
+        lit_vals = np.concatenate([val[f[(f >= 0) & ~keep_[np.maximum(f, 0)]]] for fr in src.values() for f in fr])
+        q = np.quantile(lit_vals, np.linspace(0, 1, len(ramp) + 1)[1:-1]) if len(lit_vals) else []
+        mapping = np.arange(len(palette))
+        for i in range(n):
+            if not keep_[i]:
+                mapping[i] = r0 + len(ramp) - 1 - int(np.searchsorted(q, val[i]))
+        rec = lambda fr: [np.where(f >= 0, mapping[np.maximum(f, 0)], -1) for f in fr]
+        only = rc.get("anims")  # e.g. the side view: newer animations recolour, older ones have their own kit
+        for aid, fr in src.items():
+            if only is None or aid in only:
+                put(rc["slot"], rc["id"], aid, rec(fr))
+        if (rc["slot"], rc["of"]) in under:
+            under.setdefault((rc["slot"], rc["id"]), {}).update(
+                {aid: rec(fr) for aid, fr in under[(rc["slot"], rc["of"])].items() if only is None or aid in only})
+        print(f"recolor {rc['slot']}:{rc['of']} -> {rc['id']}")
 
     derived_range: dict[tuple[str, str], tuple[int, int]] = {}
     for dv in cfg.get("derived", []):
@@ -1969,7 +2276,10 @@ def main(config_path: str) -> None:
         idx = idx[fam[idx]]
         if not len(idx):
             continue
-        q = np.quantile(value_of[idx], [0.12, 0.35, 0.65, 0.88])  # tone edges, dark to light
+        # tone edges from the palette animations' pixels (a new animation does not move them), dark to light
+        idx_q = np.concatenate([f[f >= 0] for aid, frames in per_anim.items() if aid in pal_anims for f in frames] or [idx])
+        idx_q = idx_q[fam[idx_q]] if len(idx_q) else idx
+        q = np.quantile(value_of[idx_q if len(idx_q) else idx], [0.12, 0.35, 0.65, 0.88])
         tone_of = np.full(len(palette), -1)
         for i in np.unique(idx):
             tone_of[i] = 4 - int(np.searchsorted(q, value_of[i]))  # 0 = highlight, 2 = the material colour, 4 = deepest
@@ -2000,7 +2310,10 @@ def main(config_path: str) -> None:
             hide_paths.setdefault(item, {})[aid] = rel
     labels_cfg = cfg["labels"]
     order = list(labels_cfg)
-    attack_of = {weapons[a["weapon"]]["kind"]: a["id"] for a in anims if a.get("weapon")}
+    # an animation's `role`: none = the attack of its weapon's kind; "block" = that kind's parry, "block_shield" = the
+    # parry with a shield (any one-handed weapon), "hurt", "death"
+    attack_of = {weapons[a["weapon"]]["kind"]: a["id"] for a in anims if a.get("weapon") and not a.get("role")}
+    block_of = {weapons[a["weapon"]]["kind"]: a["id"] for a in anims if a.get("weapon") and a.get("role") == "block"}
     slots_out = []
     for slot in cfg["slots"]:
         items = []
@@ -2018,7 +2331,8 @@ def main(config_path: str) -> None:
             entry = {"id": item, "label": labels_cfg.get(f"{slot['id']}:{item}", item), "strips": strips}
             if slot["id"] == "weapon":
                 w = weapons[item]
-                entry.update({"kind": w["kind"], "hands": w["hands"], "attack": w.get("attack") or attack_of.get(w["kind"])})
+                entry.update({"kind": w["kind"], "hands": w["hands"], "attack": w.get("attack") or attack_of.get(w["kind"]),
+                              "block": w.get("block", block_of.get(w["kind"]))})
             if item in hide_paths and slot["id"] == "headgear":
                 entry["hides"] = hide_paths[item]  # head pixels to cut before drawing this headgear
             if (slot["id"], item) in tone_layers:
@@ -2051,7 +2365,7 @@ def main(config_path: str) -> None:
                    "every earlier slot again clipped to masks.near_arm (the sword arm is in front of the shield). "
                    "When headgear is worn, cut its `hides` mask out of the head layer (hair that would poke "
                    "through).",
-        "animations": [{**{k: a[k] for k in ("id", "label", "frames", "fps", "loop") if k in a},
+        "animations": [{**{k: a[k] for k in ("id", "label", "frames", "fps", "loop", "role") if k in a},
                         **({"weapon": weapons[a["weapon"]]["kind"]} if a.get("weapon") else {})} for a in anims],
         "masks": {"near_arm": mask_paths, "far_arm": far_paths},
         "materials": {**{k: {"label": v["label"], "ramp": v["ramp"]} for k, v in mat_cfg.items()},

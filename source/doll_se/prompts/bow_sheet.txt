@@ -1,0 +1,7 @@
+ROLE/PURPOSE: weapon sprites for a paper-doll character in a 2D game; each bow will be cut out and held in the character's hand, so each must be a clean separate sprite.
+SUBJECT: two bows standing upright (vertical, the grip in the middle, the string on the right side), side by side, evenly spaced and not touching, the same size and shape:
+1) a plain wooden short bow like the one in image 1: brown wood limbs (#4a2e1f, #6e4426, #9a6236) with a dark wood outline, a leather grip wrap in the middle, and a thin light linen string (#e8dcc0) from tip to tip.
+2) the same bow restyled: deep red lacquered limbs (#5c1620, #8f2533, #c4404f) with small golden recurved tips (#c99a2e, #f2d16b), a dark leather grip wrap, the same thin light string.
+ART DIRECTION: crisp 16-bit pixel art matching image 1, clean 1-pixel dark navy outline (#1b1f33), flat cel shading, light from the upper left, the same coarse pixel-block size as image 1.
+TECHNICAL OUTPUT: wide image, each bow about 80% of the image height, transparent background.
+EXCLUDE: text, numbers, labels, hands, arrows, quivers, characters, ground, shadows, scenery, border, checkerboard pattern.

@@ -12,8 +12,10 @@ const PRESETS = {
   Huntress: { head: 'c', headgear: 'archer@silver', pants: 'green', chest: 'riveted', greaves: 'boots', bracers: 'wrist@silver', cloak: 'green', weapon: 'bow_dark' },
 };
 
-/** Animation tabs: the movement animations, plus one attack that follows the weapon (none without a weapon). */
+/** Animation tabs: the movement animations, one attack and one block that follow the equipment (none without a
+ *  weapon; a bow has no block), then hurt and death. */
 const ATTACK = 'attack';
+const BLOCK = 'block';
 
 const $ = (sel) => document.querySelector(sel);
 
@@ -22,7 +24,7 @@ const state = {
   sel: {},
   mat: {}, // slot -> a ready material id ('gold'), a colour ('#c08040'), or null for the piece as drawn
   hidden: new Set(),
-  view: 'idle', // an animation id, or ATTACK (the equipped weapon's attack)
+  view: 'idle', // an animation id, ATTACK (the equipped weapon's attack) or BLOCK (the outfit's parry)
   anim: 'idle',
   frame: 0,
   acc: 0,
@@ -65,6 +67,29 @@ function animDef(id) {
 
 function slotItem(slotId, itemId = state.sel[slotId]) {
   return state.doll.slots.find((s) => s.id === slotId)?.items.find((i) => i.id === itemId) ?? null;
+}
+
+/** The animation with this role (doll.json `role`: hurt, death, block_shield, block). */
+function roleAnim(role) {
+  return state.doll.animations.find((a) => a.role === role) ?? null;
+}
+
+/** Advance `o.frame` by the time in `o.acc`. A non-looping animation rests on its last frame for a moment before it
+ *  starts again (or, with `hold`, stays there). Returns whether the frame changed. */
+function stepFrames(o, a, hold = false) {
+  const d = 1 / a.fps;
+  let changed = false;
+  while (o.acc >= d) {
+    o.acc -= d;
+    if (a.loop === false && o.frame >= a.frames - 1) {
+      if (hold) { o.acc = 0; break; }
+      if (!o.rested) { o.rested = true; o.acc -= 0.8; continue; }
+    }
+    o.rested = false;
+    o.frame = (o.frame + 1) % a.frames;
+    changed = true;
+  }
+  return changed;
 }
 
 /* ---------- material colours ---------- */
@@ -402,19 +427,27 @@ function onOutfitChanged() {
 
 /* ---------- main viewer ---------- */
 
-/** What can be played with this outfit: idle / walk / run, and the attack of the equipped weapon's kind. */
+/** What can be played with this outfit: idle / walk / run, the attack and the block of the equipment, hurt, death. */
 function viewList() {
-  const views = state.doll.animations.filter((a) => !a.weapon).map((a) => ({ view: a.id, anim: a }));
+  const views = state.doll.animations.filter((a) => !a.weapon && !a.role).map((a) => ({ view: a.id, anim: a }));
   const atk = attackAnim();
   if (atk) views.push({ view: ATTACK, anim: atk });
+  const blk = blockAnim();
+  if (blk) views.push({ view: BLOCK, anim: blk });
+  for (const role of ['hurt', 'death']) {
+    const a = roleAnim(role);
+    if (a) views.push({ view: a.id, anim: a });
+  }
   return views;
 }
 
-/** The attack is named after the weapon (a glaive uses the two-handed attack, but it is the glaive's attack). */
+/** The attack and the block are named after the equipment (a glaive uses the two-handed attack, but it is the
+ *  glaive's attack). */
 function viewLabel(v) {
-  if (v.view !== ATTACK) return v.anim.label;
-  const w = slotItem('weapon')?.label?.split(' (')[0];
-  return w ? `Attack: ${w.toLowerCase()}` : v.anim.label;
+  const w = slotItem('weapon')?.label?.split(' (')[0]?.toLowerCase();
+  if (v.view === ATTACK) return w ? `Attack: ${w}` : v.anim.label;
+  if (v.view === BLOCK) return v.anim.role === 'block_shield' ? 'Block: shield' : w ? `Block: ${w}` : v.anim.label;
+  return v.anim.label;
 }
 
 /** The attack tab follows the weapon: another weapon kind switches it, no weapon falls back to idle. */
@@ -436,6 +469,7 @@ function renderAnimTabs() {
     b.textContent = viewLabel(v);
     b.classList.toggle('on', v.view === state.view);
     if (v.view === ATTACK) b.title = `Attack of the equipped weapon: ${slotItem('weapon')?.label}`;
+    if (v.view === BLOCK) b.title = v.anim.role === 'block_shield' ? 'Raises the shield' : `Parries with ${slotItem('weapon')?.label}`;
     b.addEventListener('click', () => {
       state.view = v.view;
       syncAnim();
@@ -539,7 +573,9 @@ function drawCard(c) {
 // side view: a strip of ground; isometric: a floor the character crosses along the drawn diagonals
 const WORLDS = { side: { w: 320, h: 120, ground: 108 }, iso: { w: 320, h: 180 } };
 let WORLD = WORLDS.side;
-const isIso = () => state.doll?.view === 'isometric';
+// the playground walks in 8 directions whenever any direction besides the side view is built, whichever doll the
+// picker shows (the picker only chooses the doll of the big view and the animation cards)
+const isIso = () => Object.keys(state.dirDolls ?? {}).some((f) => f !== 'right');
 const PG_SCALE = 3;
 const pg = {
   canvas: $('#pg-canvas'),
@@ -548,7 +584,9 @@ const pg = {
   x: 80,
   facing: 1,
   action: 'idle',
-  attack: null,
+  attack: null, // a one-shot animation playing: an attack or a hit (anim id)
+  blocking: false, // F held: the block plays and holds its last frame
+  dead: null, // the death animation, resting on its last frame until K again
   frame: 0,
   acc: 0,
   walk: 34,
@@ -592,8 +630,8 @@ function pgSetup() {
   // the isometric scene starts facing the way the chosen doll faces
   pg.dir = Object.keys(DIRS).find((d) => !DIRS[d].flip && DIRS[d].facing === state.doll?.facing) ?? 'E';
   $('#pg-hint').textContent = isIso()
-    ? 'click the scene: W A S D (or the arrows) walk in 8 directions: A / D alone side view, S toward you, W away, S + A / S + D and W + A / W + D the diagonals; Shift run, Space attack (side view), Q switch weapon'
-    : 'click the scene: ←→ / A D walk, Shift run, Space attack with the weapon, Q switch weapon';
+    ? 'click the scene: W A S D (or the arrows) walk in 8 directions: A / D alone side view, S toward you, W away, S + A / S + D and W + A / W + D the diagonals; Shift run, Space attack in the direction faced, hold F block, H hit, K fall / get up, Q switch weapon'
+    : 'click the scene: ←→ / A D walk, Shift run, Space attack with the weapon, hold F block, H hit, K fall / get up, Q switch weapon';
 }
 
 // the eight directions of the isometric scene: the doll drawn facing that way (`flip` = its mirror), the screen
@@ -615,6 +653,14 @@ function weaponCycle() {
 }
 function attackAnim() {
   const id = slotItem('weapon')?.attack;
+  return id ? animDef(id) : null;
+}
+/** The parry of this outfit: a worn shield is raised (with any one-handed weapon), else the weapon kind's parry; a
+ *  bow has none. */
+function blockAnim() {
+  const shieldSlot = state.doll.slots.find((s) => s.id === 'shield');
+  if (shieldSlot && allowed(shieldSlot) && slotItem('shield') && roleAnim('block_shield')) return roleAnim('block_shield');
+  const id = slotItem('weapon')?.block;
   return id ? animDef(id) : null;
 }
 
@@ -650,8 +696,9 @@ function pgUpdate(dt) {
   const dx = (right ? 1 : 0) - (left ? 1 : 0);
   const dy = iso ? (down ? 1 : 0) - (up ? 1 : 0) : 0; // the side scene only walks left and right
   const running = pg.keys.has('ShiftLeft') || pg.keys.has('ShiftRight');
-  const moving = !!(dx || dy);
-  if (!pg.attack && moving) {
+  const busy = pg.attack || pg.dead || pg.blocking; // no walking while attacking, hit, blocking or down
+  const moving = !busy && !!(dx || dy);
+  if (moving) {
     if (dx) pg.facing = dx;
     const dir = (dy > 0 ? 'S' : dy < 0 ? 'N' : '') + (dx > 0 ? 'E' : dx < 0 ? 'W' : '');
     if (iso && dir !== pg.dir) {
@@ -663,8 +710,16 @@ function pgUpdate(dt) {
   const view = pgView();
   withDoll(view.doll, () => {
     let anim;
-    if (pg.attack) {
+    let hold = false;
+    const blk = pg.blocking && !pg.dead && !pg.attack ? blockAnim() : null;
+    if (pg.dead) {
+      anim = animDef(pg.dead) ?? animDef('idle');
+      hold = true;
+    } else if (pg.attack) {
       anim = animDef(pg.attack);
+    } else if (blk) {
+      anim = blk;
+      hold = true;
     } else {
       const next = moving ? (running && animDef('run') ? 'run' : 'walk') : 'idle';
       if (next !== pg.action && !(['walk', 'run'].includes(next) && ['walk', 'run'].includes(pg.action))) {
@@ -689,6 +744,7 @@ function pgUpdate(dt) {
     const d = 1 / anim.fps;
     while (pg.acc >= d) {
       pg.acc -= d;
+      if (hold && pg.frame >= anim.frames - 1) { pg.acc = 0; break; } // the block is held up, the body stays down
       pg.frame += 1;
       if (pg.frame >= anim.frames) {
         if (pg.attack) { pg.attack = null; pg.action = 'idle'; pg.frame = 0; anim = animDef('idle'); }
@@ -720,12 +776,28 @@ function pgDraw() {
   out.drawImage(pg.buffer, 0, 0, pg.canvas.width, pg.canvas.height);
 }
 
-const PG_KEYS = new Set(['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'KeyA', 'KeyD', 'KeyS', 'KeyW', 'ShiftLeft', 'ShiftRight', 'Space', 'KeyQ']);
+const PG_KEYS = new Set(['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'KeyA', 'KeyD', 'KeyS', 'KeyW', 'ShiftLeft', 'ShiftRight', 'Space', 'KeyQ', 'KeyF', 'KeyH', 'KeyK']);
+/** Start a one-shot or held animation from frame 0. */
+function pgStart(fn) {
+  fn();
+  pg.frame = 0;
+  pg.acc = 0;
+}
 pg.canvas.addEventListener('keydown', (e) => {
   if (PG_KEYS.has(e.code)) e.preventDefault();
-  if (e.code === 'Space' && !e.repeat && !pg.attack) {
+  if (e.code === 'KeyK' && !e.repeat) { // fall, or get up again
+    const death = withDoll(pgView().doll, () => roleAnim('death'));
+    pgStart(() => { pg.dead = pg.dead || !death ? null : death.id; pg.attack = null; pg.blocking = false; pg.action = 'idle'; });
+  }
+  if (pg.dead) { pg.keys.add(e.code); return; }
+  if (e.code === 'KeyH' && !e.repeat) {
+    const hurt = withDoll(pgView().doll, () => roleAnim('hurt'));
+    if (hurt) pgStart(() => { pg.attack = hurt.id; pg.blocking = false; });
+  }
+  if (e.code === 'KeyF' && !e.repeat && !pg.attack && withDoll(pgView().doll, blockAnim)) pgStart(() => { pg.blocking = true; });
+  if (e.code === 'Space' && !e.repeat && !pg.attack && !pg.blocking) {
     let a = withDoll(pgView().doll, attackAnim);
-    if (!a && isIso()) { // attacks are drawn in the side view only: turn to the last side the character faced
+    if (!a && isIso()) { // a direction without this attack drawn: turn to the last side the character faced
       const side = pg.facing < 0 ? 'W' : 'E';
       a = withDoll(dirView(side).doll, attackAnim);
       if (a) pg.dir = side;
@@ -741,8 +813,11 @@ pg.canvas.addEventListener('keydown', (e) => {
   }
   pg.keys.add(e.code);
 });
-pg.canvas.addEventListener('keyup', (e) => pg.keys.delete(e.code));
-pg.canvas.addEventListener('blur', () => pg.keys.clear());
+pg.canvas.addEventListener('keyup', (e) => {
+  pg.keys.delete(e.code);
+  if (e.code === 'KeyF' && pg.blocking) pgStart(() => { pg.blocking = false; pg.action = 'idle'; });
+});
+pg.canvas.addEventListener('blur', () => { pg.keys.clear(); pg.blocking = false; });
 pg.canvas.addEventListener('pointerdown', () => pg.canvas.focus());
 
 /* ---------- toolbar & loop ---------- */
@@ -763,15 +838,11 @@ function tick(now) {
     if (state.playing) {
       const a = animDef(state.anim);
       state.acc += dt * state.speed;
-      let changed = false;
-      while (state.acc >= 1 / a.fps) { state.acc -= 1 / a.fps; state.frame = (state.frame + 1) % a.frames; changed = true; }
-      if (changed) drawMain();
+      if (stepFrames(state, a)) drawMain();
     }
     for (const c of state.cards) {
       c.acc += dt * state.speed;
-      let changed = false;
-      while (c.acc >= 1 / c.a.fps) { c.acc -= 1 / c.a.fps; c.frame = (c.frame + 1) % c.a.frames; changed = true; }
-      if (changed) drawCard(c);
+      if (stepFrames(c, c.a)) drawCard(c);
     }
     pgUpdate(dt);
     pgDraw();
@@ -811,6 +882,8 @@ async function load() {
   applyOutfit(keep); // pieces this doll does not have are simply left off
   pgSetup();
   pg.attack = null;
+  pg.blocking = false;
+  pg.dead = null;
   pg.action = 'idle';
   pg.frame = 0;
 }

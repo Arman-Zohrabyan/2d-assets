@@ -1,0 +1,4 @@
+source/doll_s/raw/base_attack_sword1h.png|1536x1024|source/doll_s/prompts/base_attack_sword1h.txt|source/doll_s/raw/seed.png|source/doll_s/raw/base_idle.png
+source/doll_s/raw/base_attack_sword2h.png|1536x1024|source/doll_s/prompts/base_attack_sword2h.txt|source/doll_s/raw/seed.png|source/doll_s/raw/base_idle.png
+source/doll_n/raw/base_attack_sword1h.png|1536x1024|source/doll_n/prompts/base_attack_sword1h.txt|source/doll_n/raw/seed.png|source/doll_n/raw/base_idle.png
+source/doll_n/raw/base_attack_sword2h.png|1536x1024|source/doll_n/prompts/base_attack_sword2h.txt|source/doll_n/raw/seed.png|source/doll_n/raw/base_idle.png
